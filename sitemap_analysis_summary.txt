@@ -1,0 +1,27 @@
+======================================================================
+BMW PRESS SITEMAP URL ANALYSIS SUMMARY
+======================================================================
+
+Analysis Date: 2025-12-06 20:46:12
+Total Sitemaps Analyzed: 13
+Successful Sitemaps: 13
+Failed Sitemaps: 0
+Total Press URLs (raw): 1254
+Unique Press URLs: 1254
+Average URLs per Sitemap: 96.5
+
+URLs per Sitemap:
+----------------------------------------
+sitemap_text_pcgl_en.xml        437
+sitemap_text_us_en_us.xml       176
+sitemap_text_ca_en.xml          137
+sitemap_text_gb_en_gb.xml       100
+sitemap_text_za_en.xml           68
+sitemap_text_ac_en.xml           64
+sitemap_text_rr_en.xml           64
+sitemap_text_in_en.xml           58
+sitemap_text_ea_en.xml           57
+sitemap_text_me_en.xml           34
+sitemap_text_ade_en.xml          32
+sitemap_text_ie_en.xml           23
+sitemap_text_nz_en.xml            4

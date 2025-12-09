@@ -1,0 +1,33 @@
+{
+  "total_sitemaps": 13,
+  "total_urls_collected": 1254,
+  "total_articles_scraped": 942,
+  "train_size": 636,
+  "val_size": 136,
+  "test_size": 137,
+  "selectors_used": {
+    "HEADLINE": "#content > div > div.content-left > div > h1",
+    "SUBHEADLINE": "#content > div > div.content-left > div > h2",
+    "AUTHOR": "#content > div > div.content-left > div > div.left > p:nth-child(4)",
+    "DATE": ".date",
+    "ARTICLE_BODY": "#article-text > p"
+  },
+  "selector_descriptions": {
+    "HEADLINE": "Main headline/title of the press release",
+    "SUBHEADLINE": "Subheading/secondary title",
+    "AUTHOR": "Author/creator of the press release",
+    "DATE": "Publication date",
+    "ARTICLE_BODY": "Main content paragraphs"
+  },
+  "date_selector_info": "Using \".date\" selector based on successful testing",
+  "pipeline_execution_date": "2025-12-07T00:57:31.290056",
+  "source_robots_txt": "https://www.press.bmwgroup.com/robots.txt",
+  "base_url": "https://www.press.bmwgroup.com",
+  "output_formats": [
+    "JSON",
+    "TXT (complete)",
+    "TXT (headings only)",
+    "JSONL",
+    "CSV"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "url": "https://www.press.bmwgroup.com/global/article/detail/T0453927EN",
+  "status": "success",
+  "parsed_dates": [],
+  "all_found_texts": [
+    {
+      "source": "selector",
+      "selector": "#content > div > div.content-left > div > div.article-info > h5 > span.date",
+      "text": "Fri Nov 21 10:00:00 CET 2025"
+    },
+    {
+      "source": "selector",
+      "selector": "span.date",
+      "text": "Fri Nov 21 10:00:00 CET 2025"
+    },
+    {
+      "source": "selector",
+      "selector": ".date",
+      "text": "Fri Nov 21 10:00:00 CET 2025"
+    },
+    {
+      "source": "selector",
+      "selector": "h5",
+      "text": "Fri Nov 21 10:00:00 CET 2025 Press Release"
+    }
+  ],
+  "timestamp": "2025-12-07T03:51:25.183313"
+}
