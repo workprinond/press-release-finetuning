@@ -1,0 +1,73 @@
+{
+  "test_metrics": {
+    "original": {
+      "test_loss": 0.8303782087465155,
+      "perplexity": 2.2941863536834717
+    },
+    "reduced": {
+      "test_loss": 0.9016925479493799,
+      "perplexity": 2.4637696743011475
+    }
+  },
+  "generations": {
+    "BMW is launching a new electric vehicle that": {
+      "original": "BMW is launching a new electric vehicle that will be powered by the latest technology and drivetrain technology. The new BMW iX3 will also be equipped with a new fuel cell technology. The new BMW iX3 will also be equipped with a new battery cell technology.",
+      "reduced": "BMW is launching a new electric vehicle that is designed to drive the drivetrain in a compact mode. The new BMW R 1300 RT is powered by the new BMW M Hybrid V8. The new BMW R 1300 RT is also available with the BMW XDrive, which is a standard car."
+    },
+    "The BMW Group announced today that": {
+      "original": "The BMW Group announced today that the BMW Group is now in the midst of its 30th year of strategic action. The BMW Group is a global financial institution that provides financial services to the global public through a wide range of financial institutions, accounting institutions, financial institutions and IT centres across the world. The BMW Group is the world\u2019s leading premium manufacturer of automobiles, motorcycles, motorcycles, and drive",
+      "reduced": "The BMW Group announced today that the new BMW iX3 will deliver over 7.4 million units in the first half of 2024, while the BMW Group production network will grow from 10.1 million units in the first half of 2024. In 2024, the BMW Group produced more than 6.4 million BMW vehicles in the entire supply chain."
+    },
+    "BMW's latest sustainability initiative focuses on": {
+      "original": "BMW's latest sustainability initiative focuses on sustainable technologies. This initiative aims to reduce greenhouse gas emissions and reduce greenhouse gas emissions by 2027. This is reflected in the increasing use of renewable energy. The BMW Group's Sustainable Energy Strategy aims to reduce carbon emissions by 40 per cent in 2027.",
+      "reduced": "BMW's latest sustainability initiative focuses on sustainability in the US."
+    },
+    "The future of BMW mobility includes": {
+      "original": "The future of BMW mobility includes an integrated \u201cBelt-In-One\u201d system, which enables users to choose between mobility, comfort and convenience.",
+      "reduced": "The future of BMW mobility includes an innovative way of connecting all BMW models with the BMW M4 GT3 and BMW M4 GT3, which will be supported by the BMW Group\u2019s EBT mobility network."
+    },
+    "BMW autonomous driving technology": {
+      "original": "BMW autonomous driving technology and driver feedback will be available in the BMW Group Automotive Landshuts at the end of the year.",
+      "reduced": "BMW autonomous driving technology and vehicle dynamics"
+    }
+  },
+  "qa_evaluation": {
+    "avg_log_likelihood": {
+      "original": -0.798655116558075,
+      "reduced": -0.889849865436554
+    },
+    "predictions": [
+      {
+        "question": "What is the electric range of the BMW iX?",
+        "true_answer": "The BMW iX xDrive50 has an estimated range of up to 324 miles (521 km) on a single charge.",
+        "original_prediction": "Question: What is the electric range of the BMW iX? Answer: The electric range is defined by the range of the BMW iX. The range of the BMW iX is defined by the range of the BMW iX. The range of",
+        "reduced_prediction": "Question: What is the electric range of the BMW iX? Answer: The BMW iX is the most powerful model of the all-electric BMW iX. The BMW iX is the most powerful model of the all-electric BMW iX"
+      },
+      {
+        "question": "When was the BMW Group founded?",
+        "true_answer": "The BMW Group was founded on March 7, 1916, initially as an aircraft engine manufacturer.",
+        "original_prediction": "Question: When was the BMW Group founded? Answer: [EXTERNAL_RESOURCE] Group in South Africa",
+        "reduced_prediction": "Question: When was the BMW Group founded? Answer: 18 September 2025."
+      },
+      {
+        "question": "What is BMW's sustainability strategy called?",
+        "true_answer": "BMW's sustainability strategy is called 'BMW i' and focuses on electromobility and sustainable mobility solutions.",
+        "original_prediction": "Question: What is BMW's sustainability strategy called? Answer: The sustainability strategy is a global initiative that aims to promote sustainability in the field of sustainability.",
+        "reduced_prediction": "Question: What is BMW's sustainability strategy called? Answer: The BMW Group is a global network of sustainability initiatives that will help to build sustainable solutions for the global market."
+      },
+      {
+        "question": "Which BMW model was the first fully electric vehicle?",
+        "true_answer": "The BMW i3, launched in 2013, was BMW's first purpose-built fully electric vehicle.",
+        "original_prediction": "Question: Which BMW model was the first fully electric vehicle? Answer: No.",
+        "reduced_prediction": "Question: Which BMW model was the first fully electric vehicle? Answer: The BMW iX3 was the first fully electric vehicle in the world. The BMW iX3 was the first fully electric vehicle in the world. The BMW iX3 was"
+      },
+      {
+        "question": "What does BMW stand for?",
+        "true_answer": "BMW stands for Bayerische Motoren Werke, which translates to Bavarian Motor Works in English.",
+        "original_prediction": "Question: What does BMW stand for? Answer: \u201cWe are a global company, and we are a global company. We are a global company. We have a global footprint, and we are a global company. We have a global footprint.",
+        "reduced_prediction": "Question: What does BMW stand for? Answer: \u201cThe BMW Group is the largest shareholder of BMW Group in the world. We are proud to partner with BMW in the U.S. and our partners in the U.S. and our"
+      }
+    ],
+    "num_questions": 5
+  }
+}
