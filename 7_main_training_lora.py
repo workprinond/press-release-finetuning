@@ -457,7 +457,7 @@ class EarlyStopper:
             return False
 
 class BMWDataset(Dataset):
-    def __init__(self, texts, tokenizer, max_length=128):
+    def __init__(self, texts, tokenizer, max_length=512):
         self.texts = texts
         self.tokenizer = tokenizer
         self.max_length = max_length
@@ -498,13 +498,14 @@ class BMWLoRATuner:
         # Apply LoRA
         lora_config = LoraConfig(
             r=8,
-            lora_alpha=32,
-            target_modules=["c_attn", "c_proj", "c_fc"],
-            lora_dropout=0.1,
+            lora_alpha=16,
+            target_modules=["c_attn", "c_proj", "c_fc",],
+            lora_dropout=0.05,
             bias="none",
             task_type=TaskType.CAUSAL_LM,
             inference_mode=False
         )
+       
         self.model = get_peft_model(self.base_model, lora_config)
         self.model.print_trainable_parameters()
         self.model.to(self.device)
@@ -547,10 +548,10 @@ class BMWLoRATuner:
         
         return self.train_dataset, self.val_dataset, self.test_dataset
     
-    def train(self, num_epochs=15, batch_size=8, learning_rate=1e-4, early_stopping_patience=3):
+    def train(self, num_epochs=5, batch_size=14, learning_rate=3e-4, early_stopping_patience=6):
         logger.info("Starting LoRA fine-tuning...")
         
-        train_loader = DataLoader(self.train_dataset, batch_size=batch_size, shuffle=True)
+        train_loader = DataLoader(self.train_dataset, batch_size=batch_size, shuffle=False)
         val_loader = DataLoader(self.val_dataset, batch_size=batch_size, shuffle=False)
         
         # Initialize early stopper
@@ -636,7 +637,11 @@ class BMWLoRATuner:
         with torch.no_grad():
             for batch in dataloader:
                 batch = {k: v.to(self.device) for k, v in batch.items()}
-                outputs = self.model(**batch)
+                # outputs = self.model(**batch)
+                outputs = self.model(
+                input_ids=batch['input_ids'],
+                attention_mask=batch['attention_mask'], 
+                labels=batch['input_ids']  )
                 losses.append(outputs.loss.item())
         return np.mean(losses)
     
@@ -717,7 +722,12 @@ class BMWLoRATuner:
         with torch.no_grad():
             for batch in tqdm(test_loader, desc="Evaluating Baseline"):
                 batch = {k: v.to(self.device) for k, v in batch.items()}
-                outputs = base_model(**batch)
+                # outputs = base_model(**batch)
+                outputs = self.base_model(
+                    input_ids=batch['input_ids'],
+                    attention_mask=batch['attention_mask'],  # Explicitly pass
+                    labels=batch['input_ids']  # For loss calculation
+                )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_tokens += batch['attention_mask'].sum().item()
         
@@ -750,7 +760,12 @@ class BMWLoRATuner:
         with torch.no_grad():
             for batch in tqdm(test_loader, desc="Evaluating Fine-tuned Model"):
                 batch = {k: v.to(self.device) for k, v in batch.items()}
-                outputs = self.model(**batch)
+                # outputs = self.model(**batch)
+                outputs = self.model(
+                    input_ids=batch['input_ids'],
+                    attention_mask=batch['attention_mask'],  # Explicitly pass
+                    labels=batch['input_ids']  # For loss calculation
+                )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_tokens += batch['attention_mask'].sum().item()
         
@@ -837,160 +852,340 @@ class BMWLoRATuner:
             print("-" * 80)
         
         with open(os.path.join(self.output_dir, "sample_generations.json"), 'w') as f:
-            json.dump(generations, f, indent=2)
+            json.dump(generations, f, indent=2, default=str)
         
         return generations
     
-    def compute_text_quality_metrics(self, num_samples=20):
-        """Compute text quality metrics including diversity, readability, toxicity, and FLUENCY."""
-        logger.info("Computing comprehensive text quality metrics...")
+    # def compute_text_quality_metrics(self, num_samples=20):
+    #     """Compute text quality metrics including diversity, readability, toxicity, and FLUENCY."""
+    #     logger.info("Computing comprehensive text quality metrics...")
         
-        metrics = {
-            'diversity_metrics': {},
-            'readability_scores': None,
-            'toxicity_scores': None,
-            'fluency_scores': None  # Added fluency
-        }
+    #     metrics = {
+    #         'diversity_metrics': {},
+    #         'readability_scores': None,
+    #         'toxicity_scores': None,
+    #         'fluency_scores': None  # Added fluency
+    #     }
         
-        # Sample from test set for evaluation
-        test_loader = DataLoader(self.test_dataset, batch_size=1, shuffle=True)
+    #     # Sample from test set for evaluation
+    #     test_loader = DataLoader(self.test_dataset, batch_size=1, shuffle=True)
         
-        generated_texts = []
-        reference_texts = []
+    #     generated_texts = []
+    #     reference_texts = []
         
-        # Generate texts for evaluation
-        self.model.eval()
-        for i, batch in enumerate(test_loader):
-            if i >= num_samples:
-                break
+    #     # Generate texts for evaluation
+    #     self.model.eval()
+    #     for i, batch in enumerate(test_loader):
+    #         if i >= num_samples:
+    #             break
                 
-            # Use first 20 tokens as prompt, rest as reference
-            input_ids = batch['input_ids'][0][:20]
-            reference = batch['input_ids'][0][20:]
+    #         # Use first 20 tokens as prompt, rest as reference
+    #         input_ids = batch['input_ids'][0][:20]
+    #         reference = batch['input_ids'][0][20:]
             
-            prompt = self.tokenizer.decode(input_ids, skip_special_tokens=True)
-            reference_text = self.tokenizer.decode(reference, skip_special_tokens=True)
+    #         prompt = self.tokenizer.decode(input_ids, skip_special_tokens=True)
+    #         reference_text = self.tokenizer.decode(reference, skip_special_tokens=True)
             
-            # Generate continuation
-            inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
-            with torch.no_grad():
-                outputs = self.model.generate(
-                    inputs['input_ids'],
-                    max_length=100,
-                    temperature=0.7,
-                    do_sample=True,
-                    top_p=0.9,
-                    pad_token_id=self.tokenizer.eos_token_id
-                )
+    #         # Generate continuation
+    #         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+    #         with torch.no_grad():
+    #             outputs = self.model.generate(
+    #                 inputs['input_ids'],
+    #                 max_length=100,
+    #                 temperature=0.7,
+    #                 do_sample=True,
+    #                 top_p=0.9,
+    #                 pad_token_id=self.tokenizer.eos_token_id
+    #             )
             
-            generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+    #         generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             
-            generated_texts.append(generated_text)
-            reference_texts.append(reference_text)
+    #         generated_texts.append(generated_text)
+    #         reference_texts.append(reference_text)
         
-        # 2. Compute Diversity (Distinct-n) - Keep both Distinct-1 and Distinct-2
-        all_tokens = [text.split() for text in generated_texts]
-        flat_tokens = [token for sublist in all_tokens for token in sublist]
+    #     # 2. Compute Diversity (Distinct-n) - Keep both Distinct-1 and Distinct-2
+    #     all_tokens = [text.split() for text in generated_texts]
+    #     flat_tokens = [token for sublist in all_tokens for token in sublist]
         
-        # Distinct-1 (word-level diversity)
-        unique_unigrams = set(flat_tokens)
-        metrics['diversity_metrics']['distinct_1'] = len(unique_unigrams) / len(flat_tokens) if flat_tokens else 0
+    #     # Distinct-1 (word-level diversity)
+    #     unique_unigrams = set(flat_tokens)
+    #     metrics['diversity_metrics']['distinct_1'] = len(unique_unigrams) / len(flat_tokens) if flat_tokens else 0
         
-        # Distinct-2 (phrase-level diversity - more important for avoiding repetition)
-        bigrams = []
-        for tokens in all_tokens:
-            bigrams.extend([' '.join(tokens[i:i+2]) for i in range(len(tokens)-1)])
-        unique_bigrams = set(bigrams)
-        metrics['diversity_metrics']['distinct_2'] = len(unique_bigrams) / len(bigrams) if bigrams else 0
+    #     # Distinct-2 (phrase-level diversity - more important for avoiding repetition)
+    #     bigrams = []
+    #     for tokens in all_tokens:
+    #         bigrams.extend([' '.join(tokens[i:i+2]) for i in range(len(tokens)-1)])
+    #     unique_bigrams = set(bigrams)
+    #     metrics['diversity_metrics']['distinct_2'] = len(unique_bigrams) / len(bigrams) if bigrams else 0
         
-        # 3. Compute Readability (Flesch-Kincaid)
-        try:
-            import textstat
-            readability_scores = []
-            for text in generated_texts:
-                if len(text.split()) > 10:  # Only score texts with enough words
-                    fk_score = textstat.flesch_kincaid_grade(text)
-                    readability_scores.append(fk_score)
-            metrics['readability_scores'] = {
-                'average_flesch_kincaid': float(np.mean(readability_scores)) if readability_scores else 0,
-                'num_scored': len(readability_scores)
-            }
-        except ImportError:
-            logger.warning("textstat not installed. Install with: pip install textstat")
+    #     # 3. Compute Readability (Flesch-Kincaid)
+    #     try:
+    #         import textstat
+    #         readability_scores = []
+    #         for text in generated_texts:
+    #             if len(text.split()) > 10:  # Only score texts with enough words
+    #                 fk_score = textstat.flesch_kincaid_grade(text)
+    #                 readability_scores.append(fk_score)
+    #         metrics['readability_scores'] = {
+    #             'average_flesch_kincaid': float(np.mean(readability_scores)) if readability_scores else 0,
+    #             'num_scored': len(readability_scores)
+    #         }
+    #     except ImportError:
+    #         logger.warning("textstat not installed. Install with: pip install textstat")
         
-        # 4. Compute Toxicity Scores
-        try:
-            from detoxify import Detoxify
-            toxicity_model = Detoxify('original')
-            all_toxicity_scores = []
-            for text in generated_texts:
-                scores = toxicity_model.predict(text)
-                avg_toxicity = sum(scores.values()) / len(scores)
-                all_toxicity_scores.append(avg_toxicity)
+    #     # 4. Compute Toxicity Scores
+    #     try:
+    #         from detoxify import Detoxify
+    #         toxicity_model = Detoxify('original')
+    #         all_toxicity_scores = []
+    #         for text in generated_texts:
+    #             scores = toxicity_model.predict(text)
+    #             avg_toxicity = sum(scores.values()) / len(scores)
+    #             all_toxicity_scores.append(avg_toxicity)
             
-            metrics['toxicity_scores'] = {
-                'average': float(np.mean(all_toxicity_scores)) if all_toxicity_scores else 0,
-                'max': float(np.max(all_toxicity_scores)) if all_toxicity_scores else 0,
-                'min': float(np.min(all_toxicity_scores)) if all_toxicity_scores else 0
-            }
-        except ImportError:
-            logger.warning("Detoxify not installed. Install with: pip install detoxify")
+    #         metrics['toxicity_scores'] = {
+    #             'average': float(np.mean(all_toxicity_scores)) if all_toxicity_scores else 0,
+    #             'max': float(np.max(all_toxicity_scores)) if all_toxicity_scores else 0,
+    #             'min': float(np.min(all_toxicity_scores)) if all_toxicity_scores else 0
+    #         }
+    #     except ImportError:
+    #         logger.warning("Detoxify not installed. Install with: pip install detoxify")
         
-        # 5. COMPUTE FLUENCY METRIC (Added)
-        try:
-            fluency_scores = []
-            for text in generated_texts:
-                if len(text.strip()) > 20:  # Only score texts with sufficient length
-                    # Tokenize the text
-                    inputs = self.tokenizer(text, return_tensors="pt", truncation=True).to(self.device)
+    #     # 5. COMPUTE FLUENCY METRIC (Added)
+    #     try:
+    #         fluency_scores = []
+    #         for text in generated_texts:
+    #             if len(text.strip()) > 20:  # Only score texts with sufficient length
+    #                 # Tokenize the text
+    #                 inputs = self.tokenizer(text, return_tensors="pt", truncation=True).to(self.device)
                     
-                    # Compute loss using the model
+    #                 # Compute loss using the model
+    #                 with torch.no_grad():
+    #                     # outputs = self.model(**inputs, labels=inputs['input_ids'])
+    #                     outputs = self.model(
+    #                         input_ids=inputs['input_ids'],
+    #                         attention_mask=inputs['attention_mask'],  # ← MISSING!
+    #                         labels=inputs['input_ids']
+    #                     )
+    #                     loss = outputs.loss
+                    
+    #                 # Convert to perplexity
+    #                 perplexity = torch.exp(loss).item()
+                    
+    #                 # Convert perplexity to fluency score (0-1, higher is better)
+    #                 # Lower perplexity = more fluent
+    #                 # Formula: fluency = 1 / (1 + log(1 + perplexity))
+    #                 # This gives ~0.9 for highly fluent text (perplexity ~10-20)
+    #                 # and ~0.1 for very disfluent text (perplexity > 100)
+    #                 fluency = 1.0 / (1.0 + np.log1p(perplexity))
+    #                 fluency_scores.append(fluency)
+            
+    #         metrics['fluency_scores'] = {
+    #             'average_fluency': float(np.mean(fluency_scores)) if fluency_scores else 0,
+    #             'average_perplexity': float(np.mean([1.0/(f + 0.001) - 1.0 for f in fluency_scores])) if fluency_scores else 0,
+    #             'num_scored': len(fluency_scores)
+    #         }
+    #     except Exception as e:
+    #         logger.warning(f"Could not compute fluency: {e}")
+    #         metrics['fluency_scores'] = {'error': str(e)}
+        
+    #     # Save metrics
+    #     metrics_path = os.path.join(self.output_dir, "text_quality_metrics.json")
+    #     with open(metrics_path, 'w') as f:
+    #         json.dump(metrics, f, indent=2)
+        
+    #     logger.info(f"Text quality metrics saved to {metrics_path}")
+        
+    #     # Print summary
+    #     print("\n" + "="*60)
+    #     print("TEXT QUALITY METRICS SUMMARY")
+    #     print("="*60)
+    #     print(f"Distinct-1: {metrics['diversity_metrics']['distinct_1']:.4f}")
+    #     print(f"Distinct-2: {metrics['diversity_metrics']['distinct_2']:.4f}")
+    #     if metrics.get('readability_scores'):
+    #         print(f"Avg Flesch-Kincaid Grade Level: {metrics['readability_scores']['average_flesch_kincaid']:.2f}")
+    #     if metrics.get('toxicity_scores'):
+    #         print(f"Avg Toxicity Score: {metrics['toxicity_scores']['average']:.6f}")
+    #     if metrics.get('fluency_scores') and 'average_fluency' in metrics['fluency_scores']:
+    #         print(f"Avg Fluency Score: {metrics['fluency_scores']['average_fluency']:.4f}")
+    #         print(f"Avg Perplexity (lower is better): {metrics['fluency_scores']['average_perplexity']:.2f}")
+        
+    #     return metrics
+
+    def compute_text_quality_metrics(self, num_samples=20):
+            """Compute text quality metrics including diversity, readability, toxicity, and FLUENCY."""
+            logger.info("Computing comprehensive text quality metrics...")
+            
+            metrics = {
+                'diversity_metrics': {},
+                'readability_scores': None,
+                'toxicity_scores': None,
+                'fluency_scores': None  # Added fluency
+            }
+            
+            # Sample from test set for evaluation
+            test_loader = DataLoader(self.test_dataset, batch_size=1, shuffle=True)
+            
+            generated_texts = []
+            reference_texts = []
+            
+            # Generate texts for diversity/readability/toxicity evaluation
+            self.model.eval()
+            for i, batch in enumerate(test_loader):
+                if i >= num_samples:
+                    break
+                    
+                # Use first 20 tokens as prompt, rest as reference
+                input_ids = batch['input_ids'][0][:20]
+                reference = batch['input_ids'][0][20:]
+                
+                prompt = self.tokenizer.decode(input_ids, skip_special_tokens=True)
+                reference_text = self.tokenizer.decode(reference, skip_special_tokens=True)
+                
+                # Generate continuation
+                inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+                with torch.no_grad():
+                    outputs = self.model.generate(
+                        inputs['input_ids'],
+                        attention_mask=inputs['attention_mask'],
+                        max_length=100,
+                        temperature=0.7,
+                        do_sample=True,
+                        top_p=0.9,
+                        pad_token_id=self.tokenizer.eos_token_id
+                    )
+                
+                generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+                
+                generated_texts.append(generated_text)
+                reference_texts.append(reference_text)
+            
+            # 1. Compute Diversity (Distinct-n) - Keep existing
+            all_tokens = [text.split() for text in generated_texts]
+            flat_tokens = [token for sublist in all_tokens for token in sublist]
+            
+            # Distinct-1 (word-level diversity)
+            unique_unigrams = set(flat_tokens)
+            metrics['diversity_metrics']['distinct_1'] = len(unique_unigrams) / len(flat_tokens) if flat_tokens else 0
+            
+            # Distinct-2 (phrase-level diversity)
+            bigrams = []
+            for tokens in all_tokens:
+                bigrams.extend([' '.join(tokens[i:i+2]) for i in range(len(tokens)-1)])
+            unique_bigrams = set(bigrams)
+            metrics['diversity_metrics']['distinct_2'] = len(unique_bigrams) / len(bigrams) if bigrams else 0
+            
+            # 2. Compute Readability (Flesch-Kincaid)
+            try:
+                import textstat
+                readability_scores = []
+                for text in generated_texts:
+                    if len(text.split()) > 10:
+                        fk_score = textstat.flesch_kincaid_grade(text)
+                        readability_scores.append(fk_score)
+                metrics['readability_scores'] = {
+                    'average_flesch_kincaid': float(np.mean(readability_scores)) if readability_scores else 0,
+                    'num_scored': len(readability_scores)
+                }
+            except ImportError:
+                logger.warning("textstat not installed. Install with: pip install textstat")
+            
+            # 3. Compute Toxicity Scores
+            try:
+                from detoxify import Detoxify
+                toxicity_model = Detoxify('original')
+                all_toxicity_scores = []
+                for text in generated_texts:
+                    scores = toxicity_model.predict(text)
+                    avg_toxicity = sum(scores.values()) / len(scores)
+                    all_toxicity_scores.append(avg_toxicity)
+                
+                metrics['toxicity_scores'] = {
+                    'average': float(np.mean(all_toxicity_scores)) if all_toxicity_scores else 0,
+                    'max': float(np.max(all_toxicity_scores)) if all_toxicity_scores else 0,
+                    'min': float(np.min(all_toxicity_scores)) if all_toxicity_scores else 0
+                }
+            except ImportError:
+                logger.warning("Detoxify not installed. Install with: pip install detoxify")
+            
+            # 4. FIXED FLUENCY METRIC (NEW CODE!)
+            try:
+                fluency_scores = []
+                perplexities = []
+                
+                # Create a NEW DataLoader for fluency (don't reuse the shuffled one)
+                fluency_loader = DataLoader(self.test_dataset, batch_size=1, shuffle=False)
+                
+                for i, batch in enumerate(fluency_loader):
+                    if i >= num_samples:
+                        break
+                        
+                    batch = {k: v.to(self.device) for k, v in batch.items()}
+                    
+                    # FIXED: Pass attention mask properly
                     with torch.no_grad():
-                        outputs = self.model(**inputs, labels=inputs['input_ids'])
+                        outputs = self.model(
+                            input_ids=batch['input_ids'],
+                            attention_mask=batch['attention_mask'],  # CRITICAL FIX!
+                            labels=batch['input_ids']
+                        )
                         loss = outputs.loss
                     
-                    # Convert to perplexity
+                    # Calculate perplexity (lower = more fluent)
                     perplexity = torch.exp(loss).item()
+                    perplexities.append(perplexity)
                     
-                    # Convert perplexity to fluency score (0-1, higher is better)
-                    # Lower perplexity = more fluent
-                    # Formula: fluency = 1 / (1 + log(1 + perplexity))
-                    # This gives ~0.9 for highly fluent text (perplexity ~10-20)
-                    # and ~0.1 for very disfluent text (perplexity > 100)
-                    fluency = 1.0 / (1.0 + np.log1p(perplexity))
+                    # Better fluency formula
+                    if perplexity < 10:
+                        fluency = 0.95  # Excellent
+                    elif perplexity < 20:
+                        fluency = 0.85   # Very good
+                    elif perplexity < 30:
+                        fluency = 0.75   # Good
+                    elif perplexity < 50:
+                        fluency = 0.6    # Fair
+                    elif perplexity < 100:
+                        fluency = 0.3    # Poor
+                    else:
+                        fluency = 0.1    # Very poor
+                    
                     fluency_scores.append(fluency)
+                
+                metrics['fluency_scores'] = {
+                    'average_fluency': float(np.mean(fluency_scores)) if fluency_scores else 0,
+                    'average_perplexity': float(np.mean(perplexities)) if perplexities else 0,
+                    'num_scored': len(fluency_scores)
+                }
+            except Exception as e:
+                logger.warning(f"Could not compute fluency: {e}")
+                metrics['fluency_scores'] = {'error': str(e)}
             
-            metrics['fluency_scores'] = {
-                'average_fluency': float(np.mean(fluency_scores)) if fluency_scores else 0,
-                'average_perplexity': float(np.mean([1.0/(f + 0.001) - 1.0 for f in fluency_scores])) if fluency_scores else 0,
-                'num_scored': len(fluency_scores)
-            }
-        except Exception as e:
-            logger.warning(f"Could not compute fluency: {e}")
-            metrics['fluency_scores'] = {'error': str(e)}
-        
-        # Save metrics
-        metrics_path = os.path.join(self.output_dir, "text_quality_metrics.json")
-        with open(metrics_path, 'w') as f:
-            json.dump(metrics, f, indent=2)
-        
-        logger.info(f"Text quality metrics saved to {metrics_path}")
-        
-        # Print summary
-        print("\n" + "="*60)
-        print("TEXT QUALITY METRICS SUMMARY")
-        print("="*60)
-        print(f"Distinct-1: {metrics['diversity_metrics']['distinct_1']:.4f}")
-        print(f"Distinct-2: {metrics['diversity_metrics']['distinct_2']:.4f}")
-        if metrics.get('readability_scores'):
-            print(f"Avg Flesch-Kincaid Grade Level: {metrics['readability_scores']['average_flesch_kincaid']:.2f}")
-        if metrics.get('toxicity_scores'):
-            print(f"Avg Toxicity Score: {metrics['toxicity_scores']['average']:.6f}")
-        if metrics.get('fluency_scores') and 'average_fluency' in metrics['fluency_scores']:
-            print(f"Avg Fluency Score: {metrics['fluency_scores']['average_fluency']:.4f}")
-            print(f"Avg Perplexity (lower is better): {metrics['fluency_scores']['average_perplexity']:.2f}")
-        
-        return metrics
+            # Save metrics
+            metrics_path = os.path.join(self.output_dir, "text_quality_metrics.json")
+            with open(metrics_path, 'w') as f:
+                json.dump(metrics, f, indent=2)
+            
+            logger.info(f"Text quality metrics saved to {metrics_path}")
+            
+            # Print summary
+            print("\n" + "="*60)
+            print("TEXT QUALITY METRICS SUMMARY")
+            print("="*60)
+            print(f"Distinct-1: {metrics['diversity_metrics']['distinct_1']:.4f}")
+            print(f"Distinct-2: {metrics['diversity_metrics']['distinct_2']:.4f}")
+            if metrics.get('readability_scores'):
+                print(f"Avg Flesch-Kincaid Grade Level: {metrics['readability_scores']['average_flesch_kincaid']:.2f}")
+            if metrics.get('toxicity_scores'):
+                print(f"Avg Toxicity Score: {metrics['toxicity_scores']['average']:.6f}")
+            if metrics.get('fluency_scores') and 'average_perplexity' in metrics['fluency_scores']:
+                print(f"Avg Perplexity on Test Set: {metrics['fluency_scores']['average_perplexity']:.2f}")
+                print(f"Avg Fluency Score: {metrics['fluency_scores']['average_fluency']:.4f}")
+                if metrics['fluency_scores']['average_perplexity'] < 30:
+                    print(f"  → Good fluency (perplexity < 30)")
+                else:
+                    print(f"  → Needs improvement (perplexity ≥ 30)")
+            
+            return metrics
 
 def plot_training_history(output_dir):
     try:
@@ -1133,10 +1328,10 @@ def run_pipeline():
     
     # Train with early stopping
     history = finetuner.train(
-        num_epochs=15,
-        batch_size=8,
-        learning_rate=1e-4,
-        early_stopping_patience=3  # Stop if no improvement for 3 epochs
+        num_epochs=5,
+        batch_size=14,
+        learning_rate=1e-5,
+        early_stopping_patience=6  # Stop if no improvement for 3 epochs
     )
     
     print("\n" + "="*60)

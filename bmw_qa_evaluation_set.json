@@ -1,0 +1,254 @@
+{
+  "bmw_qa_evaluation_set": [
+    {
+      "id": 1,
+      "question": "What fragrance concept did Rolls-Royce launch for the Phantom?",
+      "answer": "Rolls-Royce Scent, an immersive fragrance concept designed by their in-house perfumer."
+    },
+    {
+      "id": 2,
+      "question": "Which driver won the Intercontinental GT Challenge Drivers' Championship in 2025?",
+      "answer": "Kelvin van der Linde was crowned Drivers' Champion of the Intercontinental GT Challenge."
+    },
+    {
+      "id": 3,
+      "question": "What special edition 8 Series did BMW unveil at Pebble Beach in 2025?",
+      "answer": "The 2026 M850i Edition M Heritage, a limited-edition 8 Series with five historic paint finishes."
+    },
+    {
+      "id": 4,
+      "question": "How many units of the M850i Edition M Heritage will be produced?",
+      "answer": "Limited to just 500 units distributed to select markets worldwide."
+    },
+    {
+      "id": 5,
+      "question": "Which car won the 24H Dubai in its racing debut in 2025?",
+      "answer": "The new BMW M4 GT3 EVO won the 24H Dubai in its racing debut."
+    },
+    {
+      "id": 6,
+      "question": "Who was appointed as General Manager of Corporate Sales for BMW Group UK in July 2025?",
+      "answer": "Andrew Jago was appointed as General Manager of Corporate Sales for BMW Group UK."
+    },
+    {
+      "id": 7,
+      "question": "What was the attendance at the BMW Motorrad Days 2025 in Garmisch-Partenkirchen?",
+      "answer": "Over 40,000 visitors from around 50 nations attended the BMW Motorrad Days 2025."
+    },
+    {
+      "id": 8,
+      "question": "What record did the BMW M2 CS set on the Nürburgring-Nordschleife in April 2025?",
+      "answer": "The BMW M2 CS set a new record of 7:25.5 on the Nürburgring-Nordschleife."
+    },
+    {
+      "id": 9,
+      "question": "How much did BMW sales increase in Q3 2025 compared to the same period last year?",
+      "answer": "BMW sales rose 24% in Q3 2025 versus the same time period last year."
+    },
+    {
+      "id": 10,
+      "question": "What percentage of BMW vehicles sold in the U.S. through Q3 2025 were electrified?",
+      "answer": "Nearly 20% of BMW vehicles sold in the U.S. through Q3 2025 had either battery electric (BEV) or plug-in hybrid (PHEV) drivetrains."
+    },
+    {
+      "id": 11,
+      "question": "What advertising slogan controversy did BMW face in 2010?",
+      "answer": "BMW faced controversy when it seemed to abandon 'The Ultimate Driving Machine' tagline for 'Joy is BMW'."
+    },
+    {
+      "id": 12,
+      "question": "When was 'The Ultimate Driving Machine' tagline coined?",
+      "answer": "The tagline 'The Ultimate Driving Machine' was coined by Martin Puris in 1975."
+    },
+    {
+      "id": 13,
+      "question": "Which tennis player did BMW extend its partnership with in September 2025?",
+      "answer": "BMW extended its partnership with Spanish tennis ace Carlos Alcaraz."
+    },
+    {
+      "id": 14,
+      "question": "Which BMW plant is planning a hydrogen pipeline link?",
+      "answer": "BMW Group Plant Leipzig is planning a hydrogen pipeline link, making it the first car plant in the world to receive hydrogen via a pipeline."
+    },
+    {
+      "id": 15,
+      "question": "Who was the standout performer at the 36th BMW International Open in July 2025?",
+      "answer": "Davis Bryant (USA) was the standout performer with a 9-under-par round and a hole-in-one."
+    },
+    {
+      "id": 16,
+      "question": "What concept did BMW Motorrad present at the Concorso d'Eleganza Villa d'Este?",
+      "answer": "BMW Motorrad presented the 'BMW Motorrad Concept RR' as a preview of the next generation of BMW RR superbikes."
+    },
+    {
+      "id": 17,
+      "question": "What was the torque figure demonstrated by the BMW Vision Driving Experience in Shanghai?",
+      "answer": "The BMW Vision Driving Experience demonstrated up to 18,000 Nm of torque."
+    },
+    {
+      "id": 18,
+      "question": "What organization did BMW Group Brazil partner with for youth education?",
+      "answer": "BMW Group Brazil partnered with UNICEF under the 'BRIDGE. Educating young people for tomorrow, today' programme."
+    },
+    {
+      "id": 19,
+      "question": "Where did René Rast and Marco Wittmann compete in the DTM in August 2025?",
+      "answer": "René Rast and Marco Wittmann competed at the Sachsenring in the DTM."
+    },
+    {
+      "id": 20,
+      "question": "Which MINI John Cooper Works models are now fully electric?",
+      "answer": "The first-ever MINI John Cooper Works Electric and first-ever MINI John Cooper Works Aceman are fully electric."
+    },
+    {
+      "id": 21,
+      "question": "What is the WLTP range of the new BMW iX xDrive60?",
+      "answer": "The new BMW iX xDrive60 achieves a WLTP range of 701 kilometres (435 miles)."
+    },
+    {
+      "id": 22,
+      "question": "Who won a BMW iX M70 for a hole-in-one at the BMW Championship?",
+      "answer": "Akshay Bhatia won a BMW iX M70 for a hole-in-one at the BMW Championship."
+    },
+    {
+      "id": 23,
+      "question": "How many consecutive victories did Valentino Rossi achieve at Misano?",
+      "answer": "Valentino Rossi achieved his third consecutive victory at Misano in 2025."
+    },
+    {
+      "id": 24,
+      "question": "What was BMW Group's BEV sales growth in 2024?",
+      "answer": "BMW Group achieved BEV sales growth of +13.5% in 2024."
+    },
+    {
+      "id": 25,
+      "question": "How many BMW Art Cars were displayed at The Aurora 2025 in Sweden?",
+      "answer": "Four BMW Art Cars were displayed at The Aurora 2025 in Sweden."
+    },
+    {
+      "id": 26,
+      "question": "What was the title of BMW Customer Service's 2025 campaign short film?",
+      "answer": "The short film was titled 'The Thief' as part of the 'Relax. We Care.' campaign."
+    },
+    {
+      "id": 27,
+      "question": "When will the first Neue Klasse models enter production?",
+      "answer": "The first Neue Klasse models will enter production at the end of 2025 at the Debrecen plant in Hungary."
+    },
+    {
+      "id": 28,
+      "question": "How many wins did Toprak Razgatlioglu achieve at Donington Park in 2025?",
+      "answer": "Toprak Razgatlioglu achieved a hat-trick (three wins) at Donington Park in 2025."
+    },
+    {
+      "id": 29,
+      "question": "Where will the 2026 BMW Motorrad International GS Trophy take place?",
+      "answer": "The 2026 BMW Motorrad International GS Trophy will take place in Romania."
+    },
+    {
+      "id": 30,
+      "question": "Where does BMW manufacture high-voltage batteries for the Neue Klasse?",
+      "answer": "BMW manufactures high-voltage batteries for the Neue Klasse at pilot plants in Parsdorf, Hallbergmoos, and Munich."
+    },
+    {
+      "id": 31,
+      "question": "Who won the Hole-in-One car at the BMW Australian PGA Championship?",
+      "answer": "Daniel Gale won the BMW M5 Touring for a hole-in-one at the BMW Australian PGA Championship."
+    },
+    {
+      "id": 32,
+      "question": "How many EV charging sockets did BMW UK install in UK National Parks?",
+      "answer": "BMW UK funded the installation of 135 new EV charging sockets across fifteen UK National Parks."
+    },
+    {
+      "id": 33,
+      "question": "Which designer collaborated with MINI on the Paul Smith Edition?",
+      "answer": "Sir Paul Smith collaborated with MINI on the Paul Smith Edition."
+    },
+    {
+      "id": 34,
+      "question": "Which artist created the 'Stasis' installation for ARTEPARCO?",
+      "answer": "Velasco Vitali created the 'Stasis' installation for ARTEPARCO."
+    },
+    {
+      "id": 35,
+      "question": "What are the four 'Superbrains' in the Neue Klasse architecture?",
+      "answer": "The four Superbrains handle infotainment, automated driving, driving dynamics, and basic functions like vehicle access and climate control."
+    },
+    {
+      "id": 36,
+      "question": "When did BMW NA send employees home due to COVID-19?",
+      "answer": "BMW NA sent employees home on March 13, 2020, due to COVID-19."
+    },
+    {
+      "id": 37,
+      "question": "Which MINI team finished second in the SP3T-class at the 24 Hours of Nürburgring?",
+      "answer": "MINI John Cooper Works and Bulldog Racing finished second in the SP3T-class."
+    },
+    {
+      "id": 38,
+      "question": "What was BMW's sales performance in China in Q3 2025?",
+      "answer": "In China, retail sales did not meet expectations, with deliveries at previous year's level in Q3 2025."
+    },
+    {
+      "id": 39,
+      "question": "Which BMW M Motorsport teams qualified for the Esports World Cup?",
+      "answer": "BMW M Team Redline Racing Bulls, BS+COMPETITION, and MOUZ qualified for the Esports World Cup."
+    },
+    {
+      "id": 40,
+      "question": "Who won the Italian GT Championship Sprint in previous seasons?",
+      "answer": "BMW Italia Ceccato Racing and Jens Klingmann won the Italian GT Championship Sprint in the two previous seasons."
+    },
+    {
+      "id": 41,
+      "question": "Where did BMW start series production of electric engines for the Neue Klasse?",
+      "answer": "BMW started series production of electric engines for the Neue Klasse at Plant Steyr in Austria."
+    },
+    {
+      "id": 42,
+      "question": "What was the total prize pool for the 2025 Esports World Cup?",
+      "answer": "The total prize pool for the 2025 Esports World Cup was 500,000 US dollars."
+    },
+    {
+      "id": 43,
+      "question": "How many consecutive victories did Team WRT achieve at the Indianapolis Hour?",
+      "answer": "Team WRT celebrated its third consecutive victory at the Indianapolis Hour in 2025."
+    },
+    {
+      "id": 44,
+      "question": "What is the power output of the BMW iX M70 xDrive?",
+      "answer": "The BMW iX M70 xDrive delivers up to 485 kW/659 hp in My Mode Sport."
+    },
+    {
+      "id": 45,
+      "question": "Which BMW plant is the largest single BMW production facility in the world?",
+      "answer": "BMW Group Plant Spartanburg in South Carolina is the largest single BMW production facility in the world."
+    },
+    {
+      "id": 46,
+      "question": "How many vehicles does Plant Spartanburg assemble daily?",
+      "answer": "Plant Spartanburg assembles more than 1,500 vehicles each day."
+    },
+    {
+      "id": 47,
+      "question": "What was the BMW Group's profit before tax in 2023?",
+      "answer": "The BMW Group's profit before tax in 2023 was €17.1 billion."
+    },
+    {
+      "id": 48,
+      "question": "How many employees did the BMW Group have as of December 2023?",
+      "answer": "The BMW Group had a workforce of 154,950 employees as of December 31, 2023."
+    },
+    {
+      "id": 49,
+      "question": "What is the expected CO₂e footprint reduction for the BMW iX3 compared to ICE vehicles?",
+      "answer": "When charged with renewable electricity, the BMW iX3 beats comparable ICE models after only 17,500 kilometers."
+    },
+    {
+      "id": 50,
+      "question": "What percentage of secondary materials are used in the new BMW iX3?",
+      "answer": "Secondary materials account for one third of all material used in the new BMW iX3 50 xDrive."
+    }
+  ]
+}

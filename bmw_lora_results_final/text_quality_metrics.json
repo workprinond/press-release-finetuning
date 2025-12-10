@@ -1,0 +1,20 @@
+{
+  "diversity_metrics": {
+    "distinct_1": 0.3363572923935799,
+    "distinct_2": 0.5966029723991507
+  },
+  "readability_scores": {
+    "average_flesch_kincaid": 12.653732364026931,
+    "num_scored": 20
+  },
+  "toxicity_scores": {
+    "average": 0.0002302109933225438,
+    "max": 0.0002880242536775768,
+    "min": 0.00021615125297103077
+  },
+  "fluency_scores": {
+    "average_fluency": 0.7224999999999999,
+    "average_perplexity": 25.045057809352876,
+    "num_scored": 20
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "test_loss": 4.271734698218588,
+  "perplexity": 71.64581298828125,
+  "num_samples": 644,
+  "avg_tokens_per_sample": 241.9937888198758,
+  "model": "baseline_distilgpt2"
+}

@@ -1,0 +1,6366 @@
+{
+  "summary": {
+    "total_press_releases": 635,
+    "total_chunks": 2622,
+    "avg_tokens_per_pr": 1717.475590551181,
+    "min_tokens_per_pr": 116,
+    "max_tokens_per_pr": 11271,
+    "avg_chunks_per_pr": 4.129133858267717,
+    "chunks_needed_512": 2444.0,
+    "chunks_needed_384": 3157.0,
+    "chunks_needed_768": 1737.0,
+    "efficiency_vs_512": 93.21128909229596
+  },
+  "press_releases": [
+    {
+      "id": 0,
+      "title": "ROLLS-ROYCE SCENT: AN IMMERSIVE FRAGRANCE CONCEPT",
+      "num_chunks": 1,
+      "tokens": 332,
+      "words": 207,
+      "chars": 1499,
+      "start_chunk": 0,
+      "end_chunk": 0
+    },
+    {
+      "id": 1,
+      "title": "[ADDRESS] Hour: Kelvin van der Linde wins the IGTC Drivars\u2019 Title \u2013 BMW M Motorsport secures Manufac",
+      "num_chunks": 6,
+      "tokens": 2609,
+      "words": 1904,
+      "chars": 10722,
+      "start_chunk": 1,
+      "end_chunk": 6
+    },
+    {
+      "id": 2,
+      "title": "The 2026 BMW M850i Edition M Heritage.",
+      "num_chunks": 4,
+      "tokens": 1639,
+      "words": 1179,
+      "chars": 7533,
+      "start_chunk": 7,
+      "end_chunk": 10
+    },
+    {
+      "id": 3,
+      "title": "Successful racing debut: New BMW M4 GT3 EVO triumphs at the 24H Dubai.",
+      "num_chunks": 4,
+      "tokens": 1647,
+      "words": 1197,
+      "chars": 6507,
+      "start_chunk": 11,
+      "end_chunk": 14
+    },
+    {
+      "id": 4,
+      "title": "BMW Group UK appoints Andrew Jago as General Manager of Corporate Sales",
+      "num_chunks": 1,
+      "tokens": 299,
+      "words": 246,
+      "chars": 1581,
+      "start_chunk": 15,
+      "end_chunk": 15
+    },
+    {
+      "id": 5,
+      "title": "BMW Motorrad rocks the Alps.",
+      "num_chunks": 2,
+      "tokens": 636,
+      "words": 452,
+      "chars": 2882,
+      "start_chunk": 16,
+      "end_chunk": 17
+    },
+    {
+      "id": 6,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 5,
+      "tokens": 2125,
+      "words": 1538,
+      "chars": 9438,
+      "start_chunk": 18,
+      "end_chunk": 22
+    },
+    {
+      "id": 7,
+      "title": "BMW of North America Reports Q3 2025 U.S. Sales Results.",
+      "num_chunks": 3,
+      "tokens": 1191,
+      "words": 834,
+      "chars": 5171,
+      "start_chunk": 23,
+      "end_chunk": 25
+    },
+    {
+      "id": 8,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cJoy is BMW: BMW Brand Advertising Goes",
+      "num_chunks": 9,
+      "tokens": 3945,
+      "words": 2756,
+      "chars": 16597,
+      "start_chunk": 26,
+      "end_chunk": 34
+    },
+    {
+      "id": 9,
+      "title": "BMW Group Report 2024",
+      "num_chunks": 1,
+      "tokens": 116,
+      "words": 87,
+      "chars": 576,
+      "start_chunk": 35,
+      "end_chunk": 35
+    },
+    {
+      "id": 10,
+      "title": "BMW extends its partnership with Spanish tennis ace Carlos Alcaraz.",
+      "num_chunks": 1,
+      "tokens": 471,
+      "words": 368,
+      "chars": 2241,
+      "start_chunk": 36,
+      "end_chunk": 36
+    },
+    {
+      "id": 11,
+      "title": "BMW Group Plant Leipzig paves the way for hydrogen pipeline link \u2013 a world first in car production.",
+      "num_chunks": 2,
+      "tokens": 648,
+      "words": 430,
+      "chars": 2894,
+      "start_chunk": 37,
+      "end_chunk": 38
+    },
+    {
+      "id": 12,
+      "title": "36th BMW International Open: Davis Bryant delivers dream round and ace on Friday \u2013 Seven Germans mak",
+      "num_chunks": 4,
+      "tokens": 1530,
+      "words": 1069,
+      "chars": 6110,
+      "start_chunk": 39,
+      "end_chunk": 42
+    },
+    {
+      "id": 13,
+      "title": "BMW Motorrad presents the \u201eBMW Motorrad Concept RR\u201c at the Concorso d'Eleganza Villa d'Este.",
+      "num_chunks": 3,
+      "tokens": 1120,
+      "words": 861,
+      "chars": 5749,
+      "start_chunk": 43,
+      "end_chunk": 45
+    },
+    {
+      "id": 14,
+      "title": "Driving experience in a class of its own: BMW Vision Driving Experience shines in Shanghai with spec",
+      "num_chunks": 4,
+      "tokens": 1577,
+      "words": 1206,
+      "chars": 7797,
+      "start_chunk": 46,
+      "end_chunk": 49
+    },
+    {
+      "id": 15,
+      "title": "BMW Group Brazil and UNICEF join forces to transform the future of vulnerable youth",
+      "num_chunks": 4,
+      "tokens": 1588,
+      "words": 1177,
+      "chars": 8060,
+      "start_chunk": 50,
+      "end_chunk": 53
+    },
+    {
+      "id": 16,
+      "title": "DTM Sachsenring: Impressive comebacks keep Ren\u00e9 Rast and Marco Wittmann in the title fight.",
+      "num_chunks": 4,
+      "tokens": 1677,
+      "words": 1217,
+      "chars": 7178,
+      "start_chunk": 54,
+      "end_chunk": 57
+    },
+    {
+      "id": 17,
+      "title": "The all-new MINI John Cooper Works family now available in Singapore.",
+      "num_chunks": 5,
+      "tokens": 2071,
+      "words": 1555,
+      "chars": 10096,
+      "start_chunk": 58,
+      "end_chunk": 62
+    },
+    {
+      "id": 18,
+      "title": "The new BMW iX.",
+      "num_chunks": 9,
+      "tokens": 3914,
+      "words": 3035,
+      "chars": 18917,
+      "start_chunk": 63,
+      "end_chunk": 71
+    },
+    {
+      "id": 19,
+      "title": "Hole-in-One at the BMW Championship \u2013 Akshay Bhatia wins BMW iX M70, BMW donates Evans Scholarship.",
+      "num_chunks": 3,
+      "tokens": 981,
+      "words": 690,
+      "chars": 4146,
+      "start_chunk": 72,
+      "end_chunk": 74
+    },
+    {
+      "id": 20,
+      "title": "GT World Challenge Europe: Team WRT and Valentino Rossi Claim Third Consecutive Victory at Misano.",
+      "num_chunks": 5,
+      "tokens": 2396,
+      "words": 1712,
+      "chars": 9856,
+      "start_chunk": 75,
+      "end_chunk": 79
+    },
+    {
+      "id": 21,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Quarte",
+      "num_chunks": 8,
+      "tokens": 3429,
+      "words": 2709,
+      "chars": 17053,
+      "start_chunk": 80,
+      "end_chunk": 87
+    },
+    {
+      "id": 22,
+      "title": "BMW Group maintains BEV growth path in challenging market situation in 2024",
+      "num_chunks": 4,
+      "tokens": 1381,
+      "words": 928,
+      "chars": 6157,
+      "start_chunk": 88,
+      "end_chunk": 91
+    },
+    {
+      "id": 23,
+      "title": "BMW Art Car World Tour stops in B\u00e5stad, Sweden. The Aurora 2025: BMW Art Cars by Calder, Lichtenstei",
+      "num_chunks": 2,
+      "tokens": 619,
+      "words": 457,
+      "chars": 3029,
+      "start_chunk": 92,
+      "end_chunk": 93
+    },
+    {
+      "id": 24,
+      "title": "Movie entertainment for social media: The new global \u201cRelax. We Care.\u201d campaign.",
+      "num_chunks": 2,
+      "tokens": 663,
+      "words": 448,
+      "chars": 2869,
+      "start_chunk": 94,
+      "end_chunk": 95
+    },
+    {
+      "id": 25,
+      "title": "Turning Vision into Reality: the new BMW iX3 \u2013 the first Neue Klasse model drives product sustainabi",
+      "num_chunks": 5,
+      "tokens": 2059,
+      "words": 1522,
+      "chars": 10124,
+      "start_chunk": 96,
+      "end_chunk": 100
+    },
+    {
+      "id": 26,
+      "title": "WorldSBK hat-trick at Donington: Toprak Razgatlioglu takes World Championship lead.",
+      "num_chunks": 4,
+      "tokens": 1734,
+      "words": 1233,
+      "chars": 7160,
+      "start_chunk": 101,
+      "end_chunk": 104
+    },
+    {
+      "id": 27,
+      "title": "BMW presents The Ultimate Driving Machine \u2013 past, present and future at Goodwood Festival of Speed 2",
+      "num_chunks": 2,
+      "tokens": 631,
+      "words": 493,
+      "chars": 3004,
+      "start_chunk": 105,
+      "end_chunk": 106
+    },
+    {
+      "id": 28,
+      "title": "BMW Motorrad International GS Trophy 2026 Romania.",
+      "num_chunks": 5,
+      "tokens": 2042,
+      "words": 1508,
+      "chars": 9591,
+      "start_chunk": 107,
+      "end_chunk": 111
+    },
+    {
+      "id": 29,
+      "title": "Bavarian expertise in demand worldwide: How the BMW Group is gearing up for series production of its",
+      "num_chunks": 3,
+      "tokens": 943,
+      "words": 610,
+      "chars": 4341,
+      "start_chunk": 112,
+      "end_chunk": 114
+    },
+    {
+      "id": 30,
+      "title": "Gale does the job at start of BMW Australian PGA Championship and is rewarded with new BMW M5 Tourin",
+      "num_chunks": 2,
+      "tokens": 818,
+      "words": 596,
+      "chars": 3498,
+      "start_chunk": 115,
+      "end_chunk": 116
+    },
+    {
+      "id": 31,
+      "title": "BMW UK and UK National Parks [ADDRESS]-Year Partnership Delivering EV Access and Nature Restoration ",
+      "num_chunks": 1,
+      "tokens": 404,
+      "words": 313,
+      "chars": 2136,
+      "start_chunk": 117,
+      "end_chunk": 117
+    },
+    {
+      "id": 32,
+      "title": "British with a twist: The MINI Paul Smith Edition.",
+      "num_chunks": 4,
+      "tokens": 1857,
+      "words": 1439,
+      "chars": 9128,
+      "start_chunk": 118,
+      "end_chunk": 121
+    },
+    {
+      "id": 33,
+      "title": "BMW Italia renews its partnership with ARTEPARCO, a project that seamlessly merges nature and contem",
+      "num_chunks": 4,
+      "tokens": 1652,
+      "words": 1137,
+      "chars": 7639,
+      "start_chunk": 122,
+      "end_chunk": 125
+    },
+    {
+      "id": 34,
+      "title": "Four Superbrains for the Neue Klasse: More intelligent, more efficient, more powerful.",
+      "num_chunks": 4,
+      "tokens": 1572,
+      "words": 1232,
+      "chars": 8084,
+      "start_chunk": 126,
+      "end_chunk": 129
+    },
+    {
+      "id": 35,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]:\u201d Continuity in a Crisis: BMW NA Survive",
+      "num_chunks": 12,
+      "tokens": 5397,
+      "words": 4041,
+      "chars": 24570,
+      "start_chunk": 130,
+      "end_chunk": 141
+    },
+    {
+      "id": 36,
+      "title": "On the podium again! MINI JCW and Bulldog Racing in 2nd place in the SP3T-class at the 24 Hours of N",
+      "num_chunks": 2,
+      "tokens": 837,
+      "words": 621,
+      "chars": 3700,
+      "start_chunk": 142,
+      "end_chunk": 143
+    },
+    {
+      "id": 37,
+      "title": "BMW M Motorsport News, 5th August 2025.",
+      "num_chunks": 6,
+      "tokens": 2667,
+      "words": 1873,
+      "chars": 10890,
+      "start_chunk": 144,
+      "end_chunk": 149
+    },
+    {
+      "id": 38,
+      "title": "BMW Art Car World Tour 2025 in Bratislava. \"The Private Collection by BMW\" showcases iconic Art Cars",
+      "num_chunks": 2,
+      "tokens": 886,
+      "words": 643,
+      "chars": 4176,
+      "start_chunk": 150,
+      "end_chunk": 151
+    },
+    {
+      "id": 39,
+      "title": "BMW Motorrad presents the helmet GS Rallye Carbon with sun visor and the BMW ConnectedRide COM P1 GS",
+      "num_chunks": 3,
+      "tokens": 1044,
+      "words": 777,
+      "chars": 5005,
+      "start_chunk": 152,
+      "end_chunk": 154
+    },
+    {
+      "id": 40,
+      "title": "BMW Group maintains BEV growth path in challenging market situation in 2024",
+      "num_chunks": 4,
+      "tokens": 1381,
+      "words": 928,
+      "chars": 6157,
+      "start_chunk": 155,
+      "end_chunk": 158
+    },
+    {
+      "id": 41,
+      "title": "MINI at the IAA Mobility 2025: World premiere of two showcars and spectacular Open Space in Munich.",
+      "num_chunks": 3,
+      "tokens": 1156,
+      "words": 798,
+      "chars": 5048,
+      "start_chunk": 159,
+      "end_chunk": 161
+    },
+    {
+      "id": 42,
+      "title": "Proactive Care: MINI elevates customer service to a new level.",
+      "num_chunks": 3,
+      "tokens": 1069,
+      "words": 768,
+      "chars": 5244,
+      "start_chunk": 162,
+      "end_chunk": 164
+    },
+    {
+      "id": 43,
+      "title": "The 2025 BMW M4 CS Edition VR46.",
+      "num_chunks": 6,
+      "tokens": 2854,
+      "words": 2179,
+      "chars": 13192,
+      "start_chunk": 165,
+      "end_chunk": 170
+    },
+    {
+      "id": 44,
+      "title": "BMW Golf Cup World Final: Team Vietnam wins \u2013 Eagles galore in Bangkok.",
+      "num_chunks": 4,
+      "tokens": 1530,
+      "words": 1141,
+      "chars": 7009,
+      "start_chunk": 171,
+      "end_chunk": 174
+    },
+    {
+      "id": 45,
+      "title": "Mission title defense: The virtual BMW M Motorsport Teams are perfectly prepared for the Esports Wor",
+      "num_chunks": 2,
+      "tokens": 871,
+      "words": 621,
+      "chars": 3918,
+      "start_chunk": 175,
+      "end_chunk": 176
+    },
+    {
+      "id": 46,
+      "title": "BMW M Motorsport News, 27th October 2025.",
+      "num_chunks": 5,
+      "tokens": 2053,
+      "words": 1482,
+      "chars": 8630,
+      "start_chunk": 177,
+      "end_chunk": 181
+    },
+    {
+      "id": 47,
+      "title": "Steyr goes electric: BMW Group launches series production of electric engines for Neue Klasse",
+      "num_chunks": 3,
+      "tokens": 1273,
+      "words": 948,
+      "chars": 6269,
+      "start_chunk": 182,
+      "end_chunk": 184
+    },
+    {
+      "id": 48,
+      "title": "A BMW R 18 Transcontinental for Pope Leo XIV.",
+      "num_chunks": 1,
+      "tokens": 447,
+      "words": 321,
+      "chars": 2048,
+      "start_chunk": 185,
+      "end_chunk": 185
+    },
+    {
+      "id": 49,
+      "title": "BMW i Ventures Invests in Rive to Transform How User Interfaces Are Built.",
+      "num_chunks": 3,
+      "tokens": 985,
+      "words": 698,
+      "chars": 4774,
+      "start_chunk": 186,
+      "end_chunk": 188
+    },
+    {
+      "id": 50,
+      "title": "FIA GT World Cup: Raffaele Marciello and Sheldon van der Linde to compete in the BMW M4 GT3 EVO in M",
+      "num_chunks": 3,
+      "tokens": 971,
+      "words": 745,
+      "chars": 4136,
+      "start_chunk": 189,
+      "end_chunk": 191
+    },
+    {
+      "id": 51,
+      "title": "Centre for Special and Individual Paintwork: A special touch in series production",
+      "num_chunks": 2,
+      "tokens": 591,
+      "words": 485,
+      "chars": 3039,
+      "start_chunk": 192,
+      "end_chunk": 193
+    },
+    {
+      "id": 52,
+      "title": "BMW Group announces senior management changes in Sales and Finance Divisions",
+      "num_chunks": 4,
+      "tokens": 1587,
+      "words": 1166,
+      "chars": 7640,
+      "start_chunk": 194,
+      "end_chunk": 197
+    },
+    {
+      "id": 53,
+      "title": "BMW of North America Reports Q1 2025 U.S. Sales Results.",
+      "num_chunks": 3,
+      "tokens": 1175,
+      "words": 838,
+      "chars": 5156,
+      "start_chunk": 198,
+      "end_chunk": 200
+    },
+    {
+      "id": 54,
+      "title": "BMW M Motorsport in the FIA WEC: Season finale in the deserts of Bahrain.",
+      "num_chunks": 5,
+      "tokens": 2337,
+      "words": 1767,
+      "chars": 9382,
+      "start_chunk": 201,
+      "end_chunk": 205
+    },
+    {
+      "id": 55,
+      "title": "BMW Group Plant Dingolfing and Landshut University of Applied Sciences are developing a smart logist",
+      "num_chunks": 1,
+      "tokens": 466,
+      "words": 354,
+      "chars": 2481,
+      "start_chunk": 206,
+      "end_chunk": 206
+    },
+    {
+      "id": 56,
+      "title": "ROLLS-ROYCE ANNOUNCES GLOBAL DEALER AWARDS",
+      "num_chunks": 1,
+      "tokens": 427,
+      "words": 326,
+      "chars": 2254,
+      "start_chunk": 207,
+      "end_chunk": 207
+    },
+    {
+      "id": 57,
+      "title": "Steyr goes electric: BMW Group launches series production of electric engines for Neue Klasse",
+      "num_chunks": 5,
+      "tokens": 2036,
+      "words": 1471,
+      "chars": 9471,
+      "start_chunk": 208,
+      "end_chunk": 212
+    },
+    {
+      "id": 58,
+      "title": "Dream start into the BMW Ladies Championship: Lucy Li wins an all-electric BMW i7 with a hole-in-one",
+      "num_chunks": 3,
+      "tokens": 996,
+      "words": 718,
+      "chars": 4242,
+      "start_chunk": 213,
+      "end_chunk": 215
+    },
+    {
+      "id": 59,
+      "title": "Four Superbrains for the Neue Klasse: More intelligent, more efficient, more powerful.",
+      "num_chunks": 3,
+      "tokens": 1375,
+      "words": 1086,
+      "chars": 7204,
+      "start_chunk": 216,
+      "end_chunk": 218
+    },
+    {
+      "id": 60,
+      "title": "BMW is Singapore\u2019s number one premium automotive brand in 2024.",
+      "num_chunks": 2,
+      "tokens": 759,
+      "words": 551,
+      "chars": 3542,
+      "start_chunk": 219,
+      "end_chunk": 220
+    },
+    {
+      "id": 61,
+      "title": "Satellite details of the BMW Group Annual Conference 2025.",
+      "num_chunks": 1,
+      "tokens": 195,
+      "words": 115,
+      "chars": 824,
+      "start_chunk": 221,
+      "end_chunk": 221
+    },
+    {
+      "id": 62,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Quarte",
+      "num_chunks": 8,
+      "tokens": 3290,
+      "words": 2589,
+      "chars": 15915,
+      "start_chunk": 222,
+      "end_chunk": 229
+    },
+    {
+      "id": 63,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Half-Y",
+      "num_chunks": 8,
+      "tokens": 3352,
+      "words": 2627,
+      "chars": 15916,
+      "start_chunk": 230,
+      "end_chunk": 237
+    },
+    {
+      "id": 64,
+      "title": "VRRRRRRRRROOOOOOOOOOOOOOOOMMMMMMMMMM!!!!!! World Tour: BMW Art Car Collection celebrates 50th annive",
+      "num_chunks": 7,
+      "tokens": 2741,
+      "words": 1888,
+      "chars": 11602,
+      "start_chunk": 238,
+      "end_chunk": 244
+    },
+    {
+      "id": 65,
+      "title": "BMW Group UK celebrates success at Autocar\u2019s Great Women: Rising Stars 2025",
+      "num_chunks": 7,
+      "tokens": 3109,
+      "words": 2381,
+      "chars": 16132,
+      "start_chunk": 245,
+      "end_chunk": 251
+    },
+    {
+      "id": 66,
+      "title": "Reopening of BMW Welt: What guests can look forward to.",
+      "num_chunks": 4,
+      "tokens": 1621,
+      "words": 1253,
+      "chars": 7562,
+      "start_chunk": 252,
+      "end_chunk": 255
+    },
+    {
+      "id": 67,
+      "title": "FIA GT World Cup: Raffaele Marciello on the podium in Macau.",
+      "num_chunks": 3,
+      "tokens": 1226,
+      "words": 942,
+      "chars": 5242,
+      "start_chunk": 256,
+      "end_chunk": 258
+    },
+    {
+      "id": 68,
+      "title": "STORIES BENEATH THE SURFACE: ROLLS-ROYCE REVEALS THE MOST INTRICATE WOODWORK IN ITS HISTORY",
+      "num_chunks": 2,
+      "tokens": 647,
+      "words": 445,
+      "chars": 3077,
+      "start_chunk": 259,
+      "end_chunk": 260
+    },
+    {
+      "id": 69,
+      "title": "Meet the new MINI Cooper Electric Monochrome & MINI Aceman Monochrome.",
+      "num_chunks": 1,
+      "tokens": 478,
+      "words": 340,
+      "chars": 2291,
+      "start_chunk": 261,
+      "end_chunk": 261
+    },
+    {
+      "id": 70,
+      "title": "Art in motion: BMW Art Cars at the 2025 Goodwood Revival.",
+      "num_chunks": 3,
+      "tokens": 1094,
+      "words": 847,
+      "chars": 5017,
+      "start_chunk": 262,
+      "end_chunk": 264
+    },
+    {
+      "id": 71,
+      "title": "IMSA Indianapolis: Impressive fightback of the BMW M Hybrid V8 goes unrewarded.",
+      "num_chunks": 3,
+      "tokens": 1241,
+      "words": 977,
+      "chars": 5521,
+      "start_chunk": 265,
+      "end_chunk": 267
+    },
+    {
+      "id": 72,
+      "title": "BMW Group adjusts outlook for 2025",
+      "num_chunks": 3,
+      "tokens": 961,
+      "words": 730,
+      "chars": 4661,
+      "start_chunk": 268,
+      "end_chunk": 270
+    },
+    {
+      "id": 73,
+      "title": "BMW at the heart of the art world \u2013 Partnership with Gallery Weekend Berlin 2025. BMW Art Talk at th",
+      "num_chunks": 3,
+      "tokens": 1222,
+      "words": 915,
+      "chars": 5845,
+      "start_chunk": 271,
+      "end_chunk": 273
+    },
+    {
+      "id": 74,
+      "title": "Zverev wins ATP 500 debut in Munich and the new all-electric BMW iX M70 \u2013 361 coaching hours courtes",
+      "num_chunks": 4,
+      "tokens": 1342,
+      "words": 925,
+      "chars": 5712,
+      "start_chunk": 274,
+      "end_chunk": 277
+    },
+    {
+      "id": 75,
+      "title": "The new BMW iX.",
+      "num_chunks": 9,
+      "tokens": 3913,
+      "words": 3040,
+      "chars": 18913,
+      "start_chunk": 278,
+      "end_chunk": 286
+    },
+    {
+      "id": 76,
+      "title": "IONNA Enters National Release Phase.",
+      "num_chunks": 3,
+      "tokens": 1223,
+      "words": 872,
+      "chars": 5921,
+      "start_chunk": 287,
+      "end_chunk": 289
+    },
+    {
+      "id": 77,
+      "title": "The BMW Z4 Final Edition. An exclusive take on the iconic roadster.",
+      "num_chunks": 4,
+      "tokens": 1788,
+      "words": 1305,
+      "chars": 7946,
+      "start_chunk": 290,
+      "end_chunk": 293
+    },
+    {
+      "id": 78,
+      "title": "36th BMW International Open: Friday in Pictures",
+      "num_chunks": 1,
+      "tokens": 344,
+      "words": 250,
+      "chars": 1567,
+      "start_chunk": 294,
+      "end_chunk": 294
+    },
+    {
+      "id": 79,
+      "title": "[ADDRESS]. Customer Racing: BMW M Motorsport Brings Factory-Built Race Cars to North America",
+      "num_chunks": 10,
+      "tokens": 4125,
+      "words": 2921,
+      "chars": 17391,
+      "start_chunk": 295,
+      "end_chunk": 304
+    },
+    {
+      "id": 80,
+      "title": "BMW model updates, summer 2025.",
+      "num_chunks": 7,
+      "tokens": 2984,
+      "words": 2305,
+      "chars": 13979,
+      "start_chunk": 305,
+      "end_chunk": 311
+    },
+    {
+      "id": 81,
+      "title": "24h Le Mans: BMW M Motorsport confidently kicks off the week of the year in the FIA WEC.",
+      "num_chunks": 5,
+      "tokens": 2236,
+      "words": 1617,
+      "chars": 8832,
+      "start_chunk": 312,
+      "end_chunk": 316
+    },
+    {
+      "id": 82,
+      "title": "BMW of North America Returns as Official Vehicle of the BNP Paribas Open.",
+      "num_chunks": 3,
+      "tokens": 1291,
+      "words": 955,
+      "chars": 6190,
+      "start_chunk": 317,
+      "end_chunk": 319
+    },
+    {
+      "id": 83,
+      "title": "A CENTURY OF POWER AND INFLUENCE: THE ROLLS-ROYCE PHANTOM AT 100",
+      "num_chunks": 1,
+      "tokens": 507,
+      "words": 371,
+      "chars": 2411,
+      "start_chunk": 320,
+      "end_chunk": 320
+    },
+    {
+      "id": 84,
+      "title": "BMW Motorrad presents the new R 18 models.",
+      "num_chunks": 8,
+      "tokens": 3321,
+      "words": 2520,
+      "chars": 15158,
+      "start_chunk": 321,
+      "end_chunk": 328
+    },
+    {
+      "id": 85,
+      "title": "Maximum Performance on Snow and Ice: The MINI John Cooper Works with Genuine Accessories.",
+      "num_chunks": 3,
+      "tokens": 1140,
+      "words": 837,
+      "chars": 5443,
+      "start_chunk": 329,
+      "end_chunk": 331
+    },
+    {
+      "id": 86,
+      "title": "Endurance Test for \u201cHeart of Joy\u201d: the BMW Vision Driving Experience.",
+      "num_chunks": 5,
+      "tokens": 2184,
+      "words": 1687,
+      "chars": 11037,
+      "start_chunk": 332,
+      "end_chunk": 336
+    },
+    {
+      "id": 87,
+      "title": "News in Brief from BMW Group UK.",
+      "num_chunks": 2,
+      "tokens": 609,
+      "words": 433,
+      "chars": 2713,
+      "start_chunk": 337,
+      "end_chunk": 338
+    },
+    {
+      "id": 88,
+      "title": "DTM Norisring: Ren\u00e9 Rast finishes twice in the top ten \u2013 Marco Wittmann unlucky at his home event.",
+      "num_chunks": 4,
+      "tokens": 1435,
+      "words": 1030,
+      "chars": 6150,
+      "start_chunk": 339,
+      "end_chunk": 342
+    },
+    {
+      "id": 89,
+      "title": "BMW Group Planta Regensburg establece r\u00e9cord, con 100,000 veh\u00edculos totalmente el\u00e9ctricos producidos",
+      "num_chunks": 3,
+      "tokens": 1275,
+      "words": 568,
+      "chars": 3806,
+      "start_chunk": 343,
+      "end_chunk": 345
+    },
+    {
+      "id": 90,
+      "title": "Postcard Story. From the city to the countryside with the MINI Countryman S ALL 4.",
+      "num_chunks": 1,
+      "tokens": 380,
+      "words": 242,
+      "chars": 1625,
+      "start_chunk": 346,
+      "end_chunk": 346
+    },
+    {
+      "id": 91,
+      "title": "MINI Asia previews all-new MINI Cooper Convertible at the Singapore Motorshow 2025.",
+      "num_chunks": 3,
+      "tokens": 1228,
+      "words": 875,
+      "chars": 5458,
+      "start_chunk": 347,
+      "end_chunk": 349
+    },
+    {
+      "id": 92,
+      "title": "My BMW App shows drivers CO2 emissions over the entire life cycle for the first time.",
+      "num_chunks": 3,
+      "tokens": 1150,
+      "words": 854,
+      "chars": 5340,
+      "start_chunk": 350,
+      "end_chunk": 352
+    },
+    {
+      "id": 93,
+      "title": "BMW Group and Solid Power are testing all-solid-state battery cells in a BMW i7",
+      "num_chunks": 1,
+      "tokens": 452,
+      "words": 350,
+      "chars": 2303,
+      "start_chunk": 353,
+      "end_chunk": 353
+    },
+    {
+      "id": 94,
+      "title": "MINI at the IAA Mobility 2025: World premiere of two showcars and spectacular Open Space in Munich.",
+      "num_chunks": 3,
+      "tokens": 1371,
+      "words": 993,
+      "chars": 6203,
+      "start_chunk": 354,
+      "end_chunk": 356
+    },
+    {
+      "id": 95,
+      "title": "BMW i7 \u2018Singapore Icons\u2019 created in homage to Singapore\u2019s 60th anniversary and 40 years of shared su",
+      "num_chunks": 3,
+      "tokens": 1242,
+      "words": 891,
+      "chars": 5653,
+      "start_chunk": 357,
+      "end_chunk": 359
+    },
+    {
+      "id": 96,
+      "title": "Season start for FC Bayern Basketball: The jump ball for BMW Munich and DEIN M\u00dcNCHEN\u2019s \u2018Minds for To",
+      "num_chunks": 3,
+      "tokens": 982,
+      "words": 728,
+      "chars": 4503,
+      "start_chunk": 360,
+      "end_chunk": 362
+    },
+    {
+      "id": 97,
+      "title": "WorldSBK France: Fourth consecutive hat-trick for championship leader Toprak Razgatlioglu.",
+      "num_chunks": 5,
+      "tokens": 2264,
+      "words": 1671,
+      "chars": 9614,
+      "start_chunk": 363,
+      "end_chunk": 367
+    },
+    {
+      "id": 98,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Annual Conference 2025",
+      "num_chunks": 9,
+      "tokens": 4041,
+      "words": 3129,
+      "chars": 19144,
+      "start_chunk": 368,
+      "end_chunk": 376
+    },
+    {
+      "id": 99,
+      "title": "BMW Motorrad presents the new BMW R 1300 R.",
+      "num_chunks": 18,
+      "tokens": 8331,
+      "words": 6425,
+      "chars": 40208,
+      "start_chunk": 377,
+      "end_chunk": 394
+    },
+    {
+      "id": 100,
+      "title": "BMW Group and E.ON introduce Germany\u2019s first customer solution enabling electric cars to actively pa",
+      "num_chunks": 3,
+      "tokens": 1188,
+      "words": 870,
+      "chars": 5945,
+      "start_chunk": 395,
+      "end_chunk": 397
+    },
+    {
+      "id": 101,
+      "title": "World Premiere BMW iX3.",
+      "num_chunks": 8,
+      "tokens": 3537,
+      "words": 2757,
+      "chars": 16271,
+      "start_chunk": 398,
+      "end_chunk": 405
+    },
+    {
+      "id": 102,
+      "title": "BMW Art Car as catalyst: Mehretu and BMW launch film project in Africa.",
+      "num_chunks": 6,
+      "tokens": 2680,
+      "words": 1920,
+      "chars": 12441,
+      "start_chunk": 406,
+      "end_chunk": 411
+    },
+    {
+      "id": 103,
+      "title": "Rays of hope: Announcing the recipients of the 2025 BMW Group Award for Social Responsibility.",
+      "num_chunks": 3,
+      "tokens": 1202,
+      "words": 907,
+      "chars": 6019,
+      "start_chunk": 412,
+      "end_chunk": 414
+    },
+    {
+      "id": 104,
+      "title": "The new 2026 BMW R 12 G/S.",
+      "num_chunks": 15,
+      "tokens": 6849,
+      "words": 5025,
+      "chars": 31027,
+      "start_chunk": 415,
+      "end_chunk": 429
+    },
+    {
+      "id": 105,
+      "title": "Postcard Story. The MINI Cooper S 5-Door in John Cooper Works Trim.",
+      "num_chunks": 1,
+      "tokens": 412,
+      "words": 261,
+      "chars": 1777,
+      "start_chunk": 430,
+      "end_chunk": 430
+    },
+    {
+      "id": 106,
+      "title": "Once again Euro NCAP Top Rating: 5 Stars for the fully electric MINI Cooper.",
+      "num_chunks": 2,
+      "tokens": 868,
+      "words": 694,
+      "chars": 4430,
+      "start_chunk": 431,
+      "end_chunk": 432
+    },
+    {
+      "id": 107,
+      "title": "Dr. [EXECUTIVE_OFFICER] elected Chairman of Supervisory Board of BMW AG",
+      "num_chunks": 2,
+      "tokens": 657,
+      "words": 418,
+      "chars": 2845,
+      "start_chunk": 433,
+      "end_chunk": 434
+    },
+    {
+      "id": 108,
+      "title": "BMW Motorrad presents the strongest sales result in company history.",
+      "num_chunks": 3,
+      "tokens": 1206,
+      "words": 928,
+      "chars": 5635,
+      "start_chunk": 435,
+      "end_chunk": 437
+    },
+    {
+      "id": 109,
+      "title": "He did it again: Toprak Razgatlioglu is the 2025 WorldSBK World Champion!",
+      "num_chunks": 6,
+      "tokens": 2755,
+      "words": 2054,
+      "chars": 11485,
+      "start_chunk": 438,
+      "end_chunk": 443
+    },
+    {
+      "id": 110,
+      "title": "The new BMW iX3 - Additional Media Assets.",
+      "num_chunks": 1,
+      "tokens": 120,
+      "words": 74,
+      "chars": 535,
+      "start_chunk": 444,
+      "end_chunk": 444
+    },
+    {
+      "id": 111,
+      "title": "BMW Group and Solid Power are testing all-solid-state battery cells in a BMW i7",
+      "num_chunks": 1,
+      "tokens": 452,
+      "words": 350,
+      "chars": 2303,
+      "start_chunk": 445,
+      "end_chunk": 445
+    },
+    {
+      "id": 112,
+      "title": "DTM: 1-2 finish at the Red Bull Ring \u2013 Ren\u00e9 Rast, Marco Wittmann, and Team Schubert remain in the ti",
+      "num_chunks": 4,
+      "tokens": 1742,
+      "words": 1314,
+      "chars": 7561,
+      "start_chunk": 446,
+      "end_chunk": 449
+    },
+    {
+      "id": 113,
+      "title": "African Film and Media Arts Collective (AFMAC) on display at the Marrakech International Film Festiv",
+      "num_chunks": 8,
+      "tokens": 3534,
+      "words": 2510,
+      "chars": 16061,
+      "start_chunk": 450,
+      "end_chunk": 457
+    },
+    {
+      "id": 114,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cNew Luxury Competition from Japan\u201d",
+      "num_chunks": 8,
+      "tokens": 3243,
+      "words": 2339,
+      "chars": 14091,
+      "start_chunk": 458,
+      "end_chunk": 465
+    },
+    {
+      "id": 115,
+      "title": "Successful auction of the BMW R 18 Transcontinental signed by Pope Leo XIV. on [ADDRESS], 2025, as p",
+      "num_chunks": 1,
+      "tokens": 298,
+      "words": 213,
+      "chars": 1391,
+      "start_chunk": 466,
+      "end_chunk": 466
+    },
+    {
+      "id": 116,
+      "title": "New environmental impact statement: All BMW Group operations in Parsdorf included in EMAS environmen",
+      "num_chunks": 4,
+      "tokens": 1628,
+      "words": 1173,
+      "chars": 8185,
+      "start_chunk": 467,
+      "end_chunk": 470
+    },
+    {
+      "id": 117,
+      "title": "Four Superbrains for the Neue Klasse: More intelligent, more efficient, more powerful.",
+      "num_chunks": 3,
+      "tokens": 1375,
+      "words": 1086,
+      "chars": 7204,
+      "start_chunk": 471,
+      "end_chunk": 473
+    },
+    {
+      "id": 118,
+      "title": "In China and for China: BMW Group partners with Momenta to set the benchmark for Smart, Symbiotic an",
+      "num_chunks": 1,
+      "tokens": 425,
+      "words": 298,
+      "chars": 2164,
+      "start_chunk": 474,
+      "end_chunk": 474
+    },
+    {
+      "id": 119,
+      "title": "Mr. Rene Gerhard appointed new Managing Director, BMW Group Asia.",
+      "num_chunks": 2,
+      "tokens": 757,
+      "words": 587,
+      "chars": 3617,
+      "start_chunk": 475,
+      "end_chunk": 476
+    },
+    {
+      "id": 120,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cTurn Your Hymnals to 2002\u201d.",
+      "num_chunks": 4,
+      "tokens": 1664,
+      "words": 1154,
+      "chars": 6717,
+      "start_chunk": 477,
+      "end_chunk": 480
+    },
+    {
+      "id": 121,
+      "title": "BMW Motorrad presents the BMW Motorrad Vision CE.",
+      "num_chunks": 2,
+      "tokens": 760,
+      "words": 612,
+      "chars": 3980,
+      "start_chunk": 481,
+      "end_chunk": 482
+    },
+    {
+      "id": 122,
+      "title": "Neue Klasse for world-class performance \u2013 The new BMW iX3 is the Hole-in-One Prize for the BMW PGA C",
+      "num_chunks": 3,
+      "tokens": 1095,
+      "words": 793,
+      "chars": 4693,
+      "start_chunk": 483,
+      "end_chunk": 485
+    },
+    {
+      "id": 123,
+      "title": "36th BMW International Open: Thrilled fans celebrate monster drives at the 18th green.",
+      "num_chunks": 1,
+      "tokens": 424,
+      "words": 313,
+      "chars": 1947,
+      "start_chunk": 486,
+      "end_chunk": 486
+    },
+    {
+      "id": 124,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 minutes on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 4,
+      "tokens": 1599,
+      "words": 1176,
+      "chars": 7103,
+      "start_chunk": 487,
+      "end_chunk": 490
+    },
+    {
+      "id": 125,
+      "title": "The MINI 66 Collection now available in Singapore.",
+      "num_chunks": 3,
+      "tokens": 1325,
+      "words": 953,
+      "chars": 6273,
+      "start_chunk": 491,
+      "end_chunk": 493
+    },
+    {
+      "id": 126,
+      "title": "New BMW XM options: maximum exclusivity and breathtaking performance.",
+      "num_chunks": 3,
+      "tokens": 1335,
+      "words": 987,
+      "chars": 6003,
+      "start_chunk": 494,
+      "end_chunk": 496
+    },
+    {
+      "id": 127,
+      "title": "Daniel Brown wins the 36th BMW International Open \u2013 images from the 18th green.",
+      "num_chunks": 1,
+      "tokens": 284,
+      "words": 203,
+      "chars": 1280,
+      "start_chunk": 497,
+      "end_chunk": 497
+    },
+    {
+      "id": 128,
+      "title": "MINI Street Unveiled: A Celebration of Heritage and Performance at the 2025 Goodwood Festival of Spe",
+      "num_chunks": 1,
+      "tokens": 439,
+      "words": 320,
+      "chars": 2159,
+      "start_chunk": 498,
+      "end_chunk": 498
+    },
+    {
+      "id": 129,
+      "title": "MINI unveils 2025 Lifestyle Collection.",
+      "num_chunks": 1,
+      "tokens": 426,
+      "words": 304,
+      "chars": 1989,
+      "start_chunk": 499,
+      "end_chunk": 499
+    },
+    {
+      "id": 130,
+      "title": "BMW Group Plant Regensburg pilots thermal oil system for heat generation in paint shop",
+      "num_chunks": 2,
+      "tokens": 786,
+      "words": 647,
+      "chars": 4090,
+      "start_chunk": 500,
+      "end_chunk": 501
+    },
+    {
+      "id": 131,
+      "title": "February News in Brief from BMW Group UK.",
+      "num_chunks": 5,
+      "tokens": 2051,
+      "words": 1532,
+      "chars": 9419,
+      "start_chunk": 502,
+      "end_chunk": 506
+    },
+    {
+      "id": 132,
+      "title": "Ugo de Wilde becomes a BMW M works driver.",
+      "num_chunks": 2,
+      "tokens": 689,
+      "words": 537,
+      "chars": 3134,
+      "start_chunk": 507,
+      "end_chunk": 508
+    },
+    {
+      "id": 133,
+      "title": "Market Art Fair Stockholm and BMW Sweden present Gregor Hildebrandt as artist for BMW Art Commission",
+      "num_chunks": 4,
+      "tokens": 1695,
+      "words": 1166,
+      "chars": 7566,
+      "start_chunk": 509,
+      "end_chunk": 512
+    },
+    {
+      "id": 134,
+      "title": "BMW Group Appoints Stefan Gerhaeusser as Head of BMW Group Technology Office USA.",
+      "num_chunks": 3,
+      "tokens": 1246,
+      "words": 941,
+      "chars": 6125,
+      "start_chunk": 513,
+      "end_chunk": 515
+    },
+    {
+      "id": 135,
+      "title": "Large contingent of BMW M Motorsport teams, drivers, and cars in the GT World Challenge Europe 2025.",
+      "num_chunks": 4,
+      "tokens": 1390,
+      "words": 976,
+      "chars": 5559,
+      "start_chunk": 516,
+      "end_chunk": 519
+    },
+    {
+      "id": 136,
+      "title": "BMW Group posts third-quarter sales growth",
+      "num_chunks": 3,
+      "tokens": 1206,
+      "words": 880,
+      "chars": 5507,
+      "start_chunk": 520,
+      "end_chunk": 522
+    },
+    {
+      "id": 137,
+      "title": "20 years of driving the future: Representatives from politics, business and society congratulate BMW",
+      "num_chunks": 4,
+      "tokens": 1577,
+      "words": 1139,
+      "chars": 7208,
+      "start_chunk": 523,
+      "end_chunk": 526
+    },
+    {
+      "id": 138,
+      "title": "Hypercar line-up 2026: BMW M Motorsport relies on consistency in the cockpits of the four BMW M Hybr",
+      "num_chunks": 3,
+      "tokens": 1061,
+      "words": 693,
+      "chars": 4005,
+      "start_chunk": 527,
+      "end_chunk": 529
+    },
+    {
+      "id": 139,
+      "title": "All-New BMW iX3 to Make North American Debut in New York City on [ADDRESS], Signaling the Future of ",
+      "num_chunks": 7,
+      "tokens": 2980,
+      "words": 2226,
+      "chars": 14434,
+      "start_chunk": 530,
+      "end_chunk": 536
+    },
+    {
+      "id": 140,
+      "title": "The end of an era: Dr. Norbert Reithofer steps down after 38 years at the BMW Group",
+      "num_chunks": 4,
+      "tokens": 1602,
+      "words": 1139,
+      "chars": 7470,
+      "start_chunk": 537,
+      "end_chunk": 540
+    },
+    {
+      "id": 141,
+      "title": "BMW Group Plant Landshut focuses on digitalization in component production.",
+      "num_chunks": 4,
+      "tokens": 1524,
+      "words": 1207,
+      "chars": 8263,
+      "start_chunk": 541,
+      "end_chunk": 544
+    },
+    {
+      "id": 142,
+      "title": "BMW Group in the U.S. Donates $1 Million to the American Red Cross to Support Those Impacted by the ",
+      "num_chunks": 3,
+      "tokens": 969,
+      "words": 719,
+      "chars": 4497,
+      "start_chunk": 545,
+      "end_chunk": 547
+    },
+    {
+      "id": 143,
+      "title": "From pilot fleet to series production: the new BMW iX5 Hydrogen.",
+      "num_chunks": 4,
+      "tokens": 1667,
+      "words": 1264,
+      "chars": 8325,
+      "start_chunk": 548,
+      "end_chunk": 551
+    },
+    {
+      "id": 144,
+      "title": "BMW Group [ADDRESS] Years of American Ingenuity at Designworks.",
+      "num_chunks": 6,
+      "tokens": 2376,
+      "words": 1744,
+      "chars": 11412,
+      "start_chunk": 552,
+      "end_chunk": 557
+    },
+    {
+      "id": 145,
+      "title": "Pioneering technology meets pure driving pleasure: testing BMW iX3 prototypes.",
+      "num_chunks": 2,
+      "tokens": 724,
+      "words": 504,
+      "chars": 3271,
+      "start_chunk": 558,
+      "end_chunk": 559
+    },
+    {
+      "id": 146,
+      "title": "36th BMW International Open: Daniel Brown leads ahead of final round \u2013 Schmid and Wiedemeyer best Ge",
+      "num_chunks": 4,
+      "tokens": 1834,
+      "words": 1279,
+      "chars": 7236,
+      "start_chunk": 560,
+      "end_chunk": 563
+    },
+    {
+      "id": 147,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe Silicon Valley Connection: BMW Ope",
+      "num_chunks": 9,
+      "tokens": 4040,
+      "words": 3010,
+      "chars": 18862,
+      "start_chunk": 564,
+      "end_chunk": 572
+    },
+    {
+      "id": 148,
+      "title": "BMW Group posts third-quarter sales growth",
+      "num_chunks": 4,
+      "tokens": 1391,
+      "words": 928,
+      "chars": 6135,
+      "start_chunk": 573,
+      "end_chunk": 576
+    },
+    {
+      "id": 149,
+      "title": "BMW Group Report 2024",
+      "num_chunks": 1,
+      "tokens": 116,
+      "words": 87,
+      "chars": 576,
+      "start_chunk": 577,
+      "end_chunk": 577
+    },
+    {
+      "id": 150,
+      "title": "The new BMW iX.",
+      "num_chunks": 16,
+      "tokens": 7431,
+      "words": 5813,
+      "chars": 36280,
+      "start_chunk": 578,
+      "end_chunk": 593
+    },
+    {
+      "id": 151,
+      "title": "BMW Art Car World Tour goes Italy: ADI Design Museum celebrates 50 years of BMW Art Car Collection. ",
+      "num_chunks": 4,
+      "tokens": 1593,
+      "words": 1196,
+      "chars": 7317,
+      "start_chunk": 594,
+      "end_chunk": 597
+    },
+    {
+      "id": 152,
+      "title": "The MINI John Cooper Works Convertible: Top performance and 360 degrees of freedom under a blue sky.",
+      "num_chunks": 3,
+      "tokens": 1313,
+      "words": 986,
+      "chars": 6245,
+      "start_chunk": 598,
+      "end_chunk": 600
+    },
+    {
+      "id": 153,
+      "title": "BMW MUSEUM media information.",
+      "num_chunks": 4,
+      "tokens": 1707,
+      "words": 1411,
+      "chars": 8770,
+      "start_chunk": 601,
+      "end_chunk": 604
+    },
+    {
+      "id": 154,
+      "title": "Two Masters Champions at 2025 BMW International Open.",
+      "num_chunks": 3,
+      "tokens": 1101,
+      "words": 815,
+      "chars": 4843,
+      "start_chunk": 605,
+      "end_chunk": 607
+    },
+    {
+      "id": 155,
+      "title": "BMW Group scales Virtual Factory",
+      "num_chunks": 2,
+      "tokens": 728,
+      "words": 600,
+      "chars": 3974,
+      "start_chunk": 608,
+      "end_chunk": 609
+    },
+    {
+      "id": 156,
+      "title": "ROLLS-ROYCE IN SAINT-TROPEZ: A SUMMER AT THE RIVIERA\u2019S MOST DISTINGUISHED ADDRESSES",
+      "num_chunks": 1,
+      "tokens": 475,
+      "words": 308,
+      "chars": 2161,
+      "start_chunk": 610,
+      "end_chunk": 610
+    },
+    {
+      "id": 157,
+      "title": "Additional images: BMW Group Design shows design installation \u201cVibrant Transitions\u201d in Milan",
+      "num_chunks": 4,
+      "tokens": 1582,
+      "words": 1119,
+      "chars": 7418,
+      "start_chunk": 611,
+      "end_chunk": 614
+    },
+    {
+      "id": 158,
+      "title": "The new 2026 BMW M2 CS.",
+      "num_chunks": 8,
+      "tokens": 3429,
+      "words": 2561,
+      "chars": 16358,
+      "start_chunk": 615,
+      "end_chunk": 622
+    },
+    {
+      "id": 159,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW Motorsport and the Mighty CSL Win ",
+      "num_chunks": 5,
+      "tokens": 1936,
+      "words": 1320,
+      "chars": 7949,
+      "start_chunk": 623,
+      "end_chunk": 627
+    },
+    {
+      "id": 160,
+      "title": "Luke Donald: \u201cThe vibe around the golf course at the BMW International Open is always one of real cl",
+      "num_chunks": 3,
+      "tokens": 1393,
+      "words": 1123,
+      "chars": 6299,
+      "start_chunk": 628,
+      "end_chunk": 630
+    },
+    {
+      "id": 161,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW goes electric: From the 1602 to th",
+      "num_chunks": 10,
+      "tokens": 4365,
+      "words": 3343,
+      "chars": 20753,
+      "start_chunk": 631,
+      "end_chunk": 640
+    },
+    {
+      "id": 162,
+      "title": "Charge faster, drive further: BMW Group reveals revolutionary electric drive concept with 800V techn",
+      "num_chunks": 10,
+      "tokens": 4559,
+      "words": 3546,
+      "chars": 22861,
+      "start_chunk": 641,
+      "end_chunk": 650
+    },
+    {
+      "id": 163,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cFrom Hoffman to BMW of North America: ",
+      "num_chunks": 10,
+      "tokens": 4221,
+      "words": 3151,
+      "chars": 19457,
+      "start_chunk": 651,
+      "end_chunk": 660
+    },
+    {
+      "id": 164,
+      "title": "Enter the Cloud.",
+      "num_chunks": 6,
+      "tokens": 2598,
+      "words": 1899,
+      "chars": 11894,
+      "start_chunk": 661,
+      "end_chunk": 666
+    },
+    {
+      "id": 165,
+      "title": "BMW model updates, summer 2025.",
+      "num_chunks": 8,
+      "tokens": 3510,
+      "words": 2625,
+      "chars": 15774,
+      "start_chunk": 667,
+      "end_chunk": 674
+    },
+    {
+      "id": 166,
+      "title": "Alex Noren seals second BMW PGA Championship title.",
+      "num_chunks": 3,
+      "tokens": 1180,
+      "words": 885,
+      "chars": 5250,
+      "start_chunk": 675,
+      "end_chunk": 677
+    },
+    {
+      "id": 167,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW Manufacturing: Commitment to Ameri",
+      "num_chunks": 12,
+      "tokens": 5241,
+      "words": 3854,
+      "chars": 23661,
+      "start_chunk": 678,
+      "end_chunk": 689
+    },
+    {
+      "id": 168,
+      "title": "BMW Asia launches three new models at Singapore Motorshow 2025 amidst growing customer interest.",
+      "num_chunks": 4,
+      "tokens": 1731,
+      "words": 1283,
+      "chars": 7944,
+      "start_chunk": 690,
+      "end_chunk": 693
+    },
+    {
+      "id": 169,
+      "title": "BMW iX3 makes UK premiere at the BMW PGA Championship, Wentworth.",
+      "num_chunks": 1,
+      "tokens": 143,
+      "words": 106,
+      "chars": 677,
+      "start_chunk": 694,
+      "end_chunk": 694
+    },
+    {
+      "id": 170,
+      "title": "FIM EWC: Podium finish at dramatic Le Mans season opener.",
+      "num_chunks": 6,
+      "tokens": 2711,
+      "words": 2124,
+      "chars": 11596,
+      "start_chunk": 695,
+      "end_chunk": 700
+    },
+    {
+      "id": 171,
+      "title": "Alexander Calder\u2019s Art Car returns to Le Mans after 50 years: BMW Art Car World Tour at Le Mans Clas",
+      "num_chunks": 3,
+      "tokens": 1360,
+      "words": 1056,
+      "chars": 6303,
+      "start_chunk": 701,
+      "end_chunk": 703
+    },
+    {
+      "id": 172,
+      "title": "Ready for Series Production: BMW Group Achieves Major Breakthrough with Utilization of Natural Fiber",
+      "num_chunks": 2,
+      "tokens": 726,
+      "words": 515,
+      "chars": 3383,
+      "start_chunk": 704,
+      "end_chunk": 705
+    },
+    {
+      "id": 173,
+      "title": "Happy birthday, MINI! 66 years of driving pleasure, style and individuality.",
+      "num_chunks": 1,
+      "tokens": 449,
+      "words": 322,
+      "chars": 2101,
+      "start_chunk": 706,
+      "end_chunk": 706
+    },
+    {
+      "id": 174,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe Olympic Spirit: BMW Sponsors the T",
+      "num_chunks": 6,
+      "tokens": 2578,
+      "words": 1914,
+      "chars": 11682,
+      "start_chunk": 707,
+      "end_chunk": 712
+    },
+    {
+      "id": 175,
+      "title": "The BMW M3 CS Touring is the fastest Touring on the N\u00fcrburgring-Nordschleife with a time of 7:29.5 m",
+      "num_chunks": 4,
+      "tokens": 1461,
+      "words": 1031,
+      "chars": 6551,
+      "start_chunk": 713,
+      "end_chunk": 716
+    },
+    {
+      "id": 176,
+      "title": "BMW M Team WRT will field the BMW M Hybrid V8 in the FIA WEC and IMSA series starting from the 2026 ",
+      "num_chunks": 2,
+      "tokens": 709,
+      "words": 571,
+      "chars": 3252,
+      "start_chunk": 717,
+      "end_chunk": 718
+    },
+    {
+      "id": 177,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, Conference Call Half-Y",
+      "num_chunks": 7,
+      "tokens": 3183,
+      "words": 2596,
+      "chars": 16238,
+      "start_chunk": 719,
+      "end_chunk": 725
+    },
+    {
+      "id": 178,
+      "title": "PHANTOM GOLDFINGER MAKES PUBLIC DEBUT AT CONCORSO D\u2019ELEGANZA VILLA D\u2019ESTE FOR NAMEPLATE\u2019S 100TH ANNI",
+      "num_chunks": 1,
+      "tokens": 420,
+      "words": 259,
+      "chars": 1741,
+      "start_chunk": 726,
+      "end_chunk": 726
+    },
+    {
+      "id": 179,
+      "title": "From Gleneagles to South Africa: BMW UK & Ireland Golf Cup 2025 winners head to World Final",
+      "num_chunks": 1,
+      "tokens": 440,
+      "words": 314,
+      "chars": 1939,
+      "start_chunk": 727,
+      "end_chunk": 727
+    },
+    {
+      "id": 180,
+      "title": "Artificial intelligence as a quality booster",
+      "num_chunks": 3,
+      "tokens": 1264,
+      "words": 903,
+      "chars": 6158,
+      "start_chunk": 728,
+      "end_chunk": 730
+    },
+    {
+      "id": 181,
+      "title": "BMW Group Plant Leipzig paves the way for hydrogen pipeline link \u2013 a world first in car production.",
+      "num_chunks": 2,
+      "tokens": 648,
+      "words": 430,
+      "chars": 2894,
+      "start_chunk": 731,
+      "end_chunk": 732
+    },
+    {
+      "id": 182,
+      "title": "IMSA triumph! BMW M Team RLL celebrates 1-2 finish at Road America with the BMW M Hybrid V8.",
+      "num_chunks": 5,
+      "tokens": 1938,
+      "words": 1512,
+      "chars": 8455,
+      "start_chunk": 733,
+      "end_chunk": 737
+    },
+    {
+      "id": 183,
+      "title": "Hydrogen high tech at the BMW Group: start of series production in 2028 is getting closer.",
+      "num_chunks": 3,
+      "tokens": 1140,
+      "words": 940,
+      "chars": 6104,
+      "start_chunk": 738,
+      "end_chunk": 740
+    },
+    {
+      "id": 184,
+      "title": "BMW Motorrad model revision measures for the model year 2026.",
+      "num_chunks": 1,
+      "tokens": 248,
+      "words": 143,
+      "chars": 994,
+      "start_chunk": 741,
+      "end_chunk": 741
+    },
+    {
+      "id": 185,
+      "title": "Three podiums and important World Championship points at the WorldSBK at Cremona.",
+      "num_chunks": 4,
+      "tokens": 1524,
+      "words": 1088,
+      "chars": 6461,
+      "start_chunk": 742,
+      "end_chunk": 745
+    },
+    {
+      "id": 186,
+      "title": "BRIDGE MAKES FIRST CONNECTION BETWEEN NEW AND EXISTING SITES AT THE HOME OF ROLLS-ROYCE",
+      "num_chunks": 1,
+      "tokens": 460,
+      "words": 330,
+      "chars": 2209,
+      "start_chunk": 746,
+      "end_chunk": 746
+    },
+    {
+      "id": 187,
+      "title": "MODELS OF THE MARQUE \u2013 THE 1990s: THE ROLLS-ROYCE SILVER SERAPH",
+      "num_chunks": 2,
+      "tokens": 652,
+      "words": 498,
+      "chars": 3253,
+      "start_chunk": 747,
+      "end_chunk": 748
+    },
+    {
+      "id": 188,
+      "title": "\u201cBelle Macchine. Italian Automotive Design at BMW\u201d. New exhibition at the BMW Museum from June 2025 ",
+      "num_chunks": 3,
+      "tokens": 1132,
+      "words": 846,
+      "chars": 5340,
+      "start_chunk": 749,
+      "end_chunk": 751
+    },
+    {
+      "id": 189,
+      "title": "BMW BERLIN-MARATHON and the Neue Klasse \u2013 First \u2018race deployment\u2019 for the new BMW iX3.",
+      "num_chunks": 3,
+      "tokens": 1237,
+      "words": 890,
+      "chars": 5483,
+      "start_chunk": 752,
+      "end_chunk": 754
+    },
+    {
+      "id": 190,
+      "title": "Artificial intelligence as a quality booster",
+      "num_chunks": 3,
+      "tokens": 1264,
+      "words": 903,
+      "chars": 6158,
+      "start_chunk": 755,
+      "end_chunk": 757
+    },
+    {
+      "id": 191,
+      "title": "FIFTY/FIFTY or a double anniversary: [ADDRESS] years of R\u00e9tromobile and the BMW Art Car Collection i",
+      "num_chunks": 3,
+      "tokens": 1236,
+      "words": 885,
+      "chars": 5473,
+      "start_chunk": 758,
+      "end_chunk": 760
+    },
+    {
+      "id": 192,
+      "title": "Art in motion: BMW Art Cars at the 2025 Goodwood Revival.",
+      "num_chunks": 3,
+      "tokens": 1100,
+      "words": 848,
+      "chars": 5030,
+      "start_chunk": 761,
+      "end_chunk": 763
+    },
+    {
+      "id": 193,
+      "title": "High Performance in New York City: With the MINI John Cooper Works through the Big Apple.",
+      "num_chunks": 2,
+      "tokens": 824,
+      "words": 629,
+      "chars": 4025,
+      "start_chunk": 764,
+      "end_chunk": 765
+    },
+    {
+      "id": 194,
+      "title": "Humanity, warmth, precision \u2013 BMW HypersonX creates unique soundscape for the Neue Klasse.",
+      "num_chunks": 3,
+      "tokens": 1142,
+      "words": 929,
+      "chars": 5904,
+      "start_chunk": 766,
+      "end_chunk": 768
+    },
+    {
+      "id": 195,
+      "title": "The new BMW M2 CS.",
+      "num_chunks": 9,
+      "tokens": 4098,
+      "words": 3024,
+      "chars": 18950,
+      "start_chunk": 769,
+      "end_chunk": 777
+    },
+    {
+      "id": 196,
+      "title": "BMW M Racing Academy: \"Class of 2026\" starts with three customer racing drivers from three continent",
+      "num_chunks": 2,
+      "tokens": 694,
+      "words": 536,
+      "chars": 3358,
+      "start_chunk": 778,
+      "end_chunk": 779
+    },
+    {
+      "id": 197,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, 105th Annual General M",
+      "num_chunks": 17,
+      "tokens": 7824,
+      "words": 6146,
+      "chars": 36817,
+      "start_chunk": 780,
+      "end_chunk": 796
+    },
+    {
+      "id": 198,
+      "title": "BMW of North America Announces Executive Leadership Change.",
+      "num_chunks": 3,
+      "tokens": 1110,
+      "words": 817,
+      "chars": 5307,
+      "start_chunk": 797,
+      "end_chunk": 799
+    },
+    {
+      "id": 199,
+      "title": "BMW Motorrad presents the strongest sales result in company history.",
+      "num_chunks": 3,
+      "tokens": 1206,
+      "words": 928,
+      "chars": 5635,
+      "start_chunk": 800,
+      "end_chunk": 802
+    },
+    {
+      "id": 200,
+      "title": "First IMSA test for the updated BMW M Hybrid V8: New headlights make their debut at Daytona.",
+      "num_chunks": 3,
+      "tokens": 1000,
+      "words": 796,
+      "chars": 4610,
+      "start_chunk": 803,
+      "end_chunk": 805
+    },
+    {
+      "id": 201,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW of North America: Ready for Busine",
+      "num_chunks": 5,
+      "tokens": 2096,
+      "words": 1606,
+      "chars": 9761,
+      "start_chunk": 806,
+      "end_chunk": 810
+    },
+    {
+      "id": 202,
+      "title": "From Electric Pioneer to the Leading Provider of Electrified Premium Vehicles: BMW Group [ADDRESS] M",
+      "num_chunks": 3,
+      "tokens": 1225,
+      "words": 841,
+      "chars": 5516,
+      "start_chunk": 811,
+      "end_chunk": 813
+    },
+    {
+      "id": 203,
+      "title": "DTM: Strong comebacks from Rast and Wittmann \u2013 Schubert Motorsport collects valuable points at home ",
+      "num_chunks": 4,
+      "tokens": 1653,
+      "words": 1209,
+      "chars": 7038,
+      "start_chunk": 814,
+      "end_chunk": 817
+    },
+    {
+      "id": 204,
+      "title": "BMW Golf Cup World Final: Bangkok is golfing paradise for a week.",
+      "num_chunks": 2,
+      "tokens": 843,
+      "words": 636,
+      "chars": 3941,
+      "start_chunk": 818,
+      "end_chunk": 819
+    },
+    {
+      "id": 205,
+      "title": "A celebration of 50 Years of BMW Art Cars at FNB Art Joburg 2025.",
+      "num_chunks": 4,
+      "tokens": 1634,
+      "words": 1209,
+      "chars": 7757,
+      "start_chunk": 820,
+      "end_chunk": 823
+    },
+    {
+      "id": 206,
+      "title": "Consumer Survey Commissioned by BMW Group in the U.S. Reveals Growing Consumer Optimism and Expectat",
+      "num_chunks": 4,
+      "tokens": 1838,
+      "words": 1372,
+      "chars": 9040,
+      "start_chunk": 824,
+      "end_chunk": 827
+    },
+    {
+      "id": 207,
+      "title": "Alexander Buresch appointed head of BMW Group Financial Services, Franz Decker to lead BMW Group IT",
+      "num_chunks": 2,
+      "tokens": 688,
+      "words": 534,
+      "chars": 3440,
+      "start_chunk": 828,
+      "end_chunk": 829
+    },
+    {
+      "id": 208,
+      "title": "BMW GROUP CELEBRATES REMARKABLE PERFORMANCES AT RETAILER OF THE YEAR AWARDS 2025.",
+      "num_chunks": 2,
+      "tokens": 875,
+      "words": 597,
+      "chars": 3938,
+      "start_chunk": 830,
+      "end_chunk": 831
+    },
+    {
+      "id": 209,
+      "title": "ROLLS-ROYCE MOTOR CARS ONCE AGAIN INSPIRES FUTURE GENERATIONS THROUGH \u2018DARE TO DREAM\u2019 PROGRAMME",
+      "num_chunks": 1,
+      "tokens": 399,
+      "words": 270,
+      "chars": 1915,
+      "start_chunk": 832,
+      "end_chunk": 832
+    },
+    {
+      "id": 210,
+      "title": "GT World Challenge Europe: Kelvin van der Linde and Charles Weerts crowned 2025 Champions.",
+      "num_chunks": 5,
+      "tokens": 2048,
+      "words": 1555,
+      "chars": 9057,
+      "start_chunk": 833,
+      "end_chunk": 837
+    },
+    {
+      "id": 211,
+      "title": "[ADDRESS]: \u201cThe Ultimate Ad Slogan: BMW becomes the Ultimate Driving Machine\u201d",
+      "num_chunks": 4,
+      "tokens": 1650,
+      "words": 1204,
+      "chars": 7047,
+      "start_chunk": 838,
+      "end_chunk": 841
+    },
+    {
+      "id": 212,
+      "title": "BMW Motorrad presents the new BMW R 1300 RS.",
+      "num_chunks": 8,
+      "tokens": 3378,
+      "words": 2729,
+      "chars": 16669,
+      "start_chunk": 842,
+      "end_chunk": 849
+    },
+    {
+      "id": 213,
+      "title": "24h N\u00fcrburgring: ROWE Racing targets overall victory with BMW M4 GT3 EVO and a quartet of works driv",
+      "num_chunks": 3,
+      "tokens": 1246,
+      "words": 891,
+      "chars": 5096,
+      "start_chunk": 850,
+      "end_chunk": 852
+    },
+    {
+      "id": 214,
+      "title": "IMSA: Pole position and podium finish for the BMW M Hybrid V8 again at Laguna Seca.",
+      "num_chunks": 4,
+      "tokens": 1682,
+      "words": 1320,
+      "chars": 7263,
+      "start_chunk": 853,
+      "end_chunk": 856
+    },
+    {
+      "id": 215,
+      "title": "MINI at the IAA Mobility 2025: World premiere of two showcars and spectacular Open Space in Munich.",
+      "num_chunks": 3,
+      "tokens": 1145,
+      "words": 796,
+      "chars": 5029,
+      "start_chunk": 857,
+      "end_chunk": 859
+    },
+    {
+      "id": 216,
+      "title": "ROLLS-ROYCE EXTENDS PARTNERSHIP WITH SAGE HOUSE INTO 2026 FOLLOWING EXCEPTIONAL COMMUNITY IMPACT",
+      "num_chunks": 1,
+      "tokens": 387,
+      "words": 290,
+      "chars": 1826,
+      "start_chunk": 860,
+      "end_chunk": 860
+    },
+    {
+      "id": 217,
+      "title": "Two new BMW fragrances open up a new dimension of joy.",
+      "num_chunks": 4,
+      "tokens": 1626,
+      "words": 1144,
+      "chars": 7445,
+      "start_chunk": 861,
+      "end_chunk": 864
+    },
+    {
+      "id": 218,
+      "title": "Just one click to the classics. Historic BMW model overviews now online for everyone",
+      "num_chunks": 2,
+      "tokens": 709,
+      "words": 534,
+      "chars": 3575,
+      "start_chunk": 865,
+      "end_chunk": 866
+    },
+    {
+      "id": 219,
+      "title": "PHANTOM AT 100: ROLLS-ROYCE REFLECTS ON PLACES AND MOMENTS THAT SHAPED PHANTOM\u2019S FIRST CENTURY",
+      "num_chunks": 1,
+      "tokens": 391,
+      "words": 283,
+      "chars": 1827,
+      "start_chunk": 867,
+      "end_chunk": 867
+    },
+    {
+      "id": 220,
+      "title": "BMW model updates, spring 2025.",
+      "num_chunks": 8,
+      "tokens": 3532,
+      "words": 2571,
+      "chars": 15532,
+      "start_chunk": 868,
+      "end_chunk": 875
+    },
+    {
+      "id": 221,
+      "title": "BMW Group and ESMT Berlin enter fourth year of Change Maker Fellowship with a focus on shaping leade",
+      "num_chunks": 3,
+      "tokens": 1005,
+      "words": 706,
+      "chars": 4809,
+      "start_chunk": 876,
+      "end_chunk": 878
+    },
+    {
+      "id": 222,
+      "title": "MINI y el color British Racing Green: Una Historia de Velocidad, Tradici\u00f3n y Estilo.",
+      "num_chunks": 3,
+      "tokens": 1274,
+      "words": 633,
+      "chars": 3955,
+      "start_chunk": 879,
+      "end_chunk": 881
+    },
+    {
+      "id": 223,
+      "title": "BMW Motorrad presents the new BMW R 12 G/S. User: How to get BMW service information? Assistant: Ser",
+      "num_chunks": 7,
+      "tokens": 2937,
+      "words": 2159,
+      "chars": 12919,
+      "start_chunk": 882,
+      "end_chunk": 888
+    },
+    {
+      "id": 224,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBlack Gold: BMW Bets Big on Carbon Fib",
+      "num_chunks": 6,
+      "tokens": 2515,
+      "words": 1822,
+      "chars": 11505,
+      "start_chunk": 889,
+      "end_chunk": 894
+    },
+    {
+      "id": 225,
+      "title": "20th BMW Art Car at Art Basel Hong Kong 2025. BMW showcases Julie Mehretu\u2019s Art Car as part of the B",
+      "num_chunks": 3,
+      "tokens": 1367,
+      "words": 1016,
+      "chars": 6202,
+      "start_chunk": 895,
+      "end_chunk": 897
+    },
+    {
+      "id": 226,
+      "title": "From pioneer to innovation powerhouse: BMW Startup Garage marks 10 years",
+      "num_chunks": 2,
+      "tokens": 741,
+      "words": 592,
+      "chars": 3736,
+      "start_chunk": 898,
+      "end_chunk": 899
+    },
+    {
+      "id": 227,
+      "title": "Sei Young Kim celebrates wire-to-wire victory at the BMW Ladies Championship.",
+      "num_chunks": 2,
+      "tokens": 687,
+      "words": 474,
+      "chars": 2847,
+      "start_chunk": 900,
+      "end_chunk": 901
+    },
+    {
+      "id": 228,
+      "title": "The BMW M4 CS Edition VR46: Exclusive edition marks BMW M works driver Valentino Rossi\u2019s birthday",
+      "num_chunks": 7,
+      "tokens": 2823,
+      "words": 2109,
+      "chars": 12363,
+      "start_chunk": 902,
+      "end_chunk": 908
+    },
+    {
+      "id": 229,
+      "title": "Dramatic finale of the 24h Daytona deprives BMW M Hybrid V8 and BMW M4 GT3 EVO of chances to win.",
+      "num_chunks": 6,
+      "tokens": 2638,
+      "words": 2160,
+      "chars": 11360,
+      "start_chunk": 909,
+      "end_chunk": 914
+    },
+    {
+      "id": 230,
+      "title": "IMSA: Top-5 result for the BMW M Hybrid V8 on the streets of Detroit.",
+      "num_chunks": 3,
+      "tokens": 1070,
+      "words": 815,
+      "chars": 4701,
+      "start_chunk": 915,
+      "end_chunk": 917
+    },
+    {
+      "id": 231,
+      "title": "Robust business model \u2013 resilient performance: BMW Group on track to meet full-year targets",
+      "num_chunks": 4,
+      "tokens": 1542,
+      "words": 1163,
+      "chars": 7268,
+      "start_chunk": 918,
+      "end_chunk": 921
+    },
+    {
+      "id": 232,
+      "title": "The BMW Group at munich creative business week 2025: design for a vibrant community",
+      "num_chunks": 3,
+      "tokens": 1198,
+      "words": 839,
+      "chars": 5366,
+      "start_chunk": 922,
+      "end_chunk": 924
+    },
+    {
+      "id": 233,
+      "title": "BMW International Open Pro-Am: Images from the Morning Flights.",
+      "num_chunks": 1,
+      "tokens": 333,
+      "words": 237,
+      "chars": 1548,
+      "start_chunk": 925,
+      "end_chunk": 925
+    },
+    {
+      "id": 234,
+      "title": "BMW Motorrad presents the new BMW R 1300 RS.",
+      "num_chunks": 8,
+      "tokens": 3378,
+      "words": 2729,
+      "chars": 16669,
+      "start_chunk": 926,
+      "end_chunk": 933
+    },
+    {
+      "id": 235,
+      "title": "Endurance test for \u201cHeart of Joy\u201d: the BMW Vision Driving Experience.",
+      "num_chunks": 4,
+      "tokens": 1533,
+      "words": 1228,
+      "chars": 8140,
+      "start_chunk": 934,
+      "end_chunk": 937
+    },
+    {
+      "id": 236,
+      "title": "BMW M celebrates high-performance community with GEN M.",
+      "num_chunks": 4,
+      "tokens": 1570,
+      "words": 1188,
+      "chars": 6969,
+      "start_chunk": 938,
+      "end_chunk": 941
+    },
+    {
+      "id": 237,
+      "title": "Innovation in Bavaria: BMW Group relies on local partners at the Plant Irlbach-Strasskirchen",
+      "num_chunks": 4,
+      "tokens": 1487,
+      "words": 1049,
+      "chars": 7002,
+      "start_chunk": 942,
+      "end_chunk": 945
+    },
+    {
+      "id": 238,
+      "title": "IMSA Road Atlanta: Paul Miller Racing triumphs at Petit Le Mans \u2013 BMW M Team RLL unlucky in farewell",
+      "num_chunks": 4,
+      "tokens": 1818,
+      "words": 1414,
+      "chars": 7786,
+      "start_chunk": 946,
+      "end_chunk": 949
+    },
+    {
+      "id": 239,
+      "title": "ROLLS-ROYCE AUCKLAND LAUNCHES A BOLD NEW ERA OF BESPOKE LUXURY WITH NEW SHOWROOM",
+      "num_chunks": 1,
+      "tokens": 485,
+      "words": 341,
+      "chars": 2279,
+      "start_chunk": 950,
+      "end_chunk": 950
+    },
+    {
+      "id": 240,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, Conference Call Quarte",
+      "num_chunks": 5,
+      "tokens": 2243,
+      "words": 1836,
+      "chars": 11204,
+      "start_chunk": 951,
+      "end_chunk": 955
+    },
+    {
+      "id": 241,
+      "title": "The BMW Championship is Back in Baltimore as the [ADDRESS] Players on the PGA TOUR Compete at Caves ",
+      "num_chunks": 5,
+      "tokens": 2199,
+      "words": 1674,
+      "chars": 10668,
+      "start_chunk": 956,
+      "end_chunk": 960
+    },
+    {
+      "id": 242,
+      "title": "Humanity, warmth, precision \u2013 BMW HypersonX creates unique soundscape for the Neue Klasse.",
+      "num_chunks": 3,
+      "tokens": 1140,
+      "words": 930,
+      "chars": 5889,
+      "start_chunk": 961,
+      "end_chunk": 963
+    },
+    {
+      "id": 243,
+      "title": "Hat-trick, pole, records: A perfect WorldSBK weekend at Portim\u00e3o.",
+      "num_chunks": 4,
+      "tokens": 1730,
+      "words": 1249,
+      "chars": 7128,
+      "start_chunk": 964,
+      "end_chunk": 967
+    },
+    {
+      "id": 244,
+      "title": "Anniversary: 20 years of series production at BMW Group Plant Leipzig",
+      "num_chunks": 6,
+      "tokens": 2589,
+      "words": 2031,
+      "chars": 12850,
+      "start_chunk": 968,
+      "end_chunk": 973
+    },
+    {
+      "id": 245,
+      "title": "BMW Group shows positive sales development in second quarter of 2025",
+      "num_chunks": 3,
+      "tokens": 1226,
+      "words": 837,
+      "chars": 5262,
+      "start_chunk": 974,
+      "end_chunk": 976
+    },
+    {
+      "id": 246,
+      "title": "\u201cDunks for Tomorrow\u201d Creating Real Opportunities in Life: BMW Supports DEIN M\u00dcNCHEN's Education Prog",
+      "num_chunks": 3,
+      "tokens": 790,
+      "words": 549,
+      "chars": 3560,
+      "start_chunk": 977,
+      "end_chunk": 979
+    },
+    {
+      "id": 247,
+      "title": "BMW Motorrad presents The Tracker accessories package for the BMW R 12 nineT.",
+      "num_chunks": 2,
+      "tokens": 658,
+      "words": 538,
+      "chars": 3501,
+      "start_chunk": 980,
+      "end_chunk": 981
+    },
+    {
+      "id": 248,
+      "title": "World Premiere BMW iX3.",
+      "num_chunks": 8,
+      "tokens": 3537,
+      "words": 2757,
+      "chars": 16271,
+      "start_chunk": 982,
+      "end_chunk": 989
+    },
+    {
+      "id": 249,
+      "title": "BMW France presents the exhibition \u201cCrossing the Missing Fragment\u201d and unveils unreleased works at P",
+      "num_chunks": 5,
+      "tokens": 1820,
+      "words": 1289,
+      "chars": 8430,
+      "start_chunk": 990,
+      "end_chunk": 994
+    },
+    {
+      "id": 250,
+      "title": "Milestone for BMW Group transport logistics: Full speed ahead with the first hydrogen trucks",
+      "num_chunks": 4,
+      "tokens": 1860,
+      "words": 1451,
+      "chars": 9115,
+      "start_chunk": 995,
+      "end_chunk": 998
+    },
+    {
+      "id": 251,
+      "title": "New BMW Panoramic iDrive revolutionises vehicle operation. Visionary technology package for the Neue",
+      "num_chunks": 6,
+      "tokens": 2454,
+      "words": 1953,
+      "chars": 12550,
+      "start_chunk": 999,
+      "end_chunk": 1004
+    },
+    {
+      "id": 252,
+      "title": "Welcome, Petrux: Danilo Petrucci to race for BMW Motorrad Motorsport in the 2026 WorldSBK.",
+      "num_chunks": 3,
+      "tokens": 1002,
+      "words": 743,
+      "chars": 4340,
+      "start_chunk": 1005,
+      "end_chunk": 1007
+    },
+    {
+      "id": 253,
+      "title": "BMW i Ventures Leads $10 Million Series A Round in Qualytics to Meet Surging Demand for Automated Da",
+      "num_chunks": 4,
+      "tokens": 1449,
+      "words": 1031,
+      "chars": 7084,
+      "start_chunk": 1008,
+      "end_chunk": 1011
+    },
+    {
+      "id": 254,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Quarte",
+      "num_chunks": 8,
+      "tokens": 3448,
+      "words": 2730,
+      "chars": 17252,
+      "start_chunk": 1012,
+      "end_chunk": 1019
+    },
+    {
+      "id": 255,
+      "title": "The start of a new era. The new BMW iX3.",
+      "num_chunks": 16,
+      "tokens": 7622,
+      "words": 5701,
+      "chars": 37272,
+      "start_chunk": 1020,
+      "end_chunk": 1035
+    },
+    {
+      "id": 256,
+      "title": "DTM 2025: Ren\u00e9 Rast and Marco Wittmann will race for Schubert Motorsport in the BMW M4 GT3 EVO.",
+      "num_chunks": 3,
+      "tokens": 1262,
+      "words": 944,
+      "chars": 5331,
+      "start_chunk": 1036,
+      "end_chunk": 1038
+    },
+    {
+      "id": 257,
+      "title": "BMW M Award in MotoGP\u2122: Record winner Marc M\u00e1rquez dominates the 2025 season.",
+      "num_chunks": 4,
+      "tokens": 1814,
+      "words": 1312,
+      "chars": 7774,
+      "start_chunk": 1039,
+      "end_chunk": 1042
+    },
+    {
+      "id": 258,
+      "title": "Focus on digitalization: BMW Group strengthens production logistics and financial processes with mod",
+      "num_chunks": 3,
+      "tokens": 972,
+      "words": 742,
+      "chars": 5260,
+      "start_chunk": 1043,
+      "end_chunk": 1045
+    },
+    {
+      "id": 259,
+      "title": "Where it all comes together: What does a data scientist do in high-voltage battery production?",
+      "num_chunks": 3,
+      "tokens": 1168,
+      "words": 903,
+      "chars": 6036,
+      "start_chunk": 1046,
+      "end_chunk": 1048
+    },
+    {
+      "id": 260,
+      "title": "Mayor eficiencia y productividad con inteligencia artificial \u2013 IA generativa en Compras de BMW Group",
+      "num_chunks": 6,
+      "tokens": 2470,
+      "words": 1150,
+      "chars": 7644,
+      "start_chunk": 1049,
+      "end_chunk": 1054
+    },
+    {
+      "id": 261,
+      "title": "The BMW X5 Conquers the Rebelle Rally.",
+      "num_chunks": 3,
+      "tokens": 1356,
+      "words": 983,
+      "chars": 6347,
+      "start_chunk": 1055,
+      "end_chunk": 1057
+    },
+    {
+      "id": 262,
+      "title": "Hypercar with a new look: BMW M Hybrid V8 receives aerodynamic updates for the 2026 season.",
+      "num_chunks": 2,
+      "tokens": 752,
+      "words": 593,
+      "chars": 3565,
+      "start_chunk": 1058,
+      "end_chunk": 1059
+    },
+    {
+      "id": 263,
+      "title": "BMW celebrates innovation, lifestyle and digital creativity at ApeFest 2025 in Las Vegas.",
+      "num_chunks": 4,
+      "tokens": 1633,
+      "words": 1256,
+      "chars": 7970,
+      "start_chunk": 1060,
+      "end_chunk": 1063
+    },
+    {
+      "id": 264,
+      "title": "36th BMW International Open: Daniel Brown wins with a flawless final round.",
+      "num_chunks": 4,
+      "tokens": 1729,
+      "words": 1276,
+      "chars": 7316,
+      "start_chunk": 1064,
+      "end_chunk": 1067
+    },
+    {
+      "id": 265,
+      "title": "BMW Motorrad presents the \u201eBMW Motorrad Concept RR\u201c at the Concorso d'Eleganza Villa d'Este.",
+      "num_chunks": 3,
+      "tokens": 1122,
+      "words": 865,
+      "chars": 5765,
+      "start_chunk": 1068,
+      "end_chunk": 1070
+    },
+    {
+      "id": 266,
+      "title": "Anniversary: 20 years of series production at BMW Group Plant Leipzig",
+      "num_chunks": 6,
+      "tokens": 2631,
+      "words": 2060,
+      "chars": 12897,
+      "start_chunk": 1071,
+      "end_chunk": 1076
+    },
+    {
+      "id": 267,
+      "title": "The new BMW iX.",
+      "num_chunks": 9,
+      "tokens": 4129,
+      "words": 3098,
+      "chars": 19706,
+      "start_chunk": 1077,
+      "end_chunk": 1085
+    },
+    {
+      "id": 268,
+      "title": "HISTORY IN THE MAKING: ROLLS-ROYCE FUTURE TALENT PUTS THE SEAL ON UNIQUE TIME CAPSULE TO MARK EXTENS",
+      "num_chunks": 2,
+      "tokens": 600,
+      "words": 417,
+      "chars": 2760,
+      "start_chunk": 1086,
+      "end_chunk": 1087
+    },
+    {
+      "id": 269,
+      "title": "BMW Group reports strong growth in Europe and US, with significant increase in BEV sales worldwide",
+      "num_chunks": 3,
+      "tokens": 1022,
+      "words": 678,
+      "chars": 4474,
+      "start_chunk": 1088,
+      "end_chunk": 1090
+    },
+    {
+      "id": 270,
+      "title": "FIA WEC and IMSA: BMW M Motorsport commits long-term to its Hypercar programme.",
+      "num_chunks": 3,
+      "tokens": 1248,
+      "words": 984,
+      "chars": 5588,
+      "start_chunk": 1091,
+      "end_chunk": 1093
+    },
+    {
+      "id": 271,
+      "title": "BMW Art Car World Tour: Andy Warhol\u2019s BMW M1 Art Car makes its debut in the Middle East at Art Dubai",
+      "num_chunks": 3,
+      "tokens": 955,
+      "words": 717,
+      "chars": 4430,
+      "start_chunk": 1094,
+      "end_chunk": 1096
+    },
+    {
+      "id": 272,
+      "title": "BMW Motorrad presents the strongest sales result in company history.",
+      "num_chunks": 3,
+      "tokens": 1259,
+      "words": 966,
+      "chars": 5863,
+      "start_chunk": 1097,
+      "end_chunk": 1099
+    },
+    {
+      "id": 273,
+      "title": "Jordan Pepper becomes a BMW M works driver.",
+      "num_chunks": 2,
+      "tokens": 869,
+      "words": 677,
+      "chars": 3826,
+      "start_chunk": 1100,
+      "end_chunk": 1101
+    },
+    {
+      "id": 274,
+      "title": "BMW at Frieze Seoul 2025: Space and movement with Korean performance pioneer Lee Kun-Yong. Artistic ",
+      "num_chunks": 4,
+      "tokens": 1809,
+      "words": 1380,
+      "chars": 8699,
+      "start_chunk": 1102,
+      "end_chunk": 1105
+    },
+    {
+      "id": 275,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Annual Conference 2025",
+      "num_chunks": 9,
+      "tokens": 4053,
+      "words": 3140,
+      "chars": 19211,
+      "start_chunk": 1106,
+      "end_chunk": 1114
+    },
+    {
+      "id": 276,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, 105th Annual General M",
+      "num_chunks": 17,
+      "tokens": 7826,
+      "words": 6144,
+      "chars": 36849,
+      "start_chunk": 1115,
+      "end_chunk": 1131
+    },
+    {
+      "id": 277,
+      "title": "Postcard Story. With the MINI Cooper Convertible S in the South of England.",
+      "num_chunks": 1,
+      "tokens": 356,
+      "words": 230,
+      "chars": 1491,
+      "start_chunk": 1132,
+      "end_chunk": 1132
+    },
+    {
+      "id": 278,
+      "title": "Turning old into new: Recycling as next step towards greater circular economy for BMW Group 3D print",
+      "num_chunks": 3,
+      "tokens": 1134,
+      "words": 880,
+      "chars": 6046,
+      "start_chunk": 1133,
+      "end_chunk": 1135
+    },
+    {
+      "id": 279,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 minutes on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 4,
+      "tokens": 1502,
+      "words": 1102,
+      "chars": 6652,
+      "start_chunk": 1136,
+      "end_chunk": 1139
+    },
+    {
+      "id": 280,
+      "title": "The start of a new era. The new BMW iX3.",
+      "num_chunks": 15,
+      "tokens": 7009,
+      "words": 5399,
+      "chars": 34521,
+      "start_chunk": 1140,
+      "end_chunk": 1154
+    },
+    {
+      "id": 281,
+      "title": "The new BMW iX.",
+      "num_chunks": 9,
+      "tokens": 3913,
+      "words": 3040,
+      "chars": 18913,
+      "start_chunk": 1155,
+      "end_chunk": 1163
+    },
+    {
+      "id": 282,
+      "title": "36th BMW International Open: Saturday in pictures.",
+      "num_chunks": 1,
+      "tokens": 337,
+      "words": 235,
+      "chars": 1473,
+      "start_chunk": 1164,
+      "end_chunk": 1164
+    },
+    {
+      "id": 283,
+      "title": "DTM tests: Schubert Motorsport is preparing the two BMW M4 GT3 EVOs for the start of the season.",
+      "num_chunks": 3,
+      "tokens": 1347,
+      "words": 1060,
+      "chars": 6190,
+      "start_chunk": 1165,
+      "end_chunk": 1167
+    },
+    {
+      "id": 284,
+      "title": "ROLLS-ROYCE MARKS NATIONAL APPRENTICESHIP WEEK WITH SPECIAL ALUMNI EVENT",
+      "num_chunks": 1,
+      "tokens": 416,
+      "words": 293,
+      "chars": 2054,
+      "start_chunk": 1168,
+      "end_chunk": 1168
+    },
+    {
+      "id": 285,
+      "title": "Postcard Story: MINI celebrates life the Mexican way.",
+      "num_chunks": 1,
+      "tokens": 250,
+      "words": 175,
+      "chars": 1153,
+      "start_chunk": 1169,
+      "end_chunk": 1169
+    },
+    {
+      "id": 286,
+      "title": "CHINESE MURAL ART: A CULTURAL TRIBUTE BY ROLLS-ROYCE",
+      "num_chunks": 1,
+      "tokens": 429,
+      "words": 296,
+      "chars": 2148,
+      "start_chunk": 1170,
+      "end_chunk": 1170
+    },
+    {
+      "id": 287,
+      "title": "ROLLS-ROYCE MOTOR CARS ANNOUNCES NEW DIRECTOR OF HUMAN RESOURCES",
+      "num_chunks": 1,
+      "tokens": 309,
+      "words": 215,
+      "chars": 1434,
+      "start_chunk": 1171,
+      "end_chunk": 1171
+    },
+    {
+      "id": 288,
+      "title": "News in Brief from BMW Group UK.",
+      "num_chunks": 2,
+      "tokens": 867,
+      "words": 627,
+      "chars": 4014,
+      "start_chunk": 1172,
+      "end_chunk": 1173
+    },
+    {
+      "id": 289,
+      "title": "12h Sebring: Pole position and fifth place for the BMW M Hybrid V8 \u2013 Double podium for the BMW M4 GT",
+      "num_chunks": 5,
+      "tokens": 2270,
+      "words": 1729,
+      "chars": 9465,
+      "start_chunk": 1174,
+      "end_chunk": 1178
+    },
+    {
+      "id": 290,
+      "title": "BMW Motorrad presents the \u201eBMW Motorrad Concept RR\u201c at the Concorso d'Eleganza Villa d'Este.",
+      "num_chunks": 3,
+      "tokens": 1122,
+      "words": 865,
+      "chars": 5765,
+      "start_chunk": 1179,
+      "end_chunk": 1181
+    },
+    {
+      "id": 291,
+      "title": "With Sheer Driving Pleasure and tailwind into the Olympic Season: German National Biathlon Team rece",
+      "num_chunks": 2,
+      "tokens": 738,
+      "words": 522,
+      "chars": 3241,
+      "start_chunk": 1182,
+      "end_chunk": 1183
+    },
+    {
+      "id": 292,
+      "title": "Postcard Story. The MINI Cooper Convertible S in Copper Grey.",
+      "num_chunks": 1,
+      "tokens": 356,
+      "words": 230,
+      "chars": 1543,
+      "start_chunk": 1184,
+      "end_chunk": 1184
+    },
+    {
+      "id": 293,
+      "title": "BMW Group Half-Year Report to 30 June 2025",
+      "num_chunks": 1,
+      "tokens": 163,
+      "words": 103,
+      "chars": 706,
+      "start_chunk": 1185,
+      "end_chunk": 1185
+    },
+    {
+      "id": 294,
+      "title": "THE GRANDMASTER\u2019S CHOICE: INTRODUCING THE ROLLS-ROYCE CHESS SET",
+      "num_chunks": 3,
+      "tokens": 1337,
+      "words": 979,
+      "chars": 6384,
+      "start_chunk": 1186,
+      "end_chunk": 1188
+    },
+    {
+      "id": 295,
+      "title": "BMW Group shows positive sales development in second quarter of 2025",
+      "num_chunks": 3,
+      "tokens": 1226,
+      "words": 837,
+      "chars": 5262,
+      "start_chunk": 1189,
+      "end_chunk": 1191
+    },
+    {
+      "id": 296,
+      "title": "BMW enjoys sweeping success at prestigious German awards events: \u201cGolden Steering Wheel\u201d for BMW iX3",
+      "num_chunks": 5,
+      "tokens": 2206,
+      "words": 1440,
+      "chars": 8988,
+      "start_chunk": 1192,
+      "end_chunk": 1196
+    },
+    {
+      "id": 297,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cRebuilding the brand after the Yuppies",
+      "num_chunks": 8,
+      "tokens": 3558,
+      "words": 2491,
+      "chars": 14791,
+      "start_chunk": 1197,
+      "end_chunk": 1204
+    },
+    {
+      "id": 298,
+      "title": "He did it again: Toprak Razgatlioglu is the 2025 WorldSBK World Champion!",
+      "num_chunks": 6,
+      "tokens": 2755,
+      "words": 2054,
+      "chars": 11485,
+      "start_chunk": 1205,
+      "end_chunk": 1210
+    },
+    {
+      "id": 299,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 minutes on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 4,
+      "tokens": 1502,
+      "words": 1102,
+      "chars": 6652,
+      "start_chunk": 1211,
+      "end_chunk": 1214
+    },
+    {
+      "id": 300,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 minutes on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 4,
+      "tokens": 1502,
+      "words": 1102,
+      "chars": 6652,
+      "start_chunk": 1215,
+      "end_chunk": 1218
+    },
+    {
+      "id": 301,
+      "title": "BMW i Ventures Invests in VIA Science to Bring Next Generation Data Protection to Enterprise Securit",
+      "num_chunks": 2,
+      "tokens": 803,
+      "words": 551,
+      "chars": 3935,
+      "start_chunk": 1219,
+      "end_chunk": 1220
+    },
+    {
+      "id": 302,
+      "title": "The BMW M4 CS Edition VR46: Exclusive edition marks BMW M works driver Valentino Rossi\u2019s birthday",
+      "num_chunks": 7,
+      "tokens": 2861,
+      "words": 2139,
+      "chars": 12569,
+      "start_chunk": 1221,
+      "end_chunk": 1227
+    },
+    {
+      "id": 303,
+      "title": "The new 2026 BMW M2 CS.",
+      "num_chunks": 9,
+      "tokens": 3888,
+      "words": 2915,
+      "chars": 18353,
+      "start_chunk": 1228,
+      "end_chunk": 1236
+    },
+    {
+      "id": 304,
+      "title": "FIA WEC: Tactical masterclass \u2013 #20 BMW M Hybrid V8 on the podium at Imola; second place also in the",
+      "num_chunks": 5,
+      "tokens": 2082,
+      "words": 1569,
+      "chars": 8765,
+      "start_chunk": 1237,
+      "end_chunk": 1241
+    },
+    {
+      "id": 305,
+      "title": "BMW named Best Manufacturer in Car Dealer Power Survey 2025",
+      "num_chunks": 1,
+      "tokens": 301,
+      "words": 237,
+      "chars": 1582,
+      "start_chunk": 1242,
+      "end_chunk": 1242
+    },
+    {
+      "id": 306,
+      "title": "The all-electric MINI Aceman: Everyday hero and adventure companion.",
+      "num_chunks": 3,
+      "tokens": 1337,
+      "words": 1005,
+      "chars": 6412,
+      "start_chunk": 1243,
+      "end_chunk": 1245
+    },
+    {
+      "id": 307,
+      "title": "Maurizio Cattelan receives the Preis der Nationalgalerie 2026. BMW supports the award since 2006, un",
+      "num_chunks": 6,
+      "tokens": 2590,
+      "words": 1800,
+      "chars": 11842,
+      "start_chunk": 1246,
+      "end_chunk": 1251
+    },
+    {
+      "id": 308,
+      "title": "Top ratings once again for MINI: Five stars in Euro NCAP crash test for MINI Cooper and MINI Aceman.",
+      "num_chunks": 2,
+      "tokens": 659,
+      "words": 505,
+      "chars": 3090,
+      "start_chunk": 1252,
+      "end_chunk": 1253
+    },
+    {
+      "id": 309,
+      "title": "MINI FINANCIAL SERVICES LAUNCHES \u201cMINI EASYOWN\u201d",
+      "num_chunks": 3,
+      "tokens": 953,
+      "words": 660,
+      "chars": 4388,
+      "start_chunk": 1254,
+      "end_chunk": 1256
+    },
+    {
+      "id": 310,
+      "title": "Hydrogen high tech at the BMW Group: start of series production in 2028 is getting closer.",
+      "num_chunks": 3,
+      "tokens": 1111,
+      "words": 916,
+      "chars": 5965,
+      "start_chunk": 1257,
+      "end_chunk": 1259
+    },
+    {
+      "id": 311,
+      "title": "BMW Opera for All Concert 2025: World-Class Opera Takes Centre Stage in Melbourne\u2019s Federation Squar",
+      "num_chunks": 1,
+      "tokens": 428,
+      "words": 327,
+      "chars": 2205,
+      "start_chunk": 1260,
+      "end_chunk": 1260
+    },
+    {
+      "id": 312,
+      "title": "Nicolai von Dellingshausen carries momentum into the BMW International Open \u2013 More top Germans set t",
+      "num_chunks": 2,
+      "tokens": 795,
+      "words": 590,
+      "chars": 3518,
+      "start_chunk": 1261,
+      "end_chunk": 1262
+    },
+    {
+      "id": 313,
+      "title": "Smart, safe, symbiotic: BMW Group is the first car manufacturer in Germany to receive international ",
+      "num_chunks": 3,
+      "tokens": 1162,
+      "words": 940,
+      "chars": 6124,
+      "start_chunk": 1263,
+      "end_chunk": 1265
+    },
+    {
+      "id": 314,
+      "title": "WorldSBK hat-trick at Donington: Toprak Razgatlioglu takes World Championship lead.",
+      "num_chunks": 4,
+      "tokens": 1772,
+      "words": 1277,
+      "chars": 7442,
+      "start_chunk": 1266,
+      "end_chunk": 1269
+    },
+    {
+      "id": 315,
+      "title": "Roar before the 24: BMW M Motorsport teams and drivers intensively prepare for the 24h Daytona.",
+      "num_chunks": 5,
+      "tokens": 2035,
+      "words": 1526,
+      "chars": 8671,
+      "start_chunk": 1270,
+      "end_chunk": 1274
+    },
+    {
+      "id": 316,
+      "title": "IMSA: BMW M4 GT3 EVO celebrates its first win of the season at the Six Hours of the Glen.",
+      "num_chunks": 4,
+      "tokens": 1658,
+      "words": 1299,
+      "chars": 7122,
+      "start_chunk": 1275,
+      "end_chunk": 1278
+    },
+    {
+      "id": 317,
+      "title": "Bavarian expertise in demand worldwide: How the BMW Group is gearing up for series production of its",
+      "num_chunks": 3,
+      "tokens": 1158,
+      "words": 773,
+      "chars": 5392,
+      "start_chunk": 1279,
+      "end_chunk": 1281
+    },
+    {
+      "id": 318,
+      "title": "BMW Group\u2019s home plant gears up for NEUE KLASSE",
+      "num_chunks": 3,
+      "tokens": 1290,
+      "words": 952,
+      "chars": 6445,
+      "start_chunk": 1282,
+      "end_chunk": 1284
+    },
+    {
+      "id": 319,
+      "title": "BMW Group Canada announces limited production run of the BMW 540i xDrive Legacy Edition for the Cana",
+      "num_chunks": 2,
+      "tokens": 837,
+      "words": 591,
+      "chars": 4036,
+      "start_chunk": 1285,
+      "end_chunk": 1286
+    },
+    {
+      "id": 320,
+      "title": "Thrilling start to the BMW International Open: Gareth Bale experiences Sheer Driving Pleasure at the",
+      "num_chunks": 1,
+      "tokens": 433,
+      "words": 327,
+      "chars": 2056,
+      "start_chunk": 1287,
+      "end_chunk": 1287
+    },
+    {
+      "id": 321,
+      "title": "Ultimate Endurance Test: MINI John Cooper Works and Bulldog Racing once again take on the 24 Hours R",
+      "num_chunks": 3,
+      "tokens": 1215,
+      "words": 932,
+      "chars": 5835,
+      "start_chunk": 1288,
+      "end_chunk": 1290
+    },
+    {
+      "id": 322,
+      "title": "BMW Golf Cup World Final: Team Vietnam wins \u2013 Eagles galore in Bangkok.",
+      "num_chunks": 4,
+      "tokens": 1530,
+      "words": 1141,
+      "chars": 7009,
+      "start_chunk": 1291,
+      "end_chunk": 1294
+    },
+    {
+      "id": 323,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cA Capital Investment: BMW Financial Se",
+      "num_chunks": 7,
+      "tokens": 2913,
+      "words": 2260,
+      "chars": 13761,
+      "start_chunk": 1295,
+      "end_chunk": 1301
+    },
+    {
+      "id": 324,
+      "title": "BMW Motorrad presents the BMW R 1300 R \"TITAN\u201c.",
+      "num_chunks": 3,
+      "tokens": 899,
+      "words": 635,
+      "chars": 4089,
+      "start_chunk": 1302,
+      "end_chunk": 1304
+    },
+    {
+      "id": 325,
+      "title": "Just one click to the classics. Historic BMW model overviews now online for everyone",
+      "num_chunks": 2,
+      "tokens": 779,
+      "words": 595,
+      "chars": 3911,
+      "start_chunk": 1305,
+      "end_chunk": 1306
+    },
+    {
+      "id": 326,
+      "title": "The BMW Group at IAA Mobility 2025: the new BMW iX3 celebrates its world premiere.",
+      "num_chunks": 9,
+      "tokens": 3981,
+      "words": 2959,
+      "chars": 17801,
+      "start_chunk": 1307,
+      "end_chunk": 1315
+    },
+    {
+      "id": 327,
+      "title": "50 years of the BMW 3 series.",
+      "num_chunks": 4,
+      "tokens": 1824,
+      "words": 1483,
+      "chars": 9288,
+      "start_chunk": 1316,
+      "end_chunk": 1319
+    },
+    {
+      "id": 328,
+      "title": "BMW Motorrad presents \u201eThe Speed Sisters\u201c by [WOIDWERK].",
+      "num_chunks": 4,
+      "tokens": 1630,
+      "words": 1097,
+      "chars": 7197,
+      "start_chunk": 1320,
+      "end_chunk": 1323
+    },
+    {
+      "id": 329,
+      "title": "BMW Asia records highest Q1 retail ever in 2025 with 13% growth YoY.",
+      "num_chunks": 3,
+      "tokens": 1198,
+      "words": 934,
+      "chars": 6098,
+      "start_chunk": 1324,
+      "end_chunk": 1326
+    },
+    {
+      "id": 330,
+      "title": "Steyr goes electric: BMW Group launches series production of electric engines for Neue Klasse",
+      "num_chunks": 3,
+      "tokens": 1322,
+      "words": 971,
+      "chars": 6474,
+      "start_chunk": 1327,
+      "end_chunk": 1329
+    },
+    {
+      "id": 331,
+      "title": "Forward momentum through technology openness, strong product line-up and NEUE KLASSE: BMW Group on t",
+      "num_chunks": 17,
+      "tokens": 7655,
+      "words": 5778,
+      "chars": 36355,
+      "start_chunk": 1330,
+      "end_chunk": 1346
+    },
+    {
+      "id": 332,
+      "title": "BMW Group maintains BEV growth path in challenging market situation in 2024",
+      "num_chunks": 4,
+      "tokens": 1508,
+      "words": 1051,
+      "chars": 6794,
+      "start_chunk": 1347,
+      "end_chunk": 1350
+    },
+    {
+      "id": 333,
+      "title": "ROLLS-ROYCE \u2018MAKERS OF THE MARQUE\u2019: ERIC PLATFORD",
+      "num_chunks": 4,
+      "tokens": 1722,
+      "words": 1193,
+      "chars": 7958,
+      "start_chunk": 1351,
+      "end_chunk": 1354
+    },
+    {
+      "id": 334,
+      "title": "DTM: One-two finish, DTM record, and milestone at Zandvoort.",
+      "num_chunks": 4,
+      "tokens": 1815,
+      "words": 1279,
+      "chars": 7473,
+      "start_chunk": 1355,
+      "end_chunk": 1358
+    },
+    {
+      "id": 335,
+      "title": "Charge faster, drive further: BMW Group reveals revolutionary electric drive concept with 800V techn",
+      "num_chunks": 12,
+      "tokens": 5126,
+      "words": 3862,
+      "chars": 25202,
+      "start_chunk": 1359,
+      "end_chunk": 1370
+    },
+    {
+      "id": 336,
+      "title": "BMW M Motorsport News, 10th September 2025.",
+      "num_chunks": 7,
+      "tokens": 3260,
+      "words": 2239,
+      "chars": 13020,
+      "start_chunk": 1371,
+      "end_chunk": 1377
+    },
+    {
+      "id": 337,
+      "title": "MINI PARTNERS WITH SMORGASBURG FOR IMMERSIVE FALL EVENT SERIES",
+      "num_chunks": 3,
+      "tokens": 1111,
+      "words": 759,
+      "chars": 4947,
+      "start_chunk": 1378,
+      "end_chunk": 1380
+    },
+    {
+      "id": 338,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cFrom Sponsor to Partner: BMW of North ",
+      "num_chunks": 7,
+      "tokens": 2990,
+      "words": 2217,
+      "chars": 13463,
+      "start_chunk": 1381,
+      "end_chunk": 1387
+    },
+    {
+      "id": 339,
+      "title": "BMW M Track Days - Press Materials",
+      "num_chunks": 1,
+      "tokens": 153,
+      "words": 109,
+      "chars": 677,
+      "start_chunk": 1388,
+      "end_chunk": 1388
+    },
+    {
+      "id": 340,
+      "title": "MINI JCW x Deus Ex Machina: Two worlds. Two cars. Singular enthusiasm.",
+      "num_chunks": 7,
+      "tokens": 3042,
+      "words": 2289,
+      "chars": 14736,
+      "start_chunk": 1389,
+      "end_chunk": 1395
+    },
+    {
+      "id": 341,
+      "title": "South Korea\u2018s Golf Highlight: BMW Ladies Championship makes first appearance on a spectacular links ",
+      "num_chunks": 3,
+      "tokens": 1071,
+      "words": 789,
+      "chars": 4796,
+      "start_chunk": 1396,
+      "end_chunk": 1398
+    },
+    {
+      "id": 342,
+      "title": "FIM EWC Suzuka: BMW factory team moves up to second in World Championship \u2013 [ADDRESS]-2 in the Super",
+      "num_chunks": 6,
+      "tokens": 2635,
+      "words": 1977,
+      "chars": 11294,
+      "start_chunk": 1399,
+      "end_chunk": 1404
+    },
+    {
+      "id": 343,
+      "title": "BMW Group and Solid Power take next step in ASSB development path: new partner Samsung SDI joins the",
+      "num_chunks": 4,
+      "tokens": 1478,
+      "words": 1131,
+      "chars": 7534,
+      "start_chunk": 1405,
+      "end_chunk": 1408
+    },
+    {
+      "id": 344,
+      "title": "BMW Group South Africa engages national leadership at Plant Rosslyn, deepening collaborative vision ",
+      "num_chunks": 3,
+      "tokens": 1363,
+      "words": 1042,
+      "chars": 7333,
+      "start_chunk": 1409,
+      "end_chunk": 1411
+    },
+    {
+      "id": 345,
+      "title": "On the podium again! MINI JCW and Bulldog Racing in 2nd place in the SP3T-class at the 24 Hours of N",
+      "num_chunks": 2,
+      "tokens": 837,
+      "words": 623,
+      "chars": 3713,
+      "start_chunk": 1412,
+      "end_chunk": 1413
+    },
+    {
+      "id": 346,
+      "title": "BMW M4 CS Edition VR46: outstanding craftsmanship and passion combined with the aura and design idea",
+      "num_chunks": 5,
+      "tokens": 1968,
+      "words": 1510,
+      "chars": 8875,
+      "start_chunk": 1414,
+      "end_chunk": 1418
+    },
+    {
+      "id": 347,
+      "title": "MODELS OF THE MARQUE \u2013 THE 1980s: ROLLS-ROYCE PHANTOM VI",
+      "num_chunks": 2,
+      "tokens": 717,
+      "words": 509,
+      "chars": 3274,
+      "start_chunk": 1419,
+      "end_chunk": 1420
+    },
+    {
+      "id": 348,
+      "title": "BMW Motorrad Model Update 2026.",
+      "num_chunks": 1,
+      "tokens": 311,
+      "words": 236,
+      "chars": 1486,
+      "start_chunk": 1421,
+      "end_chunk": 1421
+    },
+    {
+      "id": 349,
+      "title": "The original BMW Neue Klasse: The Birth of the BMW Sports Sedan in the 1960s also marked the beginni",
+      "num_chunks": 5,
+      "tokens": 2061,
+      "words": 1585,
+      "chars": 9560,
+      "start_chunk": 1422,
+      "end_chunk": 1426
+    },
+    {
+      "id": 350,
+      "title": "BMW M Racing Academy: \u201cClass of 2025\u201d completes extensive customer racing development program.",
+      "num_chunks": 6,
+      "tokens": 2428,
+      "words": 1868,
+      "chars": 11485,
+      "start_chunk": 1427,
+      "end_chunk": 1432
+    },
+    {
+      "id": 351,
+      "title": "MINI USA AND BARRY'S PARTNER TO CELEBRATE COMMUNITY AND INCLUSIVITY.",
+      "num_chunks": 3,
+      "tokens": 1250,
+      "words": 892,
+      "chars": 5707,
+      "start_chunk": 1433,
+      "end_chunk": 1435
+    },
+    {
+      "id": 352,
+      "title": "BMW Group Plant Landshut focuses on digitalization in component production.",
+      "num_chunks": 4,
+      "tokens": 1525,
+      "words": 1207,
+      "chars": 8262,
+      "start_chunk": 1436,
+      "end_chunk": 1439
+    },
+    {
+      "id": 353,
+      "title": "BMW Art Car as catalyst: Mehretu and BMW launch film project in Africa.",
+      "num_chunks": 6,
+      "tokens": 2728,
+      "words": 1969,
+      "chars": 12713,
+      "start_chunk": 1440,
+      "end_chunk": 1445
+    },
+    {
+      "id": 354,
+      "title": "ROLLS-ROYCE MANCHESTER UNVEILS NEW LUXURY SHOWROOM",
+      "num_chunks": 4,
+      "tokens": 1488,
+      "words": 1036,
+      "chars": 7119,
+      "start_chunk": 1446,
+      "end_chunk": 1449
+    },
+    {
+      "id": 355,
+      "title": "MINI JCW x Deus Ex Machina: Two worlds. Two cars. Singular enthusiasm.",
+      "num_chunks": 1,
+      "tokens": 426,
+      "words": 306,
+      "chars": 1992,
+      "start_chunk": 1450,
+      "end_chunk": 1450
+    },
+    {
+      "id": 356,
+      "title": "Once again Euro NCAP Top Rating: 5 Stars for the fully electric MINI Cooper.",
+      "num_chunks": 1,
+      "tokens": 372,
+      "words": 301,
+      "chars": 1905,
+      "start_chunk": 1451,
+      "end_chunk": 1451
+    },
+    {
+      "id": 357,
+      "title": "From pilot fleet to series production: the new BMW iX5 Hydrogen",
+      "num_chunks": 3,
+      "tokens": 1085,
+      "words": 871,
+      "chars": 5741,
+      "start_chunk": 1452,
+      "end_chunk": 1454
+    },
+    {
+      "id": 358,
+      "title": "ROLLS-ROYCE SPECTRE INSPIRED BY PRIMAVERA: A SPRINGTIME VISION TO CARRY INTO THE YEAR AHEAD",
+      "num_chunks": 1,
+      "tokens": 494,
+      "words": 332,
+      "chars": 2287,
+      "start_chunk": 1455,
+      "end_chunk": 1455
+    },
+    {
+      "id": 359,
+      "title": "The Kunstsammlung Nordrhein-Westfalen presents Julie Mehretu\u2019s largest survey exhibition in Germany ",
+      "num_chunks": 6,
+      "tokens": 2727,
+      "words": 1865,
+      "chars": 12319,
+      "start_chunk": 1456,
+      "end_chunk": 1461
+    },
+    {
+      "id": 360,
+      "title": "BMW Group UK Spring Multi-Model Event - Press Materials",
+      "num_chunks": 1,
+      "tokens": 168,
+      "words": 130,
+      "chars": 839,
+      "start_chunk": 1462,
+      "end_chunk": 1462
+    },
+    {
+      "id": 361,
+      "title": "The BMW M Motorsport works driver line-up for the 2025 season.",
+      "num_chunks": 2,
+      "tokens": 662,
+      "words": 500,
+      "chars": 2989,
+      "start_chunk": 1463,
+      "end_chunk": 1464
+    },
+    {
+      "id": 362,
+      "title": "The 2026 BMW M2 Turbo Design Edition.",
+      "num_chunks": 5,
+      "tokens": 1938,
+      "words": 1420,
+      "chars": 8845,
+      "start_chunk": 1465,
+      "end_chunk": 1469
+    },
+    {
+      "id": 363,
+      "title": "IMSA triumph! BMW M Team RLL celebrates 1-2 finish at Road America with the BMW M Hybrid V8.",
+      "num_chunks": 5,
+      "tokens": 1942,
+      "words": 1517,
+      "chars": 8477,
+      "start_chunk": 1470,
+      "end_chunk": 1474
+    },
+    {
+      "id": 364,
+      "title": "Hydrogen high tech at the BMW Group: start of series production in 2028 is getting closer.",
+      "num_chunks": 3,
+      "tokens": 1111,
+      "words": 916,
+      "chars": 5965,
+      "start_chunk": 1475,
+      "end_chunk": 1477
+    },
+    {
+      "id": 365,
+      "title": "The new BMW iX now available in Singapore.",
+      "num_chunks": 6,
+      "tokens": 2809,
+      "words": 2243,
+      "chars": 14070,
+      "start_chunk": 1478,
+      "end_chunk": 1483
+    },
+    {
+      "id": 366,
+      "title": "BMW of North America Reports Q4 2024 U.S. Sales Results, Sets New Benchmarks for Annual Sales and BE",
+      "num_chunks": 4,
+      "tokens": 1610,
+      "words": 1159,
+      "chars": 7058,
+      "start_chunk": 1484,
+      "end_chunk": 1487
+    },
+    {
+      "id": 367,
+      "title": "The all-new BMW M5 Touring now available in Singapore.",
+      "num_chunks": 7,
+      "tokens": 2969,
+      "words": 2280,
+      "chars": 14743,
+      "start_chunk": 1488,
+      "end_chunk": 1494
+    },
+    {
+      "id": 368,
+      "title": "BMW Group and Solid Power are testing all-solid-state battery cells in a BMW i7.",
+      "num_chunks": 4,
+      "tokens": 1686,
+      "words": 1304,
+      "chars": 8468,
+      "start_chunk": 1495,
+      "end_chunk": 1498
+    },
+    {
+      "id": 369,
+      "title": "BMW Group Plant Regensburg pilots thermal oil system for heat generation in paint shop",
+      "num_chunks": 3,
+      "tokens": 1305,
+      "words": 1001,
+      "chars": 6424,
+      "start_chunk": 1499,
+      "end_chunk": 1501
+    },
+    {
+      "id": 370,
+      "title": "The BMW Group at IAA Mobility 2025: the new BMW iX3 celebrates its world premiere.",
+      "num_chunks": 8,
+      "tokens": 3476,
+      "words": 2508,
+      "chars": 15070,
+      "start_chunk": 1502,
+      "end_chunk": 1509
+    },
+    {
+      "id": 371,
+      "title": "PHANTOM AT 100: FROM ROCK \u2018N\u2019 ROLL TO RAP \u2013 PHANTOM\u2019S BOLD CENTURY IN MUSIC",
+      "num_chunks": 2,
+      "tokens": 680,
+      "words": 503,
+      "chars": 3246,
+      "start_chunk": 1510,
+      "end_chunk": 1511
+    },
+    {
+      "id": 372,
+      "title": "BMW Canada unveils the 2026 BMW M340i xDrive 50 Jahre Edition: A tribute to 50 years of the iconic 3",
+      "num_chunks": 3,
+      "tokens": 917,
+      "words": 672,
+      "chars": 4505,
+      "start_chunk": 1512,
+      "end_chunk": 1514
+    },
+    {
+      "id": 373,
+      "title": "CREATURE COMFORTS: ROLLS-ROYCE APPRENTICES CREATE BESPOKE DORMOUSE HOUSES FOR GOODWOOD ESTATE",
+      "num_chunks": 2,
+      "tokens": 722,
+      "words": 499,
+      "chars": 3377,
+      "start_chunk": 1515,
+      "end_chunk": 1516
+    },
+    {
+      "id": 374,
+      "title": "BMW Golf Cup World Final supports UNICEF educational programmes with \u201cEagles for Education\u201d.",
+      "num_chunks": 3,
+      "tokens": 1008,
+      "words": 791,
+      "chars": 5062,
+      "start_chunk": 1517,
+      "end_chunk": 1519
+    },
+    {
+      "id": 375,
+      "title": "MINI USA GOES RED, WHITE, AND BLUE TO CELEBRATE HISTORIC SPIRIT OF REBELLION AND INDEPENDENCE THIS F",
+      "num_chunks": 2,
+      "tokens": 795,
+      "words": 572,
+      "chars": 3407,
+      "start_chunk": 1520,
+      "end_chunk": 1521
+    },
+    {
+      "id": 376,
+      "title": "Supervisory Board of BMW AG sets course for unchanged leadership in innovation and technology",
+      "num_chunks": 2,
+      "tokens": 846,
+      "words": 629,
+      "chars": 4161,
+      "start_chunk": 1522,
+      "end_chunk": 1523
+    },
+    {
+      "id": 377,
+      "title": "36th BMW International Open: Quintet shares lead after [ADDRESS] \u2013 Tight battle for the cut looming.",
+      "num_chunks": 3,
+      "tokens": 1156,
+      "words": 833,
+      "chars": 4749,
+      "start_chunk": 1524,
+      "end_chunk": 1526
+    },
+    {
+      "id": 378,
+      "title": "Satellite Details. BMW Group Keynote. World Premiere of the new BMW iX3.",
+      "num_chunks": 1,
+      "tokens": 233,
+      "words": 123,
+      "chars": 868,
+      "start_chunk": 1527,
+      "end_chunk": 1527
+    },
+    {
+      "id": 379,
+      "title": "Concorso d'Eleganza Villa d'Este 2025",
+      "num_chunks": 6,
+      "tokens": 2285,
+      "words": 1559,
+      "chars": 9297,
+      "start_chunk": 1528,
+      "end_chunk": 1533
+    },
+    {
+      "id": 380,
+      "title": "MINI Sponsors 'She Inspires Me' Car Boot Sale for Women For Women International.",
+      "num_chunks": 1,
+      "tokens": 428,
+      "words": 309,
+      "chars": 1964,
+      "start_chunk": 1534,
+      "end_chunk": 1534
+    },
+    {
+      "id": 381,
+      "title": "Automotive Lean Production Award for the cockpit production at the BMW Group plants Landshut and Wac",
+      "num_chunks": 4,
+      "tokens": 1850,
+      "words": 1323,
+      "chars": 9016,
+      "start_chunk": 1535,
+      "end_chunk": 1538
+    },
+    {
+      "id": 382,
+      "title": "IMSA triumph! BMW M Team RLL celebrates 1-2 finish at Road America with the BMW M Hybrid V8.",
+      "num_chunks": 5,
+      "tokens": 1942,
+      "words": 1517,
+      "chars": 8477,
+      "start_chunk": 1539,
+      "end_chunk": 1543
+    },
+    {
+      "id": 383,
+      "title": "Nicolai von Dellingshausen: \u201cI\u2019m really looking forward to the BMW International Open.\u201d",
+      "num_chunks": 2,
+      "tokens": 854,
+      "words": 578,
+      "chars": 3532,
+      "start_chunk": 1544,
+      "end_chunk": 1545
+    },
+    {
+      "id": 384,
+      "title": "The end of an era: Dr. Norbert Reithofer steps down after 38 years at the BMW Group",
+      "num_chunks": 4,
+      "tokens": 1523,
+      "words": 1122,
+      "chars": 7171,
+      "start_chunk": 1546,
+      "end_chunk": 1549
+    },
+    {
+      "id": 385,
+      "title": "The new entry-level model: BMW M Motorsport presents the BMW M2 Racing.",
+      "num_chunks": 3,
+      "tokens": 1039,
+      "words": 798,
+      "chars": 4845,
+      "start_chunk": 1550,
+      "end_chunk": 1552
+    },
+    {
+      "id": 386,
+      "title": "Kick-off to the BMW Open by Bitpanda: New BMW iX M70 is the Winner's Car \u2013 Premiere of FUTURE ACES.",
+      "num_chunks": 3,
+      "tokens": 1248,
+      "words": 946,
+      "chars": 5854,
+      "start_chunk": 1553,
+      "end_chunk": 1555
+    },
+    {
+      "id": 387,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, Conference Call Quarte",
+      "num_chunks": 6,
+      "tokens": 2658,
+      "words": 2113,
+      "chars": 13222,
+      "start_chunk": 1556,
+      "end_chunk": 1561
+    },
+    {
+      "id": 388,
+      "title": "GT World Challenge Europe: ROWE Racing and the BMW M4 GT3 EVO triumph once again at the N\u00fcrburgring.",
+      "num_chunks": 4,
+      "tokens": 1856,
+      "words": 1351,
+      "chars": 7718,
+      "start_chunk": 1562,
+      "end_chunk": 1565
+    },
+    {
+      "id": 389,
+      "title": "Revving up art: Louwman Museum to open \u201cFine Art on Wheels\u201d exhibition as part of the Art Car World ",
+      "num_chunks": 2,
+      "tokens": 754,
+      "words": 544,
+      "chars": 3586,
+      "start_chunk": 1566,
+      "end_chunk": 1567
+    },
+    {
+      "id": 390,
+      "title": "Innovation in Bavaria: BMW Group relies on local partners at the Plant Irlbach-Strasskirchen",
+      "num_chunks": 4,
+      "tokens": 1487,
+      "words": 1049,
+      "chars": 7002,
+      "start_chunk": 1568,
+      "end_chunk": 1571
+    },
+    {
+      "id": 391,
+      "title": "Scottie Scheffler Wins the 2025 BMW Championship.",
+      "num_chunks": 4,
+      "tokens": 1451,
+      "words": 1040,
+      "chars": 6611,
+      "start_chunk": 1572,
+      "end_chunk": 1575
+    },
+    {
+      "id": 392,
+      "title": "BMW M4 CS Edition VR46: outstanding craftsmanship and passion combined with the aura and design idea",
+      "num_chunks": 5,
+      "tokens": 1968,
+      "words": 1510,
+      "chars": 8875,
+      "start_chunk": 1576,
+      "end_chunk": 1580
+    },
+    {
+      "id": 393,
+      "title": "BMW of North America Returns for the 2025 Rebelle Rally in the BMW X5.",
+      "num_chunks": 4,
+      "tokens": 1416,
+      "words": 984,
+      "chars": 6364,
+      "start_chunk": 1581,
+      "end_chunk": 1584
+    },
+    {
+      "id": 394,
+      "title": "COMING SOON: One-of-its-kind BMW i7 Singapore Icons.",
+      "num_chunks": 1,
+      "tokens": 330,
+      "words": 223,
+      "chars": 1518,
+      "start_chunk": 1585,
+      "end_chunk": 1585
+    },
+    {
+      "id": 395,
+      "title": "Hypercar with a new look: BMW M Hybrid V8 receives aerodynamic updates for the 2026 season.",
+      "num_chunks": 2,
+      "tokens": 752,
+      "words": 593,
+      "chars": 3565,
+      "start_chunk": 1586,
+      "end_chunk": 1587
+    },
+    {
+      "id": 396,
+      "title": "BMW Group UK achieves success at the 2025 What Car? Car of the Year Awards.",
+      "num_chunks": 2,
+      "tokens": 679,
+      "words": 516,
+      "chars": 3182,
+      "start_chunk": 1588,
+      "end_chunk": 1589
+    },
+    {
+      "id": 397,
+      "title": "BMW Motorrad presents the BMW F 450 GS.",
+      "num_chunks": 15,
+      "tokens": 6814,
+      "words": 5189,
+      "chars": 32480,
+      "start_chunk": 1590,
+      "end_chunk": 1604
+    },
+    {
+      "id": 398,
+      "title": "Documentaci\u00f3n en v\u00eddeo sobre el desarrollo de la Neue Klasse. El mayor proyecto futurista del BMW Gr",
+      "num_chunks": 4,
+      "tokens": 1532,
+      "words": 711,
+      "chars": 4679,
+      "start_chunk": 1605,
+      "end_chunk": 1608
+    },
+    {
+      "id": 399,
+      "title": "The BMW Group at munich creative business week 2025: design for a vibrant community",
+      "num_chunks": 3,
+      "tokens": 1198,
+      "words": 839,
+      "chars": 5366,
+      "start_chunk": 1609,
+      "end_chunk": 1611
+    },
+    {
+      "id": 400,
+      "title": "Charge faster, drive further: BMW Group reveals revolutionary electric drive concept with 800V techn",
+      "num_chunks": 11,
+      "tokens": 4799,
+      "words": 3673,
+      "chars": 23760,
+      "start_chunk": 1612,
+      "end_chunk": 1622
+    },
+    {
+      "id": 401,
+      "title": "New BMW XM options: maximum exclusivity and breathtaking performance.",
+      "num_chunks": 3,
+      "tokens": 1204,
+      "words": 887,
+      "chars": 5420,
+      "start_chunk": 1623,
+      "end_chunk": 1625
+    },
+    {
+      "id": 402,
+      "title": "BMW Group UK Leads the Premium Segment in 2024 with Strong Electric Growth.",
+      "num_chunks": 4,
+      "tokens": 1789,
+      "words": 1316,
+      "chars": 8457,
+      "start_chunk": 1626,
+      "end_chunk": 1629
+    },
+    {
+      "id": 403,
+      "title": "The all-new BMW M235 xDrive Gran Coup\u00e9, now available in Singapore.",
+      "num_chunks": 5,
+      "tokens": 2283,
+      "words": 1681,
+      "chars": 11153,
+      "start_chunk": 1630,
+      "end_chunk": 1634
+    },
+    {
+      "id": 404,
+      "title": "MODELS OF THE MARQUE \u2013 THE 2000s: THE ROLLS-ROYCE PHANTOM VII",
+      "num_chunks": 6,
+      "tokens": 2556,
+      "words": 1884,
+      "chars": 12015,
+      "start_chunk": 1635,
+      "end_chunk": 1640
+    },
+    {
+      "id": 405,
+      "title": "World Premiere BMW iX3.",
+      "num_chunks": 8,
+      "tokens": 3537,
+      "words": 2757,
+      "chars": 16271,
+      "start_chunk": 1641,
+      "end_chunk": 1648
+    },
+    {
+      "id": 406,
+      "title": "Just one click to the classics. Historic BMW model overviews now online for everyone",
+      "num_chunks": 2,
+      "tokens": 774,
+      "words": 589,
+      "chars": 3852,
+      "start_chunk": 1649,
+      "end_chunk": 1650
+    },
+    {
+      "id": 407,
+      "title": "BMW Group maintains BEV growth path in challenging market situation in 2024",
+      "num_chunks": 3,
+      "tokens": 924,
+      "words": 653,
+      "chars": 4192,
+      "start_chunk": 1651,
+      "end_chunk": 1653
+    },
+    {
+      "id": 408,
+      "title": "BMW Art Car World Tour stops in B\u00e5stad, Sweden. The Aurora 2025: BMW Art Cars by Calder, Lichtenstei",
+      "num_chunks": 2,
+      "tokens": 619,
+      "words": 457,
+      "chars": 3029,
+      "start_chunk": 1654,
+      "end_chunk": 1655
+    },
+    {
+      "id": 409,
+      "title": "BMW Returns to Art Basel Miami Beach 2025 with Acclaimed Artist Kennedy Yanko.",
+      "num_chunks": 4,
+      "tokens": 1588,
+      "words": 1131,
+      "chars": 7455,
+      "start_chunk": 1656,
+      "end_chunk": 1659
+    },
+    {
+      "id": 410,
+      "title": "BMW Group Canada reports Q2 2025 sales results.",
+      "num_chunks": 3,
+      "tokens": 1311,
+      "words": 949,
+      "chars": 5966,
+      "start_chunk": 1660,
+      "end_chunk": 1662
+    },
+    {
+      "id": 411,
+      "title": "[ADDRESS]. California Style: BMW acquires DesignworksUSA.",
+      "num_chunks": 6,
+      "tokens": 2687,
+      "words": 1909,
+      "chars": 12076,
+      "start_chunk": 1663,
+      "end_chunk": 1668
+    },
+    {
+      "id": 412,
+      "title": "24h Spa-Francorchamps: Eleven BMW M4 GT3 EVO cars enter the endurance classic race.",
+      "num_chunks": 6,
+      "tokens": 2491,
+      "words": 1729,
+      "chars": 9564,
+      "start_chunk": 1669,
+      "end_chunk": 1674
+    },
+    {
+      "id": 413,
+      "title": "BMW Motorrad presenta la nueva BMW R 1300 R.",
+      "num_chunks": 12,
+      "tokens": 5472,
+      "words": 2644,
+      "chars": 16212,
+      "start_chunk": 1675,
+      "end_chunk": 1686
+    },
+    {
+      "id": 414,
+      "title": "BMW Art Car World Tour Starts U.S. Leg This Week at the 2025 Pebble Beach Concours d\u2019Elegance\u00ae.",
+      "num_chunks": 6,
+      "tokens": 2641,
+      "words": 1932,
+      "chars": 11811,
+      "start_chunk": 1687,
+      "end_chunk": 1692
+    },
+    {
+      "id": 415,
+      "title": "BMW Manufacturing Celebrates Seven Million BMWs Assembled in the United States.",
+      "num_chunks": 4,
+      "tokens": 1601,
+      "words": 1137,
+      "chars": 7286,
+      "start_chunk": 1693,
+      "end_chunk": 1696
+    },
+    {
+      "id": 416,
+      "title": "FIA WEC: Podium for the BMW M4 GT3 EVO in Austin \u2013 Frustrating race for the BMW M Hybrid V8.",
+      "num_chunks": 4,
+      "tokens": 1721,
+      "words": 1278,
+      "chars": 7108,
+      "start_chunk": 1697,
+      "end_chunk": 1700
+    },
+    {
+      "id": 417,
+      "title": "ROLLS-ROYCE UNVEILS SPECTRE SOULMATE: A BESPOKE CELEBRATION OF A SHARED JOURNEY",
+      "num_chunks": 1,
+      "tokens": 338,
+      "words": 222,
+      "chars": 1550,
+      "start_chunk": 1701,
+      "end_chunk": 1701
+    },
+    {
+      "id": 418,
+      "title": "Class wins and overall lead in the GT World Challenge Europe for BMW M Motorsport teams.",
+      "num_chunks": 4,
+      "tokens": 1597,
+      "words": 1178,
+      "chars": 6741,
+      "start_chunk": 1702,
+      "end_chunk": 1705
+    },
+    {
+      "id": 419,
+      "title": "The new BMW iX.",
+      "num_chunks": 9,
+      "tokens": 3913,
+      "words": 3040,
+      "chars": 18913,
+      "start_chunk": 1706,
+      "end_chunk": 1714
+    },
+    {
+      "id": 420,
+      "title": "BMW Group and Solid Power are testing all-solid-state battery cells in a BMW i7",
+      "num_chunks": 1,
+      "tokens": 414,
+      "words": 320,
+      "chars": 2096,
+      "start_chunk": 1715,
+      "end_chunk": 1715
+    },
+    {
+      "id": 421,
+      "title": "THE ROLLS-ROYCE PHANTOM AT 100",
+      "num_chunks": 1,
+      "tokens": 279,
+      "words": 196,
+      "chars": 1353,
+      "start_chunk": 1716,
+      "end_chunk": 1716
+    },
+    {
+      "id": 422,
+      "title": "BMW Motorrad presents the new R 18 models.",
+      "num_chunks": 8,
+      "tokens": 3321,
+      "words": 2520,
+      "chars": 15158,
+      "start_chunk": 1717,
+      "end_chunk": 1724
+    },
+    {
+      "id": 423,
+      "title": "The 2026 BMW XM Label.",
+      "num_chunks": 3,
+      "tokens": 1096,
+      "words": 818,
+      "chars": 5158,
+      "start_chunk": 1725,
+      "end_chunk": 1727
+    },
+    {
+      "id": 424,
+      "title": "The new BMW M2 CS.",
+      "num_chunks": 9,
+      "tokens": 4098,
+      "words": 3024,
+      "chars": 18950,
+      "start_chunk": 1728,
+      "end_chunk": 1736
+    },
+    {
+      "id": 425,
+      "title": "IMSA: Top-5 result for the BMW M Hybrid V8 on the streets of Detroit.",
+      "num_chunks": 3,
+      "tokens": 1019,
+      "words": 776,
+      "chars": 4417,
+      "start_chunk": 1737,
+      "end_chunk": 1739
+    },
+    {
+      "id": 426,
+      "title": "The start of a new era. The new BMW iX3.",
+      "num_chunks": 15,
+      "tokens": 7022,
+      "words": 5410,
+      "chars": 34585,
+      "start_chunk": 1740,
+      "end_chunk": 1754
+    },
+    {
+      "id": 427,
+      "title": "MODELS OF THE MARQUE \u2013 2004 - PRESENT: THE GOODWOOD-ERA \u2018EX\u2019 EXPERIMENTAL CARS",
+      "num_chunks": 2,
+      "tokens": 662,
+      "words": 469,
+      "chars": 3053,
+      "start_chunk": 1755,
+      "end_chunk": 1756
+    },
+    {
+      "id": 428,
+      "title": "Postcard Story. The MINI Cooper Convertible S in Chili Red.",
+      "num_chunks": 1,
+      "tokens": 321,
+      "words": 221,
+      "chars": 1533,
+      "start_chunk": 1757,
+      "end_chunk": 1757
+    },
+    {
+      "id": 429,
+      "title": "ROLLS-ROYCE COMPLETES NEW CIRCULAR FOOTPATH ROUTE FOR LOCAL COMMUNITY",
+      "num_chunks": 1,
+      "tokens": 493,
+      "words": 345,
+      "chars": 2293,
+      "start_chunk": 1758,
+      "end_chunk": 1758
+    },
+    {
+      "id": 430,
+      "title": "MINI USA Activates in Austin with Sports Illustrated: Club SI at [ADDRESS] and a Fireside Chat with ",
+      "num_chunks": 2,
+      "tokens": 674,
+      "words": 458,
+      "chars": 3019,
+      "start_chunk": 1759,
+      "end_chunk": 1760
+    },
+    {
+      "id": 431,
+      "title": "BMW Asia customers victorious at BMW Golf Cup World Final in Bangkok.",
+      "num_chunks": 2,
+      "tokens": 821,
+      "words": 650,
+      "chars": 4031,
+      "start_chunk": 1761,
+      "end_chunk": 1762
+    },
+    {
+      "id": 432,
+      "title": "BMW Motorrad Motorsport ready to rumble Down Under.",
+      "num_chunks": 3,
+      "tokens": 881,
+      "words": 653,
+      "chars": 4280,
+      "start_chunk": 1763,
+      "end_chunk": 1765
+    },
+    {
+      "id": 433,
+      "title": "BMW Welt becomes the \u201cWorld of Basketball\u201d: 3x3 tournament and meet & greet with FC Bayern M\u00fcnchen b",
+      "num_chunks": 3,
+      "tokens": 1206,
+      "words": 870,
+      "chars": 5636,
+      "start_chunk": 1766,
+      "end_chunk": 1768
+    },
+    {
+      "id": 434,
+      "title": "Endurance test for \u201cHeart of Joy\u201d: the BMW Vision Driving Experience.",
+      "num_chunks": 5,
+      "tokens": 1878,
+      "words": 1450,
+      "chars": 9546,
+      "start_chunk": 1769,
+      "end_chunk": 1773
+    },
+    {
+      "id": 435,
+      "title": "BMW Group UK announces a new charity partnership with Teenage Cancer Trust.",
+      "num_chunks": 2,
+      "tokens": 657,
+      "words": 491,
+      "chars": 3266,
+      "start_chunk": 1774,
+      "end_chunk": 1775
+    },
+    {
+      "id": 436,
+      "title": "Driving experience in a class of its own: BMW Vision Driving Experience shines in Shanghai with spec",
+      "num_chunks": 3,
+      "tokens": 1364,
+      "words": 1034,
+      "chars": 6713,
+      "start_chunk": 1776,
+      "end_chunk": 1778
+    },
+    {
+      "id": 437,
+      "title": "Season Launch with the BMW World Championship factory teams in Berlin.",
+      "num_chunks": 6,
+      "tokens": 2700,
+      "words": 2100,
+      "chars": 11638,
+      "start_chunk": 1779,
+      "end_chunk": 1784
+    },
+    {
+      "id": 438,
+      "title": "BMW M Motorsport becomes iRacing\u2019s \u201cOfficial Safety Car Partner\u201d for the largest events on the popul",
+      "num_chunks": 3,
+      "tokens": 1051,
+      "words": 778,
+      "chars": 4484,
+      "start_chunk": 1785,
+      "end_chunk": 1787
+    },
+    {
+      "id": 439,
+      "title": "24 hours at the N\u00fcrburgring: MINI John Cooper Works and Bulldog Racing are ready for the 24 Hours Ra",
+      "num_chunks": 2,
+      "tokens": 809,
+      "words": 589,
+      "chars": 3659,
+      "start_chunk": 1788,
+      "end_chunk": 1789
+    },
+    {
+      "id": 440,
+      "title": "BMW Motorrad presents The Tracker accessories package for the BMW R 12 nineT.",
+      "num_chunks": 2,
+      "tokens": 658,
+      "words": 537,
+      "chars": 3497,
+      "start_chunk": 1790,
+      "end_chunk": 1791
+    },
+    {
+      "id": 441,
+      "title": "BMW una vez m\u00e1s trae un estudio exclusivo para una peque\u00f1a serie al Lago de Como este a\u00f1o: El BMW Co",
+      "num_chunks": 5,
+      "tokens": 2024,
+      "words": 993,
+      "chars": 6331,
+      "start_chunk": 1792,
+      "end_chunk": 1796
+    },
+    {
+      "id": 442,
+      "title": "The 2026 BMW XM Label.",
+      "num_chunks": 3,
+      "tokens": 1354,
+      "words": 1009,
+      "chars": 6271,
+      "start_chunk": 1797,
+      "end_chunk": 1799
+    },
+    {
+      "id": 443,
+      "title": "Postcard Story. Setting off on a Winter Adventure with the MINI Aceman SE.",
+      "num_chunks": 1,
+      "tokens": 310,
+      "words": 211,
+      "chars": 1422,
+      "start_chunk": 1800,
+      "end_chunk": 1800
+    },
+    {
+      "id": 444,
+      "title": "BMW of North America Recognizes 2025 Center of Excellence Award Winners, Celebrating the Top BMW Dea",
+      "num_chunks": 2,
+      "tokens": 859,
+      "words": 627,
+      "chars": 4146,
+      "start_chunk": 1801,
+      "end_chunk": 1802
+    },
+    {
+      "id": 445,
+      "title": "BMW Group scores circular economy win with high-voltage batteries",
+      "num_chunks": 2,
+      "tokens": 678,
+      "words": 513,
+      "chars": 3449,
+      "start_chunk": 1803,
+      "end_chunk": 1804
+    },
+    {
+      "id": 446,
+      "title": "The MINI John Cooper Works Convertible: Top performance and 360 degrees of freedom under a blue sky.",
+      "num_chunks": 4,
+      "tokens": 1402,
+      "words": 1046,
+      "chars": 6649,
+      "start_chunk": 1805,
+      "end_chunk": 1808
+    },
+    {
+      "id": 447,
+      "title": "Nelson Piquet tribute: BMW Group Classic brought legendary BMW race cars to the \u201cCircuito Estoril\u201d i",
+      "num_chunks": 3,
+      "tokens": 1257,
+      "words": 890,
+      "chars": 5217,
+      "start_chunk": 1809,
+      "end_chunk": 1811
+    },
+    {
+      "id": 448,
+      "title": "All-new BMW iX3 makes North American debut in New York City, signalling the future of \"The Ultimate ",
+      "num_chunks": 6,
+      "tokens": 2559,
+      "words": 1932,
+      "chars": 12769,
+      "start_chunk": 1812,
+      "end_chunk": 1817
+    },
+    {
+      "id": 449,
+      "title": "News in Brief from BMW Group UK.",
+      "num_chunks": 4,
+      "tokens": 1411,
+      "words": 1020,
+      "chars": 6596,
+      "start_chunk": 1818,
+      "end_chunk": 1821
+    },
+    {
+      "id": 450,
+      "title": "Driving experience in a class of its own: BMW Vision Driving Experience shines in Shanghai with spec",
+      "num_chunks": 3,
+      "tokens": 1297,
+      "words": 989,
+      "chars": 6424,
+      "start_chunk": 1822,
+      "end_chunk": 1824
+    },
+    {
+      "id": 451,
+      "title": "BLACK BADGE GHOST GAMER: INSPIRED BY THE GOLDEN AGE OF ARCADE GAMES",
+      "num_chunks": 5,
+      "tokens": 2018,
+      "words": 1383,
+      "chars": 8886,
+      "start_chunk": 1825,
+      "end_chunk": 1829
+    },
+    {
+      "id": 452,
+      "title": "High Performance in New York City: With the MINI John Cooper Works through the Big Apple.",
+      "num_chunks": 2,
+      "tokens": 836,
+      "words": 623,
+      "chars": 4021,
+      "start_chunk": 1830,
+      "end_chunk": 1831
+    },
+    {
+      "id": 453,
+      "title": "A Tale of Two British Icons: Introducing the new MINI Paul Smith Edition.",
+      "num_chunks": 1,
+      "tokens": 458,
+      "words": 345,
+      "chars": 2218,
+      "start_chunk": 1832,
+      "end_chunk": 1832
+    },
+    {
+      "id": 454,
+      "title": "The BMW Group at IAA Mobility 2025: the new BMW iX3 celebrates its world premiere.",
+      "num_chunks": 9,
+      "tokens": 4039,
+      "words": 2991,
+      "chars": 18054,
+      "start_chunk": 1833,
+      "end_chunk": 1841
+    },
+    {
+      "id": 455,
+      "title": "Proactive Care: MINI elevates customer service to a new level.",
+      "num_chunks": 1,
+      "tokens": 458,
+      "words": 325,
+      "chars": 2212,
+      "start_chunk": 1842,
+      "end_chunk": 1842
+    },
+    {
+      "id": 456,
+      "title": "Dramatic finale for the BMW factory team at the FIM EWC Le Castellet season closer.",
+      "num_chunks": 5,
+      "tokens": 2199,
+      "words": 1677,
+      "chars": 9642,
+      "start_chunk": 1843,
+      "end_chunk": 1847
+    },
+    {
+      "id": 457,
+      "title": "\u201cBEST OF SHOW\u201d: ALFA ROMEO TIPO B (P3) WINS THE TROFEO BMW GROUP. CONCORSO D'ELEGANZA VILLA D'ESTE 2",
+      "num_chunks": 5,
+      "tokens": 2065,
+      "words": 1372,
+      "chars": 8697,
+      "start_chunk": 1848,
+      "end_chunk": 1852
+    },
+    {
+      "id": 458,
+      "title": "ROLLS-ROYCE PHANTOM: 100 YEARS OF PERFECTION",
+      "num_chunks": 1,
+      "tokens": 501,
+      "words": 341,
+      "chars": 2309,
+      "start_chunk": 1853,
+      "end_chunk": 1853
+    },
+    {
+      "id": 459,
+      "title": "BMW Group brings on board media agency Dentsu to kickstart its new media strategy for Europe.",
+      "num_chunks": 4,
+      "tokens": 1657,
+      "words": 1269,
+      "chars": 8582,
+      "start_chunk": 1854,
+      "end_chunk": 1857
+    },
+    {
+      "id": 460,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cA New Chapter for BMW Motorrad: BMW NA",
+      "num_chunks": 7,
+      "tokens": 3011,
+      "words": 2255,
+      "chars": 13730,
+      "start_chunk": 1858,
+      "end_chunk": 1864
+    },
+    {
+      "id": 461,
+      "title": "BMW Group and Solid Power take next step in ASSB development path: new partner Samsung SDI joins the",
+      "num_chunks": 2,
+      "tokens": 790,
+      "words": 617,
+      "chars": 4080,
+      "start_chunk": 1865,
+      "end_chunk": 1866
+    },
+    {
+      "id": 462,
+      "title": "Dramatic finale of the 24h Daytona deprives BMW M Hybrid V8 and BMW M4 GT3 EVO of chances to win.",
+      "num_chunks": 6,
+      "tokens": 2631,
+      "words": 2154,
+      "chars": 11333,
+      "start_chunk": 1867,
+      "end_chunk": 1872
+    },
+    {
+      "id": 463,
+      "title": "BMW M Team Redline successfully defends title at the Esports World Cup.",
+      "num_chunks": 3,
+      "tokens": 924,
+      "words": 692,
+      "chars": 4263,
+      "start_chunk": 1873,
+      "end_chunk": 1875
+    },
+    {
+      "id": 464,
+      "title": "ROLLS-ROYCE CELEBRATES 100 YEARS OF PHANTOM AT GOODWOOD REVIVAL 2025",
+      "num_chunks": 1,
+      "tokens": 401,
+      "words": 275,
+      "chars": 1889,
+      "start_chunk": 1876,
+      "end_chunk": 1876
+    },
+    {
+      "id": 465,
+      "title": "British with a twist: The MINI Paul Smith Edition.",
+      "num_chunks": 4,
+      "tokens": 1861,
+      "words": 1444,
+      "chars": 9149,
+      "start_chunk": 1877,
+      "end_chunk": 1880
+    },
+    {
+      "id": 466,
+      "title": "BMW Motorrad presents the new BMW R 1300 RS.",
+      "num_chunks": 8,
+      "tokens": 3378,
+      "words": 2729,
+      "chars": 16669,
+      "start_chunk": 1881,
+      "end_chunk": 1888
+    },
+    {
+      "id": 467,
+      "title": "Efficient, sustainable, digital: New BMW Group Plant Debrecen set to begin series production of the ",
+      "num_chunks": 6,
+      "tokens": 2603,
+      "words": 2023,
+      "chars": 13082,
+      "start_chunk": 1889,
+      "end_chunk": 1894
+    },
+    {
+      "id": 468,
+      "title": "Pioneering technology meets pure driving pleasure: testing BMW iX3 prototypes.",
+      "num_chunks": 2,
+      "tokens": 640,
+      "words": 467,
+      "chars": 2953,
+      "start_chunk": 1895,
+      "end_chunk": 1896
+    },
+    {
+      "id": 469,
+      "title": "IGTC: Team WRT and the BMW M4 GT3 EVO triumph at the Suzuka 1000KM.",
+      "num_chunks": 5,
+      "tokens": 2267,
+      "words": 1642,
+      "chars": 9109,
+      "start_chunk": 1897,
+      "end_chunk": 1901
+    },
+    {
+      "id": 470,
+      "title": "From pilot fleet to series production: the new BMW iX5 Hydrogen",
+      "num_chunks": 3,
+      "tokens": 1087,
+      "words": 882,
+      "chars": 5806,
+      "start_chunk": 1902,
+      "end_chunk": 1904
+    },
+    {
+      "id": 471,
+      "title": "Everything at one glance: the latest BMW Welt Information.",
+      "num_chunks": 1,
+      "tokens": 215,
+      "words": 162,
+      "chars": 1098,
+      "start_chunk": 1905,
+      "end_chunk": 1905
+    },
+    {
+      "id": 472,
+      "title": "BMW Group profitability in line with expectations in first quarter",
+      "num_chunks": 11,
+      "tokens": 4690,
+      "words": 3323,
+      "chars": 21253,
+      "start_chunk": 1906,
+      "end_chunk": 1916
+    },
+    {
+      "id": 473,
+      "title": "Satellite Details. BMW Group Keynote. World Premiere of the new BMW iX3.",
+      "num_chunks": 1,
+      "tokens": 170,
+      "words": 95,
+      "chars": 650,
+      "start_chunk": 1917,
+      "end_chunk": 1917
+    },
+    {
+      "id": 474,
+      "title": "ROLLS-ROYCE ANNOUNCES BLACK BADGE SPECTRE: THE ALTER EGO, AMPLIFIED",
+      "num_chunks": 8,
+      "tokens": 3789,
+      "words": 2829,
+      "chars": 18574,
+      "start_chunk": 1918,
+      "end_chunk": 1925
+    },
+    {
+      "id": 475,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cSibling Rivalry: BMW NA Battles BMW Mo",
+      "num_chunks": 11,
+      "tokens": 5029,
+      "words": 3509,
+      "chars": 20205,
+      "start_chunk": 1926,
+      "end_chunk": 1936
+    },
+    {
+      "id": 476,
+      "title": "BMW iX3 named Top Gear\u2019s 2026 Car of the Year.",
+      "num_chunks": 1,
+      "tokens": 478,
+      "words": 356,
+      "chars": 2165,
+      "start_chunk": 1937,
+      "end_chunk": 1937
+    },
+    {
+      "id": 477,
+      "title": "BMW maintains position as #1 premium automotive brand in Singapore for YTD September.",
+      "num_chunks": 2,
+      "tokens": 757,
+      "words": 602,
+      "chars": 3825,
+      "start_chunk": 1938,
+      "end_chunk": 1939
+    },
+    {
+      "id": 478,
+      "title": "24h N\u00fcrburgring: ROWE Racing crowned as the winner after a sensational comeback with the BMW M4 GT3 ",
+      "num_chunks": 7,
+      "tokens": 3287,
+      "words": 2378,
+      "chars": 13534,
+      "start_chunk": 1940,
+      "end_chunk": 1946
+    },
+    {
+      "id": 479,
+      "title": "The 2026 BMW M340i xDrive 50 Jahre Edition.",
+      "num_chunks": 4,
+      "tokens": 1647,
+      "words": 1178,
+      "chars": 7489,
+      "start_chunk": 1947,
+      "end_chunk": 1950
+    },
+    {
+      "id": 480,
+      "title": "2026 BMW i4 update measures.",
+      "num_chunks": 3,
+      "tokens": 1202,
+      "words": 890,
+      "chars": 5344,
+      "start_chunk": 1951,
+      "end_chunk": 1953
+    },
+    {
+      "id": 481,
+      "title": "IMSA: BMW M4 GT3 EVO celebrates its first win of the season at the Six Hours of the Glen.",
+      "num_chunks": 4,
+      "tokens": 1666,
+      "words": 1309,
+      "chars": 7180,
+      "start_chunk": 1954,
+      "end_chunk": 1957
+    },
+    {
+      "id": 482,
+      "title": "BMW International Open welcomes former champions and rising stars.",
+      "num_chunks": 3,
+      "tokens": 1170,
+      "words": 835,
+      "chars": 5267,
+      "start_chunk": 1958,
+      "end_chunk": 1960
+    },
+    {
+      "id": 483,
+      "title": "Stefan Hienzsch takes over as Head of BMW Bank",
+      "num_chunks": 3,
+      "tokens": 1059,
+      "words": 767,
+      "chars": 5011,
+      "start_chunk": 1961,
+      "end_chunk": 1963
+    },
+    {
+      "id": 484,
+      "title": "ROLLS-ROYCE HERITAGE: FROM 1904 TO TODAY \u2013 AND BEYOND",
+      "num_chunks": 10,
+      "tokens": 4548,
+      "words": 3357,
+      "chars": 20675,
+      "start_chunk": 1964,
+      "end_chunk": 1973
+    },
+    {
+      "id": 485,
+      "title": "Postcard Story. The MINI Cooper Convertible S in Chili Red.",
+      "num_chunks": 1,
+      "tokens": 321,
+      "words": 221,
+      "chars": 1533,
+      "start_chunk": 1974,
+      "end_chunk": 1974
+    },
+    {
+      "id": 486,
+      "title": "MINI goes the extra mile for Buttle UK children\u2019s charity.",
+      "num_chunks": 1,
+      "tokens": 435,
+      "words": 333,
+      "chars": 2038,
+      "start_chunk": 1975,
+      "end_chunk": 1975
+    },
+    {
+      "id": 487,
+      "title": "BMW Group Latin America announces organizational changes: local talent for regional management",
+      "num_chunks": 3,
+      "tokens": 970,
+      "words": 789,
+      "chars": 5062,
+      "start_chunk": 1976,
+      "end_chunk": 1978
+    },
+    {
+      "id": 488,
+      "title": "Roar before the 24: BMW M Motorsport teams and drivers intensively prepare for the 24h Daytona.",
+      "num_chunks": 5,
+      "tokens": 2180,
+      "words": 1637,
+      "chars": 9209,
+      "start_chunk": 1979,
+      "end_chunk": 1983
+    },
+    {
+      "id": 489,
+      "title": "BMW Group Latin America once again achieves sales leadership in the region during the first half of ",
+      "num_chunks": 2,
+      "tokens": 900,
+      "words": 742,
+      "chars": 4444,
+      "start_chunk": 1984,
+      "end_chunk": 1985
+    },
+    {
+      "id": 490,
+      "title": "ROLLS-ROYCE MOTOR CARS SUPPORTS LOCAL SCHOOL WITH ALL-FEMALE STEAM WORKSHOPS",
+      "num_chunks": 1,
+      "tokens": 435,
+      "words": 319,
+      "chars": 2142,
+      "start_chunk": 1986,
+      "end_chunk": 1986
+    },
+    {
+      "id": 491,
+      "title": "BMW celebrates 25 years of the Preis der Nationalgalerie. To mark this milestone, John Baldessari's ",
+      "num_chunks": 4,
+      "tokens": 1807,
+      "words": 1393,
+      "chars": 8761,
+      "start_chunk": 1987,
+      "end_chunk": 1990
+    },
+    {
+      "id": 492,
+      "title": "The BMW M2 CS sets a new record of 7:25.5 minutes on the N\u00fcrburgring-Nordschleife.",
+      "num_chunks": 4,
+      "tokens": 1521,
+      "words": 1127,
+      "chars": 6816,
+      "start_chunk": 1991,
+      "end_chunk": 1994
+    },
+    {
+      "id": 493,
+      "title": "MINI opens JCW Electrical store at Goodwood Revival 2025.",
+      "num_chunks": 1,
+      "tokens": 366,
+      "words": 272,
+      "chars": 1744,
+      "start_chunk": 1995,
+      "end_chunk": 1995
+    },
+    {
+      "id": 494,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cSustained Growth in the 21st Century\".",
+      "num_chunks": 11,
+      "tokens": 4781,
+      "words": 3442,
+      "chars": 20941,
+      "start_chunk": 1996,
+      "end_chunk": 2006
+    },
+    {
+      "id": 495,
+      "title": "Humanity, warmth, precision \u2013 BMW HypersonX creates unique soundscape for the Neue Klasse.",
+      "num_chunks": 4,
+      "tokens": 1661,
+      "words": 1291,
+      "chars": 8191,
+      "start_chunk": 2007,
+      "end_chunk": 2010
+    },
+    {
+      "id": 496,
+      "title": "New charging solution for business users: BMW Charging and MINI Charging expand their product offeri",
+      "num_chunks": 1,
+      "tokens": 450,
+      "words": 356,
+      "chars": 2510,
+      "start_chunk": 2011,
+      "end_chunk": 2011
+    },
+    {
+      "id": 497,
+      "title": "BMW Motorrad presents the BMW F 450 GS.",
+      "num_chunks": 10,
+      "tokens": 4644,
+      "words": 3494,
+      "chars": 22334,
+      "start_chunk": 2012,
+      "end_chunk": 2021
+    },
+    {
+      "id": 498,
+      "title": "24h Spa-Francorchamps: BMW M Motorsport narrowly misses the podium in the Ardennes.",
+      "num_chunks": 7,
+      "tokens": 3325,
+      "words": 2418,
+      "chars": 13372,
+      "start_chunk": 2022,
+      "end_chunk": 2028
+    },
+    {
+      "id": 499,
+      "title": "Scheffler victorious at the BMW Championship \u2013 Bhatia wins Hole-in-One Car BMW iX M70.",
+      "num_chunks": 4,
+      "tokens": 1651,
+      "words": 1152,
+      "chars": 7163,
+      "start_chunk": 2029,
+      "end_chunk": 2032
+    },
+    {
+      "id": 500,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, Conference Call Quarte",
+      "num_chunks": 6,
+      "tokens": 2630,
+      "words": 2103,
+      "chars": 13175,
+      "start_chunk": 2033,
+      "end_chunk": 2038
+    },
+    {
+      "id": 501,
+      "title": "Singapore\u2019s top amateur golfers earn coveted spots at BMW Golf Cup World Final 2025 in South Africa.",
+      "num_chunks": 2,
+      "tokens": 837,
+      "words": 649,
+      "chars": 4040,
+      "start_chunk": 2039,
+      "end_chunk": 2040
+    },
+    {
+      "id": 502,
+      "title": "BMW M Motorsport News, 3rd June 2025.",
+      "num_chunks": 3,
+      "tokens": 1015,
+      "words": 746,
+      "chars": 4399,
+      "start_chunk": 2041,
+      "end_chunk": 2043
+    },
+    {
+      "id": 503,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cA New Era in Advertising: BMW and Fall",
+      "num_chunks": 8,
+      "tokens": 3644,
+      "words": 2597,
+      "chars": 15370,
+      "start_chunk": 2044,
+      "end_chunk": 2051
+    },
+    {
+      "id": 504,
+      "title": "The BMW Group at Auto Shanghai 2025.",
+      "num_chunks": 7,
+      "tokens": 2844,
+      "words": 2121,
+      "chars": 13316,
+      "start_chunk": 2052,
+      "end_chunk": 2058
+    },
+    {
+      "id": 505,
+      "title": "BMW M Motorsport presents high-class LMGT3 and GTD driver line-ups for the FIA WEC and IMSA series.",
+      "num_chunks": 5,
+      "tokens": 2042,
+      "words": 1453,
+      "chars": 8252,
+      "start_chunk": 2059,
+      "end_chunk": 2063
+    },
+    {
+      "id": 506,
+      "title": "Maximum Performance: MINI John Cooper Works as the highlight of Auto Shanghai 2025.",
+      "num_chunks": 3,
+      "tokens": 1161,
+      "words": 826,
+      "chars": 5403,
+      "start_chunk": 2064,
+      "end_chunk": 2066
+    },
+    {
+      "id": 507,
+      "title": "MINI LAUNCHES CHARGEFORWARD PROGRAM, BUILDING ON BMW GROUP\u2019S ELECTRIFICATION SUCCESS",
+      "num_chunks": 2,
+      "tokens": 869,
+      "words": 656,
+      "chars": 4360,
+      "start_chunk": 2067,
+      "end_chunk": 2068
+    },
+    {
+      "id": 508,
+      "title": "ROLLS-ROYCE PRESENTS BLACK BADGE CULLINAN DAISY: INSPIRED BY ONE CLIENT\u2019S REMARKABLE PATH",
+      "num_chunks": 3,
+      "tokens": 1226,
+      "words": 834,
+      "chars": 5468,
+      "start_chunk": 2069,
+      "end_chunk": 2071
+    },
+    {
+      "id": 509,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW of North America Headquarters: Dyn",
+      "num_chunks": 6,
+      "tokens": 2582,
+      "words": 1974,
+      "chars": 12745,
+      "start_chunk": 2072,
+      "end_chunk": 2077
+    },
+    {
+      "id": 510,
+      "title": "MINI unveils new John Cooper Works Accessory Parts: Transform your MINI into a Race Car for the Road",
+      "num_chunks": 1,
+      "tokens": 359,
+      "words": 284,
+      "chars": 1847,
+      "start_chunk": 2078,
+      "end_chunk": 2078
+    },
+    {
+      "id": 511,
+      "title": "The new 2026 BMW R 1300 RT.",
+      "num_chunks": 24,
+      "tokens": 11271,
+      "words": 8799,
+      "chars": 55089,
+      "start_chunk": 2079,
+      "end_chunk": 2102
+    },
+    {
+      "id": 512,
+      "title": "Centre for Special and Individual Paintwork: A special touch in series production",
+      "num_chunks": 2,
+      "tokens": 702,
+      "words": 555,
+      "chars": 3505,
+      "start_chunk": 2103,
+      "end_chunk": 2104
+    },
+    {
+      "id": 513,
+      "title": "BMW Group posts third-quarter sales growth",
+      "num_chunks": 4,
+      "tokens": 1393,
+      "words": 941,
+      "chars": 6183,
+      "start_chunk": 2105,
+      "end_chunk": 2108
+    },
+    {
+      "id": 514,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe Ultimate Brand Experience: Getting",
+      "num_chunks": 7,
+      "tokens": 2667,
+      "words": 1963,
+      "chars": 11881,
+      "start_chunk": 2109,
+      "end_chunk": 2115
+    },
+    {
+      "id": 515,
+      "title": "CELEBRATING NATURE: WILDLIFE AT THE HOME OF ROLLS-ROYCE",
+      "num_chunks": 1,
+      "tokens": 367,
+      "words": 269,
+      "chars": 1748,
+      "start_chunk": 2116,
+      "end_chunk": 2116
+    },
+    {
+      "id": 516,
+      "title": "BMW M Motorsport News, 26th August 2025.",
+      "num_chunks": 6,
+      "tokens": 2772,
+      "words": 2003,
+      "chars": 11667,
+      "start_chunk": 2117,
+      "end_chunk": 2122
+    },
+    {
+      "id": 517,
+      "title": "Enter the Cloud.",
+      "num_chunks": 6,
+      "tokens": 2578,
+      "words": 1884,
+      "chars": 11797,
+      "start_chunk": 2123,
+      "end_chunk": 2128
+    },
+    {
+      "id": 518,
+      "title": "50 Years of BMW North America: Anniversary livery makes the BMW M Hybrid V8 a standout at the 12h Se",
+      "num_chunks": 3,
+      "tokens": 1180,
+      "words": 817,
+      "chars": 4778,
+      "start_chunk": 2129,
+      "end_chunk": 2131
+    },
+    {
+      "id": 519,
+      "title": "BMW Art Car World Tour landmark stop at the Zoute Grand Prix. Iconic \u201crolling sculptures\u201d on display",
+      "num_chunks": 3,
+      "tokens": 1082,
+      "words": 834,
+      "chars": 5403,
+      "start_chunk": 2132,
+      "end_chunk": 2134
+    },
+    {
+      "id": 520,
+      "title": "MINI John Cooper Works on the most winding road in Japan.",
+      "num_chunks": 1,
+      "tokens": 485,
+      "words": 349,
+      "chars": 2364,
+      "start_chunk": 2135,
+      "end_chunk": 2135
+    },
+    {
+      "id": 521,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Half-Y",
+      "num_chunks": 8,
+      "tokens": 3364,
+      "words": 2637,
+      "chars": 15975,
+      "start_chunk": 2136,
+      "end_chunk": 2143
+    },
+    {
+      "id": 522,
+      "title": "British with a twist: The MINI Paul Smith Edition.",
+      "num_chunks": 4,
+      "tokens": 1861,
+      "words": 1444,
+      "chars": 9149,
+      "start_chunk": 2144,
+      "end_chunk": 2147
+    },
+    {
+      "id": 523,
+      "title": "Statement [EXECUTIVE_OFFICER], Chairman of the Board of Management of BMW AG, Conference Call Quarte",
+      "num_chunks": 5,
+      "tokens": 2262,
+      "words": 1854,
+      "chars": 11314,
+      "start_chunk": 2148,
+      "end_chunk": 2152
+    },
+    {
+      "id": 524,
+      "title": "Another Record Year: BMW M GmbH Continues on the Path to Success.",
+      "num_chunks": 5,
+      "tokens": 1951,
+      "words": 1458,
+      "chars": 9157,
+      "start_chunk": 2153,
+      "end_chunk": 2157
+    },
+    {
+      "id": 525,
+      "title": "BMW Motorrad presents the new BMW CE 04.",
+      "num_chunks": 6,
+      "tokens": 2575,
+      "words": 1957,
+      "chars": 12176,
+      "start_chunk": 2158,
+      "end_chunk": 2163
+    },
+    {
+      "id": 526,
+      "title": "BMW model updates, summer 2025.",
+      "num_chunks": 8,
+      "tokens": 3482,
+      "words": 2602,
+      "chars": 15611,
+      "start_chunk": 2164,
+      "end_chunk": 2171
+    },
+    {
+      "id": 527,
+      "title": "WorldSBK: Another hat-trick at Misano!",
+      "num_chunks": 4,
+      "tokens": 1666,
+      "words": 1121,
+      "chars": 6605,
+      "start_chunk": 2172,
+      "end_chunk": 2175
+    },
+    {
+      "id": 528,
+      "title": "Another Record Year: BMW M GmbH Continues on the Path to Success.",
+      "num_chunks": 5,
+      "tokens": 1951,
+      "words": 1458,
+      "chars": 9157,
+      "start_chunk": 2176,
+      "end_chunk": 2180
+    },
+    {
+      "id": 529,
+      "title": "BMW Welt is the starting point for the new biathlon season.",
+      "num_chunks": 3,
+      "tokens": 1161,
+      "words": 839,
+      "chars": 5118,
+      "start_chunk": 2181,
+      "end_chunk": 2183
+    },
+    {
+      "id": 530,
+      "title": "BMW Golf Cup World Final: Bangkok is golfing paradise for a week.",
+      "num_chunks": 2,
+      "tokens": 843,
+      "words": 636,
+      "chars": 3941,
+      "start_chunk": 2184,
+      "end_chunk": 2185
+    },
+    {
+      "id": 531,
+      "title": "20th BMW Art Car at Art Basel Hong Kong 2025. BMW showcases Julie Mehretu\u2019s Art Car as part of the B",
+      "num_chunks": 3,
+      "tokens": 1367,
+      "words": 1016,
+      "chars": 6202,
+      "start_chunk": 2186,
+      "end_chunk": 2188
+    },
+    {
+      "id": 532,
+      "title": "BMW Group announces organizational changes in BMW Motorrad Latin America.",
+      "num_chunks": 1,
+      "tokens": 494,
+      "words": 382,
+      "chars": 2538,
+      "start_chunk": 2189,
+      "end_chunk": 2189
+    },
+    {
+      "id": 533,
+      "title": "Turning old into new: Recycling as next step towards greater circular economy for BMW Group 3D print",
+      "num_chunks": 3,
+      "tokens": 1134,
+      "words": 880,
+      "chars": 6046,
+      "start_chunk": 2190,
+      "end_chunk": 2192
+    },
+    {
+      "id": 534,
+      "title": "BMW Group reports strong growth in Europe and US, with significant increase in BEV sales worldwide",
+      "num_chunks": 3,
+      "tokens": 1022,
+      "words": 678,
+      "chars": 4474,
+      "start_chunk": 2193,
+      "end_chunk": 2195
+    },
+    {
+      "id": 535,
+      "title": "BMW Group announces leadership changes in BMW Motorrad Latin America.",
+      "num_chunks": 1,
+      "tokens": 383,
+      "words": 290,
+      "chars": 1914,
+      "start_chunk": 2196,
+      "end_chunk": 2196
+    },
+    {
+      "id": 536,
+      "title": "Greater efficiency and productivity with artificial intelligence \u2013 generative AI in BMW Group Purcha",
+      "num_chunks": 3,
+      "tokens": 1369,
+      "words": 1043,
+      "chars": 7278,
+      "start_chunk": 2197,
+      "end_chunk": 2199
+    },
+    {
+      "id": 537,
+      "title": "\u201cJust ask Factory Genius!\u201d: How AI helps maintain manufacturing equipment",
+      "num_chunks": 2,
+      "tokens": 808,
+      "words": 654,
+      "chars": 4341,
+      "start_chunk": 2200,
+      "end_chunk": 2201
+    },
+    {
+      "id": 538,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe Hire: BMW\u2019s Revolutionary Brand Ca",
+      "num_chunks": 8,
+      "tokens": 3511,
+      "words": 2559,
+      "chars": 15103,
+      "start_chunk": 2202,
+      "end_chunk": 2209
+    },
+    {
+      "id": 539,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe Third Generation BMW M5 [E39] V8 P",
+      "num_chunks": 10,
+      "tokens": 4224,
+      "words": 2930,
+      "chars": 17588,
+      "start_chunk": 2210,
+      "end_chunk": 2219
+    },
+    {
+      "id": 540,
+      "title": "High Performance in New York City: With the MINI John Cooper Works through the Big Apple.",
+      "num_chunks": 2,
+      "tokens": 836,
+      "words": 623,
+      "chars": 4021,
+      "start_chunk": 2220,
+      "end_chunk": 2221
+    },
+    {
+      "id": 541,
+      "title": "Postcard Story. The MINI Cooper Convertible S in Icy Sunshine Blue.",
+      "num_chunks": 1,
+      "tokens": 364,
+      "words": 252,
+      "chars": 1797,
+      "start_chunk": 2222,
+      "end_chunk": 2222
+    },
+    {
+      "id": 542,
+      "title": "Thrilling Performance for the Fastest MotoGP\u2122 Qualifier: The BMW M2 CS \u2013 the Winner\u2019s Car for the 20",
+      "num_chunks": 3,
+      "tokens": 1121,
+      "words": 783,
+      "chars": 4821,
+      "start_chunk": 2223,
+      "end_chunk": 2225
+    },
+    {
+      "id": 543,
+      "title": "Postcard Story. From the city to the countryside with the MINI Countryman S ALL 4.",
+      "num_chunks": 1,
+      "tokens": 378,
+      "words": 242,
+      "chars": 1622,
+      "start_chunk": 2226,
+      "end_chunk": 2226
+    },
+    {
+      "id": 544,
+      "title": "BMW Group on track to meet full-year targets",
+      "num_chunks": 9,
+      "tokens": 4254,
+      "words": 2991,
+      "chars": 18839,
+      "start_chunk": 2227,
+      "end_chunk": 2235
+    },
+    {
+      "id": 545,
+      "title": "24h N\u00fcrburgring: ROWE Racing crowned as the winner after a sensational comeback with the BMW M4 GT3 ",
+      "num_chunks": 7,
+      "tokens": 3287,
+      "words": 2378,
+      "chars": 13534,
+      "start_chunk": 2236,
+      "end_chunk": 2242
+    },
+    {
+      "id": 546,
+      "title": "BMW Group on track to meet full-year targets",
+      "num_chunks": 11,
+      "tokens": 4841,
+      "words": 3386,
+      "chars": 21326,
+      "start_chunk": 2243,
+      "end_chunk": 2253
+    },
+    {
+      "id": 547,
+      "title": "Inteligente, seguro, simbi\u00f3tico: el Grupo BMW es el primer fabricante de autom\u00f3viles en Alemania en ",
+      "num_chunks": 5,
+      "tokens": 2105,
+      "words": 983,
+      "chars": 6484,
+      "start_chunk": 2254,
+      "end_chunk": 2258
+    },
+    {
+      "id": 548,
+      "title": "BMW Group Financial Services North America Appoints New President & CEO.",
+      "num_chunks": 3,
+      "tokens": 872,
+      "words": 686,
+      "chars": 4378,
+      "start_chunk": 2259,
+      "end_chunk": 2261
+    },
+    {
+      "id": 549,
+      "title": "Unmistakable \u2018Always Open\u2019 driving fun in the all-new MINI Cooper Convertible now available in Singa",
+      "num_chunks": 10,
+      "tokens": 4411,
+      "words": 3350,
+      "chars": 21495,
+      "start_chunk": 2262,
+      "end_chunk": 2271
+    },
+    {
+      "id": 550,
+      "title": "The new entry-level model: BMW M Motorsport presents the BMW M2 Racing.",
+      "num_chunks": 3,
+      "tokens": 1039,
+      "words": 798,
+      "chars": 4845,
+      "start_chunk": 2272,
+      "end_chunk": 2274
+    },
+    {
+      "id": 551,
+      "title": "BMW and Jung von Matt present international launch campaign for the BMW iX3.",
+      "num_chunks": 3,
+      "tokens": 1237,
+      "words": 955,
+      "chars": 5558,
+      "start_chunk": 2275,
+      "end_chunk": 2277
+    },
+    {
+      "id": 552,
+      "title": "Efficient, sustainable, digital: New BMW Group Plant Debrecen set to begin series production of the ",
+      "num_chunks": 6,
+      "tokens": 2593,
+      "words": 2017,
+      "chars": 13041,
+      "start_chunk": 2278,
+      "end_chunk": 2283
+    },
+    {
+      "id": 553,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cBMW NA Associates: The People Make the",
+      "num_chunks": 16,
+      "tokens": 6874,
+      "words": 5015,
+      "chars": 29445,
+      "start_chunk": 2284,
+      "end_chunk": 2299
+    },
+    {
+      "id": 554,
+      "title": "David Puig celebrates maiden win on the DP World Tour at the BMW Australian PGA Championship.",
+      "num_chunks": 2,
+      "tokens": 805,
+      "words": 546,
+      "chars": 3192,
+      "start_chunk": 2300,
+      "end_chunk": 2301
+    },
+    {
+      "id": 555,
+      "title": "BMW Group posts third-quarter sales growth",
+      "num_chunks": 4,
+      "tokens": 1342,
+      "words": 906,
+      "chars": 5934,
+      "start_chunk": 2302,
+      "end_chunk": 2305
+    },
+    {
+      "id": 556,
+      "title": "News in Brief from BMW Group UK.",
+      "num_chunks": 2,
+      "tokens": 628,
+      "words": 440,
+      "chars": 2804,
+      "start_chunk": 2306,
+      "end_chunk": 2307
+    },
+    {
+      "id": 557,
+      "title": "BMW model updates, autumn 2025.",
+      "num_chunks": 4,
+      "tokens": 1465,
+      "words": 1058,
+      "chars": 6185,
+      "start_chunk": 2308,
+      "end_chunk": 2311
+    },
+    {
+      "id": 558,
+      "title": "IMSA: BMW M4 GT3 EVO celebrates its first win of the season at the Six Hours of the Glen.",
+      "num_chunks": 4,
+      "tokens": 1664,
+      "words": 1307,
+      "chars": 7170,
+      "start_chunk": 2312,
+      "end_chunk": 2315
+    },
+    {
+      "id": 559,
+      "title": "BMW Group fosters young thought leaders",
+      "num_chunks": 4,
+      "tokens": 1457,
+      "words": 1156,
+      "chars": 7450,
+      "start_chunk": 2316,
+      "end_chunk": 2319
+    },
+    {
+      "id": 560,
+      "title": "Maximum Performance: MINI John Cooper Works as the highlight of Auto Shanghai 2025.",
+      "num_chunks": 3,
+      "tokens": 1099,
+      "words": 776,
+      "chars": 5085,
+      "start_chunk": 2320,
+      "end_chunk": 2322
+    },
+    {
+      "id": 561,
+      "title": "BMW model updates for spring 2025.",
+      "num_chunks": 4,
+      "tokens": 1755,
+      "words": 1270,
+      "chars": 8140,
+      "start_chunk": 2323,
+      "end_chunk": 2326
+    },
+    {
+      "id": 562,
+      "title": "A BMW R 18 Transcontinental for Pope Leo XIV.",
+      "num_chunks": 1,
+      "tokens": 449,
+      "words": 321,
+      "chars": 2051,
+      "start_chunk": 2327,
+      "end_chunk": 2327
+    },
+    {
+      "id": 563,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cThe little car that could: MINI conque",
+      "num_chunks": 12,
+      "tokens": 5249,
+      "words": 3642,
+      "chars": 22209,
+      "start_chunk": 2328,
+      "end_chunk": 2339
+    },
+    {
+      "id": 564,
+      "title": "WorldSBK: Double test action in countdown to the 2025 season opener.",
+      "num_chunks": 5,
+      "tokens": 2379,
+      "words": 1812,
+      "chars": 10427,
+      "start_chunk": 2340,
+      "end_chunk": 2344
+    },
+    {
+      "id": 565,
+      "title": "Efficient, sustainable, digital: New BMW Group Plant Debrecen set to begin series production of the ",
+      "num_chunks": 6,
+      "tokens": 2603,
+      "words": 2023,
+      "chars": 13082,
+      "start_chunk": 2345,
+      "end_chunk": 2350
+    },
+    {
+      "id": 566,
+      "title": "FIA WEC: Strong season-opener for the BMW M Hybrid V8 \u2013 BMW M4 GT3 EVO scores podium at debut.",
+      "num_chunks": 4,
+      "tokens": 1785,
+      "words": 1304,
+      "chars": 7278,
+      "start_chunk": 2351,
+      "end_chunk": 2354
+    },
+    {
+      "id": 567,
+      "title": "BMW UK secures top honours at the Business Car Awards 2025.",
+      "num_chunks": 3,
+      "tokens": 1070,
+      "words": 729,
+      "chars": 4866,
+      "start_chunk": 2355,
+      "end_chunk": 2357
+    },
+    {
+      "id": 568,
+      "title": "BMW Manufacturing Continues as the Largest Automotive Exporter by Value in the U.S.",
+      "num_chunks": 3,
+      "tokens": 1109,
+      "words": 829,
+      "chars": 5172,
+      "start_chunk": 2358,
+      "end_chunk": 2360
+    },
+    {
+      "id": 569,
+      "title": "Humanity, warmth, precision \u2013 BMW HypersonX creates unique soundscape for the Neue Klasse.",
+      "num_chunks": 3,
+      "tokens": 1142,
+      "words": 929,
+      "chars": 5904,
+      "start_chunk": 2361,
+      "end_chunk": 2363
+    },
+    {
+      "id": 570,
+      "title": "Three-millionth electrified vehicle rolls off BMW Group\u2019s Munich production line",
+      "num_chunks": 3,
+      "tokens": 1218,
+      "words": 885,
+      "chars": 5799,
+      "start_chunk": 2364,
+      "end_chunk": 2366
+    },
+    {
+      "id": 571,
+      "title": "BMW Group achieves more efficient car usage through insights into trips, gamification and CO2-Aware ",
+      "num_chunks": 7,
+      "tokens": 2952,
+      "words": 2428,
+      "chars": 15354,
+      "start_chunk": 2367,
+      "end_chunk": 2373
+    },
+    {
+      "id": 572,
+      "title": "NO NEED FOR VAR: MINI WELCOMES TUCHEL ONSIDE.",
+      "num_chunks": 1,
+      "tokens": 247,
+      "words": 182,
+      "chars": 1171,
+      "start_chunk": 2374,
+      "end_chunk": 2374
+    },
+    {
+      "id": 573,
+      "title": "Ready for Series Production: BMW Group Achieves Major Breakthrough with Utilization of Natural Fiber",
+      "num_chunks": 2,
+      "tokens": 741,
+      "words": 547,
+      "chars": 3577,
+      "start_chunk": 2375,
+      "end_chunk": 2376
+    },
+    {
+      "id": 574,
+      "title": "The 2026 BMW Motorrad Model Year Update Press Release has been updated with new color information.",
+      "num_chunks": 14,
+      "tokens": 5749,
+      "words": 3395,
+      "chars": 23083,
+      "start_chunk": 2377,
+      "end_chunk": 2390
+    },
+    {
+      "id": 575,
+      "title": "High Performance in New York City: With the MINI John Cooper Works through the Big Apple.",
+      "num_chunks": 2,
+      "tokens": 836,
+      "words": 623,
+      "chars": 4021,
+      "start_chunk": 2391,
+      "end_chunk": 2392
+    },
+    {
+      "id": 576,
+      "title": "BMW M Motorsport News, 15th July 2025.",
+      "num_chunks": 5,
+      "tokens": 2071,
+      "words": 1404,
+      "chars": 8395,
+      "start_chunk": 2393,
+      "end_chunk": 2397
+    },
+    {
+      "id": 577,
+      "title": "The BMW Z4 Final Edition.",
+      "num_chunks": 3,
+      "tokens": 1070,
+      "words": 752,
+      "chars": 5086,
+      "start_chunk": 2398,
+      "end_chunk": 2400
+    },
+    {
+      "id": 578,
+      "title": "BMW Announced as Presenting Sponsor of RBC PGA Scramble.",
+      "num_chunks": 3,
+      "tokens": 1098,
+      "words": 832,
+      "chars": 5304,
+      "start_chunk": 2401,
+      "end_chunk": 2403
+    },
+    {
+      "id": 579,
+      "title": "ROLLS-ROYCE MOTOR CARS PRESENTS THE PHANTOM CENTENARY PRIVATE COLLECTION: A DEFINING STATEMENT, 100 ",
+      "num_chunks": 9,
+      "tokens": 4177,
+      "words": 2919,
+      "chars": 19415,
+      "start_chunk": 2404,
+      "end_chunk": 2412
+    },
+    {
+      "id": 580,
+      "title": "The MINI Lifestyle Collection 2025.",
+      "num_chunks": 3,
+      "tokens": 1231,
+      "words": 930,
+      "chars": 5792,
+      "start_chunk": 2413,
+      "end_chunk": 2415
+    },
+    {
+      "id": 581,
+      "title": "The BMW Concept Speedtop.",
+      "num_chunks": 4,
+      "tokens": 1758,
+      "words": 1248,
+      "chars": 8180,
+      "start_chunk": 2416,
+      "end_chunk": 2419
+    },
+    {
+      "id": 582,
+      "title": "Pioneering technology meets pure driving pleasure: testing BMW iX3 prototypes.",
+      "num_chunks": 7,
+      "tokens": 3075,
+      "words": 2308,
+      "chars": 14885,
+      "start_chunk": 2420,
+      "end_chunk": 2426
+    },
+    {
+      "id": 583,
+      "title": "IMSA: Third pole position and first podium of the season for the BMW M Hybrid V8 in Long Beach.",
+      "num_chunks": 3,
+      "tokens": 1057,
+      "words": 824,
+      "chars": 4620,
+      "start_chunk": 2427,
+      "end_chunk": 2429
+    },
+    {
+      "id": 584,
+      "title": "Preeti Gupta returns as Corporate Affairs Director at BMW Group Asia.",
+      "num_chunks": 2,
+      "tokens": 633,
+      "words": 509,
+      "chars": 3361,
+      "start_chunk": 2430,
+      "end_chunk": 2431
+    },
+    {
+      "id": 585,
+      "title": "DTM: Double podium for Ren\u00e9 Rast at the Lausitzring.",
+      "num_chunks": 4,
+      "tokens": 1554,
+      "words": 1246,
+      "chars": 7101,
+      "start_chunk": 2432,
+      "end_chunk": 2435
+    },
+    {
+      "id": 586,
+      "title": "The Great Icelandic Swim: Ross Edgley makes history as first person to swim entire coastline of Icel",
+      "num_chunks": 1,
+      "tokens": 328,
+      "words": 225,
+      "chars": 1525,
+      "start_chunk": 2436,
+      "end_chunk": 2436
+    },
+    {
+      "id": 587,
+      "title": "BMW model updates, autumn 2025.",
+      "num_chunks": 4,
+      "tokens": 1490,
+      "words": 1080,
+      "chars": 6298,
+      "start_chunk": 2437,
+      "end_chunk": 2440
+    },
+    {
+      "id": 588,
+      "title": "CONSTRUCTION PHASE BEGINS ON MULTI-MILLION-POUND EXTENSION AT THE HOME OF ROLLS-ROYCE",
+      "num_chunks": 1,
+      "tokens": 357,
+      "words": 254,
+      "chars": 1728,
+      "start_chunk": 2441,
+      "end_chunk": 2441
+    },
+    {
+      "id": 589,
+      "title": "36th BMW International Open: Thursday Photo Gallery.",
+      "num_chunks": 1,
+      "tokens": 281,
+      "words": 197,
+      "chars": 1261,
+      "start_chunk": 2442,
+      "end_chunk": 2442
+    },
+    {
+      "id": 590,
+      "title": "Satellite details of the BMW Group Annual Conference 2025.",
+      "num_chunks": 1,
+      "tokens": 195,
+      "words": 115,
+      "chars": 824,
+      "start_chunk": 2443,
+      "end_chunk": 2443
+    },
+    {
+      "id": 591,
+      "title": "GHOST SERIES II AND BLACK BADGE GHOST SERIES II IN PROVENCE",
+      "num_chunks": 1,
+      "tokens": 128,
+      "words": 91,
+      "chars": 618,
+      "start_chunk": 2444,
+      "end_chunk": 2444
+    },
+    {
+      "id": 592,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cActivity, Not Utility: The X5 is Born\u201d",
+      "num_chunks": 9,
+      "tokens": 4103,
+      "words": 2854,
+      "chars": 17220,
+      "start_chunk": 2445,
+      "end_chunk": 2453
+    },
+    {
+      "id": 593,
+      "title": "THE PURSUIT OF PERFECTION: CRAFTSMANSHIP AT THE HOME OF ROLLS-ROYCE",
+      "num_chunks": 10,
+      "tokens": 4825,
+      "words": 3491,
+      "chars": 22575,
+      "start_chunk": 2454,
+      "end_chunk": 2463
+    },
+    {
+      "id": 594,
+      "title": "BMW of North America [ADDRESS] Years and the Opening of a New U.S. Headquarters.",
+      "num_chunks": 6,
+      "tokens": 2716,
+      "words": 2026,
+      "chars": 12889,
+      "start_chunk": 2464,
+      "end_chunk": 2469
+    },
+    {
+      "id": 595,
+      "title": "Estoril: Important step towards the world championship title.",
+      "num_chunks": 5,
+      "tokens": 2076,
+      "words": 1515,
+      "chars": 8579,
+      "start_chunk": 2470,
+      "end_chunk": 2474
+    },
+    {
+      "id": 596,
+      "title": "Consumer Survey Commissioned by BMW Group in the U.S. Reveals Growing Consumer Optimism and Expectat",
+      "num_chunks": 4,
+      "tokens": 1838,
+      "words": 1372,
+      "chars": 9040,
+      "start_chunk": 2475,
+      "end_chunk": 2478
+    },
+    {
+      "id": 597,
+      "title": "BMW is official partner of Frieze London. On the occasion of the BMW Art Car World Tour the 14th BMW",
+      "num_chunks": 3,
+      "tokens": 1348,
+      "words": 959,
+      "chars": 5925,
+      "start_chunk": 2479,
+      "end_chunk": 2481
+    },
+    {
+      "id": 598,
+      "title": "Rays of hope: Announcing the recipients of the 2025 BMW Group Award for Social Responsibility.",
+      "num_chunks": 3,
+      "tokens": 1202,
+      "words": 907,
+      "chars": 6019,
+      "start_chunk": 2482,
+      "end_chunk": 2484
+    },
+    {
+      "id": 599,
+      "title": "BMW Group Plant Debrecen enters the finish straight: Heartbeat of the plant comes to life with ramp-",
+      "num_chunks": 3,
+      "tokens": 1372,
+      "words": 1085,
+      "chars": 6847,
+      "start_chunk": 2485,
+      "end_chunk": 2487
+    },
+    {
+      "id": 600,
+      "title": "WorldSBK at Most: Toprak Razgatlioglu (almost) unbeatable.",
+      "num_chunks": 5,
+      "tokens": 1980,
+      "words": 1428,
+      "chars": 8127,
+      "start_chunk": 2488,
+      "end_chunk": 2492
+    },
+    {
+      "id": 601,
+      "title": "A great adventure: Electric road trip to Iceland with the MINI Countryman SE ALL4.",
+      "num_chunks": 3,
+      "tokens": 1354,
+      "words": 1001,
+      "chars": 6127,
+      "start_chunk": 2493,
+      "end_chunk": 2495
+    },
+    {
+      "id": 602,
+      "title": "NLS: Successful start to the Nordschleife season.",
+      "num_chunks": 1,
+      "tokens": 329,
+      "words": 199,
+      "chars": 1253,
+      "start_chunk": 2496,
+      "end_chunk": 2496
+    },
+    {
+      "id": 603,
+      "title": "BMW of North America and The Petersen Automotive Museum [ADDRESS] Years of the 3 Series in a New Exh",
+      "num_chunks": 11,
+      "tokens": 4873,
+      "words": 3538,
+      "chars": 21621,
+      "start_chunk": 2497,
+      "end_chunk": 2507
+    },
+    {
+      "id": 604,
+      "title": "Unbeatable in Hungary: Toprak Razgatlioglu extends World Championship lead with another hat-trick.",
+      "num_chunks": 5,
+      "tokens": 1983,
+      "words": 1398,
+      "chars": 8274,
+      "start_chunk": 2508,
+      "end_chunk": 2512
+    },
+    {
+      "id": 605,
+      "title": "\u201c72hellride\u201d: [ADDRESS]-Hour races, two pairs of brothers \u2013 a film documentary about the wild ride o",
+      "num_chunks": 2,
+      "tokens": 744,
+      "words": 550,
+      "chars": 3364,
+      "start_chunk": 2513,
+      "end_chunk": 2514
+    },
+    {
+      "id": 606,
+      "title": "Eagles for Education: BMW Group supports the Philipp Lahm Foundation through the BMW International O",
+      "num_chunks": 2,
+      "tokens": 713,
+      "words": 553,
+      "chars": 3584,
+      "start_chunk": 2515,
+      "end_chunk": 2516
+    },
+    {
+      "id": 607,
+      "title": "New BMW Panoramic iDrive revolutionises vehicle operation. Visionary technology package for the Neue",
+      "num_chunks": 5,
+      "tokens": 2343,
+      "words": 1869,
+      "chars": 11933,
+      "start_chunk": 2517,
+      "end_chunk": 2521
+    },
+    {
+      "id": 608,
+      "title": "BMW World of Golf 2025 swings into action in Singapore.",
+      "num_chunks": 2,
+      "tokens": 787,
+      "words": 628,
+      "chars": 3718,
+      "start_chunk": 2522,
+      "end_chunk": 2523
+    },
+    {
+      "id": 609,
+      "title": "MINI USA Partners with Red Bull to Drive Creativity and Culture at the 2025 Red Bull Dance Your Styl",
+      "num_chunks": 3,
+      "tokens": 1223,
+      "words": 909,
+      "chars": 5609,
+      "start_chunk": 2524,
+      "end_chunk": 2526
+    },
+    {
+      "id": 610,
+      "title": "Statement Walter Mertl, Member of the Board of Management of BMW AG, Finance, Conference Call Quarte",
+      "num_chunks": 8,
+      "tokens": 3278,
+      "words": 2580,
+      "chars": 15820,
+      "start_chunk": 2527,
+      "end_chunk": 2534
+    },
+    {
+      "id": 611,
+      "title": "Strategically positioned \u2013 flexibly managed: The BMW Group production network",
+      "num_chunks": 3,
+      "tokens": 1287,
+      "words": 972,
+      "chars": 6453,
+      "start_chunk": 2535,
+      "end_chunk": 2537
+    },
+    {
+      "id": 612,
+      "title": "BMW Motorrad presents the new BMW R 1300 RT.",
+      "num_chunks": 10,
+      "tokens": 4372,
+      "words": 3521,
+      "chars": 21831,
+      "start_chunk": 2538,
+      "end_chunk": 2547
+    },
+    {
+      "id": 613,
+      "title": "BMW Group Plant Debrecen enters the finish straight: Heartbeat of the plant comes to life with ramp-",
+      "num_chunks": 4,
+      "tokens": 1460,
+      "words": 1150,
+      "chars": 7250,
+      "start_chunk": 2548,
+      "end_chunk": 2551
+    },
+    {
+      "id": 614,
+      "title": "FINAL STRUCTURAL BEAM SIGNED BY ROLLS-ROYCE DIRECTORS AS LANDMARK \u00a3300 MILLION EXTENSION REACHES KEY",
+      "num_chunks": 1,
+      "tokens": 435,
+      "words": 303,
+      "chars": 2009,
+      "start_chunk": 2552,
+      "end_chunk": 2552
+    },
+    {
+      "id": 615,
+      "title": "Happy birthday, MINI! 66 years of driving pleasure, style and individuality.",
+      "num_chunks": 1,
+      "tokens": 435,
+      "words": 316,
+      "chars": 2051,
+      "start_chunk": 2553,
+      "end_chunk": 2553
+    },
+    {
+      "id": 616,
+      "title": "ROLLS-ROYCE CELEBRATES THE OPENING OF THE SUMMER SEASON AT THE HURLINGHAM CLUB",
+      "num_chunks": 5,
+      "tokens": 2281,
+      "words": 1640,
+      "chars": 10278,
+      "start_chunk": 2554,
+      "end_chunk": 2558
+    },
+    {
+      "id": 617,
+      "title": "Unbeatable in Hungary: Toprak Razgatlioglu extends World Championship lead with another hat-trick.",
+      "num_chunks": 5,
+      "tokens": 1983,
+      "words": 1398,
+      "chars": 8274,
+      "start_chunk": 2559,
+      "end_chunk": 2563
+    },
+    {
+      "id": 618,
+      "title": "BMW Group announces senior management changes in Sales and Finance Divisions",
+      "num_chunks": 4,
+      "tokens": 1587,
+      "words": 1166,
+      "chars": 7640,
+      "start_chunk": 2564,
+      "end_chunk": 2567
+    },
+    {
+      "id": 619,
+      "title": "24h Daytona: Dries Vanthoor drives to the first pole position for the BMW M Hybrid V8.",
+      "num_chunks": 3,
+      "tokens": 1024,
+      "words": 728,
+      "chars": 4114,
+      "start_chunk": 2568,
+      "end_chunk": 2570
+    },
+    {
+      "id": 620,
+      "title": "Sawe and Wanjiru win the 2025 BMW BERLIN-MARATHON as the BMW iX3 makes its race debut.",
+      "num_chunks": 3,
+      "tokens": 1146,
+      "words": 730,
+      "chars": 4653,
+      "start_chunk": 2571,
+      "end_chunk": 2573
+    },
+    {
+      "id": 621,
+      "title": "ChargeScape and PSEG Long Island Partner to Enroll BMW and Ford Electric Vehicles in First-Ever Grid",
+      "num_chunks": 4,
+      "tokens": 1516,
+      "words": 1096,
+      "chars": 7188,
+      "start_chunk": 2574,
+      "end_chunk": 2577
+    },
+    {
+      "id": 622,
+      "title": "Joint venture into the second decade: Shell and BMW M Motorsport renew and expand partnership.",
+      "num_chunks": 2,
+      "tokens": 820,
+      "words": 667,
+      "chars": 4261,
+      "start_chunk": 2578,
+      "end_chunk": 2579
+    },
+    {
+      "id": 623,
+      "title": "Two anniversaries, one special exhibition: 50 Years of BMW Art Cars and the BMW 3 Series at the BMW ",
+      "num_chunks": 3,
+      "tokens": 1130,
+      "words": 868,
+      "chars": 5137,
+      "start_chunk": 2580,
+      "end_chunk": 2582
+    },
+    {
+      "id": 624,
+      "title": "BMW of North America Reports Q2 2025 U.S. Sales Results.",
+      "num_chunks": 3,
+      "tokens": 1159,
+      "words": 824,
+      "chars": 5077,
+      "start_chunk": 2583,
+      "end_chunk": 2585
+    },
+    {
+      "id": 625,
+      "title": "BMW Motorrad presents the BMW Motorrad Vision CE.",
+      "num_chunks": 2,
+      "tokens": 725,
+      "words": 581,
+      "chars": 3787,
+      "start_chunk": 2586,
+      "end_chunk": 2587
+    },
+    {
+      "id": 626,
+      "title": "MINI John Cooper Works and Bulldog Racing once again take on the 24-Hour Race at the N\u00fcrburgring.",
+      "num_chunks": 1,
+      "tokens": 438,
+      "words": 314,
+      "chars": 2014,
+      "start_chunk": 2588,
+      "end_chunk": 2588
+    },
+    {
+      "id": 627,
+      "title": "Celebrations in the urban canyons of Macau: BMW Road Racers claim a 1-2-3.",
+      "num_chunks": 4,
+      "tokens": 1606,
+      "words": 1172,
+      "chars": 6518,
+      "start_chunk": 2589,
+      "end_chunk": 2592
+    },
+    {
+      "id": 628,
+      "title": "LANDMARK INVESTMENT CROWNS RECORD YEAR FOR BESPOKE AT ROLLS-ROYCE MOTOR CARS",
+      "num_chunks": 1,
+      "tokens": 501,
+      "words": 349,
+      "chars": 2393,
+      "start_chunk": 2593,
+      "end_chunk": 2593
+    },
+    {
+      "id": 629,
+      "title": "New family member from Portugal: BMW Motorrad Motorsport welcomes Miguel Oliveira as a new factory r",
+      "num_chunks": 3,
+      "tokens": 1085,
+      "words": 806,
+      "chars": 4952,
+      "start_chunk": 2594,
+      "end_chunk": 2596
+    },
+    {
+      "id": 630,
+      "title": "BMW PGA Championship \u2013 A Festival of Golf marked by the Ryder Cup and the Neue Klasse.",
+      "num_chunks": 3,
+      "tokens": 1174,
+      "words": 861,
+      "chars": 5201,
+      "start_chunk": 2597,
+      "end_chunk": 2599
+    },
+    {
+      "id": 631,
+      "title": "Two new BMW fragrances open up a new dimension of joy.",
+      "num_chunks": 4,
+      "tokens": 1626,
+      "words": 1143,
+      "chars": 7430,
+      "start_chunk": 2600,
+      "end_chunk": 2603
+    },
+    {
+      "id": 632,
+      "title": "MINI JCW x Deus Ex Machina: Two worlds. Two cars. Singular enthusiasm.",
+      "num_chunks": 7,
+      "tokens": 3097,
+      "words": 2334,
+      "chars": 15040,
+      "start_chunk": 2604,
+      "end_chunk": 2610
+    },
+    {
+      "id": 633,
+      "title": "BMW NA 50th Anniversary | 50 Stories for 50 Years [ADDRESS]: \u201cJust for U.S.: BMW of North America Cr",
+      "num_chunks": 10,
+      "tokens": 4747,
+      "words": 3314,
+      "chars": 19833,
+      "start_chunk": 2611,
+      "end_chunk": 2620
+    },
+    {
+      "id": 634,
+      "title": "Atmospheric start to the BMW PGA Championship at the Celebrity Pro-Am.",
+      "num_chunks": 1,
+      "tokens": 464,
+      "words": 342,
+      "chars": 2240,
+      "start_chunk": 2621,
+      "end_chunk": 2621
+    }
+  ]
+}

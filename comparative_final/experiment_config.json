@@ -1,0 +1,21 @@
+{
+  "base_model": "distilgpt2",
+  "device": "cuda",
+  "timestamp": "20251210_191816",
+  "lora_config": {
+    "r": 8,
+    "alpha": 32,
+    "target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "dropout": 0.1
+  },
+  "model_info": {
+    "original_params": 82502400,
+    "original_trainable_params": 589824,
+    "reduced_params": 75316224,
+    "reduced_trainable_params": 491520
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": "distilgpt2",
+  "device": "cuda",
+  "lora": {
+    "r": 8,
+    "alpha": 32,
+    "modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ]
+  },
+  "timestamp": "20251210_163331"
+}

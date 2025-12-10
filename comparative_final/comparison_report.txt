@@ -1,0 +1,93 @@
+============================================================
+COMPARATIVE MODEL FINE-TUNING REPORT
+============================================================
+
+MODEL INFORMATION
+----------------------------------------
+Base Model: distilgpt2
+Fine-tuning Method: LoRA
+Device: cuda
+Timestamp: 20251210_191816
+
+TRAINING RESULTS
+----------------------------------------
+Original Model - Best Epoch: 8, Best Val Loss: 3.2156
+Reduced Model  - Best Epoch: 8, Best Val Loss: 3.4961
+
+Total Training Time:
+  Original: 802.0s
+  Reduced:  711.9s
+  Speedup:  11.2%
+
+EVALUATION RESULTS
+----------------------------------------
+Original Model:
+  Test Loss: 3.2835
+  Perplexity: 26.67
+Reduced Model:
+  Test Loss: 3.6049
+  Perplexity: 36.78
+
+COMPREHENSIVE METRICS
+----------------------------------------
+Diversity (Distinct-2): Original=0.5085, Reduced=0.5426
+Fluency: Original=0.4867, Reduced=0.4467
+Toxicity: Original=0.000725, Reduced=0.000737
+
+BERTScore F1 (0-1, higher is better):
+  Original Model: 0.0176
+  Reduced Model:  -0.0682
+
+SAMPLE GENERATIONS
+----------------------------------------
+
+Prompt: BMW is launching a new electric vehicle that
+Original: {'text': 'BMW is launching a new electric vehicle that will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric vehicle will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric vehicle will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric', 'toxicity_score': None, 'is_toxic': False}
+Reduced:  {'text': 'BMW is launching a new electric vehicle that will use the advanced electric power technologies of the new EV and the electric battery. The electric-electric vehicle, the first electric car to be driven with a battery-electric electric vehicle, is powered by the electric battery. The electric-electric car will be driven with a lithium-ion battery, a battery-electric battery-electric battery-electric battery-', 'toxicity_score': None, 'is_toxic': False}
+----------------------------------------
+
+Prompt: The BMW Group announced today that
+Original: {'text': 'The BMW Group announced today that the BMW Group’s new line of BMW M vehicles will be the first BMW iX, an all-electric vehicle, as part of the new BMW iX series. The new BMW iX will also be available for all models, including the MINI, the BMW iX, the MINI, and the MINI. The new BMW iX will', 'toxicity_score': None, 'is_toxic': False}
+Reduced:  {'text': 'The BMW Group announced today that the first-ever BMW i3 will be available to the public at the BMW Group’s BMW Group’s BMW EEV (3, M6, S7, and X8, BMW i3 and BMW i6 M3 i3 i5, and BMW i6 M3 i3 i5, for a total of the BMW i3', 'toxicity_score': None, 'is_toxic': False}
+----------------------------------------
+
+Prompt: BMW's latest sustainability initiative focuses on
+Original: {'text': "BMW's latest sustainability initiative focuses on sustainable energy. The new initiative aims to achieve a 20% reduction in greenhouse gas emissions, and by 2020, 50% of the world's greenhouse gas emissions would be used to meet the needs of the global population. The goal is to reduce the use of fossil fuels and the use of carbon-free electricity, which can be used to power the entire economy.", 'toxicity_score': None, 'is_toxic': False}
+Reduced:  {'text': "BMW's latest sustainability initiative focuses on the sustainability of its business and environmental strategy. The project’s goal is to offer sustainability initiatives for the BMW Group and the European Commission for the next five years.", 'toxicity_score': None, 'is_toxic': False}
+----------------------------------------
+
+Prompt: The future of BMW mobility includes
+Original: {'text': 'The future of BMW mobility includes a new generation of mobility that enables the use of the BMW iX3 and the future of the BMW iX3. The future of the BMW iX3 will also include the ability to drive a new BMW iX3, with the ability to drive a new BMW iX3, with the ability to drive a new BMW iX3, and with the', 'toxicity_score': None, 'is_toxic': False}
+Reduced:  {'text': 'The future of BMW mobility includes a wide range of all-new features, including the new BMW M3 M3, the BMW M3 M4, the BMW M5, the BMW M4 M4 M5, the BMW M4 M6, the BMW M6 M3 M6, and the BMW M4 M4 M5. The new BMW M3 M4 M4', 'toxicity_score': None, 'is_toxic': False}
+----------------------------------------
+
+Prompt: BMW autonomous driving technology
+Original: {'text': 'BMW autonomous driving technology, which will take up to 30 years to develop, is currently available in the US. BMW Group is seeking to develop a range of vehicles with autonomous driving technology in the US, with the goal of developing the first autonomous driving technology in the US. The range of the new BMW iX3, the iX4 and the iX5, is expected to be the', 'toxicity_score': None, 'is_toxic': False}
+Reduced:  {'text': 'BMW autonomous driving technology has been demonstrated in the automotive world, and the technology will be tested in cars in the future. The next-generation autonomous car will be developed in the same vehicle, with the first autonomous driving technology in the next generation of autonomous driving technologies. In 2025, the first driver-on-the-road drive technology will be developed in the next-generation autonomous driving technology.', 'toxicity_score': None, 'is_toxic': False}
+----------------------------------------
+
+============================================================
+DISCUSSION AND CONCLUSIONS
+============================================================
+
+TRADE-OFFS ANALYSIS:
+1. Model Size vs. Performance: The reduced model trades a slight decrease in
+   performance (higher perplexity) for increased training and inference speed.
+2. Training Speed: Removing a transformer block typically results in ~15-25%
+   faster training due to fewer parameters and computations.
+3. Output Quality: The original model generally produces more coherent and
+   contextually appropriate text, while the reduced model may show slightly
+   more repetition or less nuanced responses.
+
+RECOMMENDATIONS:
+1. For production with strict latency requirements: Consider the reduced model.
+2. For maximum text quality: Use the original model.
+3. For resource-constrained environments: The reduced model offers better
+   efficiency with acceptable performance degradation.
+
+NEXT STEPS WITH MORE RESOURCES:
+1. Experiment with removing different transformer blocks (not just the last).
+2. Try progressive layer dropping or other adaptive pruning techniques.
+3. Increase training data and perform hyperparameter optimization.
+4. Test with larger batch sizes and more epochs.
+5. Evaluate on more diverse and challenging BMW-related tasks.

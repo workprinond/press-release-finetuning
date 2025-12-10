@@ -1,0 +1,736 @@
+{
+  "detailed_results": {
+    "original": {
+      "log_likelihoods": [
+        -4.036195755004883,
+        -3.4319827556610107,
+        -4.683350563049316,
+        -4.2542619705200195,
+        -3.2229526042938232,
+        -3.06693172454834,
+        -3.061570644378662,
+        -2.359402894973755,
+        -2.4446873664855957,
+        -2.2754037380218506,
+        -4.7896528244018555,
+        -3.6109938621520996,
+        -4.567543983459473,
+        -3.029513120651245,
+        -3.7467949390411377,
+        -3.7644712924957275,
+        -3.56762433052063,
+        -4.08434534072876,
+        -3.061772584915161,
+        -3.672675371170044,
+        -2.9524405002593994,
+        -2.53259539604187,
+        -3.3049795627593994,
+        -3.308323621749878,
+        -3.236409902572632,
+        -4.477250576019287,
+        -2.4326460361480713,
+        -3.469437599182129,
+        -2.6095786094665527,
+        -3.175934076309204,
+        -3.2600257396698,
+        -4.231609344482422,
+        -3.494462728500366,
+        -3.79544997215271,
+        -3.49010968208313,
+        -3.693058967590332,
+        -3.347226619720459,
+        -3.3254234790802,
+        -4.680542945861816,
+        -4.061058521270752,
+        -2.7453999519348145,
+        -2.747931718826294,
+        -3.753108263015747,
+        -3.259814739227295,
+        -2.2310285568237305,
+        -3.5112345218658447,
+        -2.51167893409729,
+        -2.8899576663970947,
+        -3.861006021499634,
+        -2.6823248863220215
+      ],
+      "bert_scores": [
+        -0.16614222526550293,
+        -0.06680517643690109,
+        -0.006939985789358616,
+        -0.109786756336689,
+        -0.08417509496212006,
+        -0.06233767792582512,
+        -0.052067726850509644,
+        0.3326997458934784,
+        -0.005453880410641432,
+        0.006842513103038073,
+        0.03087589144706726,
+        0.03315272554755211,
+        -0.12038937956094742,
+        0.12992829084396362,
+        -0.10958404093980789,
+        -0.19598440825939178,
+        -0.0043152859434485435,
+        0.19876661896705627,
+        -0.10381972789764404,
+        0.1582176238298416,
+        0.055401578545570374,
+        0.20625188946723938,
+        -0.0180476363748312,
+        0.16407480835914612,
+        0.18704728782176971,
+        0.037429869174957275,
+        0.03657910227775574,
+        -0.06193365901708603,
+        0.28491517901420593,
+        0.006167620420455933,
+        -0.14090386033058167,
+        0.06361188739538193,
+        0.2080194652080536,
+        0.09458913654088974,
+        -0.05180427059531212,
+        0.017227239906787872,
+        -0.17535798251628876,
+        -0.07382956892251968,
+        0.14573970437049866,
+        -0.09368044883012772,
+        0.08947323262691498,
+        0.2733190953731537,
+        -0.2876087427139282,
+        0.1634327620267868,
+        -0.05361669510602951,
+        -0.021834945306181908,
+        -0.17184790968894958,
+        0.09768354147672653,
+        -0.08286168426275253,
+        0.17895494401454926
+      ],
+      "generations": [
+        {
+          "question": "What fragrance concept did Rolls-Royce launch for the Phantom?",
+          "generated_answer": "The Phantom was designed to evoke the iconic Phantom in a more contemporary sense. It was also designed to evoke the iconic Phantom in a more contemporary sense. It was also designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is based on the iconic Phantom. The Phantom is designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is designed to evoke the iconic Phantom in a more contemporary sense. The Phantom is",
+          "context_answer": "Rolls-Royce Scent, an immersive fragrance concept designed by their in-house perfumer."
+        },
+        {
+          "question": "Which driver won the Intercontinental GT Challenge Drivers' Championship in 2025?",
+          "generated_answer": "No. The first-ever winner of the Intercontinental GT Challenge will be awarded a spot at the International Circuit of Speed in Barcelona. The first-ever winner of the Intercontinental GT Challenge will be awarded a spot at the International Circuit of Speed in Barcelona. The first-ever winner of the Intercontinental GT Challenge will be awarded a spot at the International Circuit of Speed in Barcelona. The first-ever winner of the Intercontinental GT Challenge will be awarded a spot at the International Circuit of Speed in Barcelona. The first-ever winner of the Intercontinental GT Challenge will be awarded a spot at the International Circuit of Speed in Barcelona. The first-ever",
+          "context_answer": "Kelvin van der Linde was crowned Drivers' Champion of the Intercontinental GT Challenge."
+        },
+        {
+          "question": "What special edition 8 Series did BMW unveil at Pebble Beach in 2025?",
+          "generated_answer": "It was a special edition for the BMW Group, which was a major manufacturer of the original series for the BMW iX3. The BMW Group also had an exclusive BMW iX3, which was designed to be the first BMW iX3. In addition to the unique design and performance characteristics, the BMW iX3 also received a special edition edition of the BMW iX3, which was designed to be the first BMW iX3. The special edition 8 Series was made available to the public on the BMW iX3 website in the BMW iX3 eShop. The BMW iX3 had been available in the same quantity as the",
+          "context_answer": "The 2026 M850i Edition M Heritage, a limited-edition 8 Series with five historic paint finishes."
+        },
+        {
+          "question": "How many units of the M850i Edition M Heritage will be produced?",
+          "generated_answer": "Approximately 1,000 units of the M850i Edition M Heritage will be produced in the United States. These units will be produced in the United States in the same manner as the M850i Edition M Heritage. In the United States, the M850i Edition M Heritage will be produced in the United States. The M850i Edition M Heritage will be produced in the United States in the same manner as the M850i Edition M Heritage. The M850i Edition M Heritage will be produced in the United States in the same manner as the M850i Edition M Heritage. The M850i Edition M Heritage will be produced in the United",
+          "context_answer": "Limited to just 500 units distributed to select markets worldwide."
+        },
+        {
+          "question": "Which car won the 24H Dubai in its racing debut in 2025?",
+          "generated_answer": "No. We\u2019ve already discussed the BMW X3, the BMW X4, and BMW X5. We\u2019ve also discussed the BMW X3. Our thoughts on the BMW X3, its performance and performance in the BMW X3 are very important. We also discussed the BMW X3, its acceleration, and the BMW X3 performance. We also discussed the BMW X3 performance in the BMW X3. We\u2019ve also discussed the BMW X3 performance in the BMW X3. We\u2019ve also discussed the BMW X3 performance in the BMW X3. We\u2019ve also discussed the BMW X3",
+          "context_answer": "The new BMW M4 GT3 EVO won the 24H Dubai in its racing debut."
+        },
+        {
+          "question": "Who was appointed as General Manager of Corporate Sales for BMW Group UK in July 2025?",
+          "generated_answer": "We are currently in the process of evaluating the hiring of our new General Manager. The following are some of the key questions that we\u2019ll discuss further in the coming days. We\u2019ll be working on the next step in the process. We will also look at the general manager position in terms of the position\u2019s future in the company. We\u2019ll be looking at the position in the future. We are very excited to be part of this process. We\u2019ll be looking at the position in the future. Our aim is to find a suitable candidate for our position in the future. We are currently working",
+          "context_answer": "Andrew Jago was appointed as General Manager of Corporate Sales for BMW Group UK."
+        },
+        {
+          "question": "What was the attendance at the BMW Motorrad Days 2025 in Garmisch-Partenkirchen?",
+          "generated_answer": "I think the BMW Motorrad Day 2025 was a huge success for me. It was a big success for me. I had to do some work on the road. I had to do some tests, and some technical tests. I had to work on the track. I had to work on the track and then go on the track. I had to get to the track. I had to train with a team of people and get to the track. I had to train with a team of people and get to the track. I had to get to the track to do some tests, and I had to train with",
+          "context_answer": "Over 40,000 visitors from around 50 nations attended the BMW Motorrad Days 2025."
+        },
+        {
+          "question": "What record did the BMW M2 CS set on the N\u00fcrburgring-Nordschleife in April 2025?",
+          "generated_answer": "The record of the BMW M2 CS set on the N\u00fcrburgring-Nordschleife was set at the N\u00fcrburgring-Nordschleife in April 2025. It was set at the N\u00fcrburgring-Nordschleife in April 2025. The record of the BMW M2 CS set on the N\u00fcrburgring-Nordschleife was set at the N\u00fcrburgring-Nordschleife in April 2025. The record of the BMW M2 CS set on the N\u00fcrburgring-Nordschleife was set",
+          "context_answer": "The BMW M2 CS set a new record of 7:25.5 on the N\u00fcrburgring-Nordschleife."
+        },
+        {
+          "question": "How much did BMW sales increase in Q3 2025 compared to the same period last year?",
+          "generated_answer": "The decline in sales has been driven by a strong business environment. This reflects a strong business environment in the US and the EU, and particularly in Europe and Asia. The US and the European economies have experienced a strong business environment in the past three years. The United States is the second-largest economy in the world, with the second-largest economy in the world. The US is also the second-largest economy in the world. BMW Group sales in the US are up by a whopping 13.5% since the end of the year. This is a result of a strong business environment in the US and the EU. The US",
+          "context_answer": "BMW sales rose 24% in Q3 2025 versus the same time period last year."
+        },
+        {
+          "question": "What percentage of BMW vehicles sold in the U.S. through Q3 2025 were electrified?",
+          "generated_answer": "1,300,000. For the first time, BMW was the driving force in the U.S. with the highest total sales of any automaker in the U.S. with a total sales of about $15 billion. In 2025, BMW sold approximately 8.2 million vehicles, up from the current high of 8.7 million. The sales were driven by BMW iX3, BMW iX4, BMW iX5, BMW iX6, and BMW iX7. The total sales of all BMW vehicles in the U.S. were driven by BMW iX3, BMW iX",
+          "context_answer": "Nearly 20% of BMW vehicles sold in the U.S. through Q3 2025 had either battery electric (BEV) or plug-in hybrid (PHEV) drivetrains."
+        },
+        {
+          "question": "What advertising slogan controversy did BMW face in 2010?",
+          "generated_answer": "\u201cWe had a very long campaign for the brand. We had a very long campaign for the brand. We had a very long campaign for the brand. We had a very long campaign for the brand. We had a very long campaign for the brand. We had a very long campaign for the brand.\u201d",
+          "context_answer": "BMW faced controversy when it seemed to abandon 'The Ultimate Driving Machine' tagline for 'Joy is BMW'."
+        },
+        {
+          "question": "When was 'The Ultimate Driving Machine' tagline coined?",
+          "generated_answer": "\u201cI always said 'I\u2019m not the one driving machine\u201d. \u201cI\u2019m the one driving machine. I\u2019m the one driving machine. I\u2019m the one driving machine. I\u2019m the one driving machine.\u201d In his book The Ultimate Driving Machine, he says: \u201cI always said 'I\u2019m not the one driving machine\u201d. \u201cI\u2019m the one driving machine. I\u2019m the one driving machine. I\u2019m the one driving machine. I\u2019m the one driving machine. I\u2019m the one driving machine",
+          "context_answer": "The tagline 'The Ultimate Driving Machine' was coined by Martin Puris in 1975."
+        },
+        {
+          "question": "Which tennis player did BMW extend its partnership with in September 2025?",
+          "generated_answer": "Yes. BMW Motorrad is a partner in the BMW Group. We are the BMW Group\u2019s partner in the BMW Group\u2019s BMW Group. Our relationship with BMW Motorrad has always been mutual. We have had a lot of success with BMW Motorrad, and we share a lot of mutual interest in the BMW Group. In our relationship with BMW Motorrad, we have been very supportive of the partnership. We share a lot of common values with BMW Motorrad, and we have a lot of common values with BMW Motorrad. We are also very supportive of the BMW Group\u2019s brand. We have also been very involved in the",
+          "context_answer": "BMW extended its partnership with Spanish tennis ace Carlos Alcaraz."
+        },
+        {
+          "question": "Which BMW plant is planning a hydrogen pipeline link?",
+          "generated_answer": "BMW plant plans to carry hydrogen to its plants in the UK and the United States, with a total capacity of between 4,000 and 6,000 tonnes, as the project continues. The plant has also begun to build a hydrogen line and a line of hydrogen cells in the UK, and a new hydrogen plant in France. The plant will also begin to test hydrogen from existing plants in the US, and a hydrogen-powered plant in Poland in the future. The plant is now looking for a new location in the US, and has been working on a new project for the last few years. The plant is also working on a new plant in Japan. In November, the",
+          "context_answer": "BMW Group Plant Leipzig is planning a hydrogen pipeline link, making it the first car plant in the world to receive hydrogen via a pipeline."
+        },
+        {
+          "question": "Who was the standout performer at the 36th BMW International Open in July 2025?",
+          "generated_answer": "Erik Weltmann, the head of the BMW Group, and I have been working closely with Erik Weltmann on the BMW Group\u2019s global strategy for the past year. I\u2019m not sure that he\u2019s always the ideal candidate for the job, but he\u2019s a very talented, talented individual. I\u2019m also looking forward to the long term development of the brand. I\u2019m particularly excited for Erik Weltmann\u2019s performance in the team\u2019s long term development process. He\u2019s also very enthusiastic about the opportunity to join BMW Group. The BMW Group has",
+          "context_answer": "Davis Bryant (USA) was the standout performer with a 9-under-par round and a hole-in-one."
+        },
+        {
+          "question": "What concept did BMW Motorrad present at the Concorso d'Eleganza Villa d'Este?",
+          "generated_answer": "\"I think it was a concept, a concept. It was a concept that we were developing at the Concorso d'Eleganza Villa d'Este. We wanted to show that the concept was very different from what we had been doing at the Concorso d'Eleganza Villa d'Este. We were looking at a concept that was different from what we had been doing at the Concorso d'Eleganza Villa d'Este. We had to show the concept that the concept was very different from what we had been doing at the Concorso d",
+          "context_answer": "BMW Motorrad presented the 'BMW Motorrad Concept RR' as a preview of the next generation of BMW RR superbikes."
+        },
+        {
+          "question": "What was the torque figure demonstrated by the BMW Vision Driving Experience in Shanghai?",
+          "generated_answer": "The range of the BMW Vision Driving Experience in Shanghai was estimated at about 3,500 km/h (3,500 mi) with the BMW Vision Driving Experience in Shanghai. The range of the BMW Vision Driving Experience in Shanghai was estimated at about 3,500 km/h (3,500 mi) with the BMW Vision Driving Experience in Shanghai. The range of the BMW Vision Driving Experience in Shanghai was estimated at about 3,500 km/h (3,500 mi) with the BMW Vision Driving Experience in Shanghai. The range of the BMW Vision Driving Experience in Shanghai was estimated at about 3,500 km/h (3,500 mi",
+          "context_answer": "The BMW Vision Driving Experience demonstrated up to 18,000 Nm of torque."
+        },
+        {
+          "question": "What organization did BMW Group Brazil partner with for youth education?",
+          "generated_answer": "BMW Group Brazil. The BMW Group Brazil has a long history with youth education in the U.S. and internationally. The group has been working closely with the U.S. Department of Education to develop a comprehensive curriculum for youth in the U.S. for youth education. The BMW Group Brazil is a leading partner in youth education, and the organization is a leading leader in youth education.",
+          "context_answer": "BMW Group Brazil partnered with UNICEF under the 'BRIDGE. Educating young people for tomorrow, today' programme."
+        },
+        {
+          "question": "Where did Ren\u00e9 Rast and Marco Wittmann compete in the DTM in August 2025?",
+          "generated_answer": "I was not in DTM. I competed in DTM in July and August. I was competing in DTM in August. I was competing in DTM in September. I was competing in DTM in October. I was competing in DTM in November. I was competing in DTM in December. I was competing in DTM in January. I was competing in DTM in February. I was competing in DTM in September. I was competing in DTM in October. I was competing in DTM in November. I was competing in DTM in December. I was competing in DTM in January. I",
+          "context_answer": "Ren\u00e9 Rast and Marco Wittmann competed at the Sachsenring in the DTM."
+        },
+        {
+          "question": "Which MINI John Cooper Works models are now fully electric?",
+          "generated_answer": "The MINI John Cooper works model is now fully electric. The MINI John Cooper Works model is now fully electric. The MINI John Cooper Works model is now fully electric. BMW Group sales and sales are continuing to improve as the company continues to invest in new models and new products. In the end, we are able to take advantage of the increased customer engagement and customer engagement of our vehicles and drive our growth. We are also able to leverage our unique brand relationships with our customers, who are increasingly looking for ways to drive their vehicles. The MINI John Cooper Works model is now fully electric. The MINI John Cooper Works model is now fully electric.",
+          "context_answer": "The first-ever MINI John Cooper Works Electric and first-ever MINI John Cooper Works Aceman are fully electric."
+        },
+        {
+          "question": "What is the WLTP range of the new BMW iX xDrive60?",
+          "generated_answer": "It is a new model that is designed to drive around the world, including the new BMW iX xDrive60. The new BMW iX xDrive60 is also the first model to go up the road, with the BMW iX xDrive60 being the first to go up the road, and the new BMW iX xDrive60 being the first to go up the road. The new BMW iX xDrive60 is the first to go up the road, with the BMW iX xDrive60 being the first to go up the road, and the new BMW iX xDrive60 being the first to go up the",
+          "context_answer": "The new BMW iX xDrive60 achieves a WLTP range of 701 kilometres (435 miles)."
+        },
+        {
+          "question": "Who won a BMW iX M70 for a hole-in-one at the BMW Championship?",
+          "generated_answer": "Yes, the BMW iX M70. The BMW iX M70 has a hole-in-one at the BMW Championship. The BMW iX M70 is the world's best-selling BMW iX. In a competitive race, BMW iX M70s have a hole-in-one at the BMW Championship. The BMW iX M70 has a hole-in-one at the BMW Championship. The BMW iX M70 is the world's best-selling BMW iX. In a competitive race, BMW iX M70s have a hole-in-one at the BMW Championship.",
+          "context_answer": "Akshay Bhatia won a BMW iX M70 for a hole-in-one at the BMW Championship."
+        },
+        {
+          "question": "How many consecutive victories did Valentino Rossi achieve at Misano?",
+          "generated_answer": "10.5.0 [ADDRESS], which means we\u2019re still just in the middle of the season. I\u2019m not sure how many victories we\u2019re able to achieve, but I\u2019m sure we\u2019ll win a lot more games.\u201d The result was a record-breaking victory for Rossi, who is also a world champion. \u201cI\u2019m very happy with the results, but I\u2019m still a bit disappointed in myself and my teammates, but I\u2019m still a bit disappointed in myself.\u201d The result was a record-breaking victory for Rossi, who is",
+          "context_answer": "Valentino Rossi achieved his third consecutive victory at Misano in 2025."
+        },
+        {
+          "question": "What was BMW Group's BEV sales growth in 2024?",
+          "generated_answer": "In 2024, BMW Group was responsible for over half of its BEV sales in the world. The company's BEV sales grew by 1.7% to 2.8 million units in 2025. The company sold more than one billion vehicles in the first six months of the year. In the second quarter of 2025, the company sold over 7.6 million vehicles. In the second quarter of 2025, BMW Group had sold over 2 billion vehicles. In the third quarter of 2025, BMW Group sold over 2 billion vehicles. In the fourth quarter of 2025, the company sold over 1.6 million vehicles. In the fourth quarter of 2025, the company sold over",
+          "context_answer": "BMW Group achieved BEV sales growth of +13.5% in 2024."
+        },
+        {
+          "question": "How many BMW Art Cars were displayed at The Aurora 2025 in Sweden?",
+          "generated_answer": "The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden. Date: 2025-11-13 | Author: Tobias S\u00f6dorf BMW Group | ID: T0452701EN -------------------------------------------------------------------------------- The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden. The BMW Art Cars were displayed at the Aurora 2025 in Sweden.",
+          "context_answer": "Four BMW Art Cars were displayed at The Aurora 2025 in Sweden."
+        },
+        {
+          "question": "What was the title of BMW Customer Service's 2025 campaign short film?",
+          "generated_answer": "\"Our first film was produced by BMW in the US, and it was released in Japan in 2025. The film was produced by a Japanese film production company. It was first released in the US in the UK in 2025. We were very excited about it. We wanted to bring a brand of film to the UK, and the film was also very much a reflection of our relationship with the US. The film is the first film we have ever shot in the US, and it is about a man who is in a strange place. The film was produced by a Japanese film production company. The film was produced by a Japanese film production company. We wanted",
+          "context_answer": "The short film was titled 'The Thief' as part of the 'Relax. We Care.' campaign."
+        },
+        {
+          "question": "When will the first Neue Klasse models enter production?",
+          "generated_answer": "[ADDRESS], 20 October. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. [ADDRESS], 20 October. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Klasse model will be manufactured in the Netherlands. The first Neue Kl",
+          "context_answer": "The first Neue Klasse models will enter production at the end of 2025 at the Debrecen plant in Hungary."
+        },
+        {
+          "question": "How many wins did Toprak Razgatlioglu achieve at Donington Park in 2025?",
+          "generated_answer": "No. The winners were at Donington Park, which was the only major sporting venue in the country that had hosted the game. The winning team was the first to win at Donington Park in 25 years. The winner was the first to win at Donington Park since the late 1970s. The winner was the first to win at Donington Park. The winning team was the first to win at Donington Park since the late 1970s. The winners were the first to win at Donington Park since the late 1970s. Date: 2025-01-09 | Author: Rolf Steffen BMW Group | ID: T044",
+          "context_answer": "Toprak Razgatlioglu achieved a hat-trick (three wins) at Donington Park in 2025."
+        },
+        {
+          "question": "Where will the 2026 BMW Motorrad International GS Trophy take place?",
+          "generated_answer": "The 2026 BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motorrad International GS Trophy will take place at the BMW Motorrad International GS Trophy Park. The new BMW Motor",
+          "context_answer": "The 2026 BMW Motorrad International GS Trophy will take place in Romania."
+        },
+        {
+          "question": "Where does BMW manufacture high-voltage batteries for the Neue Klasse?",
+          "generated_answer": "The Neue Klasse is a battery factory in the Neue Klasse, a region in the Netherlands that is the first automotive company in the world. In the Neue Klasse, the production of high-voltage batteries is regulated by the National Energy Board. The Neue Klasse is also the largest manufacturer in the Netherlands, with over 500,000 vehicles. In the Neue Klasse, the production of high-voltage batteries is regulated by the National Energy Board. The Neue Klasse is also the largest manufacturer in the Netherlands, with over 500,000 vehicles. In the Neue Klasse, the production of",
+          "context_answer": "BMW manufactures high-voltage batteries for the Neue Klasse at pilot plants in Parsdorf, Hallbergmoos, and Munich."
+        },
+        {
+          "question": "Who won the Hole-in-One car at the BMW Australian PGA Championship?",
+          "generated_answer": "Andrew Gillard. The BMW Australian PGA Championship has been held since 1827. The first race was held in November of this year. The second race was held in September of this year. The second race was held in February of this year. The second race was held in February of this year. Date: 2025-05-21 | Author: Joanna Geller BMW Group | ID: T0447913EN -------------------------------------------------------------------------------- Munich. The BMW Australian PGA Championship has been held since 1827. The first race was held in November of this year. The second race was held in February of this year. The second race was",
+          "context_answer": "Daniel Gale won the BMW M5 Touring for a hole-in-one at the BMW Australian PGA Championship."
+        },
+        {
+          "question": "How many EV charging sockets did BMW UK install in UK National Parks?",
+          "generated_answer": "7,000 units. Of course. The first six EV charging sockets are in the UK. That means they are available only in the UK, where the price of charging sockets has risen from $4 to $7.5. The second is in the US. The second is in the UK. The third is in the US. The fourth is in the US. In the UK, charging sockets are available only in the US. The fourth is in the UK. The fifth is in the US. In the UK, charging sockets are available only in the UK. The fifth is in the US. The sixth is in the UK. In the UK",
+          "context_answer": "BMW UK funded the installation of 135 new EV charging sockets across fifteen UK National Parks."
+        },
+        {
+          "question": "Which designer collaborated with MINI on the Paul Smith Edition?",
+          "generated_answer": "Yes. We worked closely with MINI to create the Paul Smith Edition for the BMW Group. The BMW Group produced the BMW Group\u2019s Paul Smith Edition for the BMW Group. In addition to Paul Smith, the BMW Group\u2019s Paul Smith Edition was also produced for the BMW Group in collaboration with MINI, the BMW Group\u2019s BMW Group and MINI. Paul Smith Edition is a unique and unique design, with a unique design philosophy. It is designed to be a combination of the BMW Group\u2019s Paul Smith Edition and Paul Smith Edition. The BMW Group\u2019s Paul Smith Edition is designed to complement Paul Smith\u2019s",
+          "context_answer": "Sir Paul Smith collaborated with MINI on the Paul Smith Edition."
+        },
+        {
+          "question": "Which artist created the 'Stasis' installation for ARTEPARCO?",
+          "generated_answer": "No. We created the Stasis in collaboration with the German Art Museum in Munich. The first artist of the STasis in the world to create the Stasis was Wolfgang Schaeffer. This is the first artist to create the Stasis at the ArtEPARCO exhibition. The second artist of the STasis in the world to create the Stasis was Artem Kostel. He created the STasis in collaboration with artist Michel Vries. After the introduction of the STasis, artem Kostel was the first artist to create the Stasis in collaboration with artist Michel Vries. In collaboration with artist Michel Vries, the",
+          "context_answer": "Velasco Vitali created the 'Stasis' installation for ARTEPARCO."
+        },
+        {
+          "question": "What are the four 'Superbrains' in the Neue Klasse architecture?",
+          "generated_answer": "\u201cThe four 'superbrains' are the basic elements of the Neue Klasse architecture. They are designed for the purpose of creating an intimate experience, which is to enhance the intimacy between the two people and to enhance the experience of the entire person.\u201d The BMW Group Architecture will be a part of the BMW Group Architecture Programme. The BMW Group Architecture Programme, which is part of the BMW Group Architecture Programme, will be held in partnership with the National Institute of Architects in Vienna. The BMW Group Architecture Programme will be jointly funded by the National Institute of Architects, the National Institute of Architects and the National Institute of Architects.",
+          "context_answer": "The four Superbrains handle infotainment, automated driving, driving dynamics, and basic functions like vehicle access and climate control."
+        },
+        {
+          "question": "When did BMW NA send employees home due to COVID-19?",
+          "generated_answer": "It was a year ago, and it was just a year ago. BMW NA has made a great effort to bring this back to life in the US. We have a great team of young people who have been working at BMW for a long time and have been looking forward to working with them for a long time. We are very proud of this opportunity.\u201d",
+          "context_answer": "BMW NA sent employees home on March 13, 2020, due to COVID-19."
+        },
+        {
+          "question": "Which MINI team finished second in the SP3T-class at the 24 Hours of N\u00fcrburgring?",
+          "generated_answer": "No. BMW M Motorsport is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and it has a great track record. The team is a great team and",
+          "context_answer": "MINI John Cooper Works and Bulldog Racing finished second in the SP3T-class."
+        },
+        {
+          "question": "What was BMW's sales performance in China in Q3 2025?",
+          "generated_answer": "BMW had a strong year and a half in the Q3. The second-quarter profit from the Q3 is $2.9 billion. The company was also in the midst of a strong second-quarter profit. The company also had a very strong quarter in Q3, which was a strong month for the company. The company is also in the midst of a strong second-quarter profit. The company also had a very strong quarter in Q3, which was a strong month for the company. The company also had a very strong quarter in Q3, which was a strong month for the company. The company also had a very strong quarter in Q",
+          "context_answer": "In China, retail sales did not meet expectations, with deliveries at previous year's level in Q3 2025."
+        },
+        {
+          "question": "Which BMW M Motorsport teams qualified for the Esports World Cup?",
+          "generated_answer": "Yes, BMW M Motorsport teams qualified for the Esports World Cup, and each of their teams qualified for the Esports World Cup. The teams qualified for the Esports World Cup in the following three months, and competed in four of the five Esports World Cup events. The teams qualified for the Esports World Cup in the following three months, and competed in four of the five Esports World Cup events.",
+          "context_answer": "BMW M Team Redline Racing Bulls, BS+COMPETITION, and MOUZ qualified for the Esports World Cup."
+        },
+        {
+          "question": "Who won the Italian GT Championship Sprint in previous seasons?",
+          "generated_answer": "Carlos Rosas. The Italian GT Championship Sprint had a record of 1,926 laps, surpassing the all-time record set by Mercedes-AMG in the series finale of the BMW iX4. The result was the first race in which the team finished third and fourth. The result was the first time that the team finished third. The BMW iX4 had been victorious in the series finale of the BMW iX4. The first race was the first time that the team finished third. The result was the first time that the team finished third. The result was the first time that the team finished third. The result was the first time that the",
+          "context_answer": "BMW Italia Ceccato Racing and Jens Klingmann won the Italian GT Championship Sprint in the two previous seasons."
+        },
+        {
+          "question": "Where did BMW start series production of electric engines for the Neue Klasse?",
+          "generated_answer": "The BMW iX3 line of four production models is in operation at the end of the year. The Neue Klasse production line is now operating at the end of the year. The Neue Klasse production line in the USA is in operation at the end of the year. The Neue Klasse production line in Germany is in operation at the end of the year. In the Netherlands, BMW produced the Neue Klasse Model 3 in the Netherlands, the Neue Klasse Model 4 in the Netherlands, the Neue Klasse Model 5 in the Netherlands, and the Neue Klasse Model 6 in the Netherlands. In the",
+          "context_answer": "BMW started series production of electric engines for the Neue Klasse at Plant Steyr in Austria."
+        },
+        {
+          "question": "What was the total prize pool for the 2025 Esports World Cup?",
+          "generated_answer": "The prize pool for the 2025 Esports World Cup was $20 million USD, but the prize pool for the 2025 Esports World Cup was $10 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $20 million USD. The prize pool for the 2025 Esports World Cup was $",
+          "context_answer": "The total prize pool for the 2025 Esports World Cup was 500,000 US dollars."
+        },
+        {
+          "question": "How many consecutive victories did Team WRT achieve at the Indianapolis Hour?",
+          "generated_answer": "9.0.9.0.0. [ADDRESS]: 9.0.9.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.",
+          "context_answer": "Team WRT celebrated its third consecutive victory at the Indianapolis Hour in 2025."
+        },
+        {
+          "question": "What is the power output of the BMW iX M70 xDrive?",
+          "generated_answer": "The BMW iX M70 xDrive is powered by a supercharged engine with a supercharged engine. The engine is designed to accelerate from the top down to the bottom of the vehicle. The engine can be driven with a manual transmission and a front axle. The power output of the BMW iX M70 xDrive is approximately 20 kW (27.5 hp). The power output of the BMW iX M70 xDrive is approximately 20 kW (27.5 hp). The power output of the BMW iX M70 xDrive is approximately 20 kW (27.5 hp). The power output of the BMW iX M70 xDrive",
+          "context_answer": "The BMW iX M70 xDrive delivers up to 485 kW/659 hp in My Mode Sport."
+        },
+        {
+          "question": "Which BMW plant is the largest single BMW production facility in the world?",
+          "generated_answer": "BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich, Germany. BMW Plant in Munich,",
+          "context_answer": "BMW Group Plant Spartanburg in South Carolina is the largest single BMW production facility in the world."
+        },
+        {
+          "question": "How many vehicles does Plant Spartanburg assemble daily?",
+          "generated_answer": "About 200,000 vehicles annually. The number of vehicles is expected to reach more than 1,000 in 2025. The BMW Group has been developing Plant Spartanburg since 1995. The BMW Group is headquartered in Washington, DC, and has offices in a number of cities and cities around the world. BMW Group Motorrad has over 40 employees in the United States and has offices in over 40 cities, including Chicago, New York, London, and the UK. BMW Group Motorrad has over 40 employees in the United States and has offices in a number of cities and cities around the world. BMW Group Motorrad is headquartered in Washington, DC, and has offices in a number of",
+          "context_answer": "Plant Spartanburg assembles more than 1,500 vehicles each day."
+        },
+        {
+          "question": "What was the BMW Group's profit before tax in 2023?",
+          "generated_answer": "I had a very good year. I was very profitable. I had a good year. I had a very good year. I had a good year. I would be on a lot of special teams. I was really enjoying my time. I think it was a great year. I was happy to start the season. I was very happy to start the season. I have to think about it. I am looking forward to the first three races. It is a good season. I think it was a great year for me. I am sure that I will be back in the team again this season.\u201d",
+          "context_answer": "The BMW Group's profit before tax in 2023 was \u20ac17.1 billion."
+        },
+        {
+          "question": "How many employees did the BMW Group have as of December 2023?",
+          "generated_answer": "Approximately 10,000 employees were employed in the BMW Group\u2019s global headquarters in the United States and approximately 15,000 in Canada. This year, the company\u2019s global operations in Canada and the U.S. totaled approximately 1,500 employees in the U.S. and approximately 5,000 in Canada. In December, the BMW Group increased its global operations in the U.S. by approximately 15,000 employees, more than double the number in the U.S. in December 2016. In the U.S., the company was responsible for nearly 1,200 manufacturing jobs. In the U.S., the company\ufffd",
+          "context_answer": "The BMW Group had a workforce of 154,950 employees as of December 31, 2023."
+        },
+        {
+          "question": "What is the expected CO\u2082e footprint reduction for the BMW iX3 compared to ICE vehicles?",
+          "generated_answer": "The cost savings will be significantly greater for the iX3 than the total cost savings in the current model year. The impact on the CO\u2082e footprint reduction is still small compared to the ICE vehicle. This is also due to the reduced CO\u2082e footprint in ICE vehicles, which is offset by the increased CO\u2082e footprint in ICE vehicles. The impact on the CO\u2082e footprint reduction is still small compared to the ICE vehicle. The impact on the CO\u2082e footprint reduction is still small compared to the ICE vehicle. The impact on the CO\ufffd",
+          "context_answer": "When charged with renewable electricity, the BMW iX3 beats comparable ICE models after only 17,500 kilometers."
+        },
+        {
+          "question": "What percentage of secondary materials are used in the new BMW iX3?",
+          "generated_answer": "Almost half of the secondary materials used in the new BMW iX3 are used in the new BMW iX3, and nearly half of the secondary materials used in the new BMW iX3 are used in the new BMW iX3. The number of secondary materials used in the new BMW iX3 has been reduced to 15% in the current year. In the same year, the number of secondary materials used in the new BMW iX3 has been reduced to 15% in the current year. In the same year, the number of secondary materials used in the new BMW iX3 has been reduced to 15% in the current year",
+          "context_answer": "Secondary materials account for one third of all material used in the new BMW iX3 50 xDrive."
+        }
+      ]
+    },
+    "reduced": {
+      "log_likelihoods": [
+        -4.340066909790039,
+        -3.8814890384674072,
+        -4.917386054992676,
+        -4.631270885467529,
+        -3.476982355117798,
+        -3.447272777557373,
+        -3.574277877807617,
+        -2.5959384441375732,
+        -2.8822054862976074,
+        -2.5576417446136475,
+        -5.1327643394470215,
+        -3.82539701461792,
+        -4.780075550079346,
+        -3.5092661380767822,
+        -4.368163108825684,
+        -3.958005666732788,
+        -3.757101058959961,
+        -4.317546367645264,
+        -3.312117338180542,
+        -4.113314151763916,
+        -3.2547502517700195,
+        -2.9930927753448486,
+        -3.6944162845611572,
+        -3.5866384506225586,
+        -3.813641309738159,
+        -4.730085372924805,
+        -3.0131590366363525,
+        -3.891799211502075,
+        -3.0249598026275635,
+        -3.683558702468872,
+        -3.593900442123413,
+        -4.659696102142334,
+        -3.8799045085906982,
+        -4.122371196746826,
+        -3.85884165763855,
+        -4.004943370819092,
+        -3.723541259765625,
+        -3.5425608158111572,
+        -5.003658294677734,
+        -4.6041259765625,
+        -3.3510499000549316,
+        -3.1015589237213135,
+        -4.12678861618042,
+        -3.4955458641052246,
+        -2.8225009441375732,
+        -3.9237401485443115,
+        -2.7341785430908203,
+        -3.133366107940674,
+        -4.049753189086914,
+        -3.154536008834839
+      ],
+      "bert_scores": [
+        -0.03248171880841255,
+        -0.10170076042413712,
+        -0.14691607654094696,
+        -0.4675539433956146,
+        -0.0908321961760521,
+        0.1004721075296402,
+        0.09460184723138809,
+        -0.037449296563863754,
+        -0.25058043003082275,
+        -0.01824505254626274,
+        -0.12069133669137955,
+        -0.06571990996599197,
+        -0.25240379571914673,
+        0.0488634891808033,
+        -0.21316008269786835,
+        -0.3977733850479126,
+        -0.023943321779370308,
+        0.11903465539216995,
+        -0.10604747384786606,
+        0.0084313889965415,
+        -0.060227181762456894,
+        -0.08098004013299942,
+        0.1247435137629509,
+        -0.16421501338481903,
+        -0.019541511312127113,
+        -0.1783609241247177,
+        0.08623720705509186,
+        0.13862983882427216,
+        -0.18703633546829224,
+        0.04325880855321884,
+        -0.30691152811050415,
+        0.029064876958727837,
+        -0.030846579000353813,
+        -0.16114109754562378,
+        -0.09941756725311279,
+        -0.06478296965360641,
+        -0.09580754488706589,
+        -0.056929003447294235,
+        -0.12998268008232117,
+        -0.422916054725647,
+        -0.07696070522069931,
+        -0.05900312215089798,
+        -0.19721199572086334,
+        0.06790316104888916,
+        0.31946924328804016,
+        -0.16530875861644745,
+        0.1344759464263916,
+        0.08089916408061981,
+        0.023465847596526146,
+        0.05398010089993477
+      ],
+      "generations": [
+        {
+          "question": "What fragrance concept did Rolls-Royce launch for the Phantom?",
+          "generated_answer": "Rolls-Royce: This is a very unique concept. Rolls-Royce has a wide range of different brands. Rolls-Royce will be driving and touring the world in a new generation of electric cars. BMW Group of North America is working on a project with Rolls-Royce to show the new luxury and luxury of the new hybrid. Rolls-Royce is looking to introduce a range of luxury and luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury of the luxury",
+          "context_answer": "Rolls-Royce Scent, an immersive fragrance concept designed by their in-house perfumer."
+        },
+        {
+          "question": "Which driver won the Intercontinental GT Challenge Drivers' Championship in 2025?",
+          "generated_answer": "A strong driver from the championship. The team has been winning the championship in a strong, strong, and very strong position. As the car has been winning the championship, it has a lot to do with the race. But the team is very strong in the drivers and has a very strong position, but it will be a very difficult race to win the championship. The car is a very strong driver in the car and it has to win the championship. With the championship, we have a very strong car. The championship is a very strong championship. The championship has a very strong championship. The drivers will be very strong. We have to win the championship",
+          "context_answer": "Kelvin van der Linde was crowned Drivers' Champion of the Intercontinental GT Challenge."
+        },
+        {
+          "question": "What special edition 8 Series did BMW unveil at Pebble Beach in 2025?",
+          "generated_answer": "I was really excited to be in the BMW Group. I wanted to be a BMW M driving class car. I knew it would be great to get it, but I wanted to show the BMW M and BMW M in the BMW M in the BMW M. BMW M in the BMW M is the new BMW M. BMW M is the new BMW M, the new BMW M, BMW M is the new BMW M, and BMW M has a BMW M. BMW M has a BMW M in the BMW M lineup, and BMW M has the BMW M in the BMW M in the BMW M. BMW M is the new BMW M in the BMW",
+          "context_answer": "The 2026 M850i Edition M Heritage, a limited-edition 8 Series with five historic paint finishes."
+        },
+        {
+          "question": "How many units of the M850i Edition M Heritage will be produced?",
+          "generated_answer": "7.0.0.0 (in the M, M3 and M3 variants of the M M M M2, and M M4 and M4 variants of the M M M M4 and M4 variants of the M M M M M4 and M4 variants of the M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M M",
+          "context_answer": "Limited to just 500 units distributed to select markets worldwide."
+        },
+        {
+          "question": "Which car won the 24H Dubai in its racing debut in 2025?",
+          "generated_answer": "The Porsche M3 GT3 and the GT4, the Porsche M3 GT4, will be the first BMW M3 GT4 GT4 to be produced in the FIA GT4 class. The next generation of the GT4 GT4 GT4 will be produced in the BMW M4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT4 GT",
+          "context_answer": "The new BMW M4 GT3 EVO won the 24H Dubai in its racing debut."
+        },
+        {
+          "question": "Who was appointed as General Manager of Corporate Sales for BMW Group UK in July 2025?",
+          "generated_answer": "General Manager of Corporate Sales for BMW Group UK in July 2025. Sales of BMW Group UK in the UK. [1. BMW Group UK, Group of the UK, the United Kingdom and the UK, and the UK, BMW Group UK, the UK, and the UK, BMW Group UK, the UK, and the UK, BMW Group UK, the UK, and the UK, BMW Group UK, the UK, and the UK, BMW Group UK, the UK, BMW Group UK, the UK, the UK, and the UK, BMW Group UK, the UK, the UK, BMW Group UK, the UK, and",
+          "context_answer": "Andrew Jago was appointed as General Manager of Corporate Sales for BMW Group UK."
+        },
+        {
+          "question": "What was the attendance at the BMW Motorrad Days 2025 in Garmisch-Partenkirchen?",
+          "generated_answer": "The BMW Motorrad Day of the BMW Motorrad Days. BMW Motorrad.\n\nFrom the BMW Motorrad, BMW Motorrad and BMW Motorrad are in the BMW Motorrad: the BMW Motorrad. BMW Motorrad. BMW Motorrad.\n-",
+          "context_answer": "Over 40,000 visitors from around 50 nations attended the BMW Motorrad Days 2025."
+        },
+        {
+          "question": "What record did the BMW M2 CS set on the N\u00fcrburgring-Nordschleife in April 2025?",
+          "generated_answer": "It was the first time BMW M2 CS had an all-electric and electric drivetrain. BMW M2 CS had a limited-scale powertrain, and the BMW M2 CS was an all-electric, all-electric vehicle. It was the first time BMW M2 CS had an all-electric and electric drivetrain. The BMW M2 CS had a single-clutch transmission. BMW M2 CS was the first BMW M2 CS to drive the electric drivetrain. The BMW M2 CS was a new and all-electric car. BMW M2 CS was the first BMW",
+          "context_answer": "The BMW M2 CS set a new record of 7:25.5 on the N\u00fcrburgring-Nordschleife."
+        },
+        {
+          "question": "How much did BMW sales increase in Q3 2025 compared to the same period last year?",
+          "generated_answer": "Q4 to Q5: The same: It was in the second quarter of the year. Q6 to Q7: and Q8 to Q9: and Q1: Q2. Q3: The same. Q1. Q2. Q3. Q4. Q5. Q6. Q7. Q8. Q9. Q10. Q11. Q12. Q13. Q14. Q15. Q16. Q17. Q18. Q19. Q20. Q21. Q22. Q23. Q24. Q25. Q26. Q27. Q",
+          "context_answer": "BMW sales rose 24% in Q3 2025 versus the same time period last year."
+        },
+        {
+          "question": "What percentage of BMW vehicles sold in the U.S. through Q3 2025 were electrified?",
+          "generated_answer": "BMW. We had an investment in the U.S. in the U.S. in the U.S. from 2005 to 2014, and in the U.S. in the U.S. from 2005 to 2014. In the U.S. in the U.S. in the U.S. of the U.S. from 2005 to 2014, the BMW Group had to generate a profit of $9.1 billion, or an additional $1.2 billion, in the U.S. of the total, of which was $1.7 billion in the U.S. in",
+          "context_answer": "Nearly 20% of BMW vehicles sold in the U.S. through Q3 2025 had either battery electric (BEV) or plug-in hybrid (PHEV) drivetrains."
+        },
+        {
+          "question": "What advertising slogan controversy did BMW face in 2010?",
+          "generated_answer": "It was not as a BMW brand as BMW had in the past. BMW is not a brand and we have always been a brand. BMW has always been the most influential brand in Europe, as BMW is always a brand. BMW has always been a brand, and we have always been a brand. BMW was a brand in the BMW family and it is a brand. BMW has always been the brand and it is the BMW family.\u201d BMW is a brand and is BMW. BMW is a brand and the brand is BMW. BMW has always been the BMW brand. In Germany, BMW was the brand. BMW has always been the brand. BMW is a brand and",
+          "context_answer": "BMW faced controversy when it seemed to abandon 'The Ultimate Driving Machine' tagline for 'Joy is BMW'."
+        },
+        {
+          "question": "When was 'The Ultimate Driving Machine' tagline coined?",
+          "generated_answer": "\u202aIt was an electric car. The concept was the first concept, but it was a concept that was not the end of the line. In the beginning, we were talking about a concept that was the first concept that could have been conceived in the beginning. The concept was the idea of a car that would be the most electric car in the world, the ultimate driving vehicle. And it was the first concept that was, as the first concept, the BMW i3, which could be the most electric vehicle. It was an electric car. The concept concept was the first concept that had the most electric car. It was the first concept that could be the",
+          "context_answer": "The tagline 'The Ultimate Driving Machine' was coined by Martin Puris in 1975."
+        },
+        {
+          "question": "Which tennis player did BMW extend its partnership with in September 2025?",
+          "generated_answer": "In the year 2025, BMW had BMW on the board of BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group and BMW of the BMW Group. BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group and BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group, BMW of the BMW Group,",
+          "context_answer": "BMW extended its partnership with Spanish tennis ace Carlos Alcaraz."
+        },
+        {
+          "question": "Which BMW plant is planning a hydrogen pipeline link?",
+          "generated_answer": "We have already identified a range of plants in the plant. In the future, we will not be able to plant a hydrogen plant, but to plant a hydrogen plant, which will be the primary supplier of the hydrogen plant. We are still looking for more plant plants, and a plant plant in the plant. It is also important to drive the plant in the right way, so the plant is looking for more plant plants. To get a plant, we need to have a plant in the plant in the right way, not in the right direction, but in the right location, with the right conditions. We have to consider the plant in the right place and the right location",
+          "context_answer": "BMW Group Plant Leipzig is planning a hydrogen pipeline link, making it the first car plant in the world to receive hydrogen via a pipeline."
+        },
+        {
+          "question": "Who was the standout performer at the 36th BMW International Open in July 2025?",
+          "generated_answer": "The BMW i3 and BMW i3 all finished in the top 10 in the second, and we have a strong case for the BMW i3. It is the BMW i3, the BMW i3, the BMW i3, and the BMW i3 all in the second place. The BMW i3 is the second BMW i3 and BMW i3 in the second place. It is the BMW i3, the BMW i3, the BMW i3, and the BMW i3 both at the IMSA Grand Tour. The BMW i3, the BMW i3, the BMW i3, the BMW i3, the BMW",
+          "context_answer": "Davis Bryant (USA) was the standout performer with a 9-under-par round and a hole-in-one."
+        },
+        {
+          "question": "What concept did BMW Motorrad present at the Concorso d'Eleganza Villa d'Este?",
+          "generated_answer": "A BMW Group of Motorrad concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept concept",
+          "context_answer": "BMW Motorrad presented the 'BMW Motorrad Concept RR' as a preview of the next generation of BMW RR superbikes."
+        },
+        {
+          "question": "What was the torque figure demonstrated by the BMW Vision Driving Experience in Shanghai?",
+          "generated_answer": "The BMW Vision Driving Experience in Shanghai was presented in a car with a high-performance. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. BMW Vision driving experience in Shanghai was presented in Shanghai. In the first part of the BMW Vision Driving Experience in Shanghai, the BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in Shanghai. The BMW Vision Driving Experience was presented in",
+          "context_answer": "The BMW Vision Driving Experience demonstrated up to 18,000 Nm of torque."
+        },
+        {
+          "question": "What organization did BMW Group Brazil partner with for youth education?",
+          "generated_answer": "The BMW Group BMW Group. BMW Group Brazil.",
+          "context_answer": "BMW Group Brazil partnered with UNICEF under the 'BRIDGE. Educating young people for tomorrow, today' programme."
+        },
+        {
+          "question": "Where did Ren\u00e9 Rast and Marco Wittmann compete in the DTM in August 2025?",
+          "generated_answer": "In September, BMW Motorrad introduced the new BMW 4 GT3, the BMW M3 V8, and the new BMW M2. In the new BMW M3, the BMW M3 V8, the BMW M3 V8, and the new BMW M3 V8, the BMW M3 V8, were all BMW M3 M2 cars.",
+          "context_answer": "Ren\u00e9 Rast and Marco Wittmann competed at the Sachsenring in the DTM."
+        },
+        {
+          "question": "Which MINI John Cooper Works models are now fully electric?",
+          "generated_answer": "Yes, both the BMW i8 S and the i8 S were fully electric at the time of the BMW i8 S and the i8 S. The BMW i8 S, the i8 S, and the i8 S both had a range of 5,000 km/h, and the i8 S were both fully electric at the time of the BMW i3 and i4. The i8 S was available to the BMW i3 eDrive, iDrive, and iDrive, and the i8 S was equipped with a 3.5-liter iDrive. The i8 S was also available to the BMW i3 eDrive,",
+          "context_answer": "The first-ever MINI John Cooper Works Electric and first-ever MINI John Cooper Works Aceman are fully electric."
+        },
+        {
+          "question": "What is the WLTP range of the new BMW iX xDrive60?",
+          "generated_answer": "It\u2019s a range of 6.6.0 (and 6.1.0) and 6.0.0 (and 6.1.0) of the new iX xDrive. The range of the new iX xDrive, the new iX xDrive, and the new iX xDrive are both in the BMW iX iX xDrive (BMW iX X4 eDrive, iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX iX i",
+          "context_answer": "The new BMW iX xDrive60 achieves a WLTP range of 701 kilometres (435 miles)."
+        },
+        {
+          "question": "Who won a BMW iX M70 for a hole-in-one at the BMW Championship?",
+          "generated_answer": "BMW iX M70: No, BMW iX M70 will be the BMW iX M70. We are not talking about the BMW iX M70, BMW iX M70. We are talking about the BMW iX M70, BMW iX M70, and BMW iX M70. The BMW iX M70 will be the BMW iX M70, BMW iX M70. BMW iX M70 will be the BMW iX M70. We are talking about the BMW iX M70, BMW iX M70, BMW iX M70, and BMW i",
+          "context_answer": "Akshay Bhatia won a BMW iX M70 for a hole-in-one at the BMW Championship."
+        },
+        {
+          "question": "How many consecutive victories did Valentino Rossi achieve at Misano?",
+          "generated_answer": "7.12.",
+          "context_answer": "Valentino Rossi achieved his third consecutive victory at Misano in 2025."
+        },
+        {
+          "question": "What was BMW Group's BEV sales growth in 2024?",
+          "generated_answer": "BMW Group is an international automotive company. BMW Group is a global brand. The global BMW Group is a global brand. The BMW Group is a global global business. BMW Group has a global brand. BMW Group is a global brand. BMW Group has a global brand. BMW Group is a global brand. BMW Group is a global brand. BMW Group has a global brand. BMW Group is a global brand. BMW Group has a global brand. BMW Group is a global brand. BMW Group has a global brand. BMW Group is a global brand. BMW Group is a global brand. BMW Group is a global brand. BMW Group has a global brand. BMW Group",
+          "context_answer": "BMW Group achieved BEV sales growth of +13.5% in 2024."
+        },
+        {
+          "question": "How many BMW Art Cars were displayed at The Aurora 2025 in Sweden?",
+          "generated_answer": "In the BMW Group\u2019s \u201cnew BMW M3\u201d in the BMW Group, it\u2019s the BMW M3 in the BMW M3. BMW M3 and BMW M4 will be presented at the BMW M3 exhibition in Frankfurt, Germany. The BMW M4 will be available for the BMW M3 in the BMW M3 in the BMW M3. BMW M4, the M4 in the BMW M3 and the BMW M4 in the BMW M4, are available for the BMW M3 in the BMW M3. BMW M4, BMW M4 in the BMW M4, the M4 in",
+          "context_answer": "Four BMW Art Cars were displayed at The Aurora 2025 in Sweden."
+        },
+        {
+          "question": "What was the title of BMW Customer Service's 2025 campaign short film?",
+          "generated_answer": "\"Driving the BMW E: 'A Road of the Road' is an important strategy for BMW Group. The first production vehicle in the BMW E, the BMW E, was the BMW E, the BMW E, the BMW E, and the BMW E, and the BMW E, BMW E, the BMW E, the BMW E, and the BMW E, the BMW E, BMW E, and the BMW E, the BMW E, the BMW E, the BMW E, and the BMW E, the BMW E, the BMW E, and the BMW E, the BMW E, the BMW E, the BMW E, and the BMW",
+          "context_answer": "The short film was titled 'The Thief' as part of the 'Relax. We Care.' campaign."
+        },
+        {
+          "question": "When will the first Neue Klasse models enter production?",
+          "generated_answer": "The first Neue Klasse will be available in the new BMW i4 and the new BMW i3, the first BMW i5 and the new BMW i5. The first models are planned for production in the first two years. The new BMW i4 will have a range of 20,000 units in the first three years and the BMW i5 will be the second model in the series. The BMW i5 will be equipped with the new BMW i3, the BMW i4, the new BMW i5, and the new BMW i5. The new BMW i5 will be the first to be produced in the first three years. The new BMW",
+          "context_answer": "The first Neue Klasse models will enter production at the end of 2025 at the Debrecen plant in Hungary."
+        },
+        {
+          "question": "How many wins did Toprak Razgatlioglu achieve at Donington Park in 2025?",
+          "generated_answer": "BMW M3/DC Le Mans. Toprak Razgatlioglu, BMW M5/DC Le Mans.",
+          "context_answer": "Toprak Razgatlioglu achieved a hat-trick (three wins) at Donington Park in 2025."
+        },
+        {
+          "question": "Where will the 2026 BMW Motorrad International GS Trophy take place?",
+          "generated_answer": "BMW of the world and BMW of the world. In the first world championships of the BMW Group, the BMW i3, the BMW i5, and the BMW i5 will be the championship champions. In the BMW i5, the BMW i5, the BMW i5, and the BMW i5 will be the championship champions. BMW of the world, BMW i5, and the BMW i5 will be the championship champions. In the BMW i5, the BMW i5, the BMW i5, the BMW i5, and the BMW i5 will be the championship champions. The BMW i5, the BMW i5, the",
+          "context_answer": "The 2026 BMW Motorrad International GS Trophy will take place in Romania."
+        },
+        {
+          "question": "Where does BMW manufacture high-voltage batteries for the Neue Klasse?",
+          "generated_answer": "BMW is making high-voltage batteries for the Neue Klasse, BMW in Germany, in a hybrid battery, and in the E-EV. In the end, we are a manufacturer. BMW is a BMW Motorrad company. The BMW i-EV is the future of the BMW i-EV. In the e-EV, BMW i-EV will be a BMW i-EV. In the E-EV, BMW i-EV will be the future of the BMW i-EV. In the e-EV, BMW i-EV will be the future of the BMW i-EV. In the e-EV,",
+          "context_answer": "BMW manufactures high-voltage batteries for the Neue Klasse at pilot plants in Parsdorf, Hallbergmoos, and Munich."
+        },
+        {
+          "question": "Who won the Hole-in-One car at the BMW Australian PGA Championship?",
+          "generated_answer": "the driver is the car that is driving the Porsche R7 GT3. In the GT3 class, the BMW M3 is the best car to win the WEC, the R8 GT3 GT4 GT3 GT4 GT5 GT4 GT6 GT7 GT6 GT7 GT6 GT8 GT7 GT8 GT7 GT8 GT7 GT8 GT8 GT8 GT8 GT8 GT8 GT9 GT8 GT8 GT8 GT8 GT9 GT8 GT8 GT9 GT9 GT8 GT9 GT8 GT8 GT9 GT9 GT9 GT8 GT8 GT9 GT8 GT9",
+          "context_answer": "Daniel Gale won the BMW M5 Touring for a hole-in-one at the BMW Australian PGA Championship."
+        },
+        {
+          "question": "How many EV charging sockets did BMW UK install in UK National Parks?",
+          "generated_answer": "10.2% \u2013 3.5% in the UK. (EV charging availability in the UK is not yet available in the UK, but in the US, for the US, for the US, as the plug-in EV charging system is available for the UK and the UK, the BMW eEV charging system is available for the UK and the UK. The UK is not yet the official European car charging system in the UK, but in the US, for the US, for the US, for the US, for the US, for the US. In the UK, the charging range in the UK is 0.9 kWh, which is",
+          "context_answer": "BMW UK funded the installation of 135 new EV charging sockets across fifteen UK National Parks."
+        },
+        {
+          "question": "Which designer collaborated with MINI on the Paul Smith Edition?",
+          "generated_answer": "The BMW M4 is the new MINI design. BMW M has had a hard time creating a new design, and the new MINI model will be the first in the series. BMW M and BMW M MINI have produced a new BMW M series and BMW M will be the first in the series to share the new MINI concept. The new MINI, the MINI X, and the new MINI, are the BMW M1, the BMW M3, the MINI X and the MINI X. The new MINI, the MINI X, and the MINI X are all available for the MINI BMW M and BMW M",
+          "context_answer": "Sir Paul Smith collaborated with MINI on the Paul Smith Edition."
+        },
+        {
+          "question": "Which artist created the 'Stasis' installation for ARTEPARCO?",
+          "generated_answer": "The iconic sculpture has been created for art by artist Artists. In a way, the art is unique, as it was created with the concept of a painting, for the artist. It is a sculpture that can be a canvas, a sculpture, or an illustration, and the artist has a hand in a painting. The artist is a visual artist who brings with him the works of art the art and the art that is the artist. It is the artist who creates the artwork, the artist, the artist, and the artist. The artist is a sculpture, an art. Art is a concept. A painting is a painting that can be an",
+          "context_answer": "Velasco Vitali created the 'Stasis' installation for ARTEPARCO."
+        },
+        {
+          "question": "What are the four 'Superbrains' in the Neue Klasse architecture?",
+          "generated_answer": "The four 'Superbrains' will be designed for the BMW 3 Series BMW M3, the BMW i3, the BMW i4, and the BMW i6, the BMW i3, and the BMW i4. The interior of the BMW i3, which will be made available in the range of the BMW i5, will be finished in the range of the BMW i5, the BMW i6, and the BMW i6. The BMW i5, which will be finished in the range of the BMW i6, will be finished in the range of the BMW i6, the BMW i6, and the",
+          "context_answer": "The four Superbrains handle infotainment, automated driving, driving dynamics, and basic functions like vehicle access and climate control."
+        },
+        {
+          "question": "When did BMW NA send employees home due to COVID-19?",
+          "generated_answer": "In the end, the company will be in the middle of a major manufacturing operation in Germany, with the goal of the new BMW M2. In the middle of the BMW M2, the company will be the first company to offer the production of the new BMW M2. The new BMW M2 will be the first BMW M2 to be introduced to the public. BMW will begin production in the next generation of the BMW M2 in the U.S. in the same brand. The new BMW M2 will be manufactured in the U.S. in the BMW M3, as the BMW M3 will be the first BMW M3",
+          "context_answer": "BMW NA sent employees home on March 13, 2020, due to COVID-19."
+        },
+        {
+          "question": "Which MINI team finished second in the SP3T-class at the 24 Hours of N\u00fcrburgring?",
+          "generated_answer": "Yes. The M3 team was on a fast track. In the S3, the team finished second in the S3. The M3 car was a team in the M3, and it had a strong performance in the S3. The M3 has also added the 3,5,826 GT3 and GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT3 GT",
+          "context_answer": "MINI John Cooper Works and Bulldog Racing finished second in the SP3T-class."
+        },
+        {
+          "question": "What was BMW's sales performance in China in Q3 2025?",
+          "generated_answer": "In the United States, the United States has a very strong, high-performance product segment. BMW Group sales in the U.S. in the U.S. grew by 3.4 percent to $1.4 billion, from $4.1 billion in the U.S. in the U.S. in the U.S. in the U.K. and in Germany. In the U.K. BMW Group sales in the U.S. increased by 8.1 percent to $1.2 billion. In the U.K. BMW Group sales in the U.S. increased by 2.2 percent to $",
+          "context_answer": "In China, retail sales did not meet expectations, with deliveries at previous year's level in Q3 2025."
+        },
+        {
+          "question": "Which BMW M Motorsport teams qualified for the Esports World Cup?",
+          "generated_answer": "BMW M Motorsport is in the top 10 of the E-Series in the E-Series. The Porsche M8 is the team to compete for the E-Series in the E-Series in the E-Series and the E-Series in the E-Series. The BMW M Motorsport team qualified for the E-Series in the E-Series and the E-Series in the E-Series in the E-Series, the BMW M M Motorsport team qualified for the E-Series. The BMW M Motorsport team qualified for the E-Series in the E-Series, the BMW M Motorsport team qualified for the E-Series in the E-Series.",
+          "context_answer": "BMW M Team Redline Racing Bulls, BS+COMPETITION, and MOUZ qualified for the Esports World Cup."
+        },
+        {
+          "question": "Who won the Italian GT Championship Sprint in previous seasons?",
+          "generated_answer": "BMW i4 GT3, BMW i4 GT3 and GT3, BMW i4 GT4 GT3 and GT3, BMW i4 GT3 and GT3, BMW i4 GT3 and GT3, BMW i4 GT4 GT3 and GT3. BMW i4 GT3 and GT3, BMW i4 GT4 GT3 and GT3, BMW i4 GT4 GT3 and GT3, BMW i4 GT4 GT4 GT3 and GT3, BMW i4 GT4 GT3 and GT3, BMW i4 GT4 GT3 and GT3, BMW i4 GT4 GT3 and GT3. BMW i",
+          "context_answer": "BMW Italia Ceccato Racing and Jens Klingmann won the Italian GT Championship Sprint in the two previous seasons."
+        },
+        {
+          "question": "Where did BMW start series production of electric engines for the Neue Klasse?",
+          "generated_answer": "BMW and the BMW Group are working on a range of electric production vehicles. BMW and the BMW Group are also working on a range of production and production systems. BMW and BMW are working on a range of production and production systems. BMW and BMW are working on a range of production and production systems. BMW is developing the next generation of the BMW i3. The BMW i3, BMW i4, BMW i4, BMW i6, and BMW i3 will be powered by BMW i3 power. BMW is building the next generation of the BMW i3 with the BMW i3, BMW i4, BMW i5, and BMW",
+          "context_answer": "BMW started series production of electric engines for the Neue Klasse at Plant Steyr in Austria."
+        },
+        {
+          "question": "What was the total prize pool for the 2025 Esports World Cup?",
+          "generated_answer": "I was a successful World Cup driver, and the best driver for the team in the field, and the team. I had a car and the car and the driver. I also competed for the best team in the championship, and it was the first time I had a championship. The championship was the only one. The team would qualify. I was the driver, and it was a good day for the team. I was a very successful driver. I had a car and the team. The team, the team, and the team. I was the driver. The championship was the only one. We had a great championship, and I won the championship.",
+          "context_answer": "The total prize pool for the 2025 Esports World Cup was 500,000 US dollars."
+        },
+        {
+          "question": "How many consecutive victories did Team WRT achieve at the Indianapolis Hour?",
+          "generated_answer": "4.3.0.1, 4.2.0.3.\n: 0.5.0.0.0, 1.0.3.0.0.0. 0.4.0.0.0. 0.1.1.0.0. 0.2.0.0.0. 0.0.1.0.0. 0.0.3.1.4.0. 0.0.1.0.0.0. 0.0.1.0.0.0. 0.0.2.0.0.0. 0.0",
+          "context_answer": "Team WRT celebrated its third consecutive victory at the Indianapolis Hour in 2025."
+        },
+        {
+          "question": "What is the power output of the BMW iX M70 xDrive?",
+          "generated_answer": "BMW iX M70 XDrive. The eDrive range is a key driver for the BMW iX M70 XDrive. The iX M70 XDrive is a premium driving system. The eDrive range is the driving system of the BMW iX M70 XDrive. The iX M70 XDrive is the standard driving system. The eDrive range is a unique and innovative driving system. The eDrive range is a premium driving system. The eDrive range is the BMW iX M70 XDrive. The iX M70 XDrive has a power range of 7,500 mpg, and the iX M70",
+          "context_answer": "The BMW iX M70 xDrive delivers up to 485 kW/659 hp in My Mode Sport."
+        },
+        {
+          "question": "Which BMW plant is the largest single BMW production facility in the world?",
+          "generated_answer": "BMW plant is the largest single BMW production facility in the world. The plant is located in the USA and has been the #1 plant in the world for over 20 years. BMW plant is in the USA, and has a plant in the USA, the UK and the US. It is located in the US. BMW plant is in the US. BMW plant is the BMW plant in the USA, and has a plant in the USA.",
+          "context_answer": "BMW Group Plant Spartanburg in South Carolina is the largest single BMW production facility in the world."
+        },
+        {
+          "question": "How many vehicles does Plant Spartanburg assemble daily?",
+          "generated_answer": "In total, in the end, the production of all four of the BMW Plant Spartanburg is the same. Plant Spartanburg is a plant plant plant. The plant plant plants have a capacity for the plant to produce more than 6,000 plant plant plants. The plant plants are in a plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant plant",
+          "context_answer": "Plant Spartanburg assembles more than 1,500 vehicles each day."
+        },
+        {
+          "question": "What was the BMW Group's profit before tax in 2023?",
+          "generated_answer": "The BMW Group reported a profit of $1.27 billion in 2023. The loss was in the form of tax in 2023, and was offset by a tax on depreciation. The depreciation and depreciation of the capital were offset by depreciation and depreciation in the capital, depreciation and depreciation. In 2023, the capital was reduced to an estimated 5.8 percent of the original value of the capital, and the capital was returned to the sales tax of the value of the capital. The depreciation and depreciation of the capital were offset by depreciation and depreciation in the capital, depreciation and depreciation of the capital, depreciation and depreciation of the capital, depreciation and depreciation of",
+          "context_answer": "The BMW Group's profit before tax in 2023 was \u20ac17.1 billion."
+        },
+        {
+          "question": "How many employees did the BMW Group have as of December 2023?",
+          "generated_answer": "No. In the years to come, we are at the top of the list of the top 1,000 employees in the BMW Group,\u201d BMW Group of Germany.",
+          "context_answer": "The BMW Group had a workforce of 154,950 employees as of December 31, 2023."
+        },
+        {
+          "question": "What is the expected CO\u2082e footprint reduction for the BMW iX3 compared to ICE vehicles?",
+          "generated_answer": "In the next generation of BMW iX3, the new generation of the iX3 will have a CO\u2082E-electric ratio of 10.6.1: 0.5. The new generation of the iX3 will be used to reduce the CO\u2082E-electric ratio. The new generation of the iX3 will be replaced by the new BMW iX3 with a new combustion engine. The new iX3 will be the BMW iX3 iX3 iX3 iX3 iX3 iX3 iX3 iX3 iX3",
+          "context_answer": "When charged with renewable electricity, the BMW iX3 beats comparable ICE models after only 17,500 kilometers."
+        },
+        {
+          "question": "What percentage of secondary materials are used in the new BMW iX3?",
+          "generated_answer": "0.3% of total sales in the fourth quarter of 2016. The BMW iX3 is the BMW iX3. The sales of the BMW iX3 are at the highest level in the current year. The BMW iX3 will be the first BMW iX3 to be in the global market in the second quarter of the year, with the first BMW iX3 to have sales of the BMW iX3 in the first quarter of the year. The BMW iX3 will be the first BMW iX3 to be in the global market in the second quarter of the year. The BMW iX3 is the first",
+          "context_answer": "Secondary materials account for one third of all material used in the new BMW iX3 50 xDrive."
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "log_likelihood": {
+      "original": -3.3960835361480712,
+      "reduced": -3.759018907546997
+    },
+    "bert_score": {
+      "original": 0.017585459668189286,
+      "reduced": -0.06819096392020584
+    }
+  },
+  "num_questions": 50,
+  "bert_score_info": {
+    "description": "BERTScore F1 measure between generated answer and ground truth",
+    "range": "0 to 1 (higher is better)",
+    "model_used": "BERT-base for embedding similarity"
+  }
+}

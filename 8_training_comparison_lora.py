@@ -2363,7 +2363,7 @@
 
 
 
-
+import textstat
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
@@ -2377,10 +2377,16 @@ import os
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 from peft import LoraConfig, get_peft_model, TaskType
-import evaluate  # For BLEU/ROUGE metrics
+import evaluate 
 from typing import List, Dict, Optional
+from detoxify import Detoxify
+from datasets import Dataset as HFDataset
+from bert_score import score     
+from transformers import pipeline 
+
 
 # Set up logging
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -2459,7 +2465,6 @@ class BMWQADataset(Dataset):
             'question': qa_pair['question'],
             'answer': qa_pair['answer']
         }
-
 def create_reduced_distilgpt2(model_name="distilgpt2", layer_to_remove=-1):
     """
     Create a reduced version of DistilGPT2 by removing one transformer block.
@@ -2479,22 +2484,71 @@ def create_reduced_distilgpt2(model_name="distilgpt2", layer_to_remove=-1):
         transformer_blocks = model.transformer.h
         original_num_layers = len(transformer_blocks)
         
-        # Create new module list without the specified layer
+        # FIX: Handle negative index correctly (e.g., -1 means last layer)
+        if layer_to_remove < 0:
+            layer_to_remove = original_num_layers + layer_to_remove
+        
+        # FIX: Simple and correct logic for layer removal
         new_blocks = []
         for i in range(original_num_layers):
-            if i != (original_num_layers + layer_to_remove) % original_num_layers:
+            if i != layer_to_remove:
                 new_blocks.append(transformer_blocks[i])
         
         # Replace with new module list
         model.transformer.h = nn.ModuleList(new_blocks)
         
-        logger.info(f"Removed layer at index {layer_to_remove}. "
-                   f"Original layers: {original_num_layers}, "
-                   f"New layers: {len(model.transformer.h)}")
+        logger.info(f"✅ Removed layer at index {layer_to_remove}. "
+                f"Original layers: {original_num_layers}, "
+                f"New layers: {len(model.transformer.h)}")
+        
+        # Verify the model still works
+        try:
+            test_input = torch.tensor([[1, 2, 3]])
+            with torch.no_grad():
+                _ = model(test_input)
+            logger.info("✅ Reduced model passes forward pass test")
+        except Exception as e:
+            logger.error(f"❌ Reduced model failed forward pass: {e}")
+            raise
     else:
         raise AttributeError("Could not find transformer blocks in the model.")
     
     return model
+# def create_reduced_distilgpt2(model_name="distilgpt2", layer_to_remove=-1):
+#     """
+#     Create a reduced version of DistilGPT2 by removing one transformer block.
+    
+#     Args:
+#         model_name: Name of the base model
+#         layer_to_remove: Index of the block to remove (default -1 for last block)
+    
+#     Returns:
+#         Modified model with reduced number of layers
+#     """
+#     logger.info(f"Loading original model: {model_name}")
+#     model = AutoModelForCausalLM.from_pretrained(model_name)
+    
+#     # Access transformer blocks
+#     if hasattr(model, 'transformer') and hasattr(model.transformer, 'h'):
+#         transformer_blocks = model.transformer.h
+#         original_num_layers = len(transformer_blocks)
+        
+#         # Create new module list without the specified layer
+#         new_blocks = []
+#         for i in range(original_num_layers):
+#             if i != (original_num_layers + layer_to_remove) % original_num_layers:
+#                 new_blocks.append(transformer_blocks[i])
+        
+#         # Replace with new module list
+#         model.transformer.h = nn.ModuleList(new_blocks)
+        
+#         logger.info(f"Removed layer at index {layer_to_remove}. "
+#                    f"Original layers: {original_num_layers}, "
+#                    f"New layers: {len(model.transformer.h)}")
+#     else:
+#         raise AttributeError("Could not find transformer blocks in the model.")
+    
+#     return model
 
 class ModelTrainer:
     """Trainer class for fine-tuning a single model"""
@@ -2567,12 +2621,52 @@ class ModelTrainer:
         with torch.no_grad():
             for batch in tqdm(dataloader, desc=f"Evaluating {self.model_name}"):
                 batch = {k: v.to(self.device) for k, v in batch.items()}
-                outputs = self.model(**batch)
+                # s
+                outputs = self.model(
+                    input_ids=batch['input_ids'],
+                    attention_mask=batch['attention_mask'],  
+                    labels=batch['input_ids']               
+                )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_samples += batch['input_ids'].size(0)
         
         avg_loss = total_loss / total_samples if total_samples > 0 else 0
         return avg_loss
+    
+    # def generate_text(self, prompt, max_length=100, temperature=0.7, num_return_sequences=1, check_toxicity=False):
+    #     """Generate text from prompt with optional toxicity checking"""
+    #     self.model.eval()
+        
+    #     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
+        
+    #     with torch.no_grad():
+    #         outputs = self.model.generate(
+    #             inputs['input_ids'],
+    #             attention_mask=inputs['attention_mask'],
+    #             max_length=max_length,
+    #             temperature=temperature,
+    #             do_sample=True,
+    #             top_p=0.9,
+    #             num_return_sequences=num_return_sequences,
+    #             pad_token_id=self.tokenizer.eos_token_id
+    #         )
+        
+    #     generations = []
+    #     for i in range(num_return_sequences):
+    #         generated_text = self.tokenizer.decode(outputs[i], skip_special_tokens=True)
+            
+    #         if check_toxicity:
+    #             toxicity_score = self._check_toxicity(generated_text)
+    #             generations.append({
+    #                 'text': generated_text,
+    #                 'toxicity_score': toxicity_score,
+    #                 'is_toxic': toxicity_score > 0.1  # Threshold for toxicity
+    #             })
+    #         else:
+    #             generations.append(generated_text)
+        
+    #     return generations[0] if num_return_sequences == 1 else generations
+    
     
     def generate_text(self, prompt, max_length=100, temperature=0.7, num_return_sequences=1, check_toxicity=False):
         """Generate text from prompt with optional toxicity checking"""
@@ -2601,17 +2695,25 @@ class ModelTrainer:
                 generations.append({
                     'text': generated_text,
                     'toxicity_score': toxicity_score,
-                    'is_toxic': toxicity_score > 0.1  # Threshold for toxicity
+                    'is_toxic': toxicity_score > 0.1
                 })
             else:
-                generations.append(generated_text)
+                # ALWAYS return dict for consistency
+                generations.append({
+                    'text': generated_text,
+                    'toxicity_score': None,
+                    'is_toxic': False
+                })
         
-        return generations[0] if num_return_sequences == 1 else generations
-    
+        # Always return the same structure
+        if num_return_sequences == 1:
+            return generations[0]  # Single dict
+        else:
+            return generations  # List of dicts
+        
     def _check_toxicity(self, text):
         """Check toxicity score using Detoxify."""
         try:
-            from detoxify import Detoxify
             toxicity_model = Detoxify('original')
             scores = toxicity_model.predict(text)
             return scores['toxicity']  # Primary toxicity score
@@ -2710,7 +2812,7 @@ class ComparativeFineTuner:
         
         config_path = os.path.join(self.output_dir, "experiment_config.json")
         with open(config_path, 'w') as f:
-            json.dump(config, f, indent=2)
+            json.dump(config, f, indent=2, default=str)
         
         logger.info(f"Experiment config saved to {config_path}")
     
@@ -2735,7 +2837,7 @@ class ComparativeFineTuner:
         
         return self.train_dataset, self.val_dataset, self.test_dataset
     
-    def train_models(self, num_epochs=10, batch_size=8, learning_rate=1e-4):
+    def train_models(self, num_epochs=8, batch_size=8, learning_rate=7e-5):
         """Train both models with identical settings and early stopping"""
         logger.info(f"Starting comparative training for up to {num_epochs} epochs")
         
@@ -2891,7 +2993,7 @@ class ComparativeFineTuner:
         }
         
         with open(os.path.join(best_model_dir, 'best_model_info.json'), 'w') as f:
-            json.dump(info, f, indent=2)
+            json.dump(info, f, indent=2, default=str)
     
     def _load_best_models(self, training_results):
         """Load the best saved models for evaluation."""
@@ -2920,7 +3022,7 @@ class ComparativeFineTuner:
         # Save as JSON
         results_path = os.path.join(self.output_dir, "training_results.json")
         with open(results_path, 'w') as f:
-            json.dump(training_results, f, indent=2)
+            json.dump(training_results, f, indent=2, default=str)
         
         # Save as CSV
         epochs = list(range(1, len(training_results['original']['train_losses']) + 1))
@@ -2955,7 +3057,12 @@ class ComparativeFineTuner:
         with torch.no_grad():
             for batch in tqdm(test_loader, desc="Evaluating Baseline"):
                 batch = {k: v.to(self.device) for k, v in batch.items()}
-                outputs = base_model(**batch)
+                # outputs = base_model(**batch)
+                outputs = base_model(
+                    input_ids=batch['input_ids'],
+                    attention_mask=batch['attention_mask'],  # ← ADD THIS LINE
+                    labels=batch['input_ids']                # ← KEEP THIS
+                )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_tokens += batch['attention_mask'].sum().item()
         
@@ -2971,68 +3078,284 @@ class ComparativeFineTuner:
         }
         
         with open(os.path.join(self.output_dir, "baseline_metrics.json"), 'w') as f:
-            json.dump(metrics, f, indent=2)
+            json.dump(metrics, f, indent=2, default=str)
         
         logger.info(f"BASELINE - Test Loss: {avg_loss:.4f}, Perplexity: {perplexity:.2f}")
         return metrics
+    
+    # def compute_comprehensive_metrics(self, num_samples=15):
+    #     """Compute comprehensive text quality metrics for both models."""
+    #     logger.info("Computing comprehensive text quality metrics...")
+        
+    #     try:
+            
+            
+    #         # Initialize metrics
+    #         metrics = {
+    #             'original': {
+    #                 'diversity': {},
+    #                 'readability': None,
+    #                 'fluency': None,
+    #                 'toxicity': None
+    #             },
+    #             'reduced': {
+    #                 'diversity': {},
+    #                 'readability': None,
+    #                 'fluency': None,
+    #                 'toxicity': None
+    #             }
+    #         }
+            
+    #         # Generate samples for evaluation
+    #         references = []
+    #         original_generations = []
+    #         reduced_generations = []
+            
+    #         # Use test set as base for generation
+    #         for i, ref_text in enumerate(self.test_texts[:num_samples]):
+    #             # Use first 20 words as prompt
+    #             words = ref_text.split()[:20]
+    #             prompt = " ".join(words)
+                
+    #             # Generate with both models
+    #             orig_gen = self.original_trainer.generate_text(
+    #                 prompt, max_length=100, temperature=0.7, check_toxicity=False
+    #             )
+    #             red_gen = self.reduced_trainer.generate_text(
+    #                 prompt, max_length=100, temperature=0.7, check_toxicity=False
+    #             )
+                
+    #             original_generations.append(orig_gen)
+    #             reduced_generations.append(red_gen)
+    #             references.append([ref_text])
+            
+            
+            
+    #         # 2. Diversity (Distinct-n)
+    #         def compute_distinct_n(texts, n=2):
+    #             """Compute Distinct-n score."""
+    #             all_ngrams = []
+    #             for text in texts:
+    #                 words = text.split()
+    #                 ngrams = [' '.join(words[i:i+n]) for i in range(len(words)-n+1)]
+    #                 all_ngrams.extend(ngrams)
+                
+    #             if not all_ngrams:
+    #                 return 0
+                
+    #             unique_ngrams = set(all_ngrams)
+    #             return len(unique_ngrams) / len(all_ngrams)
+            
+    #         metrics['original']['diversity'] = {
+    #             'distinct_1': compute_distinct_n(original_generations, 1),
+    #             'distinct_2': compute_distinct_n(original_generations, 2)
+    #         }
+    #         metrics['reduced']['diversity'] = {
+    #             'distinct_1': compute_distinct_n(reduced_generations, 1),
+    #             'distinct_2': compute_distinct_n(reduced_generations, 2)
+    #         }
+            
+    #         # 3. Readability (Flesch-Kincaid)
+    #         def compute_readability(texts):
+    #             try:
+                   
+    #                 scores = []
+    #                 for text in texts:
+    #                     if len(text.split()) > 10:
+    #                         try:
+    #                             fk_score = textstat.flesch_kincaid_grade(text)
+    #                             scores.append(fk_score)
+    #                         except:
+    #                             pass
+    #                 return np.mean(scores) if scores else 0
+    #             except ImportError:
+    #                 logger.warning("textstat not installed. Skipping readability.")
+    #                 return 0
+            
+    #         metrics['original']['readability'] = {
+    #             'flesch_kincaid_grade': compute_readability(original_generations),
+    #             'num_scored': len([t for t in original_generations if len(t.split()) > 10])
+    #         }
+    #         metrics['reduced']['readability'] = {
+    #             'flesch_kincaid_grade': compute_readability(reduced_generations),
+    #             'num_scored': len([t for t in reduced_generations if len(t.split()) > 10])
+    #         }
+            
+    #         # 4. Fluency (using base model perplexity)
+    #         def compute_fluency(texts, model, tokenizer, device):
+    #             fluency_scores = []
+    #             for text in texts:
+    #                 if len(text.strip()) > 20:
+    #                     inputs = tokenizer(text, return_tensors="pt", truncation=True).to(device)
+    #                     inputs["labels"] = inputs["input_ids"].clone()
+    #                     with torch.no_grad():
+    #                         # outputs = model(**inputs)
+    #                         outputs = model(
+    #                             input_ids=inputs['input_ids'],
+    #                             attention_mask=inputs['attention_mask'],  
+    #                             labels=inputs['input_ids']               
+    #                         )
+    #                         loss = outputs.loss
+    #                         # perplexity = torch.exp(loss).item()
+    #                         if loss is not None:
+    #                             perplexity = torch.exp(loss).item()
+    #                         # Convert to fluency score (0-1, higher is better)
+    #                         fluency = max(0, min(1, 50.0 / (perplexity + 1)))
+    #                         fluency_scores.append(fluency)
+                            
+    #             return np.mean(fluency_scores) if fluency_scores else 0
+            
+    #         # Load base model for fluency
+    #         base_model = AutoModelForCausalLM.from_pretrained(self.base_model_name).to(self.device)
+    #         metrics['original']['fluency'] = compute_fluency(
+    #             original_generations, base_model, self.tokenizer, self.device
+    #         )
+    #         metrics['reduced']['fluency'] = compute_fluency(
+    #             reduced_generations, base_model, self.tokenizer, self.device
+    #         )
+            
+    #         # 5. Toxicity
+    #         try:
+                
+    #             toxicity_model = Detoxify('original')
+                
+    #             def compute_toxicity(texts):
+    #                 scores = []
+    #                 for text in texts:
+    #                     if len(text.strip()) > 10:
+    #                         result = toxicity_model.predict(text)
+    #                         scores.append(result['toxicity'])
+    #                 return np.mean(scores) if scores else 0
+                
+    #             metrics['original']['toxicity'] = compute_toxicity(original_generations)
+    #             metrics['reduced']['toxicity'] = compute_toxicity(reduced_generations)
+                
+    #         except ImportError:
+    #             logger.warning("Detoxify not installed. Skipping toxicity scoring.")
+            
+    #         # Save comprehensive metrics
+    #         with open(os.path.join(self.output_dir, "comprehensive_metrics.json"), 'w') as f:
+    #             json.dump(metrics, f, indent=2, default=str)
+            
+    #         # Print summary
+    #         print("\n" + "="*60)
+    #         print("COMPREHENSIVE TEXT QUALITY METRICS")
+    #         print("="*60)
+            
+            
+    #         print(f"Diversity (Distinct-2) - Original: {metrics['original']['diversity']['distinct_2']:.4f}, "
+    #               f"Reduced: {metrics['reduced']['diversity']['distinct_2']:.4f}")
+            
+    #         print(f"Readability (FK Grade) - Original: {metrics['original']['readability']['flesch_kincaid_grade']:.2f}, "
+    #               f"Reduced: {metrics['reduced']['readability']['flesch_kincaid_grade']:.2f}")
+            
+    #         print(f"Fluency - Original: {metrics['original']['fluency']:.4f}, "
+    #               f"Reduced: {metrics['reduced']['fluency']:.4f}")
+            
+    #         if metrics['original']['toxicity'] is not None:
+    #             print(f"Toxicity - Original: {metrics['original']['toxicity']:.6f}, "
+    #                   f"Reduced: {metrics['reduced']['toxicity']:.6f}")
+            
+    #         return metrics
+            
+    #     except ImportError as e:
+    #         logger.error(f"Missing dependency for comprehensive metrics: {e}")
+    #         return None
     
     def compute_comprehensive_metrics(self, num_samples=15):
         """Compute comprehensive text quality metrics for both models."""
         logger.info("Computing comprehensive text quality metrics...")
         
         try:
-            # Import optional dependencies
-            import evaluate
-            
             # Initialize metrics
             metrics = {
                 'original': {
                     'diversity': {},
                     'readability': None,
                     'fluency': None,
+                    'perplexity_on_test': None,  # ADDED for clarity
                     'toxicity': None
                 },
                 'reduced': {
                     'diversity': {},
                     'readability': None,
                     'fluency': None,
+                    'perplexity_on_test': None,  # ADDED for clarity
                     'toxicity': None
                 }
             }
             
-            # Generate samples for evaluation
+            # ====================== BUG FIX #1: Handle generate_text() returns ======================
+            # def extract_generated_text(generation):
+            #     """Handle both string and dict returns from generate_text()"""
+            #     if isinstance(generation, dict) and 'text' in generation:
+            #         return generation['text']
+            #     elif isinstance(generation, dict) and 'generation' in generation:
+            #         return generation['generation']
+            #     elif isinstance(generation, str):
+            #         return generation
+            #     else:
+            #         return str(generation)
+
+            def extract_generated_text(generation):
+                """Handle returns from generate_text() - now always dicts"""
+                if isinstance(generation, dict) and 'text' in generation:
+                    return generation['text']
+                elif isinstance(generation, list) and len(generation) > 0:
+                    # Handle list of generations
+                    if isinstance(generation[0], dict) and 'text' in generation[0]:
+                        return generation[0]['text']
+                    else:
+                        return str(generation[0])
+                elif isinstance(generation, str):
+                    return generation
+                else:
+                    return str(generation)
+            
+            # Generate samples for diversity/readability/toxicity evaluation
             references = []
             original_generations = []
             reduced_generations = []
             
             # Use test set as base for generation
             for i, ref_text in enumerate(self.test_texts[:num_samples]):
+                if not ref_text.strip():
+                    continue
+                    
                 # Use first 20 words as prompt
                 words = ref_text.split()[:20]
-                prompt = " ".join(words)
+                prompt = " ".join(words) if words else "BMW"
                 
                 # Generate with both models
-                orig_gen = self.original_trainer.generate_text(
+                orig_gen_raw = self.original_trainer.generate_text(
                     prompt, max_length=100, temperature=0.7, check_toxicity=False
                 )
-                red_gen = self.reduced_trainer.generate_text(
+                red_gen_raw = self.reduced_trainer.generate_text(
                     prompt, max_length=100, temperature=0.7, check_toxicity=False
                 )
                 
-                original_generations.append(orig_gen)
-                reduced_generations.append(red_gen)
+                # Extract text from potentially complex return
+                orig_gen = extract_generated_text(orig_gen_raw)
+                red_gen = extract_generated_text(red_gen_raw)
+                
+                # Filter out empty generations
+                if orig_gen and orig_gen.strip():
+                    original_generations.append(orig_gen)
+                if red_gen and red_gen.strip():
+                    reduced_generations.append(red_gen)
                 references.append([ref_text])
             
-            
-            
-            # 2. Diversity (Distinct-n)
+            # ====================== 1. Diversity (Distinct-n) ======================
             def compute_distinct_n(texts, n=2):
                 """Compute Distinct-n score."""
                 all_ngrams = []
                 for text in texts:
+                    if not text.strip():
+                        continue
                     words = text.split()
-                    ngrams = [' '.join(words[i:i+n]) for i in range(len(words)-n+1)]
-                    all_ngrams.extend(ngrams)
+                    if len(words) >= n:
+                        ngrams = [' '.join(words[i:i+n]) for i in range(len(words)-n+1)]
+                        all_ngrams.extend(ngrams)
                 
                 if not all_ngrams:
                     return 0
@@ -3040,66 +3363,118 @@ class ComparativeFineTuner:
                 unique_ngrams = set(all_ngrams)
                 return len(unique_ngrams) / len(all_ngrams)
             
-            metrics['original']['diversity'] = {
-                'distinct_1': compute_distinct_n(original_generations, 1),
-                'distinct_2': compute_distinct_n(original_generations, 2)
-            }
-            metrics['reduced']['diversity'] = {
-                'distinct_1': compute_distinct_n(reduced_generations, 1),
-                'distinct_2': compute_distinct_n(reduced_generations, 2)
-            }
+            # Only compute if we have generations
+            if original_generations:
+                metrics['original']['diversity'] = {
+                    'distinct_1': compute_distinct_n(original_generations, 1),
+                    'distinct_2': compute_distinct_n(original_generations, 2),
+                    'num_samples_evaluated': len(original_generations)
+                }
             
-            # 3. Readability (Flesch-Kincaid)
+            if reduced_generations:
+                metrics['reduced']['diversity'] = {
+                    'distinct_1': compute_distinct_n(reduced_generations, 1),
+                    'distinct_2': compute_distinct_n(reduced_generations, 2),
+                    'num_samples_evaluated': len(reduced_generations)
+                }
+            
+            # ====================== 2. Readability (Flesch-Kincaid) ======================
             def compute_readability(texts):
+                """Compute readability scores with proper import handling."""
                 try:
-                    import textstat
+                    import textstat  # BUG FIX #2: Import inside function
+                    
                     scores = []
                     for text in texts:
-                        if len(text.split()) > 10:
+                        if text and len(text.split()) > 10:
                             try:
                                 fk_score = textstat.flesch_kincaid_grade(text)
                                 scores.append(fk_score)
-                            except:
-                                pass
+                            except Exception as e:
+                                logger.debug(f"Could not compute readability for text: {e}")
+                                continue
                     return np.mean(scores) if scores else 0
                 except ImportError:
-                    logger.warning("textstat not installed. Skipping readability.")
+                    logger.warning("textstat not installed. Install with: pip install textstat")
                     return 0
             
             metrics['original']['readability'] = {
-                'flesch_kincaid_grade': compute_readability(original_generations),
-                'num_scored': len([t for t in original_generations if len(t.split()) > 10])
+                'flesch_kincaid_grade': compute_readability(original_generations) if original_generations else 0,
+                'num_scored': len([t for t in original_generations if t and len(t.split()) > 10])
             }
             metrics['reduced']['readability'] = {
-                'flesch_kincaid_grade': compute_readability(reduced_generations),
-                'num_scored': len([t for t in reduced_generations if len(t.split()) > 10])
+                'flesch_kincaid_grade': compute_readability(reduced_generations) if reduced_generations else 0,
+                'num_scored': len([t for t in reduced_generations if t and len(t.split()) > 10])
             }
             
-            # 4. Fluency (using base model perplexity)
-            def compute_fluency(texts, model, tokenizer, device):
+            # ====================== 3. FLUENCY (CRITICAL FIX - TEST DATA!) ======================
+            def compute_fluency_on_test_data(model, tokenizer, device, test_dataset, num_samples=20):
+                """BIG FIX #1 & #3: Evaluate fluency on TEST DATA with attention mask"""
                 fluency_scores = []
-                for text in texts:
-                    if len(text.strip()) > 20:
-                        inputs = tokenizer(text, return_tensors="pt", truncation=True).to(device)
-                        with torch.no_grad():
-                            outputs = model(**inputs)
-                            loss = outputs.loss
-                            perplexity = torch.exp(loss).item()
-                            # Convert to fluency score (0-1, higher is better)
-                            fluency = max(0, min(1, 50.0 / (perplexity + 1)))
-                            fluency_scores.append(fluency)
-                return np.mean(fluency_scores) if fluency_scores else 0
+                perplexities = []
+                
+                # Create DataLoader from REAL test data
+                test_loader = DataLoader(test_dataset, batch_size=1, shuffle=True)
+                
+                for i, batch in enumerate(test_loader):
+                    if i >= num_samples:
+                        break
+                        
+                    batch = {k: v.to(device) for k, v in batch.items()}
+                    
+                    # BUG FIX #3: Add attention_mask!
+                    with torch.no_grad():
+                        outputs = model(
+                            input_ids=batch['input_ids'],
+                            attention_mask=batch['attention_mask'],  # ← WAS MISSING!
+                            labels=batch['input_ids']
+                        )
+                        loss = outputs.loss
+                    
+                    if loss is not None:
+                        perplexity = torch.exp(loss).item()
+                        perplexities.append(perplexity)
+                        
+                        # Convert perplexity to fluency score (0-1, higher is better)
+                        # More realistic formula based on typical perplexity ranges
+                        if perplexity < 10:
+                            fluency = 0.95  # Excellent
+                        elif perplexity < 20:
+                            fluency = 0.85  # Very good
+                        elif perplexity < 30:
+                            fluency = 0.75  # Good
+                        elif perplexity < 50:
+                            fluency = 0.60  # Fair
+                        elif perplexity < 100:
+                            fluency = 0.30  # Poor
+                        else:
+                            fluency = 0.10  # Very poor
+                        
+                        fluency_scores.append(fluency)
+                
+                avg_fluency = np.mean(fluency_scores) if fluency_scores else 0
+                avg_perplexity = np.mean(perplexities) if perplexities else 0
+                
+                return avg_fluency, avg_perplexity
             
-            # Load base model for fluency
+            # Load base model for fluency evaluation (on TEST DATA!)
             base_model = AutoModelForCausalLM.from_pretrained(self.base_model_name).to(self.device)
-            metrics['original']['fluency'] = compute_fluency(
-                original_generations, base_model, self.tokenizer, self.device
-            )
-            metrics['reduced']['fluency'] = compute_fluency(
-                reduced_generations, base_model, self.tokenizer, self.device
-            )
+            base_model.eval()
             
-            # 5. Toxicity
+            # BUG FIX #1: Evaluate on TEST DATA, not generated text
+            orig_fluency, orig_ppl = compute_fluency_on_test_data(
+                base_model, self.tokenizer, self.device, self.test_dataset, num_samples
+            )
+            metrics['original']['fluency'] = orig_fluency
+            metrics['original']['perplexity_on_test'] = orig_ppl  # For comparison
+            
+            red_fluency, red_ppl = compute_fluency_on_test_data(
+                base_model, self.tokenizer, self.device, self.test_dataset, num_samples
+            )
+            metrics['reduced']['fluency'] = red_fluency
+            metrics['reduced']['perplexity_on_test'] = red_ppl  # For comparison
+            
+            # ====================== 4. Toxicity (on GENERATED text - this is correct!) ======================
             try:
                 from detoxify import Detoxify
                 toxicity_model = Detoxify('original')
@@ -3107,53 +3482,83 @@ class ComparativeFineTuner:
                 def compute_toxicity(texts):
                     scores = []
                     for text in texts:
-                        if len(text.strip()) > 10:
-                            result = toxicity_model.predict(text)
-                            scores.append(result['toxicity'])
+                        if text and len(text.strip()) > 10:
+                            try:
+                                result = toxicity_model.predict(text)
+                                scores.append(result['toxicity'])
+                            except Exception as e:
+                                logger.debug(f"Could not compute toxicity: {e}")
+                                continue
                     return np.mean(scores) if scores else 0
                 
-                metrics['original']['toxicity'] = compute_toxicity(original_generations)
-                metrics['reduced']['toxicity'] = compute_toxicity(reduced_generations)
+                # This is CORRECT: Toxicity should be evaluated on generated text
+                metrics['original']['toxicity'] = compute_toxicity(original_generations) if original_generations else 0
+                metrics['reduced']['toxicity'] = compute_toxicity(reduced_generations) if reduced_generations else 0
                 
             except ImportError:
                 logger.warning("Detoxify not installed. Skipping toxicity scoring.")
+                metrics['original']['toxicity'] = None
+                metrics['reduced']['toxicity'] = None
             
+            # ====================== Save and Print Results ======================
             # Save comprehensive metrics
             with open(os.path.join(self.output_dir, "comprehensive_metrics.json"), 'w') as f:
-                json.dump(metrics, f, indent=2)
+                json.dump(metrics, f, indent=2, default=str)
             
-            # Print summary
+            # Print summary with clear labels
             print("\n" + "="*60)
             print("COMPREHENSIVE TEXT QUALITY METRICS")
             print("="*60)
             
+            print(f"\nDiversity (on generated text):")
+            print(f"  Distinct-1 - Original: {metrics['original']['diversity'].get('distinct_1', 0):.4f}, "
+                f"Reduced: {metrics['reduced']['diversity'].get('distinct_1', 0):.4f}")
+            print(f"  Distinct-2 - Original: {metrics['original']['diversity'].get('distinct_2', 0):.4f}, "
+                f"Reduced: {metrics['reduced']['diversity'].get('distinct_2', 0):.4f}")
             
-            print(f"Diversity (Distinct-2) - Original: {metrics['original']['diversity']['distinct_2']:.4f}, "
-                  f"Reduced: {metrics['reduced']['diversity']['distinct_2']:.4f}")
+            print(f"\nReadability (on generated text):")
+            print(f"  Flesch-Kincaid Grade - Original: {metrics['original']['readability']['flesch_kincaid_grade']:.2f}, "
+                f"Reduced: {metrics['reduced']['readability']['flesch_kincaid_grade']:.2f}")
+            print(f"  (Grade level ≈ years of education needed)")
             
-            print(f"Readability (FK Grade) - Original: {metrics['original']['readability']['flesch_kincaid_grade']:.2f}, "
-                  f"Reduced: {metrics['reduced']['readability']['flesch_kincaid_grade']:.2f}")
-            
-            print(f"Fluency - Original: {metrics['original']['fluency']:.4f}, "
-                  f"Reduced: {metrics['reduced']['fluency']:.4f}")
+            print(f"\nFluency (on TEST DATA - not generated text!):")
+            print(f"  Fluency Score - Original: {metrics['original']['fluency']:.4f}, "
+                f"Reduced: {metrics['reduced']['fluency']:.4f}")
+            print(f"  Test Perplexity - Original: {metrics['original']['perplexity_on_test']:.2f}, "
+                f"Reduced: {metrics['reduced']['perplexity_on_test']:.2f}")
+            print(f"  (Lower perplexity = more fluent)")
             
             if metrics['original']['toxicity'] is not None:
-                print(f"Toxicity - Original: {metrics['original']['toxicity']:.6f}, "
-                      f"Reduced: {metrics['reduced']['toxicity']:.6f}")
+                print(f"\nToxicity (on generated text):")
+                print(f"  Score - Original: {metrics['original']['toxicity']:.6f}, "
+                    f"Reduced: {metrics['reduced']['toxicity']:.6f}")
+                print(f"  (Lower = better, <0.01 = very safe)")
+            
+            # Add interpretation guide
+            print(f"\n{'='*60}")
+            print("INTERPRETATION GUIDE:")
+            print(f"{'='*60}")
+            print("• Diversity (0-1): Higher = less repetitive text")
+            print("• Readability (grade level): 8-12 = standard press release level")
+            print("• Fluency (0-1): Higher = more natural/coherent text")
+            print("• Toxicity (0-1): Lower = safer content (BMW press should be ~0)")
+            print(f"{'='*60}")
             
             return metrics
             
-        except ImportError as e:
-            logger.error(f"Missing dependency for comprehensive metrics: {e}")
+        except Exception as e:  # BUG FIX #5: Catch all exceptions
+            logger.error(f"Error computing comprehensive metrics: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
             return None
-    
+
     def evaluate_models(self):
         """Comprehensive evaluation of both models"""
         logger.info("\n" + "="*60)
         logger.info("Comprehensive Model Evaluation")
         logger.info("="*60)
         
-        test_loader = DataLoader(self.test_dataset, batch_size=8, shuffle=False)
+        test_loader = DataLoader(self.test_dataset, batch_size=16, shuffle=False)
         
         # 1. Evaluate test loss and perplexity
         logger.info("Evaluating test loss and perplexity...")
@@ -3176,30 +3581,93 @@ class ComparativeFineTuner:
         ]
         
         generations = {}
-        for prompt in bmw_prompts:
-            original_gen = self.original_trainer.generate_text(prompt, max_length=80, check_toxicity=True)
-            reduced_gen = self.reduced_trainer.generate_text(prompt, max_length=80, check_toxicity=True)
+
+        difference_summary = {
+        'total_prompts': len(bmw_prompts),
+        'original_longer': 0,
+        'reduced_longer': 0,
+        'original_has_repetition': 0,
+        'reduced_has_repetition': 0
+        }
+        # for prompt in bmw_prompts:
+        #     original_gen_dict = self.original_trainer.generate_text(prompt, max_length=80, check_toxicity=False)
+        #     reduced_gen_dict = self.reduced_trainer.generate_text(prompt, max_length=80, check_toxicity=False)
             
+        #     diff_note = self._generate_difference_note(original_gen_dict, reduced_gen_dict)
+
+        #     original_gen_text = original_gen_dict['text'] if isinstance(original_gen_dict, dict) else str(original_gen_dict)
+        #     reduced_gen_text = reduced_gen_dict['text'] if isinstance(reduced_gen_dict, dict) else str(reduced_gen_dict)
+
+        #     len1, len2 = len(original_gen_text.split()), len(reduced_gen_text.split())
+        #     if len1 > len2 + 20:  # Original significantly longer
+        #         difference_summary['original_longer'] += 1
+        #     elif len2 > len1 + 20:  # Reduced significantly longer
+        #         difference_summary['reduced_longer'] += 1
+            
+            
+        #     if self._has_repetition(original_gen_text):
+        #         difference_summary['original_has_repetition'] += 1
+        #     if self._has_repetition(reduced_gen_text):
+        #         difference_summary['reduced_has_repetition'] += 1
+        #     generations[prompt] = {
+        #         'original': original_gen,
+        #         'reduced': reduced_gen,
+        #         'difference_analysis': diff_note 
+        #     }
+            
+        #     logger.info(f"\nPrompt: {prompt}")
+        #     logger.info(f"Original: {original_gen}")
+        #     logger.info(f"Reduced:  {reduced_gen}")
+        #     logger.info(f"Difference Analysis: {diff_note}")
+
+        for prompt in bmw_prompts:
+    # Get generation results (these are DICTIONARIES)
+            original_gen_result = self.original_trainer.generate_text(prompt, max_length=80, check_toxicity=False)
+            reduced_gen_result = self.reduced_trainer.generate_text(prompt, max_length=80, check_toxicity=False)
+            
+            # Extract the actual TEXT from the dictionaries
+            original_gen_text = original_gen_result['text']  
+            reduced_gen_text = reduced_gen_result['text']    
+            
+            # Get difference analysis using the TEXT
+            diff_note = self._generate_difference_note(original_gen_text, reduced_gen_text)
+            
+            # Compare lengths
+            len1, len2 = len(original_gen_text.split()), len(reduced_gen_text.split())
+            if len1 > len2 + 20:
+                difference_summary['original_longer'] += 1
+            elif len2 > len1 + 20:
+                difference_summary['reduced_longer'] += 1
+            
+            # Check for repetition using the TEXT
+            if self._has_repetition(original_gen_text):
+                difference_summary['original_has_repetition'] += 1
+            if self._has_repetition(reduced_gen_text):
+                difference_summary['reduced_has_repetition'] += 1
+            
+            # Store the FULL results (dictionaries) for saving
             generations[prompt] = {
-                'original': original_gen,
-                'reduced': reduced_gen
+                'original': original_gen_result,  # Store the full dict
+                'reduced': reduced_gen_result,    # Store the full dict
+                'difference_analysis': diff_note 
             }
             
+            # Log the TEXT (not the dict) for readability
             logger.info(f"\nPrompt: {prompt}")
-            logger.info(f"Original: {original_gen}")
-            logger.info(f"Reduced:  {reduced_gen}")
-        
+            logger.info(f"Original: {original_gen_text}")
+            logger.info(f"Reduced:  {reduced_gen_text}")
+            logger.info(f"Difference Analysis: {diff_note}")    
+                
         # 3. Evaluate on Q&A set
         logger.info("\nEvaluating on BMW Q&A set...")
-        qa_results = self.evaluate_qa_set()
+        qa_results = self.evaluate_qa_set_enhanced()
         
         # 4. Compute comprehensive metrics
         logger.info("\nComputing comprehensive text quality metrics...")
         comprehensive_metrics = self.compute_comprehensive_metrics()
         
-        # 5. Create qualitative analysis
-        logger.info("\nCreating qualitative analysis...")
-        qualitative_results = self.create_qualitative_analysis_table()
+
+        
         
         # Compile evaluation results
         eval_results = {
@@ -3215,8 +3683,12 @@ class ComparativeFineTuner:
             },
             'generations': generations,
             'qa_evaluation': qa_results,
+            'difference_summary': difference_summary,
             'comprehensive_metrics': comprehensive_metrics,
-            'qualitative_analysis': qualitative_results
+            'bert_scores': {  # ✅ ADD THIS
+            'original': qa_results['comparison']['bert_score']['original'],
+            'reduced': qa_results['comparison']['bert_score']['reduced']
+            } if qa_results and 'bert_score' in qa_results['comparison'] else None
         }
         
         self.comparison_results['evaluation'] = eval_results
@@ -3233,96 +3705,294 @@ class ComparativeFineTuner:
         
         if qa_results:
             logger.info(f"\nQ&A Evaluation:")
-            logger.info(f"Original Model Avg Log-Likelihood: {qa_results['avg_log_likelihood']['original']:.4f}")
-            logger.info(f"Reduced Model Avg Log-Likelihood: {qa_results['avg_log_likelihood']['reduced']:.4f}")
+            # logger.info(f"Original Model Avg Log-Likelihood: {qa_results['log_likelihood']['original']:.4f}")
+            # logger.info(f"Reduced Model Avg Log-Likelihood: {qa_results['log_likelihood']['reduced']:.4f}")
         
         return eval_results
     
-    def evaluate_qa_set(self):
-        """
-        Evaluate models on BMW Q&A set by computing average log-likelihood of correct answers.
-        """
+    # def evaluate_qa_set(self):
+    #     """
+    #     Evaluate models on BMW Q&A set by computing average log-likelihood of correct answers.
+    #     """
+    #     # Create or load Q&A set
+    #     if qa_data is None:
+    #         qa_data = self.load_bmw_qa_from_json() or self.create_bmw_qa_set()
+        
+    #     # Create Q&A dataset
+    #     qa_dataset = BMWQADataset(qa_data, self.tokenizer)
+    #     qa_loader = DataLoader(qa_dataset, batch_size=1, shuffle=False)
+        
+    #     original_log_likelihoods = []
+    #     reduced_log_likelihoods = []
+    #     predictions = []
+        
+    #     for batch in tqdm(qa_loader, desc="Evaluating Q&A"):
+    #         question = batch['question'][0]
+    #         answer = batch['answer'][0]
+            
+    #         # Get log-likelihood for correct answer
+    #         inputs = {
+    #             'input_ids': batch['input_ids'].to(self.device),
+    #             'attention_mask': batch['attention_mask'].to(self.device),
+    #             'labels': batch['labels'].to(self.device)
+    #         }
+            
+    #         # Original model
+    #         self.original_model.eval()
+    #         with torch.no_grad():
+    #             outputs = self.original_model(**inputs)
+    #             orig_loss = outputs.loss.item()
+    #             orig_log_likelihood = -orig_loss  # Convert loss to log-likelihood
+    #             original_log_likelihoods.append(orig_log_likelihood)
+            
+    #         # Reduced model
+    #         self.reduced_model.eval()
+    #         with torch.no_grad():
+    #             outputs = self.reduced_model(**inputs)
+    #             red_loss = outputs.loss.item()
+    #             red_log_likelihood = -red_loss
+    #             reduced_log_likelihoods.append(red_log_likelihood)
+            
+    #         # Generate answer for comparison
+    #         orig_pred = self.original_trainer.generate_text(
+    #             f"Question: {question} Answer:",
+    #             max_length=50,
+    #             temperature=0.3
+    #         )
+            
+    #         red_pred = self.reduced_trainer.generate_text(
+    #             f"Question: {question} Answer:",
+    #             max_length=50,
+    #             temperature=0.3
+    #         )
+            
+    #         predictions.append({
+    #             'question': question,
+    #             'true_answer': answer,
+    #             'original_prediction': orig_pred,
+    #             'reduced_prediction': red_pred
+    #         })
+        
+    #     # Calculate average log-likelihood
+    #     avg_orig_ll = np.mean(original_log_likelihoods) if original_log_likelihoods else 0
+    #     avg_red_ll = np.mean(reduced_log_likelihoods) if reduced_log_likelihoods else 0
+        
+    #     qa_results = {
+    #         'avg_log_likelihood': {
+    #             'original': avg_orig_ll,
+    #             'reduced': avg_red_ll
+    #         },
+    #         'predictions': predictions,
+    #         'num_questions': len(qa_data)
+    #     }
+        
+    #     # Save Q&A results
+    #     with open(os.path.join(self.output_dir, "qa_evaluation.json"), 'w') as f:
+    #         json.dump(qa_results, f, indent=2)
+        
+    #     logger.info(f"Q&A Evaluation:")
+    #     logger.info(f"Original Model Avg Log-Likelihood: {avg_orig_ll:.4f}")
+    #     logger.info(f"Reduced Model Avg Log-Likelihood: {avg_red_ll:.4f}")
+        
+    #     return qa_results
+
+    def evaluate_qa_set_enhanced(self):
+        
+        logger.info("\n" + "="*60)
+        logger.info("ENHANCED Q&A EVALUATION")
+        logger.info("="*60)
+        
         # Create or load Q&A set
         qa_data = self.create_bmw_qa_set()
+        qa_json_path = "bmw_qa_evaluation_set.json"
         
-        # Create Q&A dataset
-        qa_dataset = BMWQADataset(qa_data, self.tokenizer)
-        qa_loader = DataLoader(qa_dataset, batch_size=1, shuffle=False)
+        if os.path.exists(qa_json_path):
+            loaded_data = self.load_bmw_qa_from_json(qa_json_path)
+            if loaded_data:
+                qa_data = loaded_data
         
-        original_log_likelihoods = []
-        reduced_log_likelihoods = []
-        predictions = []
+        logger.info(f"Evaluating on {len(qa_data)} BMW Q&A pairs")
         
-        for batch in tqdm(qa_loader, desc="Evaluating Q&A"):
-            question = batch['question'][0]
-            answer = batch['answer'][0]
-            
-            # Get log-likelihood for correct answer
-            inputs = {
-                'input_ids': batch['input_ids'].to(self.device),
-                'attention_mask': batch['attention_mask'].to(self.device),
-                'labels': batch['labels'].to(self.device)
-            }
-            
-            # Original model
-            self.original_model.eval()
-            with torch.no_grad():
-                outputs = self.original_model(**inputs)
-                orig_loss = outputs.loss.item()
-                orig_log_likelihood = -orig_loss  # Convert loss to log-likelihood
-                original_log_likelihoods.append(orig_log_likelihood)
-            
-            # Reduced model
-            self.reduced_model.eval()
-            with torch.no_grad():
-                outputs = self.reduced_model(**inputs)
-                red_loss = outputs.loss.item()
-                red_log_likelihood = -red_loss
-                reduced_log_likelihoods.append(red_log_likelihood)
-            
-            # Generate answer for comparison
-            orig_pred = self.original_trainer.generate_text(
-                f"Question: {question} Answer:",
-                max_length=50,
-                temperature=0.3
-            )
-            
-            red_pred = self.reduced_trainer.generate_text(
-                f"Question: {question} Answer:",
-                max_length=50,
-                temperature=0.3
-            )
-            
-            predictions.append({
-                'question': question,
-                'true_answer': answer,
-                'original_prediction': orig_pred,
-                'reduced_prediction': red_pred
-            })
-        
-        # Calculate average log-likelihood
-        avg_orig_ll = np.mean(original_log_likelihoods) if original_log_likelihoods else 0
-        avg_red_ll = np.mean(reduced_log_likelihoods) if reduced_log_likelihoods else 0
-        
-        qa_results = {
-            'avg_log_likelihood': {
-                'original': avg_orig_ll,
-                'reduced': avg_red_ll
+        results = {
+            'original': {
+                'log_likelihoods': [],
+                'bert_scores': [], 
+                'generations': []
             },
-            'predictions': predictions,
-            'num_questions': len(qa_data)
+            'reduced': {
+                'log_likelihoods': [],
+                'bert_scores': [], 
+                'generations': []
+            }
         }
         
-        # Save Q&A results
-        with open(os.path.join(self.output_dir, "qa_evaluation.json"), 'w') as f:
-            json.dump(qa_results, f, indent=2)
+        # Evaluate each Q&A pair
+        for idx, qa_pair in enumerate(tqdm(qa_data, desc="Evaluating Q&A")):
+            question = qa_pair['question']
+            context_answer = qa_pair['answer']  # Ground truth from Q&A set
+            
+            # Generate answers from both models
+            original_answer = self.generate_bmw_answer(self.original_trainer, question)
+            reduced_answer = self.generate_bmw_answer(self.reduced_trainer, question)
+            
+            # Store generations
+            results['original']['generations'].append({
+                'question': question,
+                'generated_answer': original_answer,
+                'context_answer': context_answer
+            })
+            results['reduced']['generations'].append({
+                'question': question,
+                'generated_answer': reduced_answer,
+                'context_answer': context_answer
+            })
+            
+            # 1. Compute log-likelihood (existing metric)
+            orig_ll = self.compute_log_likelihood(self.original_trainer, question, context_answer)
+            red_ll = self.compute_log_likelihood(self.reduced_trainer, question, context_answer)
+            
+            results['original']['log_likelihoods'].append(orig_ll)
+            results['reduced']['log_likelihoods'].append(red_ll)
+
+            orig_bert_score = self.compute_semantic_similarity(original_answer, context_answer)
+            red_bert_score = self.compute_semantic_similarity(reduced_answer, context_answer)
+            
+            results['original']['bert_scores'].append(orig_bert_score)
+            results['reduced']['bert_scores'].append(red_bert_score)
+            
+            # # 2. Compute professional tone score
+            # orig_prof_score = self.score_professional_tone_with_model(original_answer)
+            # red_prof_score = self.score_professional_tone_with_model(reduced_answer)
+            
+            # results['original']['professional_tone_scores'].append(orig_prof_score)
+            # results['reduced']['professional_tone_scores'].append(red_prof_score)
+            
+            # 3. Compute faithfulness (generated answer vs context/ground truth)
+            # orig_faithfulness = self.compute_faithfulness(original_answer, context_answer)
+            # red_faithfulness = self.compute_faithfulness(reduced_answer, context_answer)
+            
+            # results['original']['faithfulness_scores'].append(orig_faithfulness)
+            # results['reduced']['faithfulness_scores'].append(red_faithfulness)
+            
+            # # 4. Compute response relevancy (generated answer vs question)
+            # orig_relevancy = self.compute_response_relevancy(original_answer, question)
+            # red_relevancy = self.compute_response_relevancy(reduced_answer, question)
+            
+            # results['original']['relevancy_scores'].append(orig_relevancy)
+            # results['reduced']['relevancy_scores'].append(red_relevancy)
+            
+            # Log first few examples
+            if idx < 3:
+                logger.info(f"\nQ{idx+1}: {question}")
+                logger.info(f"Context Answer: {context_answer}")
+                logger.info(f"Original Answer: {original_answer}")
+                # logger.info(f"  BERTScore F1: {orig_bert_score:.4f}, Log-Likelihood: {orig_ll:.4f}")
+                # logger.info(f"Reduced Answer: {reduced_answer}")
+                # logger.info(f"  BERTScore F1: {red_bert_score:.4f}, Log-Likelihood: {red_ll:.4f}")
+                # logger.info(
+                #         f"Faithfulness: {orig_faithfulness:.3f}, "
+                #         f"Relevancy: {orig_relevancy:.3f}")
+                # logger.info(f"Reduced Answer: {reduced_answer}")
+                # logger.info(
+                #         f"Faithfulness: {red_faithfulness:.3f}, "
+                        # f"Relevancy: {red_relevancy:.3f}")
         
-        logger.info(f"Q&A Evaluation:")
-        logger.info(f"Original Model Avg Log-Likelihood: {avg_orig_ll:.4f}")
-        logger.info(f"Reduced Model Avg Log-Likelihood: {avg_red_ll:.4f}")
+        # Calculate averages
+        comparison = {
+            'log_likelihood': {
+                'original': np.mean(results['original']['log_likelihoods']),
+                'reduced': np.mean(results['reduced']['log_likelihoods'])
+             },
+            # 'faithfulness': {
+            #     'original': np.mean(results['original']['faithfulness_scores']),
+            #     'reduced': np.mean(results['reduced']['faithfulness_scores'])
+            # },
+            # 'relevancy': {
+            #     'original': np.mean(results['original']['relevancy_scores']),
+            #     'reduced': np.mean(results['reduced']['relevancy_scores'])
+            #},
+             'bert_score': {  
+                'original': np.mean(results['original']['bert_scores']),
+                'reduced': np.mean(results['reduced']['bert_scores'])
+            }
+          }
         
-        return qa_results
+        # Print summary
+        logger.info("\n" + "="*60)
+        logger.info("ENHANCED Q&A EVALUATION SUMMARY")
+        logger.info("="*60)
+        logger.info(f"Log-Likelihood - Original: {comparison['log_likelihood']['original']:.4f}, "
+                f"Reduced: {comparison['log_likelihood']['reduced']:.4f}")
+        # logger.info(f"Professional Tone - Original: {comparison['professional_tone']['original']:.2f}/5, "
+        #         f"Reduced: {comparison['professional_tone']['reduced']:.2f}/5")
+        # logger.info(f"Faithfulness - Original: {comparison['faithfulness']['original']:.3f}, "
+        #         f"Reduced: {comparison['faithfulness']['reduced']:.3f}")
+        # logger.info(f"Relevancy - Original: {comparison['relevancy']['original']:.3f}, "
+        #         f"Reduced: {comparison['relevancy']['reduced']:.3f}")
+        
+        # Save enhanced results
+        enhanced_results = {
+            'detailed_results': results,
+            'comparison': comparison,
+            'num_questions': len(qa_data),
+             'bert_score_info': {  
+            'description': 'BERTScore F1 measure between generated answer and ground truth',
+            'range': '0 to 1 (higher is better)',
+            'model_used': 'BERT-base for embedding similarity'
+        }
+        }
+        
+        with open(os.path.join(self.output_dir, "qa_evaluation_enhanced.json"), 'w') as f:
+            json.dump(enhanced_results, f, indent=2, default=str)
+        
+        return enhanced_results
+
+    def generate_bmw_answer(self, trainer, question):
+        """Generate answer for BMW question."""
+        prompt = f"Question: {question}\nAnswer:"
+        
+        generated = trainer.generate_text(
+            prompt,
+            max_length=150,
+            temperature=0.7,
+            num_return_sequences=1
+        )
+        
+        generated_text = generated['text'] if isinstance(generated, dict) else str(generated)   
+        
+        if "Answer:" in generated_text:
+            answer_part = generated_text.split("Answer:")[-1].strip()
+            return answer_part
+        return generated_text
+
+    def compute_log_likelihood(self, trainer, question, context_answer):
+        """Compute log-likelihood of context answer."""
+        # Format as "Question: X Answer: Y"
+        text = f"Question: {question} Answer: {context_answer}"
     
+    
+        # Tokenize
+        inputs = trainer.tokenizer(
+            text,
+            return_tensors="pt",
+            truncation=True,
+            max_length=256
+        ).to(trainer.device)
+        
+        # Get model outputs
+        trainer.model.eval()
+        with torch.no_grad():
+            # outputs = trainer.model(**inputs, labels=inputs['input_ids'])
+            outputs = trainer.model(
+            input_ids=inputs['input_ids'],
+            attention_mask=inputs['attention_mask'],  # ← ADD THIS LINE
+            labels=inputs['input_ids']
+        )
+            loss = outputs.loss.item()
+        
+        # Convert loss to log-likelihood
+        return -loss
+        
     def create_bmw_qa_set(self):
         """Create a well-designed BMW Q&A evaluation set."""
         qa_examples = [
@@ -3371,86 +4041,53 @@ class ComparativeFineTuner:
         # Save Q&A set
         qa_path = os.path.join(self.output_dir, "bmw_qa_evaluation_set.json")
         with open(qa_path, 'w') as f:
-            json.dump(qa_examples, f, indent=2)
+            json.dump(qa_examples, f, indent=2, default=str)
         
         logger.info(f"BMW Q&A evaluation set created with {len(qa_examples)} questions")
         return qa_examples
     
-    def create_qualitative_analysis_table(self):
-        """Create structured qualitative analysis for manual review."""
-        analysis_prompts = [
-            {
-                'prompt': 'BMW announces new electric vehicle technology',
-                'criteria': ['Relevance', 'Technical accuracy', 'Professional tone', 'Factual consistency']
-            },
-            {
-                'prompt': 'BMW Group reports quarterly financial results',
-                'criteria': ['Numerical coherence', 'Formal tone', 'Financial terminology', 'Structure']
-            },
-            {
-                'prompt': 'BMW sustainability and environmental initiatives',
-                'criteria': ['Technical depth', 'Environmental focus', 'Corporate responsibility', 'Clarity']
-            },
-            {
-                'prompt': 'BMW autonomous driving system features',
-                'criteria': ['Technical specifications', 'Safety emphasis', 'Innovation focus', 'Readability']
-            }
-        ]
-        
-        qualitative_results = []
-        
-        for item in analysis_prompts:
-            prompt = item['prompt']
-            criteria = item['criteria']
+
+    def load_bmw_qa_from_json(self, json_path="bmw_qa_evaluation_set.json"):
+        """Load BMW Q&A set from a JSON file."""
+        try:
+            with open(json_path, 'r') as f:
+                qa_data = json.load(f)
             
-            # Generate from both models
-            original_gen = self.original_trainer.generate_text(prompt, max_length=120, check_toxicity=False)
-            reduced_gen = self.reduced_trainer.generate_text(prompt, max_length=120, check_toxicity=False)
+            # If your JSON has the structure I provided above
+            if isinstance(qa_data, dict) and 'qa_pairs' in qa_data:
+                qa_examples = qa_data['qa_pairs']
+            elif isinstance(qa_data, dict) and 'bmw_qa_evaluation_set' in qa_data:
+                qa_examples = qa_data['bmw_qa_evaluation_set']
+            elif isinstance(qa_data, list):
+                qa_examples = qa_data
+            else:
+                logger.error(f"Unknown JSON structure in {json_path}")
+                return self.create_bmw_qa_set()  # Fall back to default
             
-            qualitative_results.append({
-                'prompt': prompt,
-                'original_generation': original_gen,
-                'reduced_generation': reduced_gen,
-                'evaluation_criteria': criteria,
-                'notes': f"Compare based on: {', '.join(criteria)}"
-            })
-        
-        # Save qualitative analysis
-        qa_path = os.path.join(self.output_dir, "qualitative_analysis.json")
-        with open(qa_path, 'w') as f:
-            json.dump(qualitative_results, f, indent=2)
-        
-        # Also create a markdown table for README
-        self._create_qualitative_markdown_table(qualitative_results)
-        
-        return qualitative_results
+            logger.info(f"Loaded {len(qa_examples)} Q&A pairs from {json_path}")
+            return qa_examples
+            
+        except FileNotFoundError:
+            logger.warning(f"Q&A JSON file not found at {json_path}, using default set")
+            return self.create_bmw_qa_set()
+
+    def _has_repetition(self, text):
+        """Check for word repetition patterns."""
+        words = text.lower().split()
+        if len(words) < 10:
+            return False
+        for i in range(len(words) - 3):
+            if words[i:i+2] == words[i+2:i+4]:
+                return True
+        return False
     
-    def _create_qualitative_markdown_table(self, results):
-        """Create markdown table for qualitative comparison."""
-        md_path = os.path.join(self.output_dir, "QUALITATIVE_COMPARISON.md")
-        
-        with open(md_path, 'w') as f:
-            f.write("# Qualitative Generation Comparison\n\n")
-            f.write("| Prompt | Original Model | Reduced Model | Key Differences |\n")
-            f.write("|--------|----------------|---------------|-----------------|\n")
-            
-            for item in results:
-                # Truncate for table readability
-                orig_trunc = item['original_generation'][:150] + "..." if len(item['original_generation']) > 150 else item['original_generation']
-                red_trunc = item['reduced_generation'][:150] + "..." if len(item['reduced_generation']) > 150 else item['reduced_generation']
-                
-                # Auto-generate key differences note
-                diff_note = self._generate_difference_note(
-                    item['original_generation'],
-                    item['reduced_generation']
-                )
-                
-                f.write(f"| {item['prompt']} | {orig_trunc} | {red_trunc} | {diff_note} |\n")
-        
-        return md_path
-    
+
     def _generate_difference_note(self, text1, text2):
         """Generate auto-analysis of differences between two texts."""
+        if isinstance(text1, dict) and 'text' in text1:
+            text1 = text1['text']
+        if isinstance(text2, dict) and 'text' in text2:
+            text2 = text2['text']
         differences = []
         
         # Compare length
@@ -3460,6 +4097,8 @@ class ComparativeFineTuner:
         
         # Check for repetition
         def has_repetition(text):
+            if isinstance(text, dict) and 'text' in text:
+                text = text['text']
             words = text.lower().split()
             if len(words) < 10:
                 return False
@@ -3483,17 +4122,104 @@ class ComparativeFineTuner:
         
         return "; ".join(differences) if differences else "Minor stylistic differences"
     
+    # def score_professional_tone_with_model(self, text):
+    #     """
+    #     Use a pre-trained model to detect formal/professional tone.
+    #     """
+        
+        
+        
+    #     # Load a text classification model trained on formality
+    #     classifier = pipeline("text-classification", 
+    #                         model="cointegrated/roberta-large-formality")
+        
+    #     # Handle long texts by truncating
+    #     if len(text) > 500:
+    #         text = text[:500]
+        
+    #     result = classifier(text)[0]
+        
+    #     # Map model output to professional tone score (0-5 scale)
+    #     if result['label'] == 'formal':
+    #         return 5.0  # Very professional
+    #     elif result['label'] == 'neutral':
+    #         return 3.0  # Moderately professional
+    #     else:  # informal
+    #         return 1.0  # Not professional
+        
+
+
+    # def compute_faithfulness(self, generated_answer, context_answer):
+    #     """
+    #     Compute faithfulness between generated answer and context (ground truth).
+    #     For your assignment: generated_answer = model's answer, context_answer = Q&A set answer
+    #     """
+ 
+    #     # Create a dataset for RAGAS evaluation
+    #     dataset = HFDataset.from_dict({
+    #         'question': ["Does the generated answer match the context?"],
+    #         'answer': [generated_answer],
+    #         'contexts': [[context_answer]]  # List of contexts
+    #     })
+        
+    #     # Calculate faithfulness
+    #     result = ragas_evaluate(dataset, metrics=[Faithfulness])
+        
+    #     # Extract the faithfulness score
+    #     faith_score = result['faithfulness']
+    #     return faith_score if isinstance(faith_score, (int, float)) else faith_score[0]
+            
+        
+
+    # def compute_response_relevancy(self, generated_answer, question):
+    #     """
+    #     Compute how relevant the generated answer is to the question.
+    #     """
+
+    #     # Create a dataset for RAGAS evaluation
+    #     dataset = HFDataset.from_dict({
+    #         'question': [question],
+    #         'answer': [generated_answer]
+    #     })
+        
+    #     # Calculate answer relevancy
+    #     result = ragas_evaluate(dataset, metrics=[AnswerRelevancy])
+        
+    #     # Extract the relevancy score
+    #     relevancy_score = result['answer_relevancy']
+    #     return relevancy_score if isinstance(relevancy_score, (int, float)) else relevancy_score[0]
+            
+      
+
+    def compute_semantic_similarity(self, text1, text2):
+        """
+        Compute semantic similarity using BERTScore as fallback for faithfulness.
+        """
+      
+        # Handle empty texts
+        if not text1.strip() or not text2.strip():
+            return 0.0
+        
+        # Compute BERTScore
+        P, R, F1 = score([text1], [text2], lang="en", verbose=False, rescale_with_baseline=True)
+        
+        return F1.item()
+            
+       
+
+
+
     def _save_evaluation_results(self, eval_results):
         """Save evaluation results"""
         # Save JSON
         eval_path = os.path.join(self.output_dir, "evaluation_results.json")
         with open(eval_path, 'w') as f:
-            json.dump(eval_results, f, indent=2)
+            json.dump(eval_results, f, indent=2, default=str)
         
         # Save generations separately
         gens_path = os.path.join(self.output_dir, "sample_generations.json")
         with open(gens_path, 'w') as f:
-            json.dump(eval_results['generations'], f, indent=2)
+            json.dump(eval_results['generations'], f, indent=2, default=str)
         
         # Save test metrics as CSV
         test_metrics = eval_results['test_metrics']
@@ -3669,10 +4395,13 @@ class ComparativeFineTuner:
                 # Q&A results if available
                 if self.comparison_results['evaluation']['qa_evaluation']:
                     qa_results = self.comparison_results['evaluation']['qa_evaluation']
-                    f.write("Q&A EVALUATION\n")
-                    f.write("-"*40 + "\n")
-                    f.write(f"Original Model Avg Log-Likelihood: {qa_results['avg_log_likelihood']['original']:.4f}\n")
-                    f.write(f"Reduced Model Avg Log-Likelihood: {qa_results['avg_log_likelihood']['reduced']:.4f}\n\n")
+                    f.write(f"BERTScore F1 (0-1, higher is better):\n")
+                    f.write(f"  Original Model: {qa_results['comparison']['bert_score']['original']:.4f}\n")
+                    f.write(f"  Reduced Model:  {qa_results['comparison']['bert_score']['reduced']:.4f}\n\n")
+                    # f.write("Q&A EVALUATION\n")
+                    # f.write("-"*40 + "\n")
+                    # f.write(f"Original Model Avg Log-Likelihood: {qa_results['log_likelihood']['original']:.4f}\n")
+                    # f.write(f"Reduced Model Avg Log-Likelihood: {qa_results['log_likelihood']['reduced']:.4f}\n\n")
             
             # Sample generations
             if 'evaluation' in self.comparison_results:
@@ -3772,9 +4501,9 @@ def run_comparative_pipeline():
     print("\n4. Starting comparative training with early stopping...")
     print("   Training both original and reduced models with identical settings...")
     training_results = tuner.train_models(
-        num_epochs=15,
+        num_epochs=8,
         batch_size=8,
-        learning_rate=1e-4
+        learning_rate=7e-5
     )
     
     # Evaluate models comprehensively

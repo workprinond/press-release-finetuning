@@ -1,0 +1,67 @@
+{
+  "BMW is launching a new electric vehicle that": {
+    "original": {
+      "text": "BMW is launching a new electric vehicle that will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric vehicle will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric vehicle will be powered by a 2,500 kW electric motor with an electric power output of 300 kW. The new electric",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "reduced": {
+      "text": "BMW is launching a new electric vehicle that will use the advanced electric power technologies of the new EV and the electric battery. The electric-electric vehicle, the first electric car to be driven with a battery-electric electric vehicle, is powered by the electric battery. The electric-electric car will be driven with a lithium-ion battery, a battery-electric battery-electric battery-electric battery-",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "difference_analysis": "Minor stylistic differences"
+  },
+  "The BMW Group announced today that": {
+    "original": {
+      "text": "The BMW Group announced today that the BMW Group\u2019s new line of BMW M vehicles will be the first BMW iX, an all-electric vehicle, as part of the new BMW iX series. The new BMW iX will also be available for all models, including the MINI, the BMW iX, the MINI, and the MINI. The new BMW iX will",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "reduced": {
+      "text": "The BMW Group announced today that the first-ever BMW i3 will be available to the public at the BMW Group\u2019s BMW Group\u2019s BMW EEV (3, M6, S7, and X8, BMW i3 and BMW i6 M3 i3 i5, and BMW i6 M3 i3 i5, for a total of the BMW i3",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "difference_analysis": "Reduced has repetition; Terminology: 3 vs 1 key terms"
+  },
+  "BMW's latest sustainability initiative focuses on": {
+    "original": {
+      "text": "BMW's latest sustainability initiative focuses on sustainable energy. The new initiative aims to achieve a 20% reduction in greenhouse gas emissions, and by 2020, 50% of the world's greenhouse gas emissions would be used to meet the needs of the global population. The goal is to reduce the use of fossil fuels and the use of carbon-free electricity, which can be used to power the entire economy.",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "reduced": {
+      "text": "BMW's latest sustainability initiative focuses on the sustainability of its business and environmental strategy. The project\u2019s goal is to offer sustainability initiatives for the BMW Group and the European Commission for the next five years.",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "difference_analysis": "Length diff: 67 vs 35 words; Terminology: 3 vs 1 key terms"
+  },
+  "The future of BMW mobility includes": {
+    "original": {
+      "text": "The future of BMW mobility includes a new generation of mobility that enables the use of the BMW iX3 and the future of the BMW iX3. The future of the BMW iX3 will also include the ability to drive a new BMW iX3, with the ability to drive a new BMW iX3, with the ability to drive a new BMW iX3, and with the",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "reduced": {
+      "text": "The future of BMW mobility includes a wide range of all-new features, including the new BMW M3 M3, the BMW M3 M4, the BMW M5, the BMW M4 M4 M5, the BMW M4 M6, the BMW M6 M3 M6, and the BMW M4 M4 M5. The new BMW M3 M4 M4",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "difference_analysis": "Minor stylistic differences"
+  },
+  "BMW autonomous driving technology": {
+    "original": {
+      "text": "BMW autonomous driving technology, which will take up to 30 years to develop, is currently available in the US. BMW Group is seeking to develop a range of vehicles with autonomous driving technology in the US, with the goal of developing the first autonomous driving technology in the US. The range of the new BMW iX3, the iX4 and the iX5, is expected to be the",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "reduced": {
+      "text": "BMW autonomous driving technology has been demonstrated in the automotive world, and the technology will be tested in cars in the future. The next-generation autonomous car will be developed in the same vehicle, with the first autonomous driving technology in the next generation of autonomous driving technologies. In 2025, the first driver-on-the-road drive technology will be developed in the next-generation autonomous driving technology.",
+      "toxicity_score": null,
+      "is_toxic": false
+    },
+    "difference_analysis": "Minor stylistic differences"
+  }
+}

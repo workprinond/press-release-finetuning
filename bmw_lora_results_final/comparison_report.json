@@ -1,0 +1,39 @@
+{
+  "experiment_summary": {
+    "timestamp": "20251210_165337",
+    "base_model": "distilgpt2",
+    "fine_tuning_method": "LoRA",
+    "best_epoch": 5
+  },
+  "performance_comparison": {
+    "baseline": {
+      "test_loss": 5.048353433609009,
+      "perplexity": 155.76573181152344
+    },
+    "fine_tuned": {
+      "test_loss": 2.9225138699786264,
+      "perplexity": 18.58795738220215,
+      "improvement_perplexity": 88.06672227194774
+    }
+  },
+  "text_quality_metrics": {
+    "diversity_metrics": {
+      "distinct_1": 0.3363572923935799,
+      "distinct_2": 0.5966029723991507
+    },
+    "readability_scores": {
+      "average_flesch_kincaid": 12.653732364026931,
+      "num_scored": 20
+    },
+    "toxicity_scores": {
+      "average": 0.0002302109933225438,
+      "max": 0.0002880242536775768,
+      "min": 0.00021615125297103077
+    },
+    "fluency_scores": {
+      "average_fluency": 0.7224999999999999,
+      "average_perplexity": 25.045057809352876,
+      "num_scored": 20
+    }
+  }
+}

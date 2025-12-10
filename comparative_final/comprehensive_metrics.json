@@ -1,0 +1,30 @@
+{
+  "original": {
+    "diversity": {
+      "distinct_1": 0.2877637130801688,
+      "distinct_2": 0.5085470085470085,
+      "num_samples_evaluated": 15
+    },
+    "readability": {
+      "flesch_kincaid_grade": 13.141744171957786,
+      "num_scored": 15
+    },
+    "fluency": 0.4866666666666665,
+    "perplexity_on_test": 56.728841908772786,
+    "toxicity": "0.00072450575"
+  },
+  "reduced": {
+    "diversity": {
+      "distinct_1": 0.2867256637168142,
+      "distinct_2": 0.5426008968609866,
+      "num_samples_evaluated": 15
+    },
+    "readability": {
+      "flesch_kincaid_grade": 10.435833381036822,
+      "num_scored": 15
+    },
+    "fluency": 0.44666666666666655,
+    "perplexity_on_test": 329.96740481058754,
+    "toxicity": "0.0007371305"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "test_loss": 2.9225138699786264,
+  "perplexity": 18.58795738220215,
+  "num_samples": 644,
+  "avg_tokens_per_sample": 422.67080745341616,
+  "model": "fine_tuned_lora",
+  "best_epoch": 5
+}
