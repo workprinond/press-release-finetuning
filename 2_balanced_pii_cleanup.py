@@ -1,37 +1,4 @@
 
-
-# import re
-# import os
-
-# def emergency_clean(file_path, output_path):
-#     """Immediate PII removal - focus on HIGHEST risk"""
-#     with open(file_path, 'r', encoding='utf-8') as f:
-#         content = f.read()
-    
-    
-#     content = re.sub(r'\b[A-Za-z0-9._%+-]+@(bmwgroup|bmw|mini)\.(com|de)\b', 
-#                     '[BMW_CONTACT]', content)
-    
-    
-#     content = re.sub(r'\+\d{1,3}[-\s]?\d{1,4}[-\s]?\d{4,}', 
-#                     '[CONTACT_NUMBER]', content)
-    
-#     with open(output_path, 'w', encoding='utf-8') as f:
-#         f.write(content)
-    
-#     print(f"✅ Emergency clean: {file_path} -> {output_path}")
-
-
-# for split in ['train', 'val', 'test']:
-#     input_file = f"bmw_press_datasets/{split}.txt"
-#     output_file = f"bmw_press_datasets/{split}_emergency_clean.txt"
-    
-#     if os.path.exists(input_file):
-#         emergency_clean(input_file, output_file)
-#     else:
-#         print(f"⚠️  Skipping {input_file} - not found")
-
-#!/usr/bin/env python3
 """
 COMPREHENSIVE PII CLEANUP WITH BALANCED URL STRATEGY
 Balanced approach: Keep URLs but sanitize with context preservation

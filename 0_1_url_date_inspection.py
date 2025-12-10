@@ -368,7 +368,7 @@ if __name__ == "__main__":
     print("BMW Press Release Date Extraction Tester")
     print("=" * 80)
     
-    # Ask user if they want to test a custom URL
+   
     choice = input(f"Test default URL or enter custom? (default/custom): ").strip().lower()
     
     if choice == 'custom':
@@ -382,7 +382,7 @@ if __name__ == "__main__":
     tester = BMWDateTester(single_url)
     tester.analyze_response()
     
-    # Ask if user wants to test multiple URLs
+   
     print("\n" + "=" * 80)
     multi_test = input("\nDo you also want to test multiple example URLs? (yes/no): ").strip().lower()
     

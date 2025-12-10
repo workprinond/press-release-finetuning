@@ -7,7 +7,7 @@ url = "https://www.press.bmwgroup.com/pressclub/p/pcgl/pressDetail.html?title=bm
 # Your specific selectors (keeping the same selector that works)
 HEADLINE_SELECTOR = "#content > div > div.content-left > div > h1"
 SUBHEADLINE_SELECTOR = "#content > div > div.content-left > div > h2"
-AUTHOR_SELECTOR = "#content > div > div.content-left > div > div.left > p:nth-child(4)"  # This is actually author name
+AUTHOR_SELECTOR = "#content > div > div.content-left > div > div.left > p:nth-child(4)"  
 ARTICLE_BODY_SELECTOR = "#article-text > p"
 
 def clean_text(element):

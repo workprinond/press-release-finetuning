@@ -77,13 +77,6 @@ def create_clean_chunks(text, tokenizer, chunk_id=None):
         # Decode back to text
         chunk_text = tokenizer.decode(chunk_tokens, skip_special_tokens=True)
         chunk_text = ' '.join(chunk_text.split()) 
-        # For chunks after the first one, clean up partial sentences at start
-        # if i > 0:
-        #     # Try to start at a sentence boundary if possible
-        #     sentences = chunk_text.split('. ')
-        #     if len(sentences) > 1:
-        #         # Join from the second sentence to avoid starting mid-sentence
-        #         chunk_text = '. '.join(sentences[1:])
 
         if i > 0:
             # Find the first proper sentence end (". ", "! ", "? ")
@@ -110,69 +103,7 @@ def create_clean_chunks(text, tokenizer, chunk_id=None):
     
     return chunks
 
-# def process_split_file(split_name, tokenizer):
-#     """Process one split file (train, val, or test)"""
-#     input_file = os.path.join(INPUT_DIR, f"{split_name}_augmented.txt")
-#     output_file = os.path.join(OUTPUT_DIR, f"{split_name}_chunked.txt")
-    
-#     print(f"\n📄 Processing {split_name}...")
-#     print(f"   Input: {input_file}")
-    
-#     # Read input file
-#     with open(input_file, 'r', encoding='utf-8') as f:
-#         content = f.read()
-    
-#     # Split into press releases
-#     releases = split_into_press_releases(content)
-#     print(f"   Found {len(releases)} press releases")
-    
-#     # Create chunks for each release
-#     all_chunks = []
-#     stats = {
-#         'total_releases': len(releases),
-#         'total_chunks': 0,
-#         'avg_tokens_per_chunk': 0,
-#         'chunks_per_release': [],
-#         'token_counts': []
-#     }
-    
-#     for i, release in enumerate(releases):
-#         chunks = create_clean_chunks(release, tokenizer, chunk_id=i+1)
-#         all_chunks.extend(chunks)
-#         stats['chunks_per_release'].append(len(chunks))
-        
-#         # Count tokens in each chunk
-#         for chunk in chunks:
-#             tokens = len(tokenizer.encode(chunk, add_special_tokens=False))
-#             stats['token_counts'].append(tokens)
-    
-#     stats['total_chunks'] = len(all_chunks)
-#     if stats['token_counts']:
-#         stats['avg_tokens_per_chunk'] = sum(stats['token_counts']) / len(stats['token_counts'])
-    
-#     # Save chunks (separated by double newlines)
-#     with open(output_file, 'w', encoding='utf-8') as f:
-#         f.write('\n\n'.join(all_chunks))
-    
-#     # Save statistics
-#     stats_file = os.path.join(OUTPUT_DIR, f"{split_name}_stats.json")
-#     with open(stats_file, 'w', encoding='utf-8') as f:
-#         json.dump(stats, f, indent=2)
-    
-#     # Print summary
-#     print(f"✅ Saved {len(all_chunks)} chunks to {output_file}")
-#     print(f"   Avg tokens per chunk: {stats['avg_tokens_per_chunk']:.0f}")
-#     print(f"   Min tokens: {min(stats['token_counts']) if stats['token_counts'] else 0}")
-#     print(f"   Max tokens: {max(stats['token_counts']) if stats['token_counts'] else 0}")
-    
-#     # Show example of first chunk
-#     if all_chunks:
-#         print(f"\n   First chunk preview:")
-#         first_lines = all_chunks[0].split('\n')[:4]
-#         for line in first_lines[:4]:
-#             print(f"      {line[:80]}{'...' if len(line) > 80 else ''}")
-    
-#     return stats
+
 
 def process_split_file(split_name, tokenizer):
     """Process one split file (train, val, or test)"""

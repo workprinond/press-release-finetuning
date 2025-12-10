@@ -325,15 +325,7 @@ This section details the comparative fine-tuning, evaluation, and analysis of th
 
 **Limitations Revealed**: Poor Q&A performance underscores that fine-tuning small models primarily teaches *style and lexicon*, not reliable factual knowledge.
 
-### 11.9 Alignment with Assignment Goals
-This stretch exercise successfully fulfilled all requirements of Option 1.2:
-- ✅ **Created a reduced variant** by programmatically removing one transformer block
-- ✅ **Fine-tuned both models comparably** with same LoRA configuration and dataset
-- ✅ **Compared training behavior** via loss curves and time metrics
-- ✅ **Implemented automatic evaluation** using comprehensive metrics
-- ✅ **Conducted qualitative analysis** on BMW-related generations
-- ✅ **Designed and implemented Q&A evaluation** with log-likelihood and BERTScore
-- ✅ **Discussed trade-offs** between size, speed, and quality
+
 
 ### 11.10 Future Investigations
 With more time and compute resources:
