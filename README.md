@@ -3,35 +3,40 @@
 A complete end-to-end pipeline for collecting, preprocessing, and fine-tuning a small language model on recent BMW press releases. This project implements both the core assignment and a comparative "stretch" exercise analyzing model size trade-offs.
 
 
-## Installation
+## Installation and flow of pipeline
 
 ```bash
 
 pip install -r requirements.txt
 # Analyze sitemaps and estimate scope
-python src/sitemap_analyzer.py
 
-# Collect BMW press releases from 2025
-python src/01_data_crawling.py --year 2025 --max-articles 900
+python 0_selector_analyzer.py
+python 1_date_selector_analyzer.py
+python 2_scrape_estimate_time.py
+
+# Collect BMW press releases from 2025,extract text and create dataset splits
+python 3_corpus_extractor.py
 
 # Extract text and create dataset splits
 python src/text_extraction_pipeline.py
 
-# Remove PII and sensitive information
-python src/pii_cleanup.py
+# Remove PII and sensitive information and balanced PII cleanup
+python 4_PII_security_analyzer.py
+python 5_PII_security_implementation.py
 
 # Add safety training examples
-python src/safety_augmentor.py
+python 6_safety_augmentor.py
 
-# Analyze corpus and create 512-token chunks
-python src/corpus_analyzer.py --chunk-size 512 --overlap 128
+# Analyze corpus and create 512-token chunks and devlop overlap strategy
+python 7_tokens_count_and_training_estimate_analyzer.py
+python 8_chunk_strategy_overlap_splitter.py
+python 9_press_release_size_estimator.py
 
 # Fine-tune original DistilGPT-2 on BMW corpus
-python src/model_training.py --config configs/first_exercise.yaml
+python A_assignment_1_training_lora_and_evaluation.py
 
 # Create reduced model and train both variants
-python src/comparative_training.py --config configs/stretch_exercise.yaml
-
+python B_assignment_stretch_reduced_and_original_comparator.py
 ```
 
 ## 📊 1. Data Collection & Crawling
