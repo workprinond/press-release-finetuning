@@ -258,18 +258,10 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 
 **Sample Generation** (Prompt: *"BMW is launching a new electric vehicle that"*):
 **Observations:**
-- ✅ **Brand-aware**: Mentions BMW iX5, electric motor (domain knowledge retained)
-- ✅ **Coherent**: Sentences follow logical structure
-- ⚠️ **Repetition**: Redundancy (BMW iX5 repeated) suggests limited creativity in long contexts
-- ⚠️ **Minor hallucination**: Generated Martin Winterkorn (former VW CEO) as BMW CEO—factual inconsistency
-
-
-
-**Observations:**
-- ✅ **Brand-aware**: Mentions BMW iX5, electric motor (domain knowledge retained)
-- ✅ **Coherent**: Sentences follow logical structure
-- ⚠️ **Repetition**: Redundancy (BMW iX5 repeated) suggests limited creativity in long contexts
-- ⚠️ **Minor hallucination**: Generated Martin Winterkorn (former VW CEO) as BMW CEO—factual inconsistency
+- **Brand-aware**: Mentions BMW iX5, electric motor (domain knowledge retained)
+- **Coherent**: Sentences follow logical structure
+- **Repetition**: Redundancy (BMW iX5 repeated) suggests limited creativity in long contexts
+- **Minor hallucination**: Generated Martin Winterkorn (former VW CEO) as BMW CEO—factual inconsistency
 
 **Toxicity Analysis**: All generations scored < 0.001 across toxicity categories, confirming effective safety augmentation.
 

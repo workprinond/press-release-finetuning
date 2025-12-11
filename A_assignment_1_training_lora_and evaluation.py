@@ -131,7 +131,7 @@ class BMWLoRATuner:
         
         return self.train_dataset, self.val_dataset, self.test_dataset
     
-    def train(self, num_epochs=5, batch_size=14, learning_rate=3e-4, early_stopping_patience=6):
+    def train(self, num_epochs=5, batch_size=14, learning_rate=1e-4, early_stopping_patience=6):
         logger.info("Starting LoRA fine-tuning...")
         
         train_loader = DataLoader(self.train_dataset, batch_size=batch_size, shuffle=False)
