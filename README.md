@@ -384,7 +384,7 @@ Here are the loss curves, training time, test time and perplexity from our train
 
 **Efficiency vs. Performance**: Removing ~9% of parameters yielded **~11% training speedup** but cost **~38% increase in test perplexity** and worse Q&A performance.
 
-**Quality Degradation**: Reduced model's degradation is qualitative—more repetition and less coherent long-form structure—suggesting removed layer played role in maintaining narrative flow. The performance decline stems from the hierarchical nature of transformer learning: earlier layers capture fundamental linguistic patterns, middle layers develop abstract representations, and final layers specialize in task-specific refinements. Removing the last layer eliminates these critical refinements, leading to a significant quality degradation.
+**Quality Degradation**: Reduced model's degradation is qualitative—more repetition and less coherent long-form structure—suggesting removed layer played role in maintaining narrative flow. The performance decline stems from the hierarchical nature of transformer learning: earlier layers capture fundamental linguistic patterns, middle layers develop abstract representations, and final layers specialize in task-specific refinements. Removing the last layer eliminates these critical refinements(press-release generation), leading to a significant quality degradation.
 
 **Practical Implications**:
 - **Choose Original Model** for highest output quality, coherence, and factual grounding
@@ -394,12 +394,13 @@ Here are the loss curves, training time, test time and perplexity from our train
 
 
 
-### 11.10 Future Investigations
+### 11.10 Future Investigations 
 With more time and compute resources:
-1. **Ablation Study on Layer Removal**: Test removing different single layers
-2. **DPO for style and preventing negative aspects**: Focus on a certain press release style for social media by feeding desirable and rejected prompts.
-3. **Hyperparameter Search for Reduced Architecture**: Find optimal settings for reduced model
-4. **Scaling Law Verification**: Repeat with larger base model
-5. **Enhanced Factual Evaluation**: Develop robust hallucination detection metrics using RAG systems
+1. **DPO for style and preventing negative aspects**: Focus on a certain press release style for social media by feeding desirable and rejected prompts.
+2. **Enhanced Factual Evaluation**: Develop robust hallucination detection metrics using RAG systems
+3. **Study on Layer Removal**: Test removing different single layers
+4. **Hyperparameter Search for Reduced Architecture**: Find optimal settings for reduced model
+5. **Scaling Law Verification**: Repeat with larger base model
+
 
 
