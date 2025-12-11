@@ -142,7 +142,6 @@ Based on audit results, implemented selective redaction balancing privacy with i
 
 ## 6. Safety Augmentation
 
-**Script:** Standalone safety augmentor
 
 **Strategy**: Injects curated Q&A pairs teaching safe responses to sensitive queries using 4 formatting styles:
 1. **Q/A Style**: Explicit question and answer
@@ -174,7 +173,6 @@ Based on audit results, implemented selective redaction balancing privacy with i
 
 ## 8. Training Preparation & Corpus Analysis
 
-**Script:** `src/corpus_analyzer.py`
 
 **Tokenization Analysis** (`train_chunked.txt`):
 - **635 press releases**, average length: **1,717 tokens**
