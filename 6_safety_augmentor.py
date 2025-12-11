@@ -176,7 +176,7 @@ def main():
     """Main function to run safety augmentation on all splits"""
     
     print("="*70)
-    print("🚀 BMW PRESS RELEASE - SAFETY AUGMENTATION PIPELINE")
+    print("BMW PRESS RELEASE - SAFETY AUGMENTATION PIPELINE")
     print("="*70)
     print("Adding safe Q&A patterns to teach model proper PII handling")
     print("-"*70)

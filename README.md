@@ -143,11 +143,7 @@ Based on audit results, implemented selective redaction balancing privacy with i
 ## 6. Safety Augmentation
 
 
-**Strategy**: Injects curated Q&A pairs teaching safe responses to sensitive queries using 4 formatting styles:
-1. **Q/A Style**: Explicit question and answer
-2. **Conversation Style**: Simulated user-assistant interaction
-3. **Instruction Style**: Instruction-following format
-4. **Single Line**: Concise statement format
+**Strategy**: Injects curated Q&A pairs teaching safe responses to sensitive queries using question answer style.
 
 **Safety Q&A Examples:**
 - *"How can I contact BMW?"* → Directs to official website forms
