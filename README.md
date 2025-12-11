@@ -127,7 +127,7 @@ Based on audit results, implemented selective redaction balancing privacy with i
   - Media contacts → `[MEDIA_REPRESENTATIVE]`
 
 **Results:**
-- TOTALS ACROSS ALL DATASETS
+- Totals across all datasets
    - Emails Removed: 508
    - Phones Removed: 467
    - Urls Corporate Sites: 21
@@ -213,7 +213,7 @@ Based on audit results, implemented selective redaction balancing privacy with i
 
 **Key Results:**
 - Memory efficiency: ~75% reduction vs full fine-tuning
-- Training speed: 2-3 hours for 5 epochs on consumer GPU
+- Training speed: 20 minutes for 5 epochs on Google Colab T4 GPU
 - Complete training history saved in JSON/CSV formats
 
 ## 10. Results Analysis & Discussion – First Exercise
@@ -289,11 +289,11 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 | Log training loss | ✅ | `training_history.csv`, `eval_history.csv` |
 | Automatic metric | ✅ | Perplexity (18.59), Test Loss (2.923) |
 | Sample generations | ✅ | 5 BMW prompts + toxicity scoring |
-| 6–8 hour scope | ✅ | Achieved (data prep ~3h, training ~2.5h, eval ~1h) |
+
 
 ### 10.5 Limitations & Observations
-- **Repetition in Long Generations**: Likely due to 512-token context limit and small model size
-- **Factual Hallucinations**: Model learned style but not precise facts (e.g., incorrect CEO)
+- **Repetition in Long Generations**: Likely due to 512-token context limit and small model size,  less alpha value
+- **Factual Hallucinations**: Model learned style but not precise facts (e.g., incorrect CEO), solution ground truth systems like RAG
 - **Loss Plateau**: After epoch 3, minimal improvement → diminishing returns
 - **LoRA Trade-off**: Only 0.1% parameters trained → fast but limited adaptation depth
 
