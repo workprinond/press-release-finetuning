@@ -19,8 +19,8 @@ bert_score
 detoxify
 evaluate
 textstat
-
-
+```
+### Execution
 ```bash
 
 pip install -r requirements.txt
@@ -48,10 +48,10 @@ python 7_tokens_count_and_training_estimate_analyzer.py
 python 8_chunk_strategy_overlap_splitter.py
 python 9_press_release_size_estimator.py
 
-# Fine-tune original DistilGPT-2 on BMW corpus
+# Fine-tune original DistilGPT-2 on BMW corpus and do evaluation strategy
 python A_assignment_1_training_lora_and_evaluation.py
 
-# Create reduced model and train both variants
+# Create reduced model and train both variants and do evaluation strategy
 python B_assignment_stretch_reduced_and_original_comparator.py
 ```
 
