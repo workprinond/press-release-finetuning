@@ -119,11 +119,11 @@ def create_reduced_distilgpt2(model_name="distilgpt2", layer_to_remove=-1):
         transformer_blocks = model.transformer.h
         original_num_layers = len(transformer_blocks)
         
-        # FIX: Handle negative index correctly (e.g., -1 means last layer)
+        # Handle negative index correctly  -1 means last layer
         if layer_to_remove < 0:
             layer_to_remove = original_num_layers + layer_to_remove
         
-        # FIX: Simple and correct logic for layer removal
+        # Simple and correct logic for layer removal
         new_blocks = []
         for i in range(original_num_layers):
             if i != layer_to_remove:
@@ -266,18 +266,18 @@ class ModelTrainer:
                     'is_toxic': toxicity_score > 0.1
                 })
             else:
-                # ALWAYS return dict for consistency
+                
                 generations.append({
                     'text': generated_text,
                     'toxicity_score': None,
                     'is_toxic': False
                 })
         
-        # Always return the same structure
+        
         if num_return_sequences == 1:
-            return generations[0]  # Single dict
+            return generations[0]  
         else:
-            return generations  # List of dicts
+            return generations  
         
     def _check_toxicity(self, text):
         """Check toxicity score using Detoxify."""
@@ -614,7 +614,7 @@ class ComparativeFineTuner:
         """Compute metrics for the base model without fine-tuning."""
         logger.info("Computing BASELINE metrics (original distilgpt2)...")
         
-        # Load base model (not fine-tuned)
+     
         base_model = AutoModelForCausalLM.from_pretrained(self.base_model_name).to(self.device)
         base_model.eval()
         
@@ -628,8 +628,8 @@ class ComparativeFineTuner:
                 # outputs = base_model(**batch)
                 outputs = base_model(
                     input_ids=batch['input_ids'],
-                    attention_mask=batch['attention_mask'],  # ← ADD THIS LINE
-                    labels=batch['input_ids']                # ← KEEP THIS
+                    attention_mask=batch['attention_mask'],  
+                    labels=batch['input_ids']               
                 )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_tokens += batch['attention_mask'].sum().item()
@@ -664,14 +664,14 @@ class ComparativeFineTuner:
                     'diversity': {},
                     'readability': None,
                     'fluency': None,
-                    'perplexity_on_test': None,  # ADDED for clarity
+                    'perplexity_on_test': None,  
                     'toxicity': None
                 },
                 'reduced': {
                     'diversity': {},
                     'readability': None,
                     'fluency': None,
-                    'perplexity_on_test': None,  # ADDED for clarity
+                    'perplexity_on_test': None,  
                     'toxicity': None
                 }
             }
@@ -725,7 +725,7 @@ class ComparativeFineTuner:
                     reduced_generations.append(red_gen)
                 references.append([ref_text])
             
-            # ====================== 1. Diversity (Distinct-n) ======================
+           
             def compute_distinct_n(texts, n=2):
                 """Compute Distinct-n score."""
                 all_ngrams = []
@@ -758,11 +758,11 @@ class ComparativeFineTuner:
                     'num_samples_evaluated': len(reduced_generations)
                 }
             
-            # ====================== 2. Readability (Flesch-Kincaid) ======================
+           
             def compute_readability(texts):
                 """Compute readability scores with proper import handling."""
                 try:
-                    import textstat  # BUG FIX #2: Import inside function
+                    import textstat  
                     
                     scores = []
                     for text in texts:
@@ -787,7 +787,7 @@ class ComparativeFineTuner:
                 'num_scored': len([t for t in reduced_generations if t and len(t.split()) > 10])
             }
             
-            # ====================== 3. FLUENCY (CRITICAL FIX - TEST DATA!) ======================
+            
             def compute_fluency_on_test_data(model, tokenizer, device, test_dataset, num_samples=20):
                 """BIG FIX #1 & #3: Evaluate fluency on TEST DATA with attention mask"""
                 fluency_scores = []
@@ -802,11 +802,11 @@ class ComparativeFineTuner:
                         
                     batch = {k: v.to(device) for k, v in batch.items()}
                     
-                    # BUG FIX #3: Add attention_mask!
+                    
                     with torch.no_grad():
                         outputs = model(
                             input_ids=batch['input_ids'],
-                            attention_mask=batch['attention_mask'],  # ← WAS MISSING!
+                            attention_mask=batch['attention_mask'],  
                             labels=batch['input_ids']
                         )
                         loss = outputs.loss
@@ -837,7 +837,7 @@ class ComparativeFineTuner:
                 
                 return avg_fluency, avg_perplexity
             
-            # Load base model for fluency evaluation (on TEST DATA!)
+            # Load base model for fluency evaluation on TEST DATA!
             base_model = AutoModelForCausalLM.from_pretrained(self.base_model_name).to(self.device)
             base_model.eval()
             
@@ -854,7 +854,7 @@ class ComparativeFineTuner:
             metrics['reduced']['fluency'] = red_fluency
             metrics['reduced']['perplexity_on_test'] = red_ppl  # For comparison
             
-            # ====================== 4. Toxicity (on GENERATED text - this is correct!) ======================
+          
             try:
                 from detoxify import Detoxify
                 toxicity_model = Detoxify('original')
@@ -880,7 +880,6 @@ class ComparativeFineTuner:
                 metrics['original']['toxicity'] = None
                 metrics['reduced']['toxicity'] = None
             
-            # ====================== Save and Print Results ======================
             # Save comprehensive metrics
             with open(os.path.join(self.output_dir, "comprehensive_metrics.json"), 'w') as f:
                 json.dump(metrics, f, indent=2, default=str)
@@ -926,7 +925,7 @@ class ComparativeFineTuner:
             
             return metrics
             
-        except Exception as e:  # BUG FIX #5: Catch all exceptions
+        except Exception as e:  
             logger.error(f"Error computing comprehensive metrics: {e}")
             import traceback
             logger.error(traceback.format_exc())
@@ -998,8 +997,8 @@ class ComparativeFineTuner:
             
             # Store the FULL results (dictionaries) for saving
             generations[prompt] = {
-                'original': original_gen_result,  # Store the full dict
-                'reduced': reduced_gen_result,    # Store the full dict
+                'original': original_gen_result, 
+                'reduced': reduced_gen_result,   
                 'difference_analysis': diff_note 
             }
             
@@ -1036,7 +1035,7 @@ class ComparativeFineTuner:
             'qa_evaluation': qa_results,
             'difference_summary': difference_summary,
             'comprehensive_metrics': comprehensive_metrics,
-            'bert_scores': {  # ✅ ADD THIS
+            'bert_scores': { 
             'original': qa_results['comparison']['bert_score']['original'],
             'reduced': qa_results['comparison']['bert_score']['reduced']
             } if qa_results and 'bert_score' in qa_results['comparison'] else None

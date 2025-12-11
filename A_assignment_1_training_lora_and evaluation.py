@@ -308,8 +308,8 @@ class BMWLoRATuner:
                 # outputs = base_model(**batch)
                 outputs = self.base_model(
                     input_ids=batch['input_ids'],
-                    attention_mask=batch['attention_mask'],  # Explicitly pass
-                    labels=batch['input_ids']  # For loss calculation
+                    attention_mask=batch['attention_mask'], 
+                    labels=batch['input_ids']  
                 )
                 total_loss += outputs.loss.item() * batch['input_ids'].size(0)
                 total_tokens += batch['attention_mask'].sum().item()
@@ -449,7 +449,7 @@ class BMWLoRATuner:
                 'diversity_metrics': {},
                 'readability_scores': None,
                 'toxicity_scores': None,
-                'fluency_scores': None  # Added fluency
+                'fluency_scores': None 
             }
             
             # Sample from test set for evaluation
@@ -537,12 +537,12 @@ class BMWLoRATuner:
             except ImportError:
                 logger.warning("Detoxify not installed. Install with: pip install detoxify")
             
-            # 4. FIXED FLUENCY METRIC (NEW CODE!)
+            
             try:
                 fluency_scores = []
                 perplexities = []
                 
-                # Create a NEW DataLoader for fluency (don't reuse the shuffled one)
+            
                 fluency_loader = DataLoader(self.test_dataset, batch_size=1, shuffle=False)
                 
                 for i, batch in enumerate(fluency_loader):
@@ -551,11 +551,11 @@ class BMWLoRATuner:
                         
                     batch = {k: v.to(self.device) for k, v in batch.items()}
                     
-                    # FIXED: Pass attention mask properly
+                    
                     with torch.no_grad():
                         outputs = self.model(
                             input_ids=batch['input_ids'],
-                            attention_mask=batch['attention_mask'],  # CRITICAL FIX!
+                            attention_mask=batch['attention_mask'],  
                             labels=batch['input_ids']
                         )
                         loss = outputs.loss
@@ -564,7 +564,7 @@ class BMWLoRATuner:
                     perplexity = torch.exp(loss).item()
                     perplexities.append(perplexity)
                     
-                    # Better fluency formula
+                   
                     if perplexity < 10:
                         fluency = 0.95  # Excellent
                     elif perplexity < 20:
@@ -760,7 +760,7 @@ def run_pipeline():
         num_epochs=5,
         batch_size=14,
         learning_rate=1e-5,
-        early_stopping_patience=6  # Stop if no improvement for 3 epochs
+        early_stopping_patience=6  
     )
     
     print("\n" + "="*60)
@@ -769,9 +769,9 @@ def run_pipeline():
     fine_tuned_metrics = finetuner.compute_metrics()
     
     print("\n" + "="*60)
-    print("4. Computing Text Quality Metrics")  # ADDED STEP 4
+    print("4. Computing Text Quality Metrics")  
     print("="*60)
-    text_metrics = finetuner.compute_text_quality_metrics()  # DEFINE text_metrics HERE
+    text_metrics = finetuner.compute_text_quality_metrics()  
     
     print("\n" + "="*60)
     print("5. Generating Sample Texts")
@@ -793,12 +793,4 @@ def run_pipeline():
     return finetuner, history, baseline_metrics, fine_tuned_metrics, text_metrics, generations
 
 if __name__ == "__main__":
-    # Install required packages if not already installed
-    try:
-        import evaluate
-    except ImportError:
-        print("Installing required packages...")
-        import subprocess
-        subprocess.check_call(["pip", "install", "evaluate", "textstat", "detoxify"])
-    
     run_pipeline()

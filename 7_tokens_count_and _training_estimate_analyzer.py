@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Script to calculate the number of tokens in a text file.
 For use with transformer models like DistilGPT-2.
@@ -36,7 +36,7 @@ def count_tokens(file_path, model_name="distilgpt2"):
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
-            if line:  # Skip empty lines
+            if line:  
                 tokens = tokenizer.encode(line, add_special_tokens=False)
                 total_tokens += len(tokens)
                 num_lines += 1
@@ -89,7 +89,7 @@ def debug_long_lines(file_path, max_samples=3):
             if i >= max_samples:
                 break
 
-# Run it on your file
+
 
 
 def main():

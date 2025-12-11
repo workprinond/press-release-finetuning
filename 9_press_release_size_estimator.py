@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Analyze BMW Press Releases from Chunked Data
 Identifies press releases by hash (#) and calculates statistics
@@ -55,7 +55,7 @@ def analyze_press_releases_from_chunks(chunked_file_path):
             print(f"  Starts with '# '? {chunk.startswith('# ')}")
             print(f"  Contains '##'? {'##' in chunk}")
     
-    # Don't forget the last PR
+    # the last PR
     if current_pr:
         press_releases.append({
             'id': pr_id,
@@ -129,8 +129,8 @@ def analyze_press_releases_from_chunks(chunked_file_path):
                 percentage = count / len(tokens) * 100
                 print(f"    {bin_min:5d}-{bin_max:5d} tokens: {count:3d} PRs ({percentage:.1f}%)")
         
-        # Show examples
-        print(f"\n🎯 SAMPLE PRESS RELEASES:")
+        #  examples
+        print(f"\SAMPLE PRESS RELEASES:")
         
         # Shortest PR
         shortest = min(pr_stats, key=lambda x: x['tokens'])
@@ -196,7 +196,7 @@ def analyze_press_releases_from_chunks(chunked_file_path):
     print(f"  90th percentile: {np.percentile(tokens, 90):.0f} tokens")
     print(f"  95th percentile: {np.percentile(tokens, 95):.0f} tokens")
 
-    # Also show how many chunks each percentile needs
+    # how many chunks each percentile needs
     print(f"\n📦 CHUNKS NEEDED AT 512 TOKENS:")
     for p in [25, 50, 75, 90, 95]:
         tokens_at_p = np.percentile(tokens, p)
@@ -206,7 +206,7 @@ def analyze_press_releases_from_chunks(chunked_file_path):
 
     return press_releases, pr_stats
 
-# Also create a simpler version for quick analysis
+#  create a simpler version for quick analysis
 def quick_analyze_chunked_file(chunked_file_path):
     """Quick analysis showing key metrics"""
     tokenizer = AutoTokenizer.from_pretrained("distilgpt2")

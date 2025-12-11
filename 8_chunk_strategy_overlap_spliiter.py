@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 BMW Press Release Chunker - Clean Version
 Processes augmented files and creates clean chunks for training
@@ -13,9 +13,9 @@ from transformers import AutoTokenizer
 # Configuration
 INPUT_DIR = "bmw_press_datasets/augmented"
 OUTPUT_DIR = "bmw_press_datasets/chunked"
-MODEL_NAME = "distilgpt2"  # or "gpt2", "distilgpt2", "facebook/opt-125m"
-MAX_TOKENS = 512  # Conservative for small models
-OVERLAP_TOKENS = 128  # Overlap between chunks
+MODEL_NAME = "distilgpt2" 
+MAX_TOKENS = 512 
+OVERLAP_TOKENS = 128  
 
 def setup_directories():
     """Create output directory"""
@@ -41,7 +41,7 @@ def split_into_press_releases(content):
     
     for part in parts:
         part = part.strip()
-        if part and len(part) > 100:  # Skip empty or very short
+        if part and len(part) > 100:  
             releases.append(part)
     
     return releases
@@ -145,7 +145,7 @@ def process_split_file(split_name, tokenizer):
     if stats['token_counts']:
         stats['avg_tokens_per_chunk'] = sum(stats['token_counts']) / len(stats['token_counts'])
     
-    # 🔥 FIXED: Save ONE clean chunk per line
+    # Save ONE clean chunk per line
     with open(output_file, 'w', encoding='utf-8') as f:
         for chunk in all_chunks:
             # Ensure chunk has NO internal newlines
