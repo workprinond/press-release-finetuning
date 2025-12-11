@@ -265,25 +265,14 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 
 **Toxicity Analysis**: All generations scored < 0.001 across toxicity categories, confirming effective safety augmentation.
 
-### 10.4 Pipeline Effectiveness vs. Assignment Goals
 
-| Assignment Requirement | How It Was Met | Evidence |
-|------------------------|----------------|----------|
-| End-to-end pipeline | ✅ | Data crawl → cleaning → fine-tuning → evaluation |
-| Small open-source model | ✅ | DistilGPT-2 (82M params) |
-| Brief fine-tuning | ✅ | 5 epochs, ~0.5 hours (939 steps) |
-| Log training loss | ✅ | `training_history.csv`, `eval_history.csv` |
-| Automatic metric | ✅ | Perplexity (18.59), Test Loss (2.923) |
-| Sample generations | ✅ | 5 BMW prompts + toxicity scoring |
-
-
-### 10.5 Limitations & Observations
+### 10.4 Limitations & Observations
 - **Repetition in Long Generations**: Likely due to 512-token context limit and small model size,  less alpha value
 - **Factual Hallucinations**: Model learned style but not precise facts (e.g., incorrect CEO), solution ground truth systems like RAG
 - **Loss Plateau**: After epoch 3, minimal improvement → diminishing returns
 - **LoRA Trade-off**: Only 0.1% parameters trained → fast but limited adaptation depth
 
-### 10.6 Conclusion 
+### 10.5 Conclusion 
 Th pipeline does domain adaptation of a small LM to BMW press releases. The fine-tuned model achieved an **88.1% reduction in perplexity**, generated coherent, brand-appropriate text, and remained safe and non-toxic. 
 
 ## 11. Comparative Model Training & Evaluation (Stretch Version)
