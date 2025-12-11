@@ -5,6 +5,22 @@ A complete end-to-end pipeline for collecting, preprocessing, and fine-tuning a 
 
 ## Installation and flow of pipeline
 
+### 12.1 Prerequisites
+```bash
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+peft>=0.4.0
+pandas>=1.5.0
+numpy>=1.24.0
+tqdm>=4.65.0
+scikit-learn>=1.2.0
+bert_score
+detoxify
+evaluate
+textstat
+
+
 ```bash
 
 pip install -r requirements.txt
@@ -41,7 +57,7 @@ python B_assignment_stretch_reduced_and_original_comparator.py
 
 ## 📊 1. Data Collection & Crawling
 
-**Script:** `src/01_data_crawling.py`
+
 
 **Approach & Process:**
 - **Sitemap Discovery**: Analyzed the site's `robots.txt` file to extract all declared sitemaps. Filtered using regex patterns (`sitemap_text` + `en`) to isolate English-language text sitemaps (e.g., `sitemap_text_pcgl_en.xml`).
@@ -58,18 +74,16 @@ python B_assignment_stretch_reduced_and_original_comparator.py
 
 ## 2. Sitemap Analysis & Scraping Time Estimation
 
-**Script:** `src/sitemap_analyzer.py` (SitemapURLCounter class)
+
 
 **Process:**
 - **Targeted Analysis**: Focused on 13 primary English-language text sitemaps.
-- **Parallelized Parsing**: Used `ThreadPoolExecutor` for concurrent XML parsing, filtering for URLs containing `'pressDetail'` and `'EN'`.
 - **Volume & Time Estimation**: Calculated unique article count and provided detailed time estimates for different scraping scenarios with respectful delays (1.5s between requests).
 
 **Outcome**: Informed decision-making on corpus scale, ensuring the project fit within the 6-8 hour scope by providing clear projections for a full-scale crawl vs. manageable subset (e.g., first 500 articles).
 
 ## 3. Complete Text Extraction Implementation
 
-**Script:** `src/text_extraction_pipeline.py` (BMWTextExtractionPipeline class)
 
 **Pipeline Execution:**
 1. **URL Harvesting**: From `robots.txt` → English sitemaps → unique press release URLs.
@@ -81,9 +95,9 @@ python B_assignment_stretch_reduced_and_original_comparator.py
 - `tqdm` progress bars with live statistics
 - Comprehensive metadata preservation
 
-**Outcome**: Curated corpus of **~900** recent (2025) BMW press releases, ready for fine-tuning.
+**Outcome**: Curated corpus of **~942** recent (2025) BMW press releases, (train data, validation data, test data: **~636**, **~136**, **~137** ) ready for fine-tuning.
 
-## 4. Data Anonymization Strategy (Updated)
+## 4. Data Anonymization Strategy 
 
 Based on audit results, implemented selective redaction balancing privacy with informational value.
 
@@ -99,7 +113,7 @@ Based on audit results, implemented selective redaction balancing privacy with i
 
 ## 5. PII Cleanup Implementation
 
-**Function:** `comprehensive_pii_clean_balanced()`
+
 
 **Cleanup Actions:**
 - **Emails**: All replaced with `[CONTACT_EMAIL]` placeholder.
@@ -113,8 +127,14 @@ Based on audit results, implemented selective redaction balancing privacy with i
   - Media contacts → `[MEDIA_REPRESENTATIVE]`
 
 **Results:**
+- TOTALS ACROSS ALL DATASETS
+   - Emails Removed: 508
+   - Phones Removed: 467
+   - Urls Corporate Sites: 21
+   - Urls Social Media: 455
+   - Urls External Links: 196
 - 100% email removal
-- >99% phone number reduction
+-  more than 99% phone number reduction
 - Contextual URL preservation
 - <5% text volume reduction
 
@@ -382,15 +402,4 @@ With more time and compute resources:
 4. **Scaling Law Verification**: Repeat with larger base model
 5. **Enhanced Factual Evaluation**: Develop robust hallucination detection metrics
 
-## 12. How to Run the Pipeline
 
-### 12.1 Prerequisites
-```bash
-python>=3.8
-torch>=2.0
-transformers>=4.30
-peft>=0.4
-datasets>=2.12
-beautifulsoup4>=4.12
-requests>=2.28
-tqdm>=4.65

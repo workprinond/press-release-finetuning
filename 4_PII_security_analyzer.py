@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Comprehensive PII audit for BMW dataset - Shows ALL matches
 """
@@ -133,7 +133,7 @@ def find_lines_with_pii(file_path, pii_type, pattern):
 
 # Main execution
 if __name__ == "__main__":
-    print("🚀 BMW PRESS RELEASE - DETAILED PII AUDIT")
+    print("BMW PRESS RELEASE - DETAILED PII AUDIT")
     print("="*60)
     
     # Files to audit (modify as needed)
