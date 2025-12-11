@@ -285,7 +285,7 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 |------------------------|----------------|----------|
 | End-to-end pipeline | ✅ | Data crawl → cleaning → fine-tuning → evaluation |
 | Small open-source model | ✅ | DistilGPT-2 (82M params) |
-| Brief fine-tuning | ✅ | 5 epochs, ~2–3 hours (939 steps) |
+| Brief fine-tuning | ✅ | 5 epochs, ~0.5 hours (939 steps) |
 | Log training loss | ✅ | `training_history.csv`, `eval_history.csv` |
 | Automatic metric | ✅ | Perplexity (18.59), Test Loss (2.923) |
 | Sample generations | ✅ | 5 BMW prompts + toxicity scoring |
