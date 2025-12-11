@@ -32,6 +32,7 @@ python src/model_training.py --config configs/first_exercise.yaml
 # Create reduced model and train both variants
 python src/comparative_training.py --config configs/stretch_exercise.yaml
 
+```
 
 ## 📊 1. Data Collection & Crawling
 
@@ -226,8 +227,13 @@ Based on audit results, implemented selective redaction balancing privacy with i
 - Epoch 3 → 2.879
 - Epoch 4 → 2.864
 - **Epoch 5 → 2.862** ← Best epoch
+## Training Results Diagram Exercise !
 
-Early stopping likely prevented overfitting after epoch 5.
+Here are the loss curves from our training:
+
+![Training Loss Curves](bmw_assignment_1/enhanced_training_plot.png)
+
+As shown above, the model converged after 5 epochs.
 
 ### 10.3 Generation Quality & Safety
 
@@ -294,6 +300,15 @@ This section details the comparative fine-tuning, evaluation, and analysis of th
 - BERTScore F1 for semantic similarity in Q&A evaluation
 - Diversity (Distinct-1, Distinct-2), readability (Flesch-Kincaid)
 - Fluency, toxicity (Detoxify library)
+
+## Training Results Diagram Exercise !
+
+Here are the loss curves from our training:
+
+![Training Loss Curves](bmw_assignment_stretch/comparison_plots.png)
+
+As shown above, the model converged after 5 epochs.
+
 
 **Qualitative Analysis:**
 - Sample generations from 5 BMW-related prompts
