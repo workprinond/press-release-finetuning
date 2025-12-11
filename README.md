@@ -2,8 +2,35 @@
 
 A complete end-to-end pipeline for collecting, preprocessing, and fine-tuning a small language model on recent BMW press releases. This project implements both the core assignment and a comparative "stretch" exercise analyzing model size trade-offs.
 
-**Repository Structure:**
 
+## Installation
+
+```bash
+
+pip install -r requirements.txt
+# Analyze sitemaps and estimate scope
+python src/sitemap_analyzer.py
+
+# Collect BMW press releases from 2025
+python src/01_data_crawling.py --year 2025 --max-articles 900
+
+# Extract text and create dataset splits
+python src/text_extraction_pipeline.py
+
+# Remove PII and sensitive information
+python src/pii_cleanup.py
+
+# Add safety training examples
+python src/safety_augmentor.py
+
+# Analyze corpus and create 512-token chunks
+python src/corpus_analyzer.py --chunk-size 512 --overlap 128
+
+# Fine-tune original DistilGPT-2 on BMW corpus
+python src/model_training.py --config configs/first_exercise.yaml
+
+# Create reduced model and train both variants
+python src/comparative_training.py --config configs/stretch_exercise.yaml
 
 
 ## 📊 1. Data Collection & Crawling
