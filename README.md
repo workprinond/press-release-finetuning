@@ -298,7 +298,7 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 - **LoRA Trade-off**: Only 0.1% parameters trained → fast but limited adaptation depth
 
 ### 10.6 Conclusion & Alignment with Assignment Goals
-This exercise successfully demonstrated a complete, reproducible pipeline for domain adaptation of a small LM to BMW press releases. The fine-tuned model achieved an **88.1% reduction in perplexity**, generated coherent, brand-appropriate text, and remained safe and non-toxic. While minor repetitions and factual inaccuracies persist, the pipeline meets all assignment requirements within the 6–8 hour scope, proving sound technical understanding and practical implementation skills.
+This exercise shows a pipeline for domain adaptation of a small LM to BMW press releases. The fine-tuned model achieved an **88.1% reduction in perplexity**, generated coherent, brand-appropriate text, and remained safe and non-toxic. While minor repetitions and factual inaccuracies persist, the pipeline meets all assignment requirements within the 6–8 hour scope.
 
 ## 11. Comparative Model Training & Evaluation (Stretch Version)
 
