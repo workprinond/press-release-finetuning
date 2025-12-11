@@ -8,7 +8,7 @@ class BMWDateTester:
     def __init__(self, url):
         self.url = url
         self.selectors = [
-            # Your original selector
+            # original selector
             "#content > div > div.content-left > div > div.article-info > h5 > span.date",
             # Alternative selectors
             "span.date",
@@ -282,7 +282,7 @@ class BMWDateTester:
             else:
                 print(f"\n✗ NO PARSABLE DATES FOUND")
                 
-                # Show what we did find
+                # Show what is found
                 if all_found_texts:
                     print(f"\nFound {len(all_found_texts)} potential date sources (couldn't parse):")
                     for i, item in enumerate(all_found_texts[:5], 1):
@@ -290,7 +290,7 @@ class BMWDateTester:
                 else:
                     print("No potential date sources found at all.")
             
-            # 5. Save results to file
+            # Save results to file
             results = {
                 'url': self.url,
                 'status': 'success',
@@ -316,14 +316,14 @@ class BMWDateTester:
 def test_multiple_urls():
     """Test multiple example URLs"""
     test_urls = [
-        # Add URLs from your output
-        "https://www.press.bmwgroup.com/global/article/detail/T0454343EN",  # from-three-continents
-        "https://www.press.bmwgroup.com/global/article/detail/T0454334EN",  # lian-pga-championship
-        "https://www.press.bmwgroup.com/global/article/detail/T0454242EN",  # ings-compared-to-2019
-        "https://www.press.bmwgroup.com/global/article/detail/T0454204EN",  # th-new-bmw-m5-touring
-        # Add a few more from different sitemaps
-        "https://www.press.bmwgroup.com/global/article/detail/T0454168EN",  # y-%e2%80%93-and-beyond
-        "https://www.press.bmwgroup.com/global/article/detail/T0453927EN",  # fication-and-co2-aware
+        
+        "https://www.press.bmwgroup.com/global/article/detail/T0454343EN", 
+        "https://www.press.bmwgroup.com/global/article/detail/T0454334EN",  
+        "https://www.press.bmwgroup.com/global/article/detail/T0454242EN",  
+        "https://www.press.bmwgroup.com/global/article/detail/T0454204EN",  
+      
+        "https://www.press.bmwgroup.com/global/article/detail/T0454168EN",  
+        "https://www.press.bmwgroup.com/global/article/detail/T0453927EN",  
     ]
     
     print("Testing multiple URLs...")
@@ -378,7 +378,7 @@ if __name__ == "__main__":
         else:
             print("Using default URL...")
     
-    # Test single URL
+
     tester = BMWDateTester(single_url)
     tester.analyze_response()
     

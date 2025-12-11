@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Your target URL
+# target URL
 url = "https://www.press.bmwgroup.com/pressclub/p/pcgl/pressDetail.html?title=bmw-m-racing-academy-class-of-2026-starts-with-three-customer-racing-drivers-from-three-continents&outputChannelId=6&id=T0454343EN&left_menu_item=node__10883"
 
-# Your specific selectors (keeping the same selector that works)
+# specific selectors (keeping the same selector that works)
 HEADLINE_SELECTOR = "#content > div > div.content-left > div > h1"
 SUBHEADLINE_SELECTOR = "#content > div > div.content-left > div > h2"
 AUTHOR_SELECTOR = "#content > div > div.content-left > div > div.left > p:nth-child(4)"  

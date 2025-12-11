@@ -9,7 +9,7 @@ import os
 from datetime import datetime, timedelta
 from sklearn.model_selection import train_test_split
 from urllib.parse import urlparse
-from tqdm import tqdm  # Added for progress bar
+from tqdm import tqdm 
 
 class BMWTextExtractionPipeline:
     def __init__(self, base_url="https://www.press.bmwgroup.com"):
@@ -43,7 +43,7 @@ class BMWTextExtractionPipeline:
             sitemap_pattern = r'Sitemap:\s*(https?://[^\s]+)'
             all_sitemaps = re.findall(sitemap_pattern, robots_content, re.IGNORECASE)
             
-            # SIMPLE AND EFFECTIVE: Filter for English text sitemaps
+            # SFilter for English text sitemaps
             self.english_sitemaps = [
                 sitemap for sitemap in all_sitemaps 
                 if 'sitemap_text' in sitemap.lower()  # Must be a text sitemap
@@ -224,7 +224,7 @@ class BMWTextExtractionPipeline:
             author = self.clean_text(author_elem) if author_elem else None
             date_text = self.clean_text(date_elem) if date_elem else None
             
-            # Parse date from text (handles multiple formats)
+            # Parse date from text 
             date_obj, year = self.parse_date_from_text(date_text) if date_text else (None, None)
             date_iso = date_obj.isoformat()[:10] if date_obj else None  # YYYY-MM-DD format
             
@@ -273,7 +273,7 @@ class BMWTextExtractionPipeline:
             }
             
         except Exception as e:
-            # Don't print error here - let the progress bar handle it
+           
             return None
     
     def collect_all_press_urls(self, max_sitemaps=None, max_per_sitemap=50):
@@ -329,7 +329,7 @@ class BMWTextExtractionPipeline:
               (f" (filtering for year {target_year})" if target_year else "") + "...\n")
         
         # Calculate estimated total time
-        avg_delay = delay + 0.5  # Average of random.uniform(0, 1)
+        avg_delay = delay + 0.5  
         est_total_seconds = len(urls_to_scrape) * avg_delay
         est_total_time = str(timedelta(seconds=int(est_total_seconds)))
         
@@ -719,7 +719,7 @@ if __name__ == "__main__":
     
     # Run pipeline for 2025 articles only
     datasets = pipeline.run_complete_pipeline(
-        max_sitemaps=None,           # Process first 10 sitemaps (set to None for all)
+        max_sitemaps=None,           # Process first n sitemaps (None for all)
         max_per_sitemap=500,       # Take first 200 URLs from each sitemap
         max_releases=1000,         # Scrape up to 1000 press releases total
         delay=1.5,                 # Delay between requests (be respectful!)

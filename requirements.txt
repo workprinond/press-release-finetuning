@@ -28,4 +28,3 @@ bert_score
 detoxify
 evaluate
 textstat
-peft

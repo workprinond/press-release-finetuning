@@ -5,7 +5,7 @@ A complete end-to-end pipeline for collecting, preprocessing, and fine-tuning a 
 
 ## Installation and flow of pipeline
 
-### 12.1 Prerequisites
+### Prerequisites
 ```bash
 torch>=2.0.0
 transformers>=4.30.0

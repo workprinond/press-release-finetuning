@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 STANDALONE SAFETY AUGMENTOR
 Run this AFTER PII cleanup to add safety Q&A patterns
