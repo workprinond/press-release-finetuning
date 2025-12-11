@@ -297,8 +297,8 @@ Here are the loss curves,learning rate,loss distribution and 50 step average fro
 - **Loss Plateau**: After epoch 3, minimal improvement → diminishing returns
 - **LoRA Trade-off**: Only 0.1% parameters trained → fast but limited adaptation depth
 
-### 10.6 Conclusion & Alignment with Assignment Goals
-This exercise shows a pipeline for domain adaptation of a small LM to BMW press releases. The fine-tuned model achieved an **88.1% reduction in perplexity**, generated coherent, brand-appropriate text, and remained safe and non-toxic. While minor repetitions and factual inaccuracies persist, the pipeline meets all assignment requirements within the 6–8 hour scope.
+### 10.6 Conclusion 
+Th pipeline does domain adaptation of a small LM to BMW press releases. The fine-tuned model achieved an **88.1% reduction in perplexity**, generated coherent, brand-appropriate text, and remained safe and non-toxic. 
 
 ## 11. Comparative Model Training & Evaluation (Stretch Version)
 
@@ -336,7 +336,7 @@ Here are the loss curves, training time, test time and perplexity from our train
 
 
 **Qualitative Analysis:**
-- Sample generations from 5 BMW-related prompts
+- 50 curated Question Answer set prepared from Ground Truth from press releases of test set.(see `bmw_qa_evaluation_set.json`)
 - Automated difference analysis (length, repetition, terminology)
 - Q&A evaluation: 50 BMW fact-based pairs with semantic similarity scoring
 
@@ -384,7 +384,7 @@ Here are the loss curves, training time, test time and perplexity from our train
 
 **Efficiency vs. Performance**: Removing ~9% of parameters yielded **~11% training speedup** but cost **~38% increase in test perplexity** and worse Q&A performance.
 
-**Quality Degradation**: Reduced model's degradation is qualitative—more repetition and less coherent long-form structure—suggesting removed layer played role in maintaining narrative flow.
+**Quality Degradation**: Reduced model's degradation is qualitative—more repetition and less coherent long-form structure—suggesting removed layer played role in maintaining narrative flow. The performance decline stems from the hierarchical nature of transformer learning: earlier layers capture fundamental linguistic patterns, middle layers develop abstract representations, and final layers specialize in task-specific refinements. Removing the last layer eliminates these critical refinements, leading to a significant quality degradation.
 
 **Practical Implications**:
 - **Choose Original Model** for highest output quality, coherence, and factual grounding
@@ -397,9 +397,9 @@ Here are the loss curves, training time, test time and perplexity from our train
 ### 11.10 Future Investigations
 With more time and compute resources:
 1. **Ablation Study on Layer Removal**: Test removing different single layers
-2. **Knowledge Distillation**: Distill knowledge from original to reduced model
+2. **DPO for style and preventing negative aspects**: Focus on a certain press release style for social media by feeding desirable and rejected prompts.
 3. **Hyperparameter Search for Reduced Architecture**: Find optimal settings for reduced model
 4. **Scaling Law Verification**: Repeat with larger base model
-5. **Enhanced Factual Evaluation**: Develop robust hallucination detection metrics
+5. **Enhanced Factual Evaluation**: Develop robust hallucination detection metrics using RAG systems
 
 
